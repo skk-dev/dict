@@ -1,0 +1,2 @@
+# dict
+SKK dictionary
