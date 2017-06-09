@@ -1,0 +1,116 @@
+# Makefile for ZIP-code dictionaries.
+
+EMACS = @emacs@
+RM = @rm@
+CP = @cp@
+MKDIR = @mkdir@
+CAT = @cat@
+DIFF = @diff@
+WGET = @wget@
+LHA = @lha@
+NKF = @nkf@
+SKKDIC_EXPR2 = @skkdic_expr2@
+SKKDIC_EXPR = @skkdic_expr@
+SKKDIC_SORT = @skkdic_sort@
+
+srcdir = @srcdir@
+top_srcdir = @top_srcdir@
+temp_dir = @temp_dir@
+
+TEMP_ZIPCODE=$(temp_dir)/.zipcode
+TEMP_OFFICE=$(temp_dir)/.office
+
+SOURCE_KEN_ALL=http://www.post.japanpost.jp/zipcode/dl/kogaki/lzh/ken_all.lzh
+SOURCE_JIGYOSYO=http://www.post.japanpost.jp/zipcode/dl/jigyosyo/lzh/jigyosyo.lzh
+
+KEN_ALL_LZH=$(temp_dir)/ken_all.lzh
+JIGYOSYO_LZH=$(temp_dir)/jigyosyo.lzh
+
+KEN_ALL=$(temp_dir)/ken_all.csv
+JIGYOSYO=$(temp_dir)/jigyosyo.csv
+
+all: zipcode office words
+
+zipcode:
+	$(EMACS) -batch -q -no-site-file -l $(srcdir)/ZIPCODE-MK \
+	  -f mkdic-zipcode -f mkdic-zipcode-header $(temp_dir)
+ifneq ($(SKKDIC_EXPR2),)
+	$(SKKDIC_EXPR2) $(TEMP_ZIPCODE) >> SKK-JISYO.zipcode
+else
+	$(SKKDIC_EXPR) $(TEMP_ZIPCODE) \
+	  | $(SKKDIC_SORT) >> SKK-JISYO.zipcode
+endif
+
+office:
+	$(EMACS) -batch -q -no-site-file -l $(srcdir)/ZIPCODE-MK \
+	  -f mkdic-office -f mkdic-office-header $(temp_dir)
+ifneq ($(SKKDIC_EXPR2),)
+	$(SKKDIC_EXPR2) $(TEMP_OFFICE) >> SKK-JISYO.office.zipcode
+else
+	$(SKKDIC_EXPR) $(TEMP_OFFICE) \
+	  | $(SKKDIC_SORT) >> SKK-JISYO.office.zipcode
+endif
+
+words:
+	$(EMACS) -batch -q -no-site-file -l $(srcdir)/ZIPCODE-MK -f mkdic-words
+
+# For checking new entries.
+
+update: orig all diff
+
+orig:
+	-$(CP) -f $(srcdir)/SKK-JISYO.office.zipcode \
+	  SKK-JISYO.office.zipcode.orig
+	-$(CP) -f $(srcdir)/SKK-JISYO.zipcode SKK-JISYO.zipcode.orig
+	-$(CP) -f $(srcdir)/words.zipcode words.zipcode.orig
+
+diff:
+	-$(DIFF) -u SKK-JISYO.office.zipcode.orig \
+	  SKK-JISYO.office.zipcode \
+	  | $(CAT) > SKK-JISYO.office.zipcode.diff
+	-$(DIFF) -u SKK-JISYO.zipcode.orig \
+	  SKK-JISYO.zipcode \
+	  | $(CAT) > SKK-JISYO.zipcode.diff
+	-$(DIFF) -u words.zipcode.orig words.zipcode \
+	  | $(CAT) > words.zipcode.diff
+
+# For doing everything automatically.
+
+batch-update: fetch extract update
+
+batch: fetch extract all
+
+fetch:
+	$(MKDIR) -p $(temp_dir)
+	-$(RM) -f $(KEN_ALL_LZH) $(JIGYOSYO_LZH)
+	$(WGET) -O $(KEN_ALL_LZH) $(SOURCE_KEN_ALL)
+	$(WGET) -O $(JIGYOSYO_LZH) $(SOURCE_JIGYOSYO)
+
+extract:
+	$(LHA) pq $(KEN_ALL_LZH) > $(KEN_ALL)
+	$(LHA) pq $(JIGYOSYO_LZH) > $(JIGYOSYO)
+#	$(NKF) -x -s < $(JIGYOSYO).1 > $(JIGYOSYO)
+
+clean:
+	-$(RM) -f $(TEMP_ZIPCODE) $(TEMP_OFFICE)
+
+clean-temps: clean
+	-$(RM) -rf $(temp_dir)
+
+clean-diffs:
+	-$(RM) -f SKK-JISYO.office.zipcode.orig \
+	  SKK-JISYO.office.zipcode.diff \
+	  SKK-JISYO.zipcode.orig \
+	  SKK-JISYO.zipcode.diff \
+	  words.zipcode.orig \
+	  words.zipcode.diff
+
+mostlyclean: clean-temps clean-diffs
+	-$(RM) -f config.status \
+	  config.log \
+	  Makefile
+
+distclean: mostlyclean
+	-$(RM) -f SKK-JISYO.office.zipcode \
+	  SKK-JISYO.zipcode \
+	  words.zipcode

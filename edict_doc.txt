@@ -1,0 +1,506 @@
+
+                                 E D I C T
+                                      
+                      JAPANESE/ENGLISH DICTIONARY FILE
+                                      
+   Copyright (C) 2000 The Electronic Dictionary Research and Development
+   Group, Monash University.
+   
+   INTRODUCTION
+   
+   The EDICT file results from a long-running project to produce a freely
+   available Japanese/English Dictionary in machine-readable form.
+   
+   The EDICT file is copyright, and is distributed in accordance with the
+   Licence Statement included at Appendix A.
+   
+   CURRENT VERSION 
+   
+   The version date and sequence number is included in the dictionary
+   itself under the entry "EDICT". (Actually it is under the JIS-ASCII
+   code "????". This keeps it as the first entry when it is sorted.)
+   
+   The master copy of EDICT is in the pub/nihongo directory of
+   ftp.cc.monash.edu.au. There are other copies around, but they may not
+   be as up-to-date. The easy way to check if the version you have is the
+   latest is from the size/date.
+   
+   As of V96-001, the EDICT file no longer contains proper names. These
+   have been moved to a separate file called "ENAMDICT". From V99-002,
+   the EDICT file has been generated from an extended dictionary database
+   which includes additional fields and information. See the later
+   section on the new JMdict project for details of this.
+   
+   FORMAT
+   
+   EDICT's format is that of the original "EDICT" format used by the
+   early PC Japanese wordprocessor MOKE (Mark's Own Kanji Editor). It
+   uses EUC-JP coding for kana and kanji, however this can be converted
+   to JIS or SJIS by any of the several conversion programs around. It is
+   a text file with one entry per line. The format of entries is:
+   
+KANJI [KANA] /English_1/English_2/.../
+
+   or
+   
+KANA /English_1/.../
+
+   (NB: Only the KANJI and KANA are in EUC; all the other characters,
+   including spaces, must be ASCII.)
+   
+   The English translations are deliberately brief, as the application of
+   the dictionary is expected to be primarily on-line look-ups, etc.
+   
+   The EDICT file is not intended to have its entries in any particular
+   order. In fact it almost always is in order as a by-product of the
+   update method I use, however there is no guarantee of this. (The order
+   is almost always JIS + alphabetical, starting with the headword.)
+   
+   CONTENTS
+   
+   EDICT consists of:
+    a. the basic EDICT distributed with MOKE 2.0. This was compiled by
+       MOKE's author, Mark Edwards, with assistance from Spencer Green.
+       Mark has very kindly released this material to the EDICT project.
+       A number of corrections were made to the MOKE original, e.g.
+       spelling mistakes, minor mistranslations, etc. It also had a lot
+       of duplications, which have been removed. It contained about 1900
+       unique entries. Mark Edwards has also kindly given permission for
+       the vocabulary files developed for KG (Kanji Guess) to be added to
+       EDICT.
+    b. additions by Jim Breen. I laboriously keyed in a ~2000 entry
+       dictionary used in my first year nihongo course at Swinburne
+       Institute of Technology years ago (I was given permission by the
+       authors to do this). I then worked through other vocabulary lists
+       trying to make sure major entries were not omitted. The
+       English-to-kana entries in the SKK files were added also. This
+       task is continuing, although it has slowed down, and I suspect I
+       will run out of energy eventually. Apart from that, I have made a
+       large number of additions during normal reading of Japanese text
+       and fj.* news using JREADER and XJDIC.
+    c. additions by others. Many people have contributed entries and
+       corrections to EDICT. I am forever on the lookout for sources of
+       material, provided it is genuinely available for use in the
+       Project. I am grateful to Theresa Martin who an early supplier a
+       lot of useful material, plus very perceptive corrections. Hidekazu
+       Tozaki has also been a great help with tidying up a lot of awry
+       entries, and helping me identify obscure kanji compounds. Kurt
+       Stueber has been an assiduous keyer of many useful entries. A
+       large group of contributions came from Sony, where Rik Smoody had
+       put together a large online dictionary. Another batch came from
+       the Japanese-German JDDICT file in similar format that Helmut
+       Goldenstein keyed (with permission) from the Langenscheidt edited
+       by Hadamitzky. Harold Rowe was great help with much of the
+       translation. During 1994, Dr Yo Tomita, then at the University of
+       Leeds, conducted a massive proof-reading of the entire file, for
+       which I am most grateful. Jeffrey Friedl at Omron in Kyoto has
+       also been a most helpful contributor and error-detector. During
+       1995, I have been keeping an eye on the "honyaku" mailing list,
+       wherein Japanese-English translators discuss thorny issues. From
+       this I have derived many new entries, and many updates to existing
+       entries. To the many honyakujin, my thanks.
+       
+   A reasonably full list of contributors is at the back of this file,
+   although I am sure to have missed a few.
+   
+   At this stage EDICT has many more entries than many good commercial
+   dictionaries, which typically have 20,000+ non-name entries with
+   examples, etc. It is certainly bigger than some of the smaller printed
+   dictionaries, and when used in conjunction with a search-and-display
+   program like JDIC or XJDIC it provides a highly effective on-line
+   dictionary service.
+   
+   COPYRIGHT ISSUES
+   
+   Dictionary copyright is a difficult point, because clearly the first
+   lexicographer who published "inu means dog" could not claim a
+   copyright violation over all subsequent Japanese dictionaries. While
+   it is usual to consult other dictionaries for "accurate lexicographic
+   information", as Nelson put it, wholesale copying is, of course, not
+   permissable. What makes each dictionary unique (and copyrightable) is
+   the particular selection of words, the phrasing of the meanings, the
+   presentation of the contents (a very important point in the case of
+   EDICT), and the means of publication. Of course, the fact that for the
+   most part the kanji and kana of each entry are coming from public
+   sources, and the structure and layout of the entries themselves are
+   quite unlike those in any published dictionary, adds a degree of
+   protection to EDICT.
+   
+   The advice I have received from people who know about these things is
+   that EDICT is just as much a new dictionary as any others on the
+   market. Readers may see an entry which looks familiar, and say "Aha!
+   That comes from the XYZ Jiten!". They may be right, and they may be
+   wrong. After all there aren't too many translations of neko. Let me
+   make one thing quite clear, despite considerable temptation
+   (Electronic Books can be easily decoded), NONE of this dictionary came
+   from commercial machine-readable dictionaries. I have a case of RSI in
+   my right elbow to prove it.
+   
+   Please do not contribute entries to EDICT which have come directly
+   from copyrightable sources. It is hard to check these, and you may be
+   jeopardizing EDICT's status.
+   
+   LEXICOGRAPHICAL DETAILS
+   
+   EDICT is actually a Japanese->English dictionary, although the words
+   within it can be selected in either language using appropriate
+   software. (JDIC uses it to provide both E->J and J->E functionality.)
+   
+   The early stages of EDICT had size limitations due to its usage (MOKE
+   scans it sequentially and JDXGEN, which is JDIC's index generator,
+   held it in RAM.) This meant that examples of usage could not be
+   included, and inclusion of phrases was very limited. JDIC/JDXGEN can
+   now handle a much larger dictionary, but the compact format has
+   continued.
+   
+   No inflections of verbs or adjectives have been included, except in
+   idiomatic expressions. Similarly particles are handled as separate
+   entries. Adverbs formed from adjectives (-ku or ni) are generally not
+   included. Verbs are, of course, in the plain or "dictionary" form.
+   
+   In working on EDICT, bearing in mind I want to use it in MOKE and with
+   JDIC, I have had to come up with a solution to the problem of
+   adjectival nouns [keiyoudoushi] (e.g. kirei and kantan), nouns which
+   can be used adjectivally with the particle "no" and verbs formed by
+   adding suru (e.g. benkyousuru). If I put entries in edict with the
+   "na" and "suru" included, MOKE will not find a match when they are
+   omitted or, the case of suru, inflected. What I have decided to do is
+   to put the basic noun into the dictionary and add "(vs)" where it can
+   be used to form a verb with suru, "(a-no)" for common "no" usage, and
+   "(an)" if it is an adjectival noun. Entries appear as:
+   
+KANJI [benkyou] /study (vs)/
+KANJI [kantan] /simple (an)/
+
+   Where necessary, verbs are marked with "(vi)" or "(vt)" according to
+   whether they are intransitive or transitive. (Work on this aspect is
+   continuing.) I have also used (id) to mark idiomatic expressions,
+   (col) for colloquialisms, (pol) for teineigo, etc.
+   
+   The (current) full list of such entry markers is:
+   
+abbr    abbreviation
+adj     adjective
+adv     adverb
+an      adjectival nouns or quasi-adjectives (keiyodoshi)
+a-no    nouns which may take the genitive case particle "no"
+arch    archaism
+aux     auxiliary
+aux v   auxiliary verb
+col     colloquialism
+fam     familiar language
+fem     female term or language
+gikun   gikun (meaning) reading
+gram    grammatical
+hon     honorific or respectful (sonkeigo) language
+hum     humble (kenjougo) language
+I       Type I (godan) verb (currently only added to verbs where the type is no
+t implicit)
+IV      Type IV (irregular) verb, such as "gozaru".
+id      idiomatic expression
+iK      word containing irregular kanji usage
+ik      word containing irregular kana usage
+io      irregular okurigana usage
+MA      martial arts term
+male    male term or language
+m-sl    manga slang
+neg     negative (in a negative sentence, or with negative verb)
+neg v   negative verb (when used with)
+obs     obsolete term
+obsc    obscure term
+oK      word containing out-dated kanji
+ok      out-dated or obsolete kana usage
+pol     polite (teineigo) language
+pref    prefix
+qv      quod vide (this entry expanded in the EDICTEXT file)
+sl      slang
+suf     suffix
+uK      word usually written using kanji alone
+uk      word usually written using kana alone
+vi      intransitive verb
+vs      noun or participle which takes the aux. verb suru
+vt      transitive verb
+vulg    vulgar expression or word
+X rude or X-rated term (not displayed in educational software)
+
+   I have endeavoured to cater for many possible variants of English
+   translation and spelling. Where appropriate different translations are
+   included for national variants (e.g. autumn/fall). I use Oxford
+   (British) standard spelling (-our, -ize) for the entries I make, but I
+   leave other entries in the national spelling of the submitter.
+   
+   For gairaigo which have not been derived from English words, I have
+   attempted to indicate the source language and the word in that
+   language. Languages have been coded in the two-letter codes from the
+   ISO 639:1988 "Code for the representation of names of languages"
+   standard, e.g. "(fr: avec)". See Appendix C for more on this. (Thanks
+   to Holger Gruber for suggesting this language coding.)
+   
+   In addition to the language codes described in Appendix C, a number of
+   tags are used to indicate that a word or phrase is associated with a
+   particular regional language variant within Japan. The tags are:
+   
+kyb     Kyoto-ben
+osb     Osaka-ben
+ksb     Kansai-ben
+ktb     Kantou-ben
+tsb     Tosa-ben
+
+   In the case of gairaigo which have a meaning which is not apparent
+   from the original (English) words, the literal transcription is
+   included, with the tag (lit).
+   
+   NEW JMDICT PROJECT
+   
+   Early in 1999 work began on the JMdict project, which aims to extend
+   the structure and content of the EDICT file to enable it to contain
+   additional information and provided an improved service to users.
+   
+   The project has several broad goals:
+    a. to convert the EDICT file to a new dictionary structure which
+       overcomes the deficiencies in the current structure. With regard
+       to this goal, the particular structural and content aspects to be
+       addressed include, but are not limited to:
+         i. the handling of orthographical variation (e.g. in kanji
+            usage, okurigana usage, readings) within the single entry;
+        ii. additional and more appropriately associated tagging of
+            grammatical and other information;
+        iii. provision for separation of different senses (polysemy) in
+            the translations;
+        iv. provision for the inclusion of translational equivalents from
+            several languages;
+         v. provision for inclusion of examples of the usage of words;
+        vi. provision for cross-references to related entries.
+    b. to publish the dictionary in a standard format which is accessible
+       by a wide range of software tools; [It is proposed that this goal
+       be addressed by developing the structure so that it can be
+       released as an XML document, with an associated XML DTD.
+    c. to retain backward compatibility with the original EDICT structure
+       in order to enable legacy software systems to use later versions
+       of the EDICT files.
+       
+   For more information on the JMdict project, please see the
+   documentation files.
+   
+   By May 1999 the EDICT file had been converted into the new format. A
+   major part of this consisted of identifying and combining entries
+   which were effectively variants of each other.
+   
+   Since V99-002, the EDICT file has been generated from the new format.
+   This has meant:
+    a. a marginal increase in the number of entries, as there is an
+       increased number of variants;
+    b. the English fields of the variant entries are now exactly the
+       same, as they have generated from the single expanded entry;
+    c. the tags such as (vs), (an), etc. now appear before the first word
+       of the English fields.
+       
+   USAGE
+   
+   EDICT can be used, with acknowledgement, for any free software or
+   server, or included in file and software distributions at a nominal
+   charge for the distribution medium. It is also available under
+   non-exclusive licence for commercial uses. Consult the Licence
+   Statement information at Appendix A.
+   
+   It is, of course, the main dictionary used by PD and GPL Copyright
+   software such as JDIC, JREADER, XJDIC, MacJDic, etc. It can be used as
+   the dictionary within MOKE (it may need to be renamed JTOE.DCT if used
+   with version 2.1 of MOKE), and it is also used by the NJSTAR and JWP
+   Word Processor packages.
+   
+   CONTRIBUTIONS
+   
+   I will be delighted if people send me corrections, suggestions, and
+   ESPECIALLY additions. Before ripping in with a lot of suggestions,
+   make sure you have the latest version, as others may have already made
+   the same comments.
+   
+   The preferred format for submissions is a JIS, EUC or Shift-JIS file
+   (uuencoded for safety) containing replacement/new entries. This can be
+   emailed to me at the address at the end of this file.
+   
+   Amendments to EDICT are carried out using a "perl" program kindly
+   provided by Jeffrey Friedl. This program carries out additions,
+   deletions and replacements, as well as checking the formats of the
+   entries. I would greatly assist if all contributions to EDICT follow
+   the format set in that program. The format consists of entries
+   prepended by a letter to indicate the action to be carried out: A for
+   addition, D for deletion, and E/C for a replacement pair.
+   Alternatively, the prepended codes can be "NEW: ", "DEL: " and "old:
+   /new: " respectively.
+   
+   Examples:
+   
+AKANJI1 [kana1] /new entry #1/
+
+AKANJI2 [kana2] /new entry #2/
+
+
+Akana3 /new entry #3/
+
+
+EKANJI4 [kana4] /old entry to be replaced/
+CKANJI4 [kana4] /replacement entry/
+
+
+DKANJI5 [kana5] /entry to be deleted/
+
+   or
+   
+NEW: KANJI1 [kana1] /new entry #1/
+
+NEW: KANJI2 [kana2] /new entry #2/
+
+
+old: KANJI3 [kana3] /old entry to be replaced/
+new: KANJI3 [kana3] /replacement entry/
+
+
+DEL: KANJI4 [kana4] /entry to be deleted/
+
+   Please provide an annotated reason for any deletions or amendments you
+   send.
+   
+   The order of entries in the submission file is immaterial, however the
+   E/C or pairs of lines must be in order.
+   
+   I prefer not to get a "diff" or "patch" file as the master EDICT is
+   under continuous revision, and may have had quite a few changes since
+   you got your copy.
+   
+   Users intending to make submissions to EDICT should follow the
+   following simple rules:
+     * all verbs in plain form. The English must begin with "to ....".
+       Add (vi) or (vt) to the first translation if the nature of the
+       verb is not implicit in the translation(s);
+     * add (an) or (a-no) or (vs) as appropriate to nouns. Do not put the
+       "na" or "no" particles on the Japanese, or the "suru" auxiliary
+       verb. For entries which have (vs), do not enter them as verb
+       infinitives (e.g. "to cook"), instead enter them as
+       gerunds/participles/whatever (e.g. cooking (vs)).
+     * indicate prefixes and suffixes by "(pref)" and "(suf)" in the
+       first English entry, not by using "-" in the kanji or kana.
+     * do not add definite or indefinite articles (e.g. "a", "an", "the",
+       etc) to English nouns unless they are necessary to distinguish the
+       word from another usage type or homonym.
+     * do not guess the kanji. One of the most persistent problems in
+       editing EDICT is finding and eliminating incorrect kanji.
+     * do not use the "/", "[" or "]" characters except in their
+       separating roles.
+     * if you are using a reference in romaji form, make sure you have
+       the correct kana for "too/tou" and "zu", where the Hepburn romaji
+       is often ambiguous.
+     * do not use kana or kanji in the "English" fields. Where it is
+       necessary to use a Japanese word, e.g. kanto, use Hepburn romaji.
+     * make sure your kana is correct. A persistent problem is the
+       submission of words like "honyaku" as ho+nya+ku instead of the
+       correct ho+n+ya+ku.
+     * do not include words formed by common Japanese suffixes, such as
+       "-teki", unless they cannot be deduced from the root.
+       
+   ACKNOWLEDGEMENTS
+   
+   The following people, in roughly chronological order, have played a
+   part in the development of EDICT.
+   
+   Mark Edwards, Spencer Green, Alina Skoutarides, Takako Machida,
+   Theresa Martin, Satoshi Tadokoro, Stephen Chung, Hidekazu Tozaki,
+   Clifford Olling, David Cooper, Ken Lunde, Joel Schulman, Hiroto
+   Kagotani, Truett Smith, Mike Rosenlof, Harold Rowe, Al Harkom, Per
+   Hammarlund, Atsushi Fukumoto, John Crossley, Bob Kerns, Frank
+   O'Carroll, Rik Smoody, Scott Trent, Curtis Eubanks, Jamie Packer,
+   Hitoshi Doi, Thalawyn Silverwood, Makato Shimojima, Bart Mathias,
+   Koichi Mori, Steven Sprouse, Jeffrey Friedl, Yazuru Hiraga, Kurt
+   Stueber, Rafael Santos, Bruce Casner, Masato Toho, Carolyn Norton,
+   Simon Clippingdale, Shiino Masayoshi, Susumu Miki, Yushi Kaneda,
+   Masahiko Tachibana, Naoki Shibata, Yuzuru Hiraga, Yasuaki Nakano, Atsu
+   Yagasaki, Hitoshi Oi, Chizuko Kanazawa, Lars Huttar, Jonathan Hanna,
+   Yoshimasa Tsuji, Masatsugu Mamimura, Keiichi Nakata, Masako Nomura,
+   Hiroshi Kamabe, Shi-Wen Peng, Norihiro Okada, Jun-ichi Nakamura,
+   Yoshiyuki Mizuno, Minoru Terada, Itaru Ichikawa, Toru Matsuda, Katsumi
+   Inoue, John Finlayson, David Luke, Iain Sinclair, Warwick Hockley,
+   Jamii Corley, Howard Landman, Tom Bryce, Jim Thomas, Paul Burchard,
+   Kenji Saito, Ken Eto, Niibe Yutaka, Hideyuki Ozaki, Kouichi Suzuki,
+   Sakaguchi Takeyuki, Haruo Furuhashi, Takashi Hattori, Yoshiyuki Kondo,
+   Kusakabe Youichi, Nobuo Sakiyama, Kouhei Matsuda, Toru Sato, Takayuki
+   Ito, Masayuki Tokoshima, Kiyo Inaba, Dan Cohn, Yo Tomita, Ed Hall,
+   Takashi Imamura, Bernard Greenberg, Michael Raine, Akiko Nagase, Ben
+   Bullock, Scott Draves, Matthew Haines, Andy Howells, Takayuki Ito,
+   Anders Brabaek, Michael Chachich, Masaki Muranaka, Paul Randolph, Vesa
+   Karhu, Bruce Bailey, Gal Shalif, Riichiro Saito, Keith Rogers, Steve
+   Petersen, Bill Smith, Barry Byrne, Satoshi Kuramoto, Jason Molenda,
+   Travis Stewart, Yuichiro Kushiro Keiko Okushi, Wayne Lammers, Koichi
+   Fujino, Joerg Fischer, Satoru Miyazaki, Gaspard Gendreau, David Olson,
+   Peter Evans, Steven Zaveloff, Larry Tyrrell, Heinz Clemencon, Justin
+   Mayer, David Jones, Holger Gruber, David Wilson, John De Hoog, Stephen
+   Davis, Dan Crevier, Ron Granich, Bruce Raup, Scott Childress, Richard
+   Warmington, Jean-Jacques Labarthe, Matt Bloedel, Szabolcs Varga, Alan
+   Bram, Hidetaka Koie, David Villareale, Hirokazu Ohata, Toshiki Sasabe,
+   William Maton, Tom Salmon, Kian Yap, Paul Denisowski, Glen Pankow,
+   Richard Northcott, Roger Meunier, Petteri Kettunen, Jeff Korpa, Kanji
+   Haitani, Liam O'Brien, Serdar Yegulalp, Jonathan Way, Gururaj Rao,
+   Yoichiro Niitsu, Ralph Seewald, Andreas Jordell, Chua Hian Koon,
+   Hartmut Pilch, Shouichi Takeuchi, Ayumu Yasutomi, Mike Wright, James
+   Rose, Nich Hill.
+   
+   Jim Breen
+   (jwb@csse.monash.edu.au)
+   School of Computer Science & Software Engineering
+   Monash University
+   Clayton 3168
+   AUSTRALIA
+     _________________________________________________________________
+   
+   APPENDIX A: EDICT LICENCE STATEMENT
+   
+   In March 2000, James William Breen assigned ownership of the copyright
+   of the dictionary files assembled, coordinated and edited by him to
+   the The Electronic Dictionary Research and Development Group at Monash
+   University.
+   
+   Information about the formal usage arrangement for EDICT can be found
+   on the Group's WWW page at: http://www.dgs.monash.edu.au/edrdg/
+   
+   In summary, EDICT can be used, with acknowledgement, for any free
+   software or server, or included in file and software distributions at
+   a nominal charge for the distribution medium. It is also available
+   under non-exclusive licence for commercial uses.
+     _________________________________________________________________
+   
+   APPENDIX B. LANGUAGE CODES FROM ISO 639
+   
+   The following language codes have been used with non-English derived
+   gairaigo. They have been derived from the ISO 639:1988 "Code for the
+   representation of names of languages" standard.
+   
+ar      Arabic
+zh      Chinese (Zhongwen)
+de      German (Deutsch)
+en      English
+fr      French
+el      Greek (Ellinika)
+iw      Hebrew (Iwrith)
+ja      Japanese
+ko      Korean
+nl      Dutch (Nederlands)
+no      Norwegian
+pl      Polish
+ru      Russian
+sv      Swedish
+bo      Tibetan (Bodskad)
+eo      Esperanto
+es      Spanish
+in      Indonesian
+it      Italian
+lt      Latin
+pt      Portugese
+hi      Hindi
+ur      Urdu
+mn      Mongolian
+kl      Inuit (formerly Eskimo)
+
+   And I have added the following, which are not in the Standard:
+   
+ai      Ainu
+
