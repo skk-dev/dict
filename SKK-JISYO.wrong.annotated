@@ -4,10 +4,10 @@
 ;;               SKK Development Team <skk@ring.gr.jp>
 ;;
 ;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: SKK-JISYO.wrong.annotated,v 1.144 2017/03/24 10:18:37 skk-cvs Exp $
+;; Version: $Id: SKK-JISYO.wrong.annotated,v 1.145 2017/06/21 12:32:20 skk-cvs Exp $
 ;; Keywords: japanese
 ;; Created: Sep. 23, 2000
-;; Last Modified: $Date: 2017/03/24 10:18:37 $
+;; Last Modified: $Date: 2017/06/21 12:32:20 $
 ;;
 ;; This dictionary is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -1526,6 +1526,7 @@ zigsaw /ジグソーパズル;見出し語typo. {z->j}igsaw/
 まんねんびと /毎年人;見出し語typo,ま{ん->い; ?}ねんびと/
 み /三重県桑名郡長島町中川６７１;DELETEME/
 みかくにんじょうほう /見確認情報;《「未」確認情報?》,goo 7件/
+みかわちやき /三河内焼;{河->川}/
 みがら /見柄;《「身」柄??》,goo 21件/
 みじゅつかんあんない /美術館案内;見出し語間違い,{み->び}じゅつかんあんない/
 みす /簾;《「御簾」-「御」なしでこうは読まない?》/

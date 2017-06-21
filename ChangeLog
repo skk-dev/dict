@@ -1,8 +1,14 @@
+2017-06-21  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* SKK-JISYO.geo: Modify two entries.
+	へきかいぐん /碧海{群->郡}/
+	へっかいぐん /碧海{群->郡}/
+
 2017-06-07  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* READMEs/committers.txt: Modify.
 
-2017-06-05 <teika@lavabit.com ring.gr.jp >
+2017-06-05 Teika Kazura <teika@lavabit.com>
 
 	* SKK-JISYO.itaiji: Modify entries.
 

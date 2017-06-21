@@ -5,9 +5,9 @@
 ;; IIDA Yosiaki <iida@ring.gr.jp>
 ;;
 ;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: SKK-JISYO.geo,v 1.32 2017/06/07 10:41:25 skk-cvs Exp $
+;; Version: $Id: SKK-JISYO.geo,v 1.33 2017/06/21 12:32:20 skk-cvs Exp $
 ;; Keywords: japanese
-;; Last Modified: $Date: 2017/06/07 10:41:25 $
+;; Last Modified: $Date: 2017/06/21 12:32:20 $
 ;;
 ;; This dictionary is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -92104,7 +92104,7 @@ Dongguan /東莞;中国広東省の都市。‖これだけ浮いてる？/
 へいわまち /平和町/
 へがわ /辺川/
 へき /日置/戸木/
-へきかいぐん /碧海群/
+へきかいぐん /碧海郡/
 へきかみ /日置上/
 へきくらおだ /日置蔵小田/
 へきしも /日置下/
@@ -92166,7 +92166,7 @@ Dongguan /東莞;中国広東省の都市。‖これだけ浮いてる？/
 へだむら /戸田村/
 へだれ /部垂/
 へだれまち /部垂町/
-へっかいぐん /碧海群/
+へっかいぐん /碧海郡/
 へっち /辺地/
 へつか /辺塚/
 へつぎ /戸次/
