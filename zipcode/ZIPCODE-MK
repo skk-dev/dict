@@ -205,13 +205,13 @@
 	      (setq pt1 (match-beginning 0))
 	      (when (string-match "’nŠ„$" fromstr)
 		(setq pt2 (match-beginning 0)))
-	      (setq from (string-to-int (substring fromstr pt1 pt2)))
+	      (setq from (string-to-number (substring fromstr pt1 pt2)))
 	      ;;
 	      (when (string-match "[0-9]" tostr)
 		(setq pt1 (match-beginning 0)))
 	      (when (string-match "’nŠ„$" tostr)
 		(setq pt2 (match-beginning 0)))
-	      (setq to (string-to-int (substring tostr pt1 pt2)))
+	      (setq to (string-to-number (substring tostr pt1 pt2)))
 	      ;;
 	      (let ((i from))
 		(while (<= i to)
