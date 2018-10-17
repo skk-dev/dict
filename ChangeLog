@@ -1,3 +1,9 @@
+2018-10-17  Tetsuo Tsukamoto  <czkmt@remus.dti.ne.jp>
+
+	* zipcode/{Makefile.in, condifure, configure.ac}: Use unzip
+	instead of lha following the changes at www.post.japanpost.jp.
+	* zipcode: Update the dictionaries.
+
 2017-06-21  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* SKK-JISYO.geo: Modify two entries.

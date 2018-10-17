@@ -7,7 +7,7 @@ MKDIR = @mkdir@
 CAT = @cat@
 DIFF = @diff@
 WGET = @wget@
-LHA = @lha@
+UNZIP = @unzip@
 NKF = @nkf@
 SKKDIC_EXPR2 = @skkdic_expr2@
 SKKDIC_EXPR = @skkdic_expr@
@@ -20,11 +20,11 @@ temp_dir = @temp_dir@
 TEMP_ZIPCODE=$(temp_dir)/.zipcode
 TEMP_OFFICE=$(temp_dir)/.office
 
-SOURCE_KEN_ALL=http://www.post.japanpost.jp/zipcode/dl/kogaki/lzh/ken_all.lzh
-SOURCE_JIGYOSYO=http://www.post.japanpost.jp/zipcode/dl/jigyosyo/lzh/jigyosyo.lzh
+SOURCE_KEN_ALL=http://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip
+SOURCE_JIGYOSYO=http://www.post.japanpost.jp/zipcode/dl/jigyosyo/zip/jigyosyo.zip
 
-KEN_ALL_LZH=$(temp_dir)/ken_all.lzh
-JIGYOSYO_LZH=$(temp_dir)/jigyosyo.lzh
+KEN_ALL_ZIP=$(temp_dir)/ken_all.zip
+JIGYOSYO_ZIP=$(temp_dir)/jigyosyo.zip
 
 KEN_ALL=$(temp_dir)/ken_all.csv
 JIGYOSYO=$(temp_dir)/jigyosyo.csv
@@ -82,13 +82,13 @@ batch: fetch extract all
 
 fetch:
 	$(MKDIR) -p $(temp_dir)
-	-$(RM) -f $(KEN_ALL_LZH) $(JIGYOSYO_LZH)
-	$(WGET) -O $(KEN_ALL_LZH) $(SOURCE_KEN_ALL)
-	$(WGET) -O $(JIGYOSYO_LZH) $(SOURCE_JIGYOSYO)
+	-$(RM) -f $(KEN_ALL_ZIP) $(JIGYOSYO_ZIP)
+	$(WGET) -O $(KEN_ALL_ZIP) $(SOURCE_KEN_ALL)
+	$(WGET) -O $(JIGYOSYO_ZIP) $(SOURCE_JIGYOSYO)
 
 extract:
-	$(LHA) pq $(KEN_ALL_LZH) > $(KEN_ALL)
-	$(LHA) pq $(JIGYOSYO_LZH) > $(JIGYOSYO)
+	$(UNZIP) -p $(KEN_ALL_ZIP) > $(KEN_ALL)
+	$(UNZIP) -p $(JIGYOSYO_ZIP) > $(JIGYOSYO)
 #	$(NKF) -x -s < $(JIGYOSYO).1 > $(JIGYOSYO)
 
 clean:

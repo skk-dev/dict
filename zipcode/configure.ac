@@ -14,7 +14,7 @@ AC_PATH_PROG(mkdir, mkdir)
 AC_PATH_PROG(diff, diff)
 AC_PATH_PROG(cat, cat)
 AC_PATH_PROG(wget, wget)
-AC_PATH_PROG(lha, lha)
+AC_PATH_PROG(unzip, unzip)
 AC_PATH_PROG(nkf, nkf)
 AC_PATH_PROG(skkdic_expr2, skkdic-expr2)
 
