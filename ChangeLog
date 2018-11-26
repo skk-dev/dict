@@ -1,6 +1,6 @@
 2018-10-17  Tetsuo Tsukamoto  <czkmt@remus.dti.ne.jp>
 
-	* zipcode/{Makefile.in, condifure, configure.ac}: Use unzip
+	* zipcode/{Makefile.in, configure, configure.ac}: Use unzip
 	instead of lha following the changes at www.post.japanpost.jp.
 	* zipcode: Update the dictionaries.
 
