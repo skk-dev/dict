@@ -1,3 +1,8 @@
+2018-11-27  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* zipcode/README.md: new file.
+	* zipcode/README.ja: remove file.
+
 2018-10-17  Tetsuo Tsukamoto  <czkmt@remus.dti.ne.jp>
 
 	* zipcode/{Makefile.in, configure, configure.ac}: Use unzip
