@@ -1,0 +1,10 @@
+Makefile
+config.log
+config.status
+.work/
+SKK-JISYO.office.zipcode.diff
+SKK-JISYO.office.zipcode.orig
+SKK-JISYO.zipcode.diff
+SKK-JISYO.zipcode.orig
+words.zipcode.diff
+words.zipcode.orig
