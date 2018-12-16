@@ -3,34 +3,34 @@
 
 # ファイル
 
- 1. `SKK-JISYO.zipcode` … SKK 用の 7 桁郵便番号辞書です。
+ 1. `SKK-JISYO.zipcode` … SKK 用の７桁郵便番号辞書です。public domain です。
 
- 2. `SKK-JISYO.office.zipcode` … SKK 用の事業所郵便番号辞書です。
+ 2. `SKK-JISYO.office.zipcode` … SKK 用の事業所郵便番号辞書です。public domain です。
 
  3. `words.zipcode` … これは郵便番号辞書を `skk-look` の機能と組み合わせて利用
    する場合に `/usr/dict/words` というファイルに書くべき内容が書かれています。
+   public domain です。
 
- 4. `Makefile`, `ZIPCODE-MK` … これらは、日本郵便株式会社の「郵便番号データダ
-   ウンロード」から取得できるファイルを基に、自分で郵便番号辞書を作る場合に使い
-   ます（最新版に更新したいときなど）。Emacs 26 以上を使う必要があります。
-
-  [日本郵便株式会社「郵便番号データダウンロード」](http://www.post.japanpost.jp/zipcode/download.html)
-
-上記のうち、1, 2, 3 は public domain であり、4 については GPL のもとで配布され
-ます。
+ 4. `Makefile`, `ZIPCODE-MK` … これらは、[日本郵便株式会社](http://www.post.japanpost.jp/) の
+   [郵便番号データダウンロード](http://www.post.japanpost.jp/zipcode/download.html) か
+   ら取得できるファイルを基に、自分で郵便番号辞書を最新版に更新したいときなどに使
+   います。 Emacs 26 以上を使う必要があります。GPL です。
 
 
 # インストール
 
-* `SKK-JISYO.zipcode` … `SKK-JISYO.L` に内容を追加する、などの方法で利用可能に
-  します。`skk-tools` がインストールされているならば、
+* `SKK-JISYO.zipcode` … `SKK-JISYO.L` など既存の辞書ファイルに内容を追加する、な
+  どの方法で利用可能にします。[`skk-tools`](https://github.com/skk-dev/skktools) が
+  インストールされているならば、
 
   ```
   % skkdic-expr SKK-JISYO.L + SKK-JISYO.zipcode | skkdic-sort > SKK-JISYO.LL
   ```
 
-  のようにして新しい辞書を作れます。 一緒にしたくない場合は複数辞書に対応した辞
-  書サーバを利用するのがいいでしょう。
+  のように実行することで、新しい辞書ファイルを作ることができます。
+  
+  内容を合成したくない場合は、複数辞書に対応した辞書サーバを利用するのがいいでし
+  ょう。
 
 * `SKK-JISYO.office.zipcode` … 同上。
  
@@ -44,20 +44,22 @@
 
   とするなど、適当にインストールしてください。
 
-なお，同梱の辞書を使うのではなく、最新の郵便番号データを自動的にダウンロードし
-て辞書をつくり直すこともできます。それには
+なお，最新の郵便番号データを自動的にダウンロードして郵便番号辞書ファイル
+（`SKK-JISYO.zipcode`, `SKK-JISYO.office.zipcode`, `words.zipcode`）を作り直すこと
+もできます。それには
 
 ```
 % sh configure
 % make batch
 ```
 
-を実行します。
+を実行します。カレントディレクトリにある `SKK-JISYO.zipcode`, `SKK-JISYO.office.zipcode`,
+`words.zipcode` が更新されます。
 
 
-# 使用法
+# DDSKK で郵便番号辞書ファイルを使ってみる
 
-* "/" で `skk-abbrev-mode` に入り、７桁の数字を入力すれば地名に変換できます。
+* "/" の打鍵で `skk-abbrev-mode` に入り、７桁の数字を入力すれば地名に変換できます。
 
 * `skk-look` と組み合わせることで、５桁 or ３桁の郵便番号にも対応できます。
   `~/.skk` に
@@ -115,9 +117,9 @@
 
 # 使用者の皆さんへのお願い
 
-この辞書を生成するにあたって、地名に関する知識が不足していること、情報量が膨大
-なことなどにより、すべての地名について正確かどうかチェックすることはできていま
-せん。
+この辞書ファイルを生成するにあたって、地名に関する知識が不足していること、情報
+量が膨大なことなどにより、すべての地名について正確かどうかチェックすることはで
+きていません。
 
 そこでよろしければ、よく御存知の地名について、間違っていないかどうか調べてみて
 ください。もし間違いがありましたら、SKK 開発ラボ <skk@ring.gr.jp> にご連絡くだ
@@ -126,29 +128,29 @@
 
 # メンテナンスの方法 (コミッタの方へ)
 
-日本郵便提供のデータは基本的に月 1 回更新されます。それに伴う本辞書の更新は以下
-の手順で行います。
+日本郵便株式会社が提供しているデータは基本的に月１回更新されます。それに伴う本
+辞書の更新は以下の手順で行います。
 
 ## 手順
 
 ```
 % cd $(somewhere)/skk/dic/zipcode
-% cvs up
+% cvs up （又は git pull）
 % sh configure
 % make batch-update
 ```
 
-(ここで生成された差分ファイルを確認して)
+ここで生成された差分ファイル `*.diff` を確認して
 
 ```
-% cvs ci
+% cvs ci （又は git add -u && git commit）
 ```
 
-なお、`make batch-update` には `wget` と `lha` が必要です。ない場合は
+なお、`make batch-update` には `wget` と `unzip` が必要です。ない場合は
 
- http://www.post.japanpost.jp/zipcode/dl/kogaki/lzh/ken_all.lzh
+ http://www.post.japanpost.jp/zipcode/dl/kogaki/lzh/ken_all.zip
 
- http://www.post.japanpost.jp/zipcode/dl/jigyosyo/lzh/jigyosyo.lzh
+ http://www.post.japanpost.jp/zipcode/dl/jigyosyo/lzh/jigyosyo.zip
 
 を取得して、適当な方法で展開したうえで
 
@@ -161,19 +163,20 @@
 ## 差分ファイルについて
 
 `SKK-JISYO.office.zipcode`, `SKK-JISYO.zipcode`, `words.zipcode` をチェックイン
-する前に、これらの差分を必ず確認してください。これは以下のような理由によります。
+する前に、これらの差分 `*.diff` を必ず確認してください。これは以下のような理由によ
+ります。
 
-* `ZIPCODE-MK` にバグがあると変なエントリを生成してしまう可能性がある。
+* `ZIPCODE-MK` にバグがあると、変なエントリを生成してしまう可能性がある。
 
-* 日本郵便のデータの、書式が変わるなどの理由によって `ZIPCODE-MK` が対応できなく
-  なっている可能性がある。
+* 日本郵便株式会社のデータの書式が変わるなどの理由によって `ZIPCODE-MK` が対応で
+  きなくなっている可能性がある。
 
 * 使用する Emacs によっては、元データの内容を正しくデコードできないなどの理由に
   よって、変なエントリを生成してしまう可能性がある。
 
 ## 必要なもの
 
-* `skk-tools`
+* `skk-tools` https://github.com/skk-dev/skktools
 
 * Emacs … Emacs 22 以上。 XEmacs でも一応できますが、XEmacs 21.1 系では一部正し
   くデコードできないので、XEmacs 21.4.4 以上のものを使ってください。
@@ -184,10 +187,10 @@
 世の中には郵便番号辞書が種々、存在します。同じデータを元にしているものが多いは
 ずですが、その出来栄えには差があります。
 
-日本郵便が配布しているデータは CSV 形式で、一応、一定の形式で書かれています。と
-ころが、この「一応」というのがなかなかクセ者で、ひとすじなわではいきません。単
-純なスクリプトで文字列を結合しただけだと、ヘンテコな地名がたくさんできてしまい
-ます。
+日本郵便株式会社が配布しているデータは CSV 形式で、一応、一定の形式で書かれてい
+ます。ところが、この「一応」というのがなかなかクセ者で、ひとすじなわではいきま
+せん。単純なスクリプトで文字列を結合しただけだと、ヘンテコな地名がたくさんでき
+てしまいます。
 
 まず、郵便番号簿というものは、基本的には地名でなく郵便番号を調べるものだという
 ことがあると思います。だから、「〜一円」、「〜市（その他）」のように、要らない
