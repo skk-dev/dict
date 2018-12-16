@@ -30,7 +30,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
 単漢字主義のS辞書と語彙主義のL辞書とでは収録されている「語」の種類だけでなく登録順なども大きく異なっているので、どの辞書を使うかでほとんど別の input method と言って良いほど使用感が違うと思います。
 
   * SKK-JISYO.S.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.S.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.S.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.S.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.S.gz.md5)]
     - 最も小さな辞書であり、`~/.skk-jisy`o に rename して最初の個人辞書のベースと
       して利用することができます。
@@ -38,23 +38,23 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
       ります。
 
   * SKK-JISYO.M.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.M.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.M.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.M.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.M.gz.md5)]
     - ミドルサイズの辞書です。
 
   * SKK-JISYO.ML.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.ML.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.ML.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.ML.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.ML.gz.md5)]
     - M 辞書と L 辞書の中間サイズの辞書です。
 
   * SKK-JISYO.L.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.gz.md5)]
     - 最も大きな辞書です。ある程度の人名・地名や複合語までを含んでいます。
       annotation を積極的に付けることが推奨
 
   * SKK-JISYO.L.unannotated.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.unannotated.gz
+5    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.unannotated.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.unannotated.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.unannotated.gz.md5)]
     - L 辞書から annotation を取り除いたもの。make 時に自動的に生成されます。
 
@@ -75,7 +75,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
 ### (1) 固有名詞系
 
   * SKK-JISYO.jinmei.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.jinmei.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.jinmei.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.jinmei.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.jinmei.gz.md5)]
     - 人名、特に日本人の姓名を収録した辞書です。
     - GPL に基づき改変、再配布可能な Wnn 用の人名辞書 (gerodic) を SKK 形式に変換
@@ -83,7 +83,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
       のデータを追加し、さらに DDSKK 独自の追加・編纂も施して作成されています。
 
   * SKK-JISYO.fullname.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.fullname.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.fullname.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.fullname.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.fullname.gz.md5)]
     - 海道昭恵氏の公開されておられる音訳用の [人名録](http://www.ctk.ne.jp/~kai-6344/)
       を SKK 辞書形式に変換したものをベースに加除したものです。新聞に掲載された人
@@ -92,7 +92,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
       て頂いております。
 
   * SKK-JISYO.geo.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.geo.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.geo.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.geo.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.geo.gz.md5)]
     - 日本郵便株式会社（以前は郵政省 → 郵政事業庁 → 日本郵政公社）のページにある
       データをもとに SKK 辞書形式の「地名辞典」に加工したものです。
@@ -106,7 +106,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
       階ではあまり強くはありません。
 
   * SKK-JISYO.propernoun.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.propernoun.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.propernoun.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.propernoun.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.propernoun.gz.md5)]
     - 芸能・音楽・企業・アニメなど、`SKK-JISYO.geo` にも `SKK-JISYO.jinmei` 辞書に
       も当てはまらない固有名詞を集めたものです。
@@ -114,7 +114,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
       一例として、東証一部上場企業や国内の四年制大学などを網羅しています。
 
   * SKK-JISYO.station.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.station.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.station.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.station.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.station.gz.md5)]
     - 駅名・路線名・鉄道会社名およびその他の鉄道用語の専門辞書です。
       国内の鉄道駅名はほぼ網羅できているのではないかと思います。
@@ -123,21 +123,21 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
 ### (2) 専門分野系
 
   * SKK-JISYO.law.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.law.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.law.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.law.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.law.gz.md5)]
     - 弁護士 小松 弘先生による GPL な法律辞書 [法律用語電子化辞書 LKKS](http://icrouton.as.wakwak.ne.jp/pub/kks/index.html) を SKK 辞書形式に変換したものです。
     - `SKK-JISYO.L` と重複するコンテンツを機械的に削除し、その後、更に一般的用語は
       手作業で削除して `SKK-JISYO.L` に移しています。一部追加もあります。
 
   * SKK-JISYO.okinawa.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.okinawa.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.okinawa.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.okinawa.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.okinawa.gz.md5)]
     - [沖縄辞書プロジェクト](http://www.zukeran.org/o-dic/) が作成、メンテナンスし
       ている沖縄辞書を SKK 辞書形式に変換したものです。沖縄辞書に付いていた品詞や
       コメントは、annotation に変換して残しています。
 
   * SKK-JISYO.china_taiwan.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.china_taiwan.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.china_taiwan.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.china_taiwan.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.china_taiwan.gz.md5)]
     - 中国、台湾の地名ばかりを集めた辞書です。簡単な annotation が付いています。
 
@@ -145,7 +145,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
 ### (3) 特殊変換系
 
   * SKK-JISYO.assoc.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.assoc.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.assoc.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.assoc.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.assoc.gz.md5)]
     - この辞書は、見出し語を単純に変換して得られる候補ではなく、見出し語と候補との
       間に一定の連想関係があるエントリを集めたものです。大量の略語エントリを含んで
@@ -154,7 +154,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
       書ファイルのヘッダにある解説に目を通しておかれると良いでしょう。
 
   * SKK-JISYO.edict.tar.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.edict.tar.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.edict.tar.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.edict.tar.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.edict.tar.gz.md5)]
     - 英数文字を見出しにした変換 (abbrev) によって英和変換を実現するための辞書です。
     - [The Electronic Dictionary Research and Development Group](http://www.csse.monash.edu.au/groups/edrdg/) による「和英辞典」edict を `edict2skk.awk` を利用して SKK 辞書形式の「英和辞典」に加工したものです。
@@ -167,7 +167,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
       ヘッダー及び `edict_doc.txt` などをご覧下さい。
 
   * zipcode.tar.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/zipcode.tar.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/zipcode.tar.gz](https://github.com/skk-dev/dict/raw/gh-pages/zipcode.tar.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/zipcode.tar.gz.md5)]
     - 郵便番号辞書です。日本郵便株式会社が公開しているデータから変換したものです。
 
@@ -177,13 +177,13 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
 特殊な入力方法や環境整備を必要とする辞書です。
 
   * SKK-JISYO.JIS2.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.JIS2.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.JIS2.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.JIS2.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.JIS2.gz.md5)]
     - この辞書は JIS 第二水準の文字のみを、部首を見出しとして収録した SKK 辞書です。
       `skk-tankan.el` と併用すると、部首と画数から検索できるようになります。
 
   * SKK-JISYO.JIS3_4.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.JIS3_4.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.JIS3_4.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.JIS3_4.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.JIS3_4.gz.md5)]
     - この辞書は、JIS 第三、第四水準の文字に代表される、JISX0208 には含まれないが
       JISX0213 には含まれる文字およびそれらを含む語彙のみを収録した SKK 辞書です。
@@ -202,7 +202,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
 | jisx0213code.txt    | もりみつじゅんじさんに GPL に基づく配布をご快諾いただきました。Yano Keisukeさんに情報提供をいただく他、辞書形式の変換や配布条件の確認などのお手伝いをいただきました。関係された皆様に厚く感謝申し上げます。                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
   * SKK-JISYO.JIS2004.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.JIS2004.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.JIS2004.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.JIS2004.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.JIS2004.gz.md5)]
     - JIS X 0213 の 2004 年改正で追加された「表外漢字 UCS 互換」10 文字を含む語彙
       のみを収録した辞書です。
@@ -211,26 +211,26 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
       あわせてお使いください。
 
   * SKK-JISYO.itaiji.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.itaiji.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.itaiji.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.itaiji.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.itaiji.gz.md5)]
     - 「▽」の挿入による再変換の機構などを利用して、異体字変換を行うための辞書です。
       斉藤寿成氏、大野裕氏の作成された [異體字轉](http://www.eonet.ne.jp/~kotobukispace/ddt/itaizy/itaizy.html) から作成されています。
 
   * SKK-JISYO.itaiji.JIS3_4.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.itaiji.JIS3_4.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.itaiji.JIS3_4.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.itaiji.JIS3_4.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.itaiji.JIS3_4.gz.md5)]
     - `SKK-JISYO.itaiji` の JIS 第３・第４水準版です。もりみつじゅんじ氏の作成によ
       る [参照文字リスト(0213)](http://www.jca.apc.org/~earthian/aozora/0213.html) か
       ら作成されています。
 
   * SKK-JISYO.mazegaki.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.mazegaki.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.mazegaki.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.mazegaki.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.mazegaki.gz.md5)]
     - `SKK-JISYO.M` を `skk-mkmgk.el` で機械的に加工した交ぜ書き辞書です。
       `skk-tutcode` を利用する場合に併用すると便利です。
 
   * SKK-JISYO.lisp.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.lisp.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.lisp.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.lisp.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.lisp.gz.md5)]
     - `SKK-JISYO.L` から concat 関数を除く Lisp の関数の候補を抜き出した辞書です。
     - 新規に `skk-relative-date` 関数を追加しています。プログラム実行変換で用いら
@@ -243,11 +243,11 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
 書です。
 
   * SKK-JISYO.wrong.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.wrong.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.wrong.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.wrong.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.wrong.gz.md5)]
 
   * SKK-JISYO.wrong.annotated.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.wrong.annotated.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.wrong.annotated.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.wrong.annotated.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.wrong.annotated.gz.md5)]
     - `SKK-JISYO.{SML}` に間違えて含まれていたエントリを抽出したものです。
     - このファイルは `SKK-JISYO.{SML}` に再び誤ったエントリが含まれないようにする
@@ -268,7 +268,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
       のように、`SKK-JISYO.wrong.annotated` をそのまま使用することもできます。
 
   * SKK-JISYO.pubdic+.gz
-    - https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.pubdic+.gz
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.pubdic+.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.pubdic+.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.pubdic+.gz.md5)]
     - `SKK-JISYO.pubdic+` は the Pubdic+ project により作成された pubdic.p を SKK
       辞書形式に加工し、L 辞書に含まれるエントリを削除したものです。
