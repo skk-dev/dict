@@ -54,7 +54,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
       annotation を積極的に付けることが推奨
 
   * SKK-JISYO.L.unannotated.gz
-5    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.unannotated.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.unannotated.gz)
+    - [https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.unannotated.gz](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.unannotated.gz)
       [[md5](https://github.com/skk-dev/dict/raw/gh-pages/SKK-JISYO.L.unannotated.gz.md5)]
     - L 辞書から annotation を取り除いたもの。make 時に自動的に生成されます。
 
