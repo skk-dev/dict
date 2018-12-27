@@ -1,3 +1,10 @@
+2018-12-27  Takeshi Abe  <tabe@fixedpoint.jp>
+
+	* zipcode/Makefile.in (SOURCE_KEN_ALL, SOURCE_JIGYOSYO): Use HTTPS
+	to fetch zipcode data from www.post.japanpost.jp.
+
+	* zipcode/README.md: Update URLs accordingly.
+
 2018-11-27  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* zipcode/README.md: new file.

@@ -11,8 +11,8 @@
    する場合に `/usr/dict/words` というファイルに書くべき内容が書かれています。
    public domain です。
 
- 4. `Makefile`, `ZIPCODE-MK` … これらは、[日本郵便株式会社](http://www.post.japanpost.jp/) の
-   [郵便番号データダウンロード](http://www.post.japanpost.jp/zipcode/download.html) か
+ 4. `Makefile`, `ZIPCODE-MK` … これらは、[日本郵便株式会社](https://www.post.japanpost.jp/) の
+   [郵便番号データダウンロード](https://www.post.japanpost.jp/zipcode/download.html) か
    ら取得できるファイルを基に、自分で郵便番号辞書を最新版に更新したいときなどに使
    います。 Emacs 26 以上を使う必要があります。GPL です。
 
@@ -148,9 +148,9 @@
 
 なお、`make batch-update` には `wget` と `unzip` が必要です。ない場合は
 
- http://www.post.japanpost.jp/zipcode/dl/kogaki/lzh/ken_all.zip
+ https://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip
 
- http://www.post.japanpost.jp/zipcode/dl/jigyosyo/lzh/jigyosyo.zip
+ https://www.post.japanpost.jp/zipcode/dl/jigyosyo/zip/jigyosyo.zip
 
 を取得して、適当な方法で展開したうえで
 

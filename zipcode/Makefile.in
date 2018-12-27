@@ -20,8 +20,8 @@ temp_dir = @temp_dir@
 TEMP_ZIPCODE=$(temp_dir)/.zipcode
 TEMP_OFFICE=$(temp_dir)/.office
 
-SOURCE_KEN_ALL=http://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip
-SOURCE_JIGYOSYO=http://www.post.japanpost.jp/zipcode/dl/jigyosyo/zip/jigyosyo.zip
+SOURCE_KEN_ALL=https://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip
+SOURCE_JIGYOSYO=https://www.post.japanpost.jp/zipcode/dl/jigyosyo/zip/jigyosyo.zip
 
 KEN_ALL_ZIP=$(temp_dir)/ken_all.zip
 JIGYOSYO_ZIP=$(temp_dir)/jigyosyo.zip
