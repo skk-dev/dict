@@ -32,7 +32,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
   * SKK-JISYO.S.gz
     - [https://skk-dev.github.io/dict/SKK-JISYO.S.gz](https://skk-dev.github.io/dict/SKK-JISYO.S.gz)
       [[md5](https://skk-dev.github.io/dict/SKK-JISYO.S.gz.md5)]
-    - 最も小さな辞書であり、`~/.skk-jisy`o に rename して最初の個人辞書のベースと
+    - 最も小さな辞書であり、`~/.skk-jisyo` に rename して最初の個人辞書のベースと
       して利用することができます。
     - 漢字へのアクセスを優先するために、使用頻度が少なくても収録されている候補があ
       ります。
@@ -96,7 +96,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
       [[md5](https://skk-dev.github.io/dict/SKK-JISYO.geo.gz.md5)]
     - 日本郵便株式会社（以前は郵政省 → 郵政事業庁 → 日本郵政公社）のページにある
       データをもとに SKK 辞書形式の「地名辞典」に加工したものです。
-    - 2015 年 2 月 3 日現在、 http://www.post.japanpost.jp/zipcode/dl/readme.html に
+    - 2015 年 2 月 3 日現在、[http://www.post.japanpost.jp/zipcode/dl/readme.html](http://www.post.japanpost.jp/zipcode/dl/readme.html) に
       よれば、『郵便番号データに限っては日本郵便株式会社は著作権を主張しません。自
       由に配布していただいて結構です。』とあります。同社のご厚意に感謝しつつ、自由
       に配布できるよう、明示的に GPL を適用しました。
@@ -163,7 +163,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
           無償で配布する場合、ドキュメント `edict_doc.txt` を常に一緒に配布し、
           the copyright notice を取り外さない限り、配布可能
       というものです。
-      詳細は http://www.csse.monash.edu.au/groups/edrdg/newlic.html, `SKK-JISYO.edict` の
+      詳細は [http://www.csse.monash.edu.au/groups/edrdg/newlic.html](http://www.csse.monash.edu.au/groups/edrdg/newlic.html), `SKK-JISYO.edict` の
       ヘッダー及び `edict_doc.txt` などをご覧下さい。
 
   * zipcode.tar.gz
