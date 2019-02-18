@@ -1,3 +1,12 @@
+2019-02-19  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* SKK-JISYO.lisp: Modify entry.
+	now /(current-time-string)/(substring (current-time-string) 11 16)/(substring (current-time-string) 11 19)/{->(format-time-string "%H時%M分" (current-time))/(format-time-string "%p%I時%M分" (current-time))/}
+
+	Add one entry.
+	いま /(current-time-string)/(substring (current-time-string) 11 16)/(substring (current-time-string) 11 19)/(format-time-string "%H時%M分" (current-time))/(format-time-string "%p%I時%M分" (current-time))/
+
+
 2018-12-27  Takeshi Abe  <tabe@fixedpoint.jp>
 
 	* zipcode/Makefile.in (SOURCE_KEN_ALL, SOURCE_JIGYOSYO): Use HTTPS
