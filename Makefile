@@ -1,10 +1,7 @@
 # Makefile: makefile for SKK Dictionaries.
 #
 # Maintainer: SKK Development Team <skk@ring.gr.jp>
-# Version: $Id: Makefile,v 1.47 2015/01/16 07:34:37 skk-cvs Exp $
-# Last Modified: $Date: 2015/01/16 07:34:37 $
 
-BZIP2	  = bzip2 -9
 COUNT	  = skkdic-count
 DATE	  = date
 EXPR	  = skkdic-expr
@@ -18,8 +15,6 @@ RM	  = /bin/rm -f
 RUBY	  = ruby -I $(TOOLS_DIR)/filters
 SORT	  = skkdic-sort
 TAR	  = tar
-#TODAY	  = `$(DATE) '+%Y%m%d'`
-ZIP	  = zip
 ZIPDIC_DIR  = ./zipcode
 
 DIC2PDB = dic2pdb
@@ -47,10 +42,10 @@ CDB_SOURCE = ./SKK-JISYO.L
 CDB_TARGET = ./`basename $(CDB_SOURCE)`.cdb
 
 clean:
-	$(RM) *.gz* *.bz2* *.zip* *~ `find . -name '*~'` `find . -name '.*~'` `find . -name '.#*'` \
+	$(RM) *.gz* *~ `find . -name '*~'` `find . -name '.*~'` `find . -name '.#*'` \
 	*.unannotated SKK-JISYO.wrong PBinlineDB.pdb *.tmp *.w PBinlineDB.dic *.taciturn SKK-JISYO.L+ SKK-JISYO.total SKK-JISYO.total+zipcode SKK-JISYO.L.header SKK-JISYO.china_taiwan
 
-archive: gzip #zip bzip2
+archive: gzip
 
 unannotated: SKK-JISYO.L.unannotated SKK-JISYO.wrong SKK-JISYO.china_taiwan.unannotated
 
@@ -94,15 +89,6 @@ PBinlineDB_full.pdb: PBinlineDB.dic
 
 PBinlineDB.pdb: PBinlineDB_full.pdb
 	$(RM) PBinlineDB.dic
-
-zip: clean $(ALL_SRCS)
-	for file in $(ALL_SRCS); do \
-	  $(ZIP) $$file.zip $$file ;\
-	  $(MD5) $$file.zip >$$file.zip.md5; \
-	done
-	$(ZIP) SKK-JISYO.edict.zip SKK-JISYO.edict edict_doc.txt
-	$(ZIP) -r zipcode.zip $(ZIPDIC_DIR) -x@./skk.ex
-	$(MD5) zipcode.zip >zipcode.zip.md5
 
 gzip: clean $(ALL_SRCS)
 	for file in $(ALL_SRCS); do \
@@ -175,18 +161,5 @@ all: annotated-all unannotated-all taciturn-all
 
 cdb:
 	$(PYTHON) $(TOOLS_DIR)/$(SKK2CDB) $(CDB_TARGET) $(CDB_SOURCE)
-
-# bzip2: clean $(SRCS)
-# 	for file in $(SRCS); do \
-# 	  $(BZIP2) -fc $$file >$$file.bz2 ;\
-# 	  $(MD5) $$file.bz2 >$$file.bz2.md5; \
-# 	done
-# 	$(TAR) cvpf SKK-JISYO.edict.tar SKK-JISYO.edict edict_doc.txt
-# 	$(BZIP2) -f SKK-JISYO.edict.tar
-# 	$(MD5) SKK-JISYO.edict.tar.bz2 > SKK-JISYO.edict.tar.bz2.md5
-# #	$(TAR) cvpf zipcode.tar ./zipcode --exclude-from=./skk.ex
-# 	$(TAR) cvpf zipcode.tar ./zipcode
-# 	$(BZIP2) -f zipcode.tar
-# 	$(MD5) zipcode.tar.bz2 >zipcode.tar.bz2.md5
 
 # end of Makefile.
