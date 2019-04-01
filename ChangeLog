@@ -1,3 +1,8 @@
+2019-04-01  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* SKK-JISYO.L: Modify entry.
+	れいわ /{->令和;年号(2019-)/}例話/
+
 2019-02-19  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* SKK-JISYO.lisp: Modify entry.
