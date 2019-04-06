@@ -1,3 +1,28 @@
+2019-04-06  Nobuyuki SASAKI  <nathancorvussolis@gmail.com>
+
+	* SKK-JISYO.L: Modify below candidates.
+	よもつひらさか /黄泉平坂/{->黄泉比良坂;古事記/泉津平坂;日本書紀/}
+	やつめうなぎ /八目鰻{鱧/->}/
+	ばっさい /伐採/{伐裁/->}
+	せんけん /先遣/先見/専権/先験/浅見/淺見;「浅」旧字/先件/嬋娟;-たる美女/仙建/擅権/選研/選鉱{精->製}錬研究所;※abbrev/
+	よいざm /酔い覚{;->}/酔い醒/酔醒/
+
+	* SKK-JISYO.L: Remove below candidates.
+	かみきょうく /上京区/
+	にしぎょうく /西京区/
+	さいきょうく /西京区/
+	ちゅうきょうく /中京区/
+	しゅんとうぐん /駿東郡/
+
+	* SKK-JISYO.L: Add below candidates.
+	うきょうく /右京区/
+	かみぎょうく /上京区/
+	しもぎょうく /下京区/
+	なかぎょうく /中京区/
+	にしきょうく /西京区/
+	ひがしやまく /東山区/
+	すんとうぐん /駿東郡/
+
 2019-04-02  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* SKK-JISYO.L: Modify entry.
