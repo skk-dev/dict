@@ -1,3 +1,7 @@
+2019-04-10  Tatsuya Kinoshita  <tats@debian.org>
+
+	* SKK-JISYO.lisp: Add one entry. (れいわ#ねん)
+
 2019-04-06  Nobuyuki SASAKI  <nathancorvussolis@gmail.com>
 
 	* SKK-JISYO.L: Modify below candidates.
