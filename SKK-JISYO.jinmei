@@ -5,9 +5,7 @@
 ;;
 ;; Author: OMRON SOFTWARE Co., Ltd. <freewnn@rd.kyoto.omronsoft.co.jp>
 ;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: SKK-JISYO.jinmei,v 1.273 2017/03/24 10:14:06 skk-cvs Exp $
 ;; Keywords: japanese
-;; Last Modified: $Date: 2017/03/24 10:14:06 $
 ;;
 ;; This dictionary is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as

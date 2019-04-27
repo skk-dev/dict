@@ -7,9 +7,7 @@
 ;; the source dictionary, containing only letters in JIS1 and JIS2.
 ;;
 ;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: SKK-JISYO.itaiji,v 1.7 2017/06/05 13:04:18 yutopia Exp $
 ;; Keywords: japanese
-;; Last Modified: $Date: 2017/06/05 13:04:18 $
 ;;
 ;;; Commentary:
 ;;

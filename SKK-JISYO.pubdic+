@@ -3,9 +3,7 @@
 ;; Copyright (C) 2000 the Pubdic+ project.
 ;;               2002, 2003, 2004 SKK Development Team <skk@ring.gr.jp>
 ;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: SKK-JISYO.pubdic+,v 1.14 2006/01/29 16:34:35 skk-cvs Exp $
 ;; Keywords: japanese
-;; Last Modified: $Date: 2006/01/29 16:34:35 $
 ;;
 ;; This package is copyrighted by the Pubdic+ project. Permission to use,
 ;; copy, modify, and distribute this package for any purpose is hereby

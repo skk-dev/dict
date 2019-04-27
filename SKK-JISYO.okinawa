@@ -2,9 +2,7 @@
 ;; SKK system made from 沖縄辞書 (Okinawa dic 2005/11/07)
 ;;
 ;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: SKK-JISYO.okinawa,v 1.5 2006/01/29 16:34:35 skk-cvs Exp $
 ;; Keywords: japanese
-;; Last Modified: $Date: 2006/01/29 16:34:35 $
 ;;
 ;; この辞書は Public Domain です。使用・変更・配布に関しては一切の制限
 ;; をつけません。商品などに組み込むことも自由に行なってください。既に

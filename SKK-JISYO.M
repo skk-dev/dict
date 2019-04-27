@@ -10,9 +10,7 @@
 ;; SKK Development Team <skk@ring.gr.jp>
 ;;
 ;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: SKK-JISYO.M,v 1.28 2006/01/04 10:25:03 skk-cvs Exp $
 ;; Keywords: japanese
-;; Last Modified: $Date: 2006/01/04 10:25:03 $
 ;;
 ;; This dictionary is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

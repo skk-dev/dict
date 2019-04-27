@@ -1,3 +1,12 @@
+2019-04-27  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+	* SKK-JISYO.JIS2, SKK-JISYO.JIS2004, SKK-JISYO.JIS3_4, SKK-JISYO.L, SKK-JISYO.L.unannotated:
+	* SKK-JISYO.M, SKK-JISYO.ML, SKK-JISYO.S, SKK-JISYO.assoc, SKK-JISYO.edict, SKK-JISYO.fullname:
+	* SKK-JISYO.geo, SKK-JISYO.hukugougo, SKK-JISYO.itaiji, SKK-JISYO.itaiji.JIS3_4, SKK-JISYO.jinmei:
+	* SKK-JISYO.law, SKK-JISYO.lisp, SKK-JISYO.mazegaki, SKK-JISYO.noregist, SKK-JISYO.not_wrong:
+	* SKK-JISYO.notes, SKK-JISYO.okinawa, SKK-JISYO.propernoun, SKK-JISYO.pubdic+, SKK-JISYO.requested:
+	* SKK-JISYO.station, SKK-JISYO.wrong, SKK-JISYO.wrong.annotated:
+	Remove keyword line `$Id$' and `$Date$'.
+
 2019-04-10  Tatsuya Kinoshita  <tats@debian.org>
 
 	* SKK-JISYO.lisp: Add one entry. (れいわ#ねん)

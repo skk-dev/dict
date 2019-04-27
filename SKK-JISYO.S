@@ -10,9 +10,7 @@
 ;; Katsushi Sato and Nobuhiro Yamagishi
 ;;
 ;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: SKK-JISYO.S,v 1.55 2006/01/04 10:25:04 skk-cvs Exp $
 ;; Keywords: japanese
-;; Last Modified: $Date: 2006/01/04 10:25:04 $
 ;;
 ;; This dictionary is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

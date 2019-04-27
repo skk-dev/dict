@@ -5,9 +5,7 @@
 ;;
 ;; Author: Akie Kaidoh <kaidoh@ma.ctk.ne.jp>
 ;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: SKK-JISYO.fullname,v 1.11 2017/03/24 10:14:05 skk-cvs Exp $
 ;; Keywords: japanese
-;; Last Modified: $Date: 2017/03/24 10:14:05 $
 ;;
 ;; This dictionary is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as

@@ -3,10 +3,8 @@
 ;; Copyright (C) 2003 SKK Development Team <skk@ring.gr.jp>
 ;;
 ;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: SKK-JISYO.noregist,v 1.66 2006/02/19 17:23:09 skk-cvs Exp $
 ;; Keywords: japanese
 ;; Created: Mar. 16, 2003
-;; Last Modified: $Date: 2006/02/19 17:23:09 $
 ;;
 ;; This dictionary is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as

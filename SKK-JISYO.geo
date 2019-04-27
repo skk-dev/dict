@@ -5,9 +5,7 @@
 ;; IIDA Yosiaki <iida@ring.gr.jp>
 ;;
 ;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: SKK-JISYO.geo,v 1.33 2017/06/21 12:32:20 skk-cvs Exp $
 ;; Keywords: japanese
-;; Last Modified: $Date: 2017/06/21 12:32:20 $
 ;;
 ;; This dictionary is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
