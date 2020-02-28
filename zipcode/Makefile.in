@@ -8,7 +8,6 @@ CAT = @cat@
 DIFF = @diff@
 WGET = @wget@
 UNZIP = @unzip@
-NKF = @nkf@
 SKKDIC_EXPR2 = @skkdic_expr2@
 SKKDIC_EXPR = @skkdic_expr@
 SKKDIC_SORT = @skkdic_sort@
@@ -32,8 +31,8 @@ JIGYOSYO=$(temp_dir)/jigyosyo.csv
 all: zipcode office words
 
 zipcode:
-	$(EMACS) -batch -q -no-site-file -l $(srcdir)/ZIPCODE-MK \
-	  -f mkdic-zipcode -f mkdic-zipcode-header $(temp_dir)
+	$(EMACS) --batch -q -no-site-file --load $(srcdir)/ZIPCODE-MK \
+	  --funcall mkdic-zipcode --funcall mkdic-zipcode-header $(temp_dir)
 ifneq ($(SKKDIC_EXPR2),)
 	$(SKKDIC_EXPR2) $(TEMP_ZIPCODE) >> SKK-JISYO.zipcode
 else
@@ -42,8 +41,8 @@ else
 endif
 
 office:
-	$(EMACS) -batch -q -no-site-file -l $(srcdir)/ZIPCODE-MK \
-	  -f mkdic-office -f mkdic-office-header $(temp_dir)
+	$(EMACS) --batch -q -no-site-file --load $(srcdir)/ZIPCODE-MK \
+	  --funcall mkdic-office --funcall mkdic-office-header $(temp_dir)
 ifneq ($(SKKDIC_EXPR2),)
 	$(SKKDIC_EXPR2) $(TEMP_OFFICE) >> SKK-JISYO.office.zipcode
 else
@@ -52,7 +51,7 @@ else
 endif
 
 words:
-	$(EMACS) -batch -q -no-site-file -l $(srcdir)/ZIPCODE-MK -f mkdic-words
+	$(EMACS) --batch -q -no-site-file --load $(srcdir)/ZIPCODE-MK --funcall mkdic-words
 
 # For checking new entries.
 
@@ -89,7 +88,6 @@ fetch:
 extract:
 	$(UNZIP) -p $(KEN_ALL_ZIP) > $(KEN_ALL)
 	$(UNZIP) -p $(JIGYOSYO_ZIP) > $(JIGYOSYO)
-#	$(NKF) -x -s < $(JIGYOSYO).1 > $(JIGYOSYO)
 
 clean:
 	-$(RM) -f $(TEMP_ZIPCODE) $(TEMP_OFFICE)

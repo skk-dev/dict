@@ -1,5 +1,7 @@
 2020-02-28  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
+	* zipcode/Makefile.in: Use long options for GNU Emacs.
+
 	* zipcode/ZIPCODE-MK (mkdic-office): Use function decode-coding-string() insted
 	of string-as-multibyte().
 	(mkdic-zipcode, mkdic-office): Remove comment lines.
