@@ -14,7 +14,7 @@
  4. `Makefile`, `ZIPCODE-MK` … これらは、[日本郵便株式会社](https://www.post.japanpost.jp/) の
    [郵便番号データダウンロード](https://www.post.japanpost.jp/zipcode/download.html) か
    ら取得できるファイルを基に、自分で郵便番号辞書を最新版に更新したいときなどに使
-   います。 Emacs 26 以上を使う必要があります。GPL です。
+   います。 GNU Emacs 26 以上を使う必要があります。GPL です。
 
 
 # インストール
@@ -35,7 +35,7 @@
 * `SKK-JISYO.office.zipcode` … 同上。
  
 * `words.zipcode` … `/usr/dict/words` のエントリに追加します。このとき、
-  alphabet のエントリより上位に追加しないと正しく検索できないようです。
+  alphabet のエントリよりも上位に追加しないと正しく検索できないようです。
 
   ```
   % mv /usr/dict/words /usr/dict/words.original
@@ -59,7 +59,7 @@
 
 # DDSKK で郵便番号辞書ファイルを使ってみる
 
-* "/" の打鍵で `skk-abbrev-mode` に入り、７桁の数字を入力すれば地名に変換できます。
+* <kbd>/</kbd> の打鍵で `skk-abbrev-mode` に入り、７桁の数字を入力すれば地名に変換できます。
 
 * `skk-look` と組み合わせることで、５桁 or ３桁の郵便番号にも対応できます。
   `~/.skk` に
@@ -111,7 +111,6 @@
                            v2 (if (not skk-look-expanded-word-only)
                                   (skk-nunion v2 (cons (car v) v3))
                                 (if v3
-
   ```
 
 
@@ -135,34 +134,23 @@
 
 ```
 % cd $(somewhere)/skk/dic/zipcode
-% cvs up （又は git pull）
-% sh configure
+% git pull
+% ./configure
 % make batch-update
+% make test
 ```
 
-ここで生成された差分ファイル `*.diff` を確認して
+この手順で生成された差分ファイル `*.diff` を確認してから
 
 ```
-% cvs ci （又は git add -u && git commit）
+% git add -u && git commit -m "update zipcode"
 ```
 
-なお、`make batch-update` には `wget` と `unzip` が必要です。ない場合は
-
- https://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip
-
- https://www.post.japanpost.jp/zipcode/dl/jigyosyo/zip/jigyosyo.zip
-
-を取得して、適当な方法で展開したうえで
-
-```
-% make update
-```
-
-としてください。
+なお、`make batch-update` を実行するには `wget` と `unzip` が必要です。
 
 ## 差分ファイルについて
 
-`SKK-JISYO.office.zipcode`, `SKK-JISYO.zipcode`, `words.zipcode` をチェックイン
+`SKK-JISYO.office.zipcode`, `SKK-JISYO.zipcode`, `words.zipcode` を commit
 する前に、これらの差分 `*.diff` を必ず確認してください。これは以下のような理由によ
 ります。
 
@@ -171,16 +159,14 @@
 * 日本郵便株式会社のデータの書式が変わるなどの理由によって `ZIPCODE-MK` が対応で
   きなくなっている可能性がある。
 
-* 使用する Emacs によっては、元データの内容を正しくデコードできないなどの理由に
+* 使用する GNU Emacs によっては、元データの内容を正しくデコードできないなどの理由に
   よって、変なエントリを生成してしまう可能性がある。
 
 ## 必要なもの
 
 * `skk-tools` https://github.com/skk-dev/skktools
 
-* Emacs … Emacs 22 以上。 XEmacs でも一応できますが、XEmacs 21.1 系では一部正し
-  くデコードできないので、XEmacs 21.4.4 以上のものを使ってください。
-
+* GNU Emacs 26 以上
 
 # この辞書の出来、他の郵便番号辞書、などについて
 
