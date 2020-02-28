@@ -1,3 +1,8 @@
+2020-02-28  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* zipcode/ZIPCODE-MK (mkdic-office): Use function decode-coding-string() insted
+	of string-as-multibyte().
+
 2019-04-27  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 	* SKK-JISYO.JIS2, SKK-JISYO.JIS2004, SKK-JISYO.JIS3_4, SKK-JISYO.L, SKK-JISYO.L.unannotated:
 	* SKK-JISYO.M, SKK-JISYO.ML, SKK-JISYO.S, SKK-JISYO.assoc, SKK-JISYO.edict, SKK-JISYO.fullname:

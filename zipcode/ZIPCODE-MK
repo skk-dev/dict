@@ -342,34 +342,36 @@
     ;;
     (let ((coding-system-for-read 'binary))
       (insert-file-contents JIGYOSYO))
+
     ;; workaround 2007-01-16
+    ;; IBM Šg’£•¶Žš fab1 ‚ð`è'i8de8j‚Ö’uŠ·
+    ;;   (format "%x-%x" #o372 #o261) => "fa-b1"
     (goto-char (point-min))
-    (while (search-forward (string-as-multibyte "\372\261") nil t) ; ˜’?
+    (while (search-forward (decode-coding-string "\372\261" 'japanese-cp932) nil t)
       (replace-match "")
-      (insert (string-as-multibyte "\215")
-	      (string-as-multibyte "\350"))) ; è
+      (insert (decode-coding-string "\215\350" 'sjis)))
+
     ;; workaround 2007-02-12
+    ;; IBM Šg’£•¶Žš fadc ‚ð `‚µ‚å‚¤'i‚Ð‚ç‚ª‚È‚R•¶Žšj‚Ö’uŠ·
     (goto-char (point-min))
-    (while (search-forward (string-as-multibyte "\372\334") nil t) ; ëd?
+    (while (search-forward (decode-coding-string "\372\334" 'japanese-cp932) nil t)
       (replace-match "")
-      (insert (string-as-multibyte "\202")
-	      (string-as-multibyte "\265")
-	      (string-as-multibyte "\202")
-	      (string-as-multibyte "\345")
-	      (string-as-multibyte "\202")
-	      (string-as-multibyte "\244"))) ; ‚µ‚å‚¤
+      (insert (decode-coding-string "\202\265\202\345\202\244" 'sjis)))
+
     ;; workaround 2007-05-11
+    ;; fa 9c ‚ð `’Ë' ‚Ö’uŠ·
     (goto-char (point-min))
-    (while (search-forward (string-as-multibyte "\372\234") nil t) ; ˆv?
+    (while (search-forward (decode-coding-string "\372\234" 'japanese-cp932) nil t)
       (replace-match "")
-      (insert (string-as-multibyte "\222")
-	      (string-as-multibyte "\313"))) ; ’Ë
+      (insert (decode-coding-string "\222\313" 'sjis)))
+
     ;; workaround 2011-06-09
+    ;; ƒnƒVƒS‚iIBM Šg’£•¶Žš fbfcj‚ð `‚' ‚Ö’uŠ·
     (goto-char (point-min))
-    (while (search-forward (string-as-multibyte "\373\374") nil t) ; ƒnƒVƒS‚
+    (while (search-forward (decode-coding-string "\373\374" 'japanese-cp932) nil t)
       (replace-match "")
-      (insert (string-as-multibyte "\215")
-	      (string-as-multibyte "\202"))) ; ‚
+      (insert (decode-coding-string "\215\202" 'sjis)))
+
     ;;
     (decode-coding-region (point-min) (point-max) 'shift_jis)
     ;;
