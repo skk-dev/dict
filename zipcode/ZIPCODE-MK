@@ -92,8 +92,6 @@
       (mkdic-get-line))
     ;;
     (set-buffer " *dic *")
-;    (set-buffer-file-coding-system 'euc-jp-unix)
-;    (set-buffer-modified-p t)
     (goto-char (point-min))
     (insert "\
 ;; okuri-ari entries.
@@ -385,12 +383,7 @@
       (mkdic-office-get-line))
     ;;
     (set-buffer " *dic *")
-;    (set-buffer-file-coding-system 'euc-jp-unix)
-;    (set-buffer-modified-p t)
     (goto-char (point-min))
-    ;;
- ;   (when (re-search-forward "^91086\"," nil t)
- ;     (replace-match "9108630"))
     ;;
     (goto-char (point-min))
     (insert "\
@@ -459,8 +452,6 @@
     (sort-lines nil (point-min)	(point-max))
     (set-buffer-file-coding-system 'raw-text-unix)
     (write-region (point-min) (point-max) WORDS)))
-
-;;
 
 (defun mkdic-zipcode-header ()
   (with-temp-buffer
