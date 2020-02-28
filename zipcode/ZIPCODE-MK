@@ -68,29 +68,27 @@
       (set (car file) (expand-file-name (cdr file) temp-dir)))
     (setcdr (nthcdr 3 command-line-args-left) nil)))
 
-;; 一般郵便番号用
+;; 一般郵便番号用 .. make zipcode
 (defun mkdic-zipcode ()
   (let (*addr3* *addr4*
 		*stat*)
     (set-buffer (get-buffer-create " *dic *"))
     (erase-buffer)
-    ;;
     (set-buffer (get-buffer-create " *csv *"))
     (erase-buffer)
-    ;;
+
     (let ((large-file-warning-threshold 20000000)
 	  (coding-system-for-read 'shift_jis))
       (insert-file-contents KEN_ALL))
-    ;;
+
     (goto-char (point-min))
-    ;;
     (while (not (looking-at "^[0-9]"))
       (forward-line))
-    ;;
+
     (mkdic-get-line)
     (while (eq (forward-line) 0)
       (mkdic-get-line))
-    ;;
+
     (set-buffer " *dic *")
     (goto-char (point-min))
     (insert "\
@@ -285,16 +283,20 @@
      ((string-match "\\(～\\|（丁目）\\|その他\\|番地）$\\)"
 		    nantaras)
       (setq nantaras nil))
+
      ((string-match "（[０-９]丁目）" nantaras)
       (setq cho (concat cho (substring nantaras 1 (1- (length nantaras)))))
       (setq nantaras nil))
+
      (t
       (setq nantaras (split-string (substring nantaras 1
 					      (1- (length nantaras)))
 				   "、"))))
+
     (cond
      ((not nantaras)
       (setq addr cho))
+
      (t
       (setq addr (concat (car nantaras) cho))
       (dolist (nantara (cdr nantaras))
@@ -328,15 +330,15 @@
 	  (setq addr (concat addr "/" addr1 addr2 cho nantara))))
       addr))))
 
-;; 事業所用
+;; 事業所用 .. make office
 (defun mkdic-office ()
   (let (*addr3* *addr4*	*stat*)
     (set-buffer (get-buffer-create " *dic *"))
     (erase-buffer)
-    ;;
+
     (set-buffer (get-buffer-create " *csv *"))
     (erase-buffer)
-    ;;
+
     (let ((coding-system-for-read 'binary))
       (insert-file-contents JIGYOSYO))
 
@@ -369,21 +371,16 @@
       (replace-match "")
       (insert (decode-coding-string "\215\202" 'sjis)))
 
-    ;;
     (decode-coding-region (point-min) (point-max) 'shift_jis)
-    ;;
     (goto-char (point-min))
-    ;;
     (while (not (looking-at "^[0-9]"))
       (forward-line))
-    ;;
+
     (mkdic-office-get-line)
     (while (eq (forward-line) 0)
       (mkdic-office-get-line))
-    ;;
+
     (set-buffer " *dic *")
-    (goto-char (point-min))
-    ;;
     (goto-char (point-min))
     (insert "\
 ;; okuri-ari entries.
@@ -397,31 +394,29 @@
 	zip name
 	addr1 addr2 addr3 addr4)
     (while (< i 9)
-      (cond
-       ((= i 7)
-	(forward-char 1)
-	(setq zip (buffer-substring (point) (+ 7 (point)))))
-       ((= i 2)
-	(forward-char 1)
-	(setq name (buffer-substring (point) (1- (search-forward "\"")))))
-       ((= i 3)
-	(forward-char 1)
-	(setq addr1 (buffer-substring (point) (1- (search-forward "\"")))))
-       ((= i 4)
-	(forward-char 1)
-	(setq addr2 (buffer-substring (point) (1- (search-forward "\"")))))
-       ((= i 5)
-	(forward-char 1)
-	(setq addr3 (buffer-substring (point) (1- (search-forward "\"")))))
-       ((= i 6)
-	(forward-char 1)
-	(setq addr4 (buffer-substring (point) (1- (search-forward "\""))))))
-      ;;
+      (cond ((= i 7)
+	     (forward-char 1)
+	     (setq zip (buffer-substring (point) (+ 7 (point)))))
+            ((= i 2)
+	     (forward-char 1)
+	     (setq name (buffer-substring (point) (1- (search-forward "\"")))))
+            ((= i 3)
+	     (forward-char 1)
+	     (setq addr1 (buffer-substring (point) (1- (search-forward "\"")))))
+            ((= i 4)
+	     (forward-char 1)
+	     (setq addr2 (buffer-substring (point) (1- (search-forward "\"")))))
+            ((= i 5)
+	     (forward-char 1)
+	     (setq addr3 (buffer-substring (point) (1- (search-forward "\"")))))
+            ((= i 6)
+	     (forward-char 1)
+	     (setq addr4 (buffer-substring (point) (1- (search-forward "\""))))))
       (let ((search (search-forward "," nil t)))
 	(setq i (if search
 		    (1+ i)
 		  9))))
-    ;;
+
     (with-current-buffer " *dic *"
       (when (and zip name addr1 addr2 addr3 addr4)
 	(insert zip  " /" name " @ " addr1 addr2 addr3 addr4 "/\n")))))

@@ -1,3 +1,7 @@
+2020-02-29  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* zipcode/ZIPCODE-MK: Modify comment.
+
 2020-02-28  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* zipcode/Makefile.in: Use long options for GNU Emacs.
