@@ -3,6 +3,8 @@
 	* zipcode/ZIPCODE-MK (mkdic-office): Use function decode-coding-string() insted
 	of string-as-multibyte().
 	(mkdic-zipcode, mkdic-office): Remove comment lines.
+	(mkdic-get-line, mkdic-office-get-line, mkdic-words): Use macro with-current-buffer
+	instead of save-excursion() + set-buffer().
 
 2019-04-27  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 	* SKK-JISYO.JIS2, SKK-JISYO.JIS2004, SKK-JISYO.JIS3_4, SKK-JISYO.L, SKK-JISYO.L.unannotated:
