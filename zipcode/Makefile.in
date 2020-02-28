@@ -112,3 +112,7 @@ distclean: mostlyclean
 	-$(RM) -f SKK-JISYO.office.zipcode \
 	  SKK-JISYO.zipcode \
 	  words.zipcode
+
+.PHONY: test
+test:
+	$(EMACS) --batch --quick --directory test --load test/all-tests.el --funcall ert-run-tests-batch-and-exit
