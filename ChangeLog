@@ -8,7 +8,7 @@
 	* zipcode/ZIPCODE-MK (mkdic-get-line): Use function string-equal() instead of
 	string=().
 
-	* zipcode/ZIPCODE-MK: Modify comment.
+	* zipcode/ZIPCODE-MK: Remove line "(require 'cl)".
 
 2020-02-28  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
