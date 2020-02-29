@@ -5,6 +5,9 @@
 	* zipcode/Makefile.in: Add target `test'.
 	* test/all-tests.el, test/zipcode-test.el: New files.
 
+	* zipcode/ZIPCODE-MK (mkdic-get-line): Use function string-equal() instead of
+	string=().
+
 	* zipcode/ZIPCODE-MK: Modify comment.
 
 2020-02-28  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>

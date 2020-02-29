@@ -117,13 +117,13 @@
        ((= i 8)
 	(forward-char 1)
 	(setq addr3 (buffer-substring (point) (1- (search-forward "\""))))
-	(when (or (string= "ˆÈ‰º‚ÉŒfÚ‚ª‚È‚¢ê‡" addr3)
+	(when (or (string-equal "ˆÈ‰º‚ÉŒfÚ‚ª‚È‚¢ê‡" addr3)
 		  (string-match ".*ˆê‰~$" addr3)
 		  (string-match ".*‚ÌŸ‚É”Ô’n‚ª‚­‚éê‡$" addr3)
 		  (string-match "^[‚O-‚X].*[‚O-‚X]$" addr3))
 	  (setq addr3 ""))
 	;;
-	(when (string= addr3 "•x‰ªi››‰®•~j")
+	(when (string-equal addr3 "•x‰ªi››‰®•~j")
 	  ;; ˆ¤’mŒ§Vés‰®•~’n‹æ?
 	  ;; ˆ¤’mŒ§Vés‰®•~‚Í•Ê”Ô†‚Ì–Í—l
 	  (setq addr3 "•x‰ªi‘å‰®•~A’†‰®•~A“Œ‰®•~A¼‰®•~j"))
@@ -145,7 +145,7 @@
 		      (concat (substring addr3 0 start)
 			      (substring addr3 (1+ start) (match-end 0))))))
 	     ;;
-	     ((and (string= addr1 "‹“s•{")
+	     ((and (string-equal addr1 "‹“s•{")
 		   (string-match "^‹“ss" addr2))
 	      (setq *addr4* (substring addr3 0 start))
 	      (setq *addr3* (substring addr3 start))
@@ -163,7 +163,7 @@
 			 addr3)))
 	      (setq *addr4* (substring addr3 0 start))
 	      (setq *addr3* (substring addr3 start))
-	      (when (string= *addr4* "bA‰³")
+	      (when (string-equal *addr4* "bA‰³")
 		(setq *addr4* ""))
 	      (if (and (string-match ".+j$" *addr3*)
 		       (not (string-match "u\\|v\\|`\\|[‚O-‚X]" *addr3*)))
