@@ -3,7 +3,9 @@
 # Maintainer: SKK Development Team <skk@ring.gr.jp>
 
 COUNT	  = skkdic-count
+CURL      = curl
 DATE	  = date
+EMACS	  = emacs --batch --directory ./
 EXPR	  = skkdic-expr
 EXPR2	  = skkdic-expr2
 GAWK	  = LC_ALL=C gawk
@@ -43,7 +45,8 @@ CDB_TARGET = ./`basename $(CDB_SOURCE)`.cdb
 
 clean:
 	$(RM) *.gz* *~ `find . -name '*~'` `find . -name '.*~'` `find . -name '.#*'` \
-	*.unannotated SKK-JISYO.wrong PBinlineDB.pdb *.tmp *.w PBinlineDB.dic *.taciturn SKK-JISYO.L+ SKK-JISYO.total SKK-JISYO.total+zipcode SKK-JISYO.L.header SKK-JISYO.china_taiwan
+	*.unannotated SKK-JISYO.wrong PBinlineDB.pdb *.tmp *.w PBinlineDB.dic *.taciturn SKK-JISYO.L+ SKK-JISYO.total SKK-JISYO.total+zipcode SKK-JISYO.L.header SKK-JISYO.china_taiwan \
+	emoji-list.txt
 
 archive: gzip
 
@@ -161,5 +164,22 @@ all: annotated-all unannotated-all taciturn-all
 
 cdb:
 	$(PYTHON) $(TOOLS_DIR)/$(SKK2CDB) $(CDB_TARGET) $(CDB_SOURCE)
+
+
+# Unicode emoji
+
+emoji: emoji.tmp
+	echo ';; -*- mode: fundamental; coding: utf-8 -*-' > SKK-JISYO.emoji
+	$(EXPR2) emoji.tmp >> SKK-JISYO.emoji
+	$(RM) emoji.tmp
+
+emoji.tmp: emoji-list.txt
+	$(EMACS) --load emoji.el --funcall text2jisyo > emoji.tmp
+
+emoji-list.txt:
+	$(CURL) -o emoji-list.txt https://unicode.org/emoji/charts-13.0/emoji-list.html
+
+check-midasi:
+	$(EMACS) --load emoji.el --funcall check-midasi
 
 # end of Makefile.
