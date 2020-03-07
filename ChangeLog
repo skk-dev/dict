@@ -1,3 +1,10 @@
+2020-03-07  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* emoji.el: Add new file.
+	* Makefile (emoji): Add new target. Use emoji.el.
+
+	* zipcode/test/zipcode-test.el: Add Copyright, etc.
+
 2020-02-29  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* zipcode/README.md: Update.
