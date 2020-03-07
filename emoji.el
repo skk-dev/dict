@@ -51,7 +51,7 @@
   ;; 見出し語は ascii 文字に限りたい（見出し語を作るための変換操作はイヤ）
   ;; Keyword に含まれる ` ' は `-' とする。
   (let ((lst '((8217 "'")               ; ’
-               (8220 "")                ; 
+               (8220 "")                ;
                (8221 "")                ; ”
                (232 "e")                ; yu è bǐng
                (234 "e")                ; cr ê pe
@@ -72,7 +72,7 @@
   ;; 生成した SKK-JISYO.emoji の各エントリの見出し語をチェック
   ;; 見出し語に用いている文字は ascii の範囲かどうか
   (with-temp-buffer
-    (insert-file-contents (expand-file-name "SKK-JISYO.emoji" "./"))
+    (insert-file-contents (expand-file-name "SKK-JISYO.emoji.tmp" "./"))
     (goto-char (point-min))
     (while (re-search-forward "^\\([^ ]+\\) .*$" nil t)
       (let ((midasi (match-string 0)))
@@ -81,6 +81,104 @@
                            (split-string (match-string 1) "" t)))
           (when (< ?z c)
             (princ (format "%s : %s in %s\n" c (char-to-string c) midasi))))))))
+
+(defun katakana (str)
+  (let* ((lst (split-string str "" t))
+         (d (- #x30a1 #x3041)))
+    (mapconcat #'(lambda (s)
+                   (let ((c (string-to-char s)))
+                     (if (and (< #x30a0 c)
+                              (< c #x30f7))
+                         (char-to-string (- c d))
+                       s)))
+               lst "")))
+
+(defun mk-alist (file)
+  (let (alist)
+    (with-temp-buffer
+      (insert-file-contents file)
+      (goto-char (point-min))
+      (search-forward ";; okuri-nasi entries.")
+      (forward-line)
+      (while (not (eobp))
+        (let* ((line (buffer-substring (point) (progn (end-of-line) (point))))
+               (entry (split-string line " /"))
+               (midasi (car entry))
+               (first-cand (katakana (car (split-string (car (cdr entry)) "/" t)))))
+          (setq alist (cons (cons midasi first-cand) alist)))
+        (forward-line)))
+    alist))
+
+(defun edict-midasi ()
+  (let ((alist (mk-alist (expand-file-name "SKK-JISYO.edict" "./"))))
+    (with-temp-buffer
+      (insert-file-contents (expand-file-name "SKK-JISYO.emoji.tmp" "./"))
+      (goto-char (point-min))
+      (forward-line 3)
+      (while (not (eobp))
+        (let* ((line (buffer-substring (point) (progn (end-of-line) (point))))
+               (entry (split-string line " /"))
+               (midasi (car entry))
+               (cands (car (cdr entry)))
+               (result (cdr (assoc midasi alist))))
+          (when result
+            (princ (format "%s /%s\n" result cands)))
+          (forward-line))))))
+
+(defun mk-allcands-alist (file)
+  (let (alist)
+    (with-temp-buffer
+      (insert-file-contents file)
+      (goto-char (point-min))
+      (search-forward ";; okuri-nasi entries.")
+      (forward-line)
+      (while (not (eobp))
+        (let* ((line (buffer-substring (point) (progn (end-of-line) (point))))
+               (entry (split-string line " /"))
+               (midasi (replace-regexp-in-string ">" "" (car entry)))
+               (cands (split-string (car (cdr entry)) "/" t)))
+          (dolist (cand cands)
+            (setq alist (cons (cons cand midasi) alist))))
+        (forward-line)))
+    alist))
+
+(defun l-midasi ()
+  (let ((alist (mk-allcands-alist (expand-file-name "SKK-JISYO.L.unannotated" "./"))))
+    (with-temp-buffer
+      (insert-file-contents (expand-file-name "emoji-kanji.tmp" "./"))
+      (goto-char (point-min))
+      (forward-line 3)
+      (while (not (eobp))
+        (let* ((line (buffer-substring (point) (progn (end-of-line) (point))))
+               (entry (split-string line " /"))
+               (midasi (car entry))
+               (cands (car (cdr entry)))
+               (result (cdr (assoc midasi alist))))
+          (when result
+            (princ (format "%s /%s\n" result cands)))
+          (forward-line))))))
+
+(defun kana-p (str)
+  "STR の構成がすべて kana なら t."
+  (let ((result t)
+        (lst (split-string str "" t)))
+    (dolist (s lst)
+      (unless (eq (aref char-script-table (string-to-char s))
+                  'kana)
+        (setq result nil)))
+    result))
+
+(defun midasi-kana-p ()
+  (with-temp-buffer
+    (insert-file-contents (expand-file-name "emoji-edict-matched.tmp" "./"))
+    (goto-char (point-min))
+    (while (not (eobp))
+      (let* ((line (buffer-substring (point) (progn (end-of-line) (point))))
+             (entry (split-string line " /"))
+             (midasi (car entry)))
+        (when (kana-p midasi)
+          (princ (format "%s\n" line)))
+        (forward-line)))))
 
 (provide 'make-emoji)
 

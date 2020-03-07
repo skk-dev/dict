@@ -169,17 +169,21 @@ cdb:
 # Unicode emoji
 
 emoji: emoji.tmp
+	$(EXPR2) emoji.tmp > SKK-JISYO.emoji.tmp
+	$(EMACS) --load emoji.el --funcall check-midasi
+	$(EMACS) --load emoji.el --funcall edict-midasi > emoji-edict-matched.tmp
+	$(EMACS) --load emoji.el --funcall midasi-kana-p > emoji-kana-only.tmp
+	$(EXPR2) emoji-edict-matched.tmp - emoji-kana-only.tmp > emoji-kanji.tmp
+	$(EMACS) --load emoji.el --funcall l-midasi >> emoji-kana-only.tmp
 	echo ';; -*- mode: fundamental; coding: utf-8 -*-' > SKK-JISYO.emoji
-	$(EXPR2) emoji.tmp >> SKK-JISYO.emoji
-	$(RM) emoji.tmp
+	$(EXPR2) SKK-JISYO.emoji.tmp + emoji-kana-only.tmp >> SKK-JISYO.emoji
+	$(RM) emoji.tmp SKK-JISYO.emoji.tmp emoji-edict-matched.tmp emoji-kanji.tmp \
+	emoji-kana-only.tmp
 
 emoji.tmp: emoji-list.txt
 	$(EMACS) --load emoji.el --funcall text2jisyo > emoji.tmp
 
 emoji-list.txt:
 	$(CURL) -o emoji-list.txt https://unicode.org/emoji/charts-13.0/emoji-list.html
-
-check-midasi:
-	$(EMACS) --load emoji.el --funcall check-midasi
 
 # end of Makefile.
