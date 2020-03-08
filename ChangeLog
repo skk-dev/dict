@@ -1,3 +1,10 @@
+2020-03-08  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* Makefile (SKK-JISYO.edict): Add new target.
+	* edict_doc.html: Add new file.
+        * edict_doc.txt: Remove file.
+	* SKK-JISYO.edict: Regenerated.
+
 2020-03-07  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* emoji.el: Add new file.

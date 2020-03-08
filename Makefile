@@ -17,6 +17,7 @@ RM	  = /bin/rm -f
 RUBY	  = ruby -I $(TOOLS_DIR)/filters
 SORT	  = skkdic-sort
 TAR	  = tar
+UNZIP	  = unzip -o
 ZIPDIC_DIR  = ./zipcode
 
 DIC2PDB = dic2pdb
@@ -185,5 +186,22 @@ emoji.tmp: emoji-list.txt
 
 emoji-list.txt:
 	$(CURL) -o emoji-list.txt https://unicode.org/emoji/charts-13.0/emoji-list.html
+
+
+# http://www.edrdg.org/jmdict/edict.html
+#   ELECTRONIC DICTIONARY RESEARCH AND DEVELOPMENT GROUP GENERAL DICTIONARY LICENCE STATEMENT
+#   http://www.edrdg.org/edrdg/licence.html
+
+SKK-JISYO.edict: edict
+	echo ';; -*- mode: fundamental; coding: euc-jp -*-' > SKK-JISYO.edict
+	$(GAWK) -f ../tools/convert2skk/edict2skk.awk edict | $(EXPR2) >> SKK-JISYO.edict
+	$(RM) edict edict.jdx 
+
+edict: edict.zip
+	$(UNZIP) edict.zip
+
+edict.zip:
+	$(CURL) -o edict.zip http://ftp.monash.edu/pub/nihongo/edict.zip
+
 
 # end of Makefile.
