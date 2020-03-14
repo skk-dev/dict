@@ -13,6 +13,7 @@ GREP	  = grep
 SED	  = sed
 GZIP	  = gzip -9
 MD5	  = md5
+MV	  = mv --force
 RM	  = /bin/rm -f
 RUBY	  = ruby -I $(TOOLS_DIR)/filters
 SORT	  = skkdic-sort
@@ -192,16 +193,14 @@ emoji-list.txt:
 #   ELECTRONIC DICTIONARY RESEARCH AND DEVELOPMENT GROUP GENERAL DICTIONARY LICENCE STATEMENT
 #   http://www.edrdg.org/edrdg/licence.html
 
-SKK-JISYO.edict: edict
-	echo ';; -*- mode: fundamental; coding: euc-jp -*-' > SKK-JISYO.edict
-	$(GAWK) -f ../tools/convert2skk/edict2skk.awk edict | $(EXPR2) >> SKK-JISYO.edict
-	$(RM) edict edict.jdx 
+SKK-JISYO.edict2: edict2u
+#	$(MV) SKK-JISYO.edict2 SKK-JISYO.edict2.ORIG
+	$(EMACS) --load ../tools/convert2skk/edict2toskk.el --funcall main | $(EXPR2) > SKK-JISYO.edict2.tmp
+	$(EMACS) --load ../tools/convert2skk/edict2toskk.el --funcall after
+	$(MV) SKK-JISYO.edict2.tmp SKK-JISYO.edict2
 
-edict: edict.zip
-	$(UNZIP) edict.zip
-
-edict.zip:
-	$(CURL) -o edict.zip http://ftp.monash.edu/pub/nihongo/edict.zip
-
+edict2u:
+	$(CURL) -o edict2u.gz http://ftp.monash.edu/pub/nihongo/edict2u.gz
+	$(GZIP) --force --decompress edict2u.gz
 
 # end of Makefile.

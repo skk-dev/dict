@@ -1,3 +1,7 @@
+2020-03-14  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* Makefile (SKK-JISYO.edict2): Rename from SKK-JISYO.edict.
+
 2020-03-08  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* Makefile (SKK-JISYO.edict): Add new target.
