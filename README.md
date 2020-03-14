@@ -19,7 +19,8 @@ SKK では個人の環境に応じて、また個人のニーズに応じて様�
 
 複数の辞書を検索指定できる skk 辞書サーバもあります。
 
-SKK 辞書の誤り、追加すべき候補、エントリを発見された方は多少にかかわらず <skk@ring.gr.jp> までお知らせください。
+SKK 辞書の誤り、追加すべき候補、エントリを発見された方は https://github.com/skk-dev/dict へ
+Pull request していただければと思います。
 
 
 ## 1. 基本辞書
@@ -158,13 +159,7 @@ SKK 入力のための基本となる、単独で日本語文の入力が可能�
       [[md5](https://skk-dev.github.io/dict/SKK-JISYO.edict.tar.gz.md5)]
     - 英数文字を見出しにした変換 (abbrev) によって英和変換を実現するための辞書です。
     - [The Electronic Dictionary Research and Development Group](http://www.csse.monash.edu.au/groups/edrdg/) による「和英辞典」edict を `edict2skk.awk` を利用して SKK 辞書形式の「英和辞典」に加工したものです。
-    - edict も独自の copyright notice を設けており、`SKK-JISYO.edict` もこの配布条
-      件に拘束されます。配布条件を簡単に言うと
-          無償で配布する場合、ドキュメント `edict_doc.txt` を常に一緒に配布し、
-          the copyright notice を取り外さない限り、配布可能
-      というものです。
-      詳細は [http://www.csse.monash.edu.au/groups/edrdg/newlic.html](http://www.csse.monash.edu.au/groups/edrdg/newlic.html), `SKK-JISYO.edict` の
-      ヘッダー及び `edict_doc.txt` などをご覧下さい。
+    - edict のライセンスは CC BY-SA 3.0 です。
 
   * zipcode.tar.gz
     - [https://skk-dev.github.io/dict/zipcode.tar.gz](https://skk-dev.github.io/dict/zipcode.tar.gz)
