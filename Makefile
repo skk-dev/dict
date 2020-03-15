@@ -100,7 +100,7 @@ gzip: clean $(ALL_SRCS)
 	  $(GZIP) -fc $$file >$$file.gz ;\
 	  $(MD5) $$file.gz >$$file.gz.md5; \
 	done
-	$(TAR) cvpf SKK-JISYO.edict.tar SKK-JISYO.edict edict_doc.txt
+	$(TAR) cvpf SKK-JISYO.edict.tar SKK-JISYO.edict edict_doc.html
 	$(GZIP) -f SKK-JISYO.edict.tar
 	$(MD5) SKK-JISYO.edict.tar.gz > SKK-JISYO.edict.tar.gz.md5
 	$(TAR) cvzpf zipcode.tar.gz --exclude-from=./skk.ex ./zipcode
@@ -194,10 +194,12 @@ emoji-list.txt:
 #   http://www.edrdg.org/edrdg/licence.html
 
 SKK-JISYO.edict2: edict2u
-#	$(MV) SKK-JISYO.edict2 SKK-JISYO.edict2.ORIG
+	$(MV) SKK-JISYO.edict2 SKK-JISYO.edict2.ORIG
 	$(EMACS) --load ../tools/convert2skk/edict2toskk.el --funcall main | $(EXPR2) > SKK-JISYO.edict2.tmp
 	$(EMACS) --load ../tools/convert2skk/edict2toskk.el --funcall after
 	$(MV) SKK-JISYO.edict2.tmp SKK-JISYO.edict2
+	$(GZIP) -fc SKK-JISYO.edict2 > SKK-JISYO.edict2.gz
+	$(MD5) SKK-JISYO.edict2.gz > SKK-JISYO.edict2.gz.md5
 
 edict2u:
 	$(CURL) -o edict2u.gz http://ftp.monash.edu/pub/nihongo/edict2u.gz
