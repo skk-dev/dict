@@ -1,5 +1,5 @@
 ;; -*- text -*-
-;; SKK-JISYO.L.unannotated was generated automatically by unannotation.awk at Sun Apr  7 19:43:12 2019
+;; SKK-JISYO.L.unannotated was generated automatically by unannotation.awk at Sun Mar 15 09:05:13 2020
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; Large size dictionary for SKK system
 ;; Copyright (C) 1988-1995, 1997, 1999-2014
@@ -22980,6 +22980,7 @@ covering /カバーリング/
 coverstory /カバーストーリー/
 coverup /カバーアップ/
 coverversion /カバーバージョン/
+covid-19 /新型コロナウイルス感染症/
 cow /カウ/
 cowbell /カウベル/
 cowboy /カウボーイ/
@@ -38109,6 +38110,9 @@ sardine /サーディン/
 sari /サリー/サリ/
 sarin /サリン/
 sarod /サロード/サロッド/
+sars /severe acute respiratory syndrome/重症急性呼吸器症候群/
+sars-cov /severe acute respiratory syndrome coronavirus/SARSコロナウイルス
+sars-cov-2 /severe acute respiratory syndrome coronavirus 2/2019新型コロナウイルス
 sartre /サルトル/
 saruman /サルマン/
 sasa /ササ/
