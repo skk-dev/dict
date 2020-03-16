@@ -170,24 +170,22 @@ cdb:
 
 # Unicode emoji
 
-emoji: emoji.tmp
-	$(EXPR2) emoji.tmp > SKK-JISYO.emoji.tmp
-	$(EMACS) --load emoji.el --funcall check-midasi
-	$(EMACS) --load emoji.el --funcall edict-midasi > emoji-edict-matched.tmp
-	$(EMACS) --load emoji.el --funcall midasi-kana-p > emoji-kana-only.tmp
-	$(EXPR2) emoji-edict-matched.tmp - emoji-kana-only.tmp > emoji-kanji.tmp
-	$(EMACS) --load emoji.el --funcall l-midasi >> emoji-kana-only.tmp
-	echo ';; -*- mode: fundamental; coding: utf-8 -*-' > SKK-JISYO.emoji
-	$(EXPR2) SKK-JISYO.emoji.tmp + emoji-kana-only.tmp >> SKK-JISYO.emoji
-	$(RM) emoji.tmp SKK-JISYO.emoji.tmp emoji-edict-matched.tmp emoji-kanji.tmp \
-	emoji-kana-only.tmp
+VER = 36.1
 
-emoji.tmp: emoji-list.txt
-	$(EMACS) --load emoji.el --funcall text2jisyo > emoji.tmp
+SKK-JISYO.emoji: SKK-JISYO.emoji.en SKK-JISYO.emoji.ja
+	$(EXPR2) SKK-JISYO.emoji.en + SKK-JISYO.emoji.ja > SKK-JISYO.emoji
+	$(RM) SKK-JISYO.emoji.en SKK-JISYO.emoji.ja en.xml ja.xml
 
-emoji-list.txt:
-	$(CURL) -o emoji-list.txt https://unicode.org/emoji/charts-13.0/emoji-list.html
+SKK-JISYO.emoji.en: cldr-common.zip
+	test -f en.xml || $(UNZIP) -p cldr-common.zip "*common/annotations/en.xml" > en.xml
+	$(EMACS) --load emoji.el --funcall en > SKK-JISYO.emoji.en
 
+SKK-JISYO.emoji.ja: cldr-common.zip
+	test -f ja.xml || $(UNZIP) -p cldr-common.zip "*common/annotations/ja.xml" > ja.xml
+	$(EMACS) --load emoji.el --funcall ja > SKK-JISYO.emoji.ja
+
+cldr-common.zip:
+	test -f cldr-common.zip || $(CURL) -o cldr-common.zip https://unicode.org/Public/cldr/$(VER)/cldr-common-$(VER).zip
 
 # http://www.edrdg.org/jmdict/edict.html
 #   ELECTRONIC DICTIONARY RESEARCH AND DEVELOPMENT GROUP GENERAL DICTIONARY LICENCE STATEMENT
