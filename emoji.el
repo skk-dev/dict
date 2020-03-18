@@ -26,17 +26,18 @@
 
 (require 'dom)
 
-(defun xml-to-jisyo (file)
-  (let* ((xml-dom-tree (with-temp-buffer
-                        (insert-file-contents file)
-                        (libxml-parse-xml-region (point-min) (point-max))))
+(defun xml-to-jisyo (file &optional kanjionly)
+  (let* ((xml-dom-tree (with-temp-buffer (insert-file-contents file)
+                                         (libxml-parse-xml-region (point-min) (point-max))))
          (doms-anno (dom-by-tag xml-dom-tree 'annotation)))
     (mapc #'(lambda (dom-anno)
               (let ((annos (split-string (dom-text dom-anno) " | "))
                     (cp (dom-attr dom-anno 'cp)))
                 (mapc #'(lambda (anno)
                           (and (validate anno)
-                               (validate2 anno)
+                               (if kanjionly
+                                   (validate3 anno)
+                                 (validate2 anno))
                                (princ (format "%s /%s/\n" (treat anno) cp))))
                       annos)))
           doms-anno)))
@@ -61,6 +62,16 @@
              (member 'symbol lst)
              ))))
 
+(defun validate3 (anno)
+  ;; すべてが漢字だけで構成されている文字列であれば t
+  ;; １文字でも漢字以外があれば nil
+  (let* ((strings (split-string anno "" t))
+         (result t))
+    (dolist (s strings)
+      (unless (eq 'han (aref char-script-table (string-to-char s)))
+        (setq result nil)))
+    result))
+
 (defun treat (str)
   (let ((lst `((,(char-to-string 232) . "e") ; è
                (,(char-to-string 234) . "e") ; ê
@@ -78,6 +89,8 @@
                       str)
     (princ (format "Found non-ascii : %s\n" str) 'external-debugging-output))
 
+  (setq str (downcase str))
+
   ;; 片仮名を平仮名へ変換
   (let ((diff (- #x30a1 #x3041))
         (lst (split-string str "" t))
@@ -85,16 +98,64 @@
     (mapconcat #'(lambda (s)
                    (setq c (string-to-char s))
 		   (if (and (<= #x30a1 c) (<= c #x30f6))
-		     (char-to-string (- c diff))
-		   (char-to-string c)))
+		       (char-to-string (- c diff))
+		     (char-to-string c)))
                lst "")))
 
 (defun ja ()
   (xml-to-jisyo "ja.xml"))
 
+(defun kanjionly ()
+  (xml-to-jisyo "ja.xml" t))
+
 (defun en ()
   (xml-to-jisyo "en.xml"))
 
+(defvar kanji2kana-alist nil)
+
+(defun make-alist ()
+    (let (alist)
+      (with-temp-buffer
+        (insert-file-contents "SKK-JISYO.L.unannotated")
+        (goto-char (point-min))
+        (re-search-forward "^あ /.+$")
+        (beginning-of-line)
+        (while (not (eobp))
+          (let* ((line (buffer-substring (point) (progn (end-of-line) (point))))
+                 (lst (split-string line " /"))
+                 (kana-midasi (car lst))
+                 (kanji-cands (format "/%s" (car (cdr lst)))))
+            (unless (string-match ">" kana-midasi)
+              (setq alist (cons (cons kana-midasi kanji-cands) alist))))
+          (forward-line)))
+      alist))
+
+(defun kanji-to-kana ()
+  (setq kanji2kana-alist (make-alist))
+  (with-temp-buffer
+      (insert-file-contents "SKK-JISYO.emoji.kanji")
+      (let ((c (count-lines (point-min) (point-max)))
+            (i 1))
+        (goto-char (point-min))
+        (while (re-search-forward "^\\([^ ]+\\) /\\(.+\\)/$" nil t)
+          (let ((kanji (match-string 1))
+                (cands (match-string 2))
+                kana-lst)
+            (when (zerop (mod i 20))
+              (princ (format "kanji-to-kana : %d/%d, %s\n" i c kanji) 'external-debugging-output))
+            (when (setq kana-lst (get-kana kanji))
+              (mapc #'(lambda (kana)
+                        (princ (format "%s /%s/\n" kana cands)))
+                    kana-lst)))
+            (setq i (1+ i))))))
+
+(defun get-kana (kanji-key)
+  (let ((kanji-key (format "/%s/" kanji-key))
+        result)
+    (dolist (cell kanji2kana-alist)
+      (when (string-match kanji-key (cdr cell))
+        (setq result (cons (car cell) result))))
+    result))
 
 (provide 'emoji)
 

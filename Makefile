@@ -172,10 +172,12 @@ cdb:
 
 VER = 36.1
 
-SKK-JISYO.emoji: SKK-JISYO.emoji.en SKK-JISYO.emoji.ja unicode-license.txt
-	$(EXPR2) SKK-JISYO.emoji.en + SKK-JISYO.emoji.ja > SKK-JISYO.emoji.tmp
+SKK-JISYO.emoji: SKK-JISYO.emoji.en SKK-JISYO.emoji.ja SKK-JISYO.emoji.kana unicode-license.txt
+	$(EXPR2) SKK-JISYO.emoji.en + SKK-JISYO.emoji.ja + SKK-JISYO.emoji.kana \
+	  > SKK-JISYO.emoji.tmp
 	$(SED) "s/^/;; /g" unicode-license.txt | cat - SKK-JISYO.emoji.tmp > SKK-JISYO.emoji
-	$(RM) SKK-JISYO.emoji.en SKK-JISYO.emoji.ja en.xml ja.xml SKK-JISYO.emoji.tmp
+	$(RM) SKK-JISYO.emoji.en SKK-JISYO.emoji.ja en.xml ja.xml
+	$(RM) SKK-JISYO.emoji.tmp SKK-JISYO.emoji.kana
 
 SKK-JISYO.emoji.en: cldr-common.zip
 	test -f en.xml || $(UNZIP) -p cldr-common.zip "*common/annotations/en.xml" > en.xml
@@ -184,6 +186,14 @@ SKK-JISYO.emoji.en: cldr-common.zip
 SKK-JISYO.emoji.ja: cldr-common.zip
 	test -f ja.xml || $(UNZIP) -p cldr-common.zip "*common/annotations/ja.xml" > ja.xml
 	$(EMACS) --load emoji.el --funcall ja > SKK-JISYO.emoji.ja
+
+SKK-JISYO.emoji.kana: SKK-JISYO.emoji.kanji
+	$(EMACS) --load emoji.el --funcall kanji-to-kana > SKK-JISYO.emoji.kana
+	$(RM) SKK-JISYO.emoji.kanji
+
+SKK-JISYO.emoji.kanji: cldr-common.zip
+	test -f ja.xml || $(UNZIP) -p cldr-common.zip "*common/annotations/ja.xml" > ja.xml
+	$(EMACS) --load emoji.el --funcall kanjionly | $(EXPR2) > SKK-JISYO.emoji.kanji
 
 unicode-license.txt: cldr-common.zip
 	test -f unicode-license.txt || $(UNZIP) -p cldr-common.zip "*unicode-license.txt" > unicode-license.txt
