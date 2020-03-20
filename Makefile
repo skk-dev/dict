@@ -217,4 +217,18 @@ edict2u:
 	$(CURL) -o edict2u.gz http://ftp.monash.edu/pub/nihongo/edict2u.gz
 	$(GZIP) --force --decompress edict2u.gz
 
+
+# Unicode Ideographic Variation Database (IVD)
+
+SKK-JISYO.ivd: IVD_Sequences.txt IVD_Collections.txt
+	$(EMACS) --load ivd.el --funcall make-ivd-jisyo | $(EXPR2) > SKK-JISYO.ivd.tmp
+	$(SED) "s/^/;; /g" unicode-license.txt | cat - SKK-JISYO.ivd.tmp > SKK-JISYO.ivd
+	$(RM) SKK-JISYO.ivd.tmp
+
+IVD_Sequences.txt:
+	test -f IVD_Sequences.txt || $(CURL) -o IVD_Sequences.txt https://unicode.org/ivd/data/2017-12-12/IVD_Sequences.txt
+
+IVD_Collections.txt:
+	test -f IVD_Collections.txt || $(CURL) -o IVD_Collections.txt https://unicode.org/ivd/data/2017-12-12/IVD_Collections.txt
+
 # end of Makefile.

@@ -1,3 +1,15 @@
+2020-03-20  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* SKK-JISYO.ivd: Add new jisyo file.
+
+	* Makefile (SKK-JISYO.ivd): Add new target.
+
+	* ivd.el: Add new file.
+
+2020-03-18  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* SKK-JISYO.emoji: Add new jisyo file.
+
 2020-03-16  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* Makefile (SKK-JISYO.emoji): Rewrite. Use Unicode CLDR.
