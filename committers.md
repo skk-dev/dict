@@ -72,6 +72,29 @@ Public domain です。
 
 ただし、これらを生成するためのプログラムは GPL が適用されます。
 
+## 2.6. SKK-JISYO.emoji
+
+SKK-JISYO.emoji は、[Unicode Common Locale Data Repository](http://cldr.unicode.org/)
+の cldr-common.zip に含まれる annotations/[en|ja].xml から生成していま
+す。
+
+```
+make SKK-JISYO.emoji
+```
+
+unicode license です。
+
+## 2.7. SKK-JISYO.ivd
+
+SKK-JISYO.ivd は、 https://unicode.org/ の ivd/data/*/IVD_Sequences.txt
+から生成しています。
+
+```
+make SKK-JISYO.ivd
+```
+
+unicode license です。
+
 
 # 3. 各辞書の編集方針について
 
