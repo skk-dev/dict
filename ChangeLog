@@ -1,3 +1,8 @@
+2020-03-21  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* SKK-JISYO.fullname: Change coding-system-name euc-jis-2004
+	from euc-jp. this file include JIS X 0213 characters.
+
 2020-03-20  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* SKK-JISYO.ivd: Add new jisyo file.
