@@ -5,17 +5,11 @@ Refer to the following URL for the distribution files.
 https://skk-dev.github.io/dict/
 
 
-# 辞書ファイルの編集
+# 辞書ファイルを編集する
 
-ChangeLog の記述には 「真鵺道」(まぬえど) を使います。
+[committers.md](committers.md) を参照してください。
 
-  - https://sundayresearch.eu/hitoshi/otherprojects/manued/index-j.html
-  - https://github.com/yamauchih/manued
-
-
-# 辞書ファイルの公開
-
-## 配布用の gzip アーカイブを作る
+# 配布用の gzip アーカイブを作る
 
 `make archive` を実行すると、配布用の gzip ファイルを作ることができます。
 この過程では `skktools` を用いて `csv/china_taiwan.csv` から `SKK-JISYO.china_taiwan` を
@@ -40,6 +34,7 @@ $ mv zipdoce.*.gz ../
 $ mv zipdoce.*.md5 ../
 ```
 
+
 ## make の副作用
 
 `make archive` の実行過程で、いくつかのファイルが更新される場合があります。
@@ -60,7 +55,6 @@ Changes not staged for commit:
 ```
 $ git add -u && git commit
 ```
-
 
 
 ## 配布用の gzip アーカイブをブランチ gh-pages に配置
