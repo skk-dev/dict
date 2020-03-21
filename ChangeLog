@@ -1,3 +1,7 @@
+2020-03-22  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* committers.md: Rename from committers.txt
+
 2020-03-21  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* SKK-JISYO.fullname: Change coding-system-name euc-jis-2004
