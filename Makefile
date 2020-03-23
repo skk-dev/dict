@@ -175,7 +175,7 @@ VER = 36.1
 SKK-JISYO.emoji: SKK-JISYO.emoji.en SKK-JISYO.emoji.ja SKK-JISYO.emoji.kana unicode-license.txt
 	$(EXPR2) SKK-JISYO.emoji.en + SKK-JISYO.emoji.ja + SKK-JISYO.emoji.kana \
 	  > SKK-JISYO.emoji.tmp
-	$(SED) "s/^/;; /g" unicode-license.txt | cat - SKK-JISYO.emoji.tmp > SKK-JISYO.emoji
+	echo '-*- mode: fundamental; coding: utf-8 -*-' | cat - unicode-license.txt | $(SED) "s/^/;; /g" | cat - SKK-JISYO.emoji.tmp > SKK-JISYO.emoji
 	$(RM) SKK-JISYO.emoji.en SKK-JISYO.emoji.ja en.xml ja.xml
 	$(RM) SKK-JISYO.emoji.tmp SKK-JISYO.emoji.kana
 
@@ -222,7 +222,7 @@ edict2u:
 
 SKK-JISYO.ivd: IVD_Sequences.txt IVD_Collections.txt
 	$(EMACS) --load ivd.el --funcall make-ivd-jisyo | $(EXPR2) > SKK-JISYO.ivd.tmp
-	$(SED) "s/^/;; /g" unicode-license.txt | cat - SKK-JISYO.ivd.tmp > SKK-JISYO.ivd
+	echo '-*- mode: fundamental; coding: utf-8 -*-' | cat - unicode-license.txt | $(SED) "s/^/;; /g" | cat - SKK-JISYO.ivd.tmp > SKK-JISYO.ivd
 	$(RM) SKK-JISYO.ivd.tmp
 
 IVD_Sequences.txt:
