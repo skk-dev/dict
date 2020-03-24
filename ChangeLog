@@ -1,3 +1,10 @@
+2020-03-24  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* emoji.el (get-codepoint): New function.
+	(xml-to-jisyo): Use it.
+
+	* SKK-JISYO.emoji: Add skk annotation (unicode codepoint).
+
 2020-03-23  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* emoji.el: Update comment.

@@ -15,13 +15,11 @@
 
 ;; (2) お寿司 /🍣/
 ;;     漢字混じりの見出し語とならないよう（かな入力できない。補完もできない）
-;;     出力していない。 validate2()
+;;     出力していません。 validate2()
 ;;     しかし、すべて漢字で構成される見出し語であれば、
-;;     L 辞書 unannotated と突合して漢字をかなへ変換している。
+;;     L 辞書 unannotated と突合して漢字をかなへ変換しています。
 
-;;; TODO:
-;; (2) 候補に skk アノテーションを付加する
-;;     Short Name や U+9999 など
+;; (3) 候補には skk アノテーションとして U+9999 を付加しています。
 
 ;;; Code:
 
@@ -39,9 +37,14 @@
                                (if kanjionly
                                    (validate3 anno)
                                  (validate2 anno))
-                               (princ (format "%s /%s/\n" (treat anno) cp))))
+                               (princ (format "%s /%s;%s/\n" (treat anno) cp (get-codepoint cp)))))
                       annos)))
           doms-anno)))
+
+(defun get-codepoint (str)
+  (mapconcat #'(lambda (s)
+               (format "U+%x" (string-to-char s)))
+           (split-string str "" t) ","))
 
 (defun validate (anno)
   ;; ひとつでも t なら nil、すべて nil なら t
