@@ -1,3 +1,7 @@
+2020-12-26  Tetsuo Tsukamoto  <tt.tetsuo.tsukamoto@gmail.com>
+
+	* SKK-JISYO.pinyin: New file.
+
 2020-03-24  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
 	* emoji.el (get-codepoint): New function.
