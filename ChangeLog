@@ -1,3 +1,7 @@
+2021-01-26  Tatsuya Kinoshita  <tats@debian.org>
+
+	* Makefile (SKK-JISYO.edict2): Use TOOLS_DIR.
+
 2020-12-26  Tetsuo Tsukamoto  <tt.tetsuo.tsukamoto@gmail.com>
 
 	* SKK-JISYO.pinyin: New file.

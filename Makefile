@@ -207,8 +207,8 @@ cldr-common.zip:
 
 SKK-JISYO.edict2: edict2u
 	$(MV) SKK-JISYO.edict2 SKK-JISYO.edict2.ORIG
-	$(EMACS) --load ../tools/convert2skk/edict2toskk.el --funcall main | $(EXPR2) > SKK-JISYO.edict2.tmp
-	$(EMACS) --load ../tools/convert2skk/edict2toskk.el --funcall after
+	$(EMACS) --load $(TOOLS_DIR)/convert2skk/edict2toskk.el --funcall main | $(EXPR2) > SKK-JISYO.edict2.tmp
+	$(EMACS) --load $(TOOLS_DIR)/convert2skk/edict2toskk.el --funcall after
 	$(MV) SKK-JISYO.edict2.tmp SKK-JISYO.edict2
 	$(GZIP) -fc SKK-JISYO.edict2 > SKK-JISYO.edict2.gz
 	$(MD5) SKK-JISYO.edict2.gz > SKK-JISYO.edict2.gz.md5
