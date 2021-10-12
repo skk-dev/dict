@@ -1,4 +1,4 @@
-;; -*- mode: fundamental; coding: euc-jp -*-
+;; -*- mode: fundamental; -*-
 ;; Geographical dictionary for SKK system
 ;; Copyright (C) 2001, 2002, 2003-2005
 ;;

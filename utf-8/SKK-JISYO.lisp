@@ -1,4 +1,4 @@
-;; -*- mode: fundamental; coding: euc-jp -*-
+;; -*- mode: fundamental; -*-
 ;; Lisp dictionary for SKK system
 ;; Copyright (C) 1988-1995, 1997, 1999-2010, 2014-2015
 ;;

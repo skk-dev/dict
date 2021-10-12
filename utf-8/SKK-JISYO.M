@@ -1,4 +1,4 @@
-;; -*- mode: fundamental; coding: euc-jp -*-
+;; -*- mode: fundamental; -*-
 ;; Medium size dictionary for SKK system
 ;; Copyright (C) 1988-1995, 1999-2001, 2003, 2004
 ;; Masahiko Sato <masahiko@kuis.kyoto-u.ac.jp>
