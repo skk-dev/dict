@@ -447,6 +447,7 @@
 (defun mkdic-zipcode-header ()
   (with-temp-buffer
     (insert "\
+;; -*- coding: euc-jp; -*-
 ;; SKK-JISYO.zipcode --- 7-digit ZIP code dictionary for SKK
 " JISYO_HEADER)
     (let ((time-stamp-format "%02d %03b %y")
@@ -459,6 +460,7 @@
 (defun mkdic-office-header ()
   (with-temp-buffer
     (insert "\
+;; -*- coding: euc-jp; -*-
 ;; SKK-JISYO.office.zipcode --- 7-digit ZIP code (offices) dictionary for SKK
 " JISYO_HEADER)
     (let ((time-stamp-format "%02d %03b %y")
