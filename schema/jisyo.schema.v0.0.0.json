@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": {},
+  "id": "jisyo.schema.v0.0.0.json",
+  "title": "Jisyo",
+  "description": "SKKの変換エンジンのための辞書形式",
+  "$comment": "必須の項目に加えて任意の項目を追加してもよい",
+  "$comment": "JSONの仕様と同じくBOM無しのUTF-8で記述する",
+  "required": [
+    "copyright",
+    "license",
+    "okuri_ari",
+    "okuri_nasi"
+  ],
+  "properties": {
+    "copyright": {
+      "type": "string",
+      "description": "辞書作成者の著作権表示"
+    },
+    "license": {
+      "type": "string",
+      "description": "辞書のライセンス条文",
+      "$comment": "ライセンス名のみの記述は非推奨である"
+    },
+    "version": {
+      "type": "string",
+      "description": "辞書形式の版",
+      "$comment": "Semverに基づいて記述することが好ましい",
+      "$comment": "辞書自体の版ではない"
+    },
+    "okuri_ari": {
+      "additionalProperties": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "type": "object",
+      "description": "送り仮名があるエントリ"
+    },
+    "okuri_nasi": {
+      "additionalProperties": {
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "type": "object",
+      "description": "送り仮名がないエントリ"
+    }
+  },
+  "type": "object"
+}
