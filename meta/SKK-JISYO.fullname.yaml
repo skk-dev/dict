@@ -1,0 +1,37 @@
+version: 0.0.0
+description: フルネーム辞書 for SKK system
+copyright: |-
+  Copyright (C) 2004-2006 Akie Kaidoh <kaidoh@ma.ctk.ne.jp>
+  Copyright (C) 2004-2006 SKK Development Team <skk@ring.gr.jp>
+license: |-
+  This dictionary is free software; you can redistribute it and/or
+  modify it under the terms of the GNU General Public License as
+  published by the Free Software Foundation; either version 2, or
+  (at your option) any later version.
+
+  This dictionary is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with GNU Emacs; see the file COPYING.  If not, write to the
+  Free Software Foundation Inc., 51 Franklin St, Fifth Floor, Boston,
+  MA 02110-1301, USA.
+note: |-
+  本辞書は、海道昭恵氏の公開されておられる音訳用の人名録
+
+  　　http://www.ctk.ne.jp/~kaidoh/
+
+  を SKK 辞書形式に変換したものをベースに加除したものです。
+  新聞に掲載された同時代の人名、約30,000ペアが収められています。
+  (NB: 外国人名等が未整理のため現在の実数は 26,940 です)
+
+  オリジナルの人名録にある肩書などの属性はそのまま SKK annotation
+  として辞書内に含めています。annotation が不要な方は
+  skk/dic/unannotation.awk を利用して削除して下さい。
+
+  肩書等は新聞掲載当時のもののため、現況と一致しない場合があります。
+
+  (2011.1.18 追記) このファイルは間違いが含まれている可能性が指摘され
+  ています。現在積極的メンテナはいません。利用には注意が必要です。

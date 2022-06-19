@@ -1,0 +1,24 @@
+version: 0.0.0
+description: 人名辞書 for SKK system
+copyright: |-
+  Copyright (C) 1993 Wnn Consortium
+  Copyright (C) 2002, 2003, 2004 SKK Development Team <skk@ring.gr.jp>
+license: |-
+  This dictionary is free software; you can redistribute it and/or
+  modify it under the terms of the GNU General Public License as
+  published by the Free Software Foundation; either version 2, or
+  (at your option) any later version.
+
+  This dictionary is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with GNU Emacs; see the file COPYING.  If not, write to the
+  Free Software Foundation Inc., 59 Temple Place - Suite 330, Boston,
+  MA 02111-1307, USA.
+note: |-
+  本辞書は、skk/tools/convert2skk/wnn2skk.awk を利用し「人名辞書 (gerodic) 1.00」を SKK 辞書形式に変換したものをベースに加除した ものです。
+  % gawk -f wnn2skk.awk gerodic/g-jinmei.u > temp % skkdic-expr temp | skkdic-sort > SKK-JISYO.jinmei
+  Wnn の品詞データ、コメントは SKK annotation として辞書内に含め ています。annotation が不要な方は skk/dic/unannotation.awk を利 用して削除して下さい。

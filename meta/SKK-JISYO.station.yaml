@@ -1,0 +1,39 @@
+version: 0.0.0
+description: SKK railroad stations dictionary.
+copyright: |-
+  Copyright (C) 2003-2005 MITA Yuusuke  <clefs@mail.goo.ne.jp>
+                SKK Development Team <skk@ring.gr.jp>
+license: |-
+  This dictionary is free software; you can redistribute it and/or
+  modify it under the terms of the GNU General Public License as
+  published by the Free Software Foundation; either version 2, or
+  (at your option) any later version.
+
+  This dictionary is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Daredevil SKK, see the file COPYING.  If not, write to
+  the Free Software Foundation Inc., 51 Franklin St, Fifth Floor,
+  Boston, MA 02110-1301, USA.
+note: |-
+  日本国内の鉄道の駅名および路線名を収録した辞書です。
+
+  基本的に、全ての駅名について「駅」のついた形とつかない形の双方で
+  収録してあります。
+  (TIP: 「えき」をつけて変換して、駅の字だけ消す方が速く入力できる
+   場合があります)
+
+  廃駅・廃線については基本的に削除の対象にはしない方針です。
+
+  同音異駅のある場合のみ、路線名をannotationとして付与しています。
+
+
+   Acknowledgment:
+
+  この辞書の作成に当たり、特に以下のリソースを参考にさせていただきました。
+  作成・公開された皆様に感謝いたします。
+
+  http://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E3%81%AE%E9%89%84%E9%81%93%E9%A7%85%E4%B8%80%E8%A6%A7

@@ -1,0 +1,54 @@
+version: 0.0.0
+description: Large size dictionary for SKK system
+copyright: |-
+  Copyright (C) 1988-1995, 1997, 1999-2014
+
+  Masahiko Sato <masahiko@kuis.kyoto-u.ac.jp>
+  Hironobu Takahashi <takahasi@tiny.or.jp>,
+  Masahiro Doteguchi, Miki Inooka,
+  Yukiyoshi Kameyama <kameyama@kuis.kyoto-u.ac.jp>,
+  Akihiko Sasaki, Dai Ando, Junichi Okukawa,
+  Katsushi Sato and Nobuhiro Yamagishi
+  NAKAJIMA Mikio <minakaji@osaka.email.ne.jp>
+  MITA Yuusuke <clefs@mail.goo.ne.jp>
+  SKK Development Team <skk@ring.gr.jp>
+license: |-
+  This dictionary is free software; you can redistribute it and/or
+  modify it under the terms of the GNU General Public License as
+  published by the Free Software Foundation; either version 2, or
+  (at your option) any later version.
+
+  This dictionary is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Daredevil SKK, see the file COPYING.  If not, write to
+  the Free Software Foundation Inc., 59 Temple Place - Suite 330,
+  Boston, MA 02111-1307, USA.
+note: |-
+  Acknowledgement:
+  この辞書は、SKK 原作者の佐藤雅彦先生が、第 1 版作成のために東北大学
+  電気通信研究所佐藤研究室 (当時) の学生さん達とともに scratch から作
+  成されたのをその起源とし、その後、無数のユーザからのユーザ辞書の提
+  供やフォームによる追加・校閲によって今尚日々メンテナンスされている日
+  本で最大規模の、GPL による copy free の辞書です。
+
+  この辞書の作成にご尽力頂いた全ての方に感謝すると共に、これをお読み
+  のあなたのご協力を是非ともお待ちしております。
+
+    http://openlab.ring.gr.jp/skk/registdic.cgi
+
+  にアクセスし、フォームに是非あなたの新語・誤登録指摘・コメントを書
+  いて下さい。
+
+  また、実際に辞書の編集をしてみたいという方は、
+
+    http://openlab.ring.gr.jp/skk/cvs-ja.html#account
+
+  をご覧の上、cvs account の発行申し込みをして下さい。
+
+  辞書の編集方針は skk/dic/READMEs/committers.txt をご参照下さい。
+  そこに記載のない事項、またその変更については、その都度 SKK Openlab
+  ML で話し合いで決められます。

@@ -1,0 +1,46 @@
+version: 0.0.0
+description: SKK propernoun dictionary.
+copyright: |-
+  Copyright (C) 2003-2006 MITA Yuusuke  <clefs@mail.goo.ne.jp>
+                SKK Development Team <skk@ring.gr.jp>
+license: |-
+  This dictionary is free software; you can redistribute it and/or
+  modify it under the terms of the GNU General Public License as
+  published by the Free Software Foundation; either version 2, or
+  (at your option) any later version.
+
+  This dictionary is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Daredevil SKK, see the file COPYING.  If not, write to
+  the Free Software Foundation Inc., 51 Franklin St, Fifth Floor,
+  Boston, MA 02110-1301, USA.
+note: |-
+  この辞書は、芸能・音楽・アニメ・企業・組織などなどの固有名詞のうち、 geo辞書にもjinmei辞書にも当てはまらないものを集めたものです。
+  「固有性とは何か？」などと難しいことは考えずに、 来るものは拒まずで大らかに採録しています。(議論歓迎) お気軽にフォームまで登録希望をお寄せ下さい：
+  http://openlab.jp/skk/registdic.cgi
+
+  重点強化項目：
+  ・出版社名・文庫・新書・叢書名など これは網羅性を目指すか、主要なもののみにするか難しいところです。
+  しちょうしゃ /思潮社;[出版社名]現代詩専門/ げんだいしぶんこ /現代詩文庫;思潮社/ みしましょう /三島賞/三島由紀夫賞;※abbrev/ ; 文学賞 みしまゆきおしょう /三島由紀夫賞/ びじゅつてちょう /美術手帖;[雑誌名]美術出版社/ ; 雑誌名
+  ・東証一部上場企業 「[企業名]」の後の４桁の数字は証券コードです。 網羅性を志しています。新規上場や名称変更がありましたらご一報を お願いいたします。 (東証一部以外は採録しないということではありません。)
+  advantest /アドバンテスト;[企業名]6857/(株)アドバンテスト;[企業名]6857/株式会社アドバンテスト;[企業名]6857/ omせいさくしょ /オーエム製作所;[企業名]6213/(株)オーエム製作所;[企業名]6213/株式会社オーエム製作所;[企業名]6213/ ; 現状では入力できない きしゅうせいし /紀州製紙;[企業名]3882/紀州製紙(株);[企業名]3882/紀州製紙株式会社;[企業名]3882/
+  MEMO 証券コード→企業名の変換ができると良いが 単純にコードを見出しにすると弊害が出る。うまい方法はないか？
+  ・大学・大学校 国内の現存する高等教育機関は網羅を、 国外のものについては適宜需要のありそうなところの収録を目指す方針です。 略称については、「大学」を機械的に「大」に置き換えて収録しているほか、 通用している略称・愛称も適宜収録します。
+  あいだい /愛大/愛知大学;※abbrev/愛媛大学;※abbrev/ あいちだい /愛知大/ あいちだいがく /愛知大学/ はーばーどだい /ハーバード大;Harvard University. www.harverd.edu/ はーばーどだいがく /ハーバード大学;Harvard University. www.harverd.edu/
+  学部名などを付けた形では積極的には収録しない方針ですが、 L辞書などに既に入っていたものは暫定的にこちらに収めてあります。 小中高校名などもこれに準じます。
+  けいだいかんきょうじょうほう /慶大環境情報/ おうびりんこうこう /桜美林高校/
+  ・放送局名 国内の主要な放送局名を収録しています。 annotationは略称とコールサインです。連想辞書にこれらを見出しにした 形のエントリが収録されています。 びわこほうそう /びわ湖放送;BBC,JOBL-TV/ ふくいえふえむほうそう /福井エフエム放送;JOLU-FM/福井FM放送/
+  ・藩と国 あいづはん /会津藩/ あきのくに /安芸国/安芸の国/ あいづはんし /会津藩士/ ; 藩士 (低頻度なものもある) あいづはんしゅ /会津藩主/ ; 藩主 あきのかみ /安芸守/ ; 国司
+  ・年号(元号) 日本で使用された年号を、数値変換および数値変換でもフォローできない 「元年」つきの形とセットで収録しています。 あんせい /安政;年号(1854-1860)/ あんせいがんねん /安政元年;1854/ ; 「○○末年」は未収 あんせい#ねん /安政#2年;年号(1854-1860)/安政#3年/安政#0年/安政#1年/ あんせいき /安政期;(1854-1860)/         ;「期」「年間」「時代」は あんせいじだい /安政時代;(1854-1860)/   ; 主要なもののみ あんせいねんかん /安政年間;(1854-1860)/
+  ・歴代内閣名 いとうないかく /伊藤内閣/ いとうひろぶみないかく /伊藤博文内閣/ いとうないかく /伊藤内閣;1885-88,92-96,98,1900-01/ いとうひろぶみないかく /伊藤博文内閣;1885-88,92-96,98,1900-01/ (NOTE 「○○首相」「○○総理」は？　jinmei？)
+  ・裁判所名と検察庁名(8高裁・50地裁。50家裁・438簡裁は未収) みとちさい /水戸地裁;茨城/水戸地方裁判所;※abbrev/ みとちけん /水戸地検;茨城/水戸地方検察庁;※abbrev/
+  ・都道府県警・庁・民・立 (NOTE ○○市立・市役所はどうしましょう) あおもりけんけい /青森県警/ あおもりけんちょう /青森県庁/ あおもりけんみん /青森県民/ あおもりけんりつ /青森県立/
+  ・星座名(88) 天文学や占星術で使われる略語をannotateしています。 なお、この略語を見出しにしたエントリは連想辞書に収録されています。
+  おひつじざ /牡羊座;Aries(Ari)/おひつじ座/ (連想辞書) Ari /牡羊座/おひつじ座/Aries/
+
+
+  TODO ・主要雑誌名 (作業進行中、乞登録希望) ・幹線道路名 (膨大になるようならSKK-JISYO.road?) ・通り(street)の名前 ・古典文学作品名 ・仏典・経文名 ・中国元号 (+「人」「期」「末」etc) (SKK-JISYO.historyがほしい...)

@@ -1,0 +1,10 @@
+version: 0.0.0
+copyright: |-
+  Copyright (C) 2017
+    The Electronic Dictionary Research and Development Group.
+    http://www.edrdg.org/
+license: |-
+  Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+  <https://creativecommons.org/licenses/by-sa/3.0/deed>
+  <https://creativecommons.org/licenses/by-sa/3.0/legalcode>
+note: "SKK-JISYO.edict は The Electronic Dictionary Research and Development Group\nによる「和英辞典」edict を SKK 辞書形式の「英和辞典」に機械的に変換したもの\nです。\n\nThe EDICT Dictionary File -- http://www.edrdg.org/jmdict/edict.html\n    EDICT can be freely used provided satisfactory acknowledgement is made\n    in any software product, server, etc. that uses it. There are a few other\n    conditions relating to distributing copies of EDICT with or without modification.\n    Copyright is vested in the EDRG (Electronic Dictionary Research Group)\n    with the file available under a Creative Commons Attribution-ShareAlike Licence (V3.0).\n    You can see the specific licence statement at the Group's site. "

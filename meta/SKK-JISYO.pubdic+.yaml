@@ -1,0 +1,16 @@
+version: 0.0.0
+description: Pubdic+ dictionary for SKK system
+copyright: |-
+  Copyright (C) 2000 the Pubdic+ project.
+                2002, 2003, 2004 SKK Development Team <skk@ring.gr.jp>
+license: |-
+  THE PUBDIC+ PROJECT DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS
+  PACKAGE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+  FITNESS, IN NO EVENT SHALL PUBDIC+ PROJECT BE LIABLE FOR ANY SPECIAL,
+  INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING
+  FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+  NEGLIGENCE OR OTHER TORTUOUS ACTION, ARISING OUT OF OR IN CONNECTION
+  WITH THE USE OR PERFORMANCE OF THIS PACKAGE.
+note: |-
+  This file is made by the following steps;
+  $ pubdic2list pubdic.p | adddummy | sort -u | removedummy | list2skk > temp $ skkdic-expr2 temp - SKK-JISYO.L > SKK-JISYO.pubdic+ (and some edit to remove entries that cannot be used with SKK).
