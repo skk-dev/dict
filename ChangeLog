@@ -1,3 +1,36 @@
+2023-01-09  Takushi Usami  <takushi1969@gmail.com>
+
+	* zipcode: update dictonaries on 2022/05/05.
+
+	* zipcode/ZIPCODE-MK: change coding in order to represent characters
+	correctly.
+
+	* zipcode/ZIPCODE-MK: insert a magic comment about coding.
+
+2023-01-09  tgw314  <52594217+tgw314@users.noreply.github.com>
+
+	* SKK-JISYO.L, SKK-JISYO.L.unannotated: fix typo; 魏史 -> 魏志.
+
+2023-01-09  Naoya Yamashita  <conao3@gmail.com>
+
+	* SKK-JISYO.L.unannotated, SKK-JISYO.wrong: regenarate dict files.
+
+2021-10-12  Naoya Yamashita  <conao3@gmail.com>
+
+	* SKK-JISYO.L: fix typo; 発生確立 -> 発生確率.
+
+2021-07-05  orumin  <dev@orum.in>
+
+	* SKK-JISYO.fullname: correct entry.
+
+2021-05-09  blame2020  <7962083-hiraku_sugiura@users.noreply.gitlab.com>
+
+	* SKK-JISYO.L: Add words for crypto-currency.
+
+2021-02-16  KANATSU Minoru  <dev@orum.in>
+
+	* SKK-JISYO.assoc: fix incorrect words.
+
 2021-01-26  Tatsuya Kinoshita  <tats@debian.org>
 
 	* Makefile (SKK-JISYO.edict2): Use TOOLS_DIR.
