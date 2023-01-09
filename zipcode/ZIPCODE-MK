@@ -77,7 +77,7 @@
     (erase-buffer)
 
     (let ((large-file-warning-threshold 20000000)
-	  (coding-system-for-read 'shift_jis))
+	  (coding-system-for-read 'shift_jis-2004))
       (insert-file-contents KEN_ALL))
 
     (goto-char (point-min))
@@ -94,7 +94,7 @@
 ;; okuri-ari entries.
 ;; okuri-nasi entries.
 ")
-    (let ((coding-system-for-write 'euc-jp-unix))
+    (let ((coding-system-for-write 'euc-jis-2004-unix))
       (write-region (point-min) (point-max) TEMP_ZIPCODE))))
 
 (defun mkdic-get-line ()
@@ -370,7 +370,7 @@
       (replace-match "")
       (insert (decode-coding-string "\215\202" 'sjis)))
 
-    (decode-coding-region (point-min) (point-max) 'shift_jis)
+    (decode-coding-region (point-min) (point-max) 'shift_jis-2004)
     (goto-char (point-min))
     (while (not (looking-at "^[0-9]"))
       (forward-line))
@@ -385,7 +385,7 @@
 ;; okuri-ari entries.
 ;; okuri-nasi entries.
 ")
-    (let ((coding-system-for-write 'euc-jp-unix))
+    (let ((coding-system-for-write 'euc-jis-2004-unix))
       (write-region (point-min) (point-max) TEMP_OFFICE))))
 
 (defun mkdic-office-get-line ()
@@ -447,25 +447,27 @@
 (defun mkdic-zipcode-header ()
   (with-temp-buffer
     (insert "\
+;; -*- coding: euc-jis-2004; -*-
 ;; SKK-JISYO.zipcode --- 7-digit ZIP code dictionary for SKK
 " JISYO_HEADER)
     (let ((time-stamp-format "%02d %03b %y")
 	  (time-stamp-time-zone "GMT")
 	  (system-time-locale "C"))
       (time-stamp))
-    (set-buffer-file-coding-system 'euc-jp-unix)
+    (set-buffer-file-coding-system 'euc-jis-2004-unix)
     (write-region (point-min) (point-max) ZIPCODE)))
 
 (defun mkdic-office-header ()
   (with-temp-buffer
     (insert "\
+;; -*- coding: euc-jis-2004; -*-
 ;; SKK-JISYO.office.zipcode --- 7-digit ZIP code (offices) dictionary for SKK
 " JISYO_HEADER)
     (let ((time-stamp-format "%02d %03b %y")
 	  (time-stamp-time-zone "GMT")
 	  (system-time-locale "C"))
       (time-stamp))
-    (set-buffer-file-coding-system 'euc-jp-unix)
+    (set-buffer-file-coding-system 'euc-jis-2004-unix)
     (write-region (point-min) (point-max) OFFICE)))
 
 ;; ZIPCODE-MK ends here
