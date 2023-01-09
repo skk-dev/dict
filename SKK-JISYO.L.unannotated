@@ -1,5 +1,5 @@
 ;; -*- text -*-
-;; SKK-JISYO.L.unannotated was generated automatically by unannotation.awk at Sat Mar 21 12:46:05 2020
+;; SKK-JISYO.L.unannotated was generated automatically by unannotation.awk at Wed Oct 13 21:06:35 2021
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; Large size dictionary for SKK system
 ;; Copyright (C) 1988-1995, 1997, 1999-2014
@@ -38111,8 +38111,8 @@ sari /サリー/サリ/
 sarin /サリン/
 sarod /サロード/サロッド/
 sars /severe acute respiratory syndrome/重症急性呼吸器症候群/
-sars-cov /severe acute respiratory syndrome coronavirus/SARSコロナウイルス
-sars-cov-2 /severe acute respiratory syndrome coronavirus 2/2019新型コロナウイルス
+sars-cov /severe acute respiratory syndrome coronavirus/SARSコロナウイルス/
+sars-cov-2 /severe acute respiratory syndrome coronavirus 2/2019新型コロナウイルス/
 sartre /サルトル/
 saruman /サルマン/
 sasa /ササ/
@@ -46446,7 +46446,9 @@ zyklus /チクルス/ツィクルス/
 あんごう /暗号/暗合/
 あんごうか /暗号化/
 あんごうかぎ /暗号鍵/
+あんごうしさん /暗号資産/
 あんごうちょう /暗号帳/
+あんごうつうか /暗号通貨/
 あんごうひょう /暗号表/
 あんごうぶん /暗号文/
 あんさつ /暗殺/
@@ -61916,6 +61918,7 @@ zyklus /チクルス/ツィクルス/
 かそうせん /仮想戦/
 かそうたいしょう /仮装大賞/
 かそうたんまつ /仮想端末/
+かそうつうか /仮想通貨/
 かそうてき /仮想的/仮想敵/
 かそうてきこく /仮想敵国/
 かそうば /火葬場/
@@ -138364,6 +138367,7 @@ zyklus /チクルス/ツィクルス/
 にじゅうさんや /二十三夜/
 にじゅうしし /二十四史/
 にじゅうしせっき /二十四節気/
+にじゅうしはらい /二重支払/
 にじゅうしょう /二重唱/
 にじゅうじんかく /二重人格/
 にじゅうせい /二重性/二重星/
@@ -138478,6 +138482,7 @@ zyklus /チクルス/ツィクルス/
 にだな /荷棚/
 にだん /二段/
 にだんかい /二段階/2段階/
+にだんかいにんしょう /二段階認証/
 にだんかつよう /二段活用/
 にだんがさね /二段重ね/
 にだんがまえ /二段構え/
@@ -143451,7 +143456,7 @@ zyklus /チクルス/ツィクルス/
 はっせいえいが /発声映画/
 はっせいかいすう /発生回数/
 はっせいかいろ /発生回路/
-はっせいかくりつ /発生確立/
+はっせいかくりつ /発生確率/
 はっせいかしょ /発生箇所/
 はっせいかんかく /発生間隔/
 はっせいがく /発生学/
