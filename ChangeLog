@@ -1,3 +1,10 @@
+2023-02-07  pklion  <78145811+pklion@users.noreply.github.com>
+
+	* SKK-JISYO.L: Modify entry.
+	さいげん /再現;{represent->reproduce}/際限;limits.「-無く」/
+	* SKK-JISYO.notes: Modify entry.
+	さいげん /再現;{represent->reproduce}‖サ変名詞[φs]/
+
 2023-01-09  Takushi Usami  <takushi1969@gmail.com>
 
 	* zipcode: update dictonaries on 2022/05/05.
@@ -9,7 +16,10 @@
 
 2023-01-09  tgw314  <52594217+tgw314@users.noreply.github.com>
 
-	* SKK-JISYO.L, SKK-JISYO.L.unannotated: fix typo; 魏史 -> 魏志.
+	* SKK-JISYO.L: Modify entry.
+	ぎし /技師;engineer/技士;(資格名を作る)/義歯/義姉/義士/義肢/義子;養子など/擬死/偽史/魏{史->志};-倭人伝/岸/
+	* SKK-JISYO.L.unannotated: Modify entry.
+	ぎし /技師/技士/義歯/義姉/義士/義肢/義子/擬死/偽史/魏{史->志}/岸/
 
 2023-01-09  Naoya Yamashita  <conao3@gmail.com>
 
@@ -17,27 +27,45 @@
 
 2021-10-12  Naoya Yamashita  <conao3@gmail.com>
 
-	* SKK-JISYO.L: fix typo; 発生確立 -> 発生確率.
+	* SKK-JISYO.L: Modify entry.
+	はっせいかくりつ /発生確{立->率}/
 
 2021-07-05  orumin  <dev@orum.in>
 
-	* SKK-JISYO.fullname: correct entry.
+	* SKK-JISYO.fullname: Modify entry.
+	ぐしけんようこう /具{支->志}堅用高;フルネーム,元・プロボクサー/
 
 2021-05-09  blame2020  <7962083-hiraku_sugiura@users.noreply.gitlab.com>
 
-	* SKK-JISYO.L: Add words for crypto-currency.
+	* SKK-JISYO.L: Add entries.
+	あんごうつうか /暗号通貨/
+	かそうつうか /仮想通貨/
+	にじゅうしはらい /二重支払/
+	にだんかいにんしょう /二段階認証/
 
 2021-02-16  KANATSU Minoru  <dev@orum.in>
 
-	* SKK-JISYO.assoc: fix incorrect words.
+	* SKK-JISYO.assoc: Modify entries.
+	14 /X{VI->IV};[ローマ数字]/
+	24 /XX{VI->IV};[ローマ数字]/
 
 2021-01-26  Tatsuya Kinoshita  <tats@debian.org>
 
 	* Makefile (SKK-JISYO.edict2): Use TOOLS_DIR.
 
+2021-01-06  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	* SKK-JISYO.L: Modify entries.
+	sars-cov /severe acute respiratory syndrome coronavirus/SARSコロナウイルス{->/}
+	sars-cov-2 /severe acute respiratory syndrome coronavirus 2/2019新型コロナウイルス{->/}
+
 2020-12-26  Tetsuo Tsukamoto  <tt.tetsuo.tsukamoto@gmail.com>
 
 	* SKK-JISYO.pinyin: New file.
+
+2020-04-04  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
+	zipcode: update.
 
 2020-03-24  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 
@@ -125,6 +153,7 @@
 	instead of save-excursion() + set-buffer().
 
 2019-04-27  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
+
 	* SKK-JISYO.JIS2, SKK-JISYO.JIS2004, SKK-JISYO.JIS3_4, SKK-JISYO.L, SKK-JISYO.L.unannotated:
 	* SKK-JISYO.M, SKK-JISYO.ML, SKK-JISYO.S, SKK-JISYO.assoc, SKK-JISYO.edict, SKK-JISYO.fullname:
 	* SKK-JISYO.geo, SKK-JISYO.hukugougo, SKK-JISYO.itaiji, SKK-JISYO.itaiji.JIS3_4, SKK-JISYO.jinmei:
@@ -135,7 +164,8 @@
 
 2019-04-10  Tatsuya Kinoshita  <tats@debian.org>
 
-	* SKK-JISYO.lisp: Add one entry. (れいわ#ねん)
+	* SKK-JISYO.lisp: Add entry.
+	れいわ#ねん /(skk-gengo-to-ad "" "年")/(skk-gengo-to-ad "西暦" "年")/
 
 2019-04-06  Nobuyuki SASAKI  <nathancorvussolis@gmail.com>
 
