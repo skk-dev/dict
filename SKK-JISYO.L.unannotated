@@ -1,5 +1,5 @@
 ;; -*- text -*-
-;; SKK-JISYO.L.unannotated was generated automatically by unannotation.awk at Wed Oct 13 21:06:35 2021
+;; SKK-JISYO.L.unannotated was generated automatically by unannotation.awk at Sun Jan 14 18:50:34 2024
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; Large size dictionary for SKK system
 ;; Copyright (C) 1988-1995, 1997, 1999-2014
@@ -2925,6 +2925,7 @@
 へんにゅうs /編入/
 へんそうくだs /返送下/
 へんじくだs /返事下/
+へんしょう /貶称/
 へんこういたs /変更致/
 へんこうs /変更/
 へんかんg /変換/
@@ -66450,6 +66451,7 @@ zyklus /チクルス/ツィクルス/
 がいはんぼし /外反母趾/外反拇趾/外反拇指/
 がいばつてき /外罰的/
 がいばん /外盤/
+がいひ /該非/
 がいひ /外皮/外被/
 がいひがわ /外皮側/
 がいひょう /概評/
@@ -135312,6 +135314,7 @@ zyklus /チクルス/ツィクルス/
 どのよう /何の様/
 どはずれ /度外れ/
 どはつ /怒髪/
+どはつてん /怒髪天/
 どはで /ド派手/
 どば /土場/駑馬/
 どばし /土橋/
@@ -155689,6 +155692,8 @@ zyklus /チクルス/ツィクルス/
 べきしゅうごう /冪集合/
 べきじょう /べき乗/冪乗/巾乗/羃乗/
 べきすう /冪数/
+べきとう /羃等/
+べきとうせい /羃等性/
 べく /可/
 べくさかずき /可杯/
 べくとるか /ベクトル化/
