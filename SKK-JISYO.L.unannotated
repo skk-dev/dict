@@ -1,5 +1,5 @@
 ;; -*- text -*-
-;; SKK-JISYO.L.unannotated was generated automatically by unannotation.awk at Sun Jan 14 18:50:34 2024
+;; SKK-JISYO.L.unannotated was generated automatically by unannotation.awk at Wed Jan 17 20:59:09 2024
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; Large size dictionary for SKK system
 ;; Copyright (C) 1988-1995, 1997, 1999-2014
@@ -43,20 +43,13 @@
 ;; この辞書の作成にご尽力頂いた全ての方に感謝すると共に、これをお読み
 ;; のあなたのご協力を是非ともお待ちしております。
 ;;
-;;   http://openlab.ring.gr.jp/skk/registdic.cgi
+;;   https://github.com/skk-dev/dict
 ;;
-;; にアクセスし、フォームに是非あなたの新語・誤登録指摘・コメントを書
-;; いて下さい。
+;; にアクセスし、Issue や Pull request をお寄せください。
 ;;
-;; また、実際に辞書の編集をしてみたいという方は、
-;;
-;;   http://openlab.ring.gr.jp/skk/cvs-ja.html#account
-;;
-;; をご覧の上、cvs account の発行申し込みをして下さい。
-;;
-;; 辞書の編集方針は skk/dic/READMEs/committers.txt をご参照下さい。
-;; そこに記載のない事項、またその変更については、その都度 SKK Openlab
-;; ML で話し合いで決められます。
+;; 辞書の編集方針は committers.md をご参照下さい。
+;; そこに記載のない事項、またその変更については、その都度 github.com/skk-dev/dict/Issue
+;; で話し合いで決められます。
 ;;
 ;; okuri-ari entries.
 をs /惜/
