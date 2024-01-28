@@ -1,0 +1,186 @@
+{
+  "version": "0.0.0",
+  "description": null,
+  "copyright": "Copyright (C) 2000 the Pubdic+ project.\n              2002, 2003, 2004 SKK Development Team <skk@ring.gr.jp>",
+  "license": "THE PUBDIC+ PROJECT DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS\nPACKAGE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND\nFITNESS, IN NO EVENT SHALL PUBDIC+ PROJECT BE LIABLE FOR ANY SPECIAL,\nINDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING\nFROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,\nNEGLIGENCE OR OTHER TORTUOUS ACTION, ARISING OUT OF OR IN CONNECTION\nWITH THE USE OR PERFORMANCE OF THIS PACKAGE.",
+  "note": "This file is made by the following steps;\n$ pubdic2list pubdic.p | adddummy | sort -u | removedummy | list2skk > temp $ skkdic-expr2 temp - SKK-JISYO.L > SKK-JISYO.pubdic+ (and some edit to remove entries that cannot be used with SKK).",
+  "okuri_ari": {},
+  "okuri_nasi": {
+    "ありったけ": [
+      "有りったけ"
+    ],
+    "あるがまま": [
+      "有るがまま"
+    ],
+    "あるめん": [
+      "アル綿"
+    ],
+    "あんこがた": [
+      "アンコ形"
+    ],
+    "いいくるめ": [
+      "言いくるめ"
+    ],
+    "いいふくめ": [
+      "言い含め"
+    ],
+    "いちかごん": [
+      "一家言"
+    ],
+    "いんしょうづけ": [
+      "印象付け"
+    ],
+    "かいめん": [
+      "海棉"
+    ],
+    "かえりざき": [
+      "返咲き"
+    ],
+    "かきつらね": [
+      "書き連ね"
+    ],
+    "かぎかっこ": [
+      "鈎括弧"
+    ],
+    "かつえ": [
+      "餓え",
+      "飢え"
+    ],
+    "かふばん": [
+      "可付番"
+    ],
+    "きはじめ": [
+      "来始め"
+    ],
+    "きゅうかな": [
+      "旧カナ"
+    ],
+    "きれつ": [
+      "き裂"
+    ],
+    "ぎへんすう": [
+      "疑変数"
+    ],
+    "こうしょう": [
+      "工厰"
+    ],
+    "こねあげ": [
+      "こね上げ"
+    ],
+    "ごうつくばり": [
+      "業つくばり"
+    ],
+    "ざれぶみ": [
+      "戯れ文"
+    ],
+    "しみ": [
+      "浸み"
+    ],
+    "しゅかい": [
+      "主魁"
+    ],
+    "しゅさん": [
+      "主餐"
+    ],
+    "じゅんかいせき": [
+      "順解析"
+    ],
+    "じゅんたいげんじょし": [
+      "準体言助詞"
+    ],
+    "たいいきち": [
+      "大域値"
+    ],
+    "たなざらし": [
+      "店ざらし"
+    ],
+    "たま": [
+      "丸"
+    ],
+    "つきぎり": [
+      "月切"
+    ],
+    "てきしゅつりつ": [
+      "摘出率"
+    ],
+    "てんぷら": [
+      "天麸羅"
+    ],
+    "てんゆうしんじょ": [
+      "天祐神助"
+    ],
+    "でんぶ": [
+      "田麸"
+    ],
+    "とろりーせん": [
+      "トロリー線"
+    ],
+    "どうしゃく": [
+      "同尺"
+    ],
+    "なすりつけ": [
+      "擦り付け"
+    ],
+    "なまわく": [
+      "生ワク"
+    ],
+    "のりかえ": [
+      "乗替"
+    ],
+    "はしりぬけ": [
+      "走り抜け"
+    ],
+    "はんせいすうがた": [
+      "汎整数型"
+    ],
+    "ばっくぷろぱげーしょんほう": [
+      "バックプロパゲーション法"
+    ],
+    "ひだんけいし": [
+      "避弾経始"
+    ],
+    "ひとさらい": [
+      "人拐い"
+    ],
+    "ふっけん": [
+      "復研"
+    ],
+    "ふへん": [
+      "父片"
+    ],
+    "ほうがん": [
+      "方丸"
+    ],
+    "ほうはつ": [
+      "髣髪"
+    ],
+    "みすえ": [
+      "見据え"
+    ],
+    "みつけ": [
+      "見付け"
+    ],
+    "みんてい": [
+      "明帝"
+    ],
+    "めいもく": [
+      "暝黙"
+    ],
+    "もりたて": [
+      "守り立て",
+      "盛り立て"
+    ],
+    "やぎ": [
+      "夜着"
+    ],
+    "ゆかん": [
+      "湯潅"
+    ],
+    "りんせんたいせい": [
+      "臨戦体制"
+    ],
+    "わけあたえ": [
+      "分け与え"
+    ]
+  }
+}
