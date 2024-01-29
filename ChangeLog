@@ -1,3 +1,9 @@
+2024-01-30  Cj-bc <cj.bc-sd@outlook.jp>
+	* SKK-JISYO.L: Modify entry.
+	$B$G$s$-$=$j$g$&(B /$BEE5$AGNL(B;1.602176{53->634;SI$AND$(GUs$A5Z(B9$A0f$K$F$(I+y$A8|(B}*10^-19C/
+	* SKK-JISYO.assoc: Modify entry.
+	$B$G$s$-$=$j$g$&(B /$BEE5$AGNL(B;e0/1.602176{53->634;$AM,IO(B}*10^-19 C/elementary charge/
+
 2024-01-17  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 	* SKK-JISYO.L, SKK-JISYO.L.unannotated, SKK-JISYO.assoc:
 	* SKK-JISYO.propernoun, SKK-JISYO.requested, SKK-JISYO.station:
