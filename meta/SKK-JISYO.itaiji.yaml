@@ -1,0 +1,8 @@
+version: 0.0.0
+description: 異体字 dictionary for SKK system.
+copyright: Copyright (c) 2022 SKK Development Team <skk@ring.gr.jp>
+license: |-
+  This file is made of 異体辞書 (See
+  http://www.eonet.ne.jp/~kotobukispace/ddt/itaizy/itaizy.html)
+  Contents of this file is public domain.  This file is subset of
+  the source dictionary, containing only letters in JIS1 and JIS2.

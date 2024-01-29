@@ -61,3 +61,10 @@ $ git add -u && git commit
 
 さきほど退避しておいた `SKK-JISYO.*.gz`, `SKK-JISYO.*.md5`, `zipdoce.*.gz`, `zipdoce.*.md5` を
 ブランチ gh-pages に mv して add && push します。
+
+# JSON形式の辞書 について
+
+辞書データをJSONに変換したテキストファイルです。
+一部のIMEではJSON形式の辞書をサポートしています。
+生成するためにはスクリプト実行環境としてDenoが必要です。
+`make json`でJSONファイルが生成されます。

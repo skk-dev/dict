@@ -1,0 +1,43 @@
+version: 0.0.0
+description: Medium-Large size dictionary for SKK system
+copyright: |-
+  Copyright (C) 1988-1995, 1997, 1999-2006
+
+  Masahiko Sato <masahiko@kuis.kyoto-u.ac.jp>
+  Hironobu Takahashi <takahasi@tiny.or.jp>,
+  Masahiro Doteguchi, Miki Inooka,
+  Yukiyoshi Kameyama <kameyama@kuis.kyoto-u.ac.jp>,
+  Akihiko Sasaki, Dai Ando, Junichi Okukawa,
+  Katsushi Sato and Nobuhiro Yamagishi
+  Mikio NAKAJIMA <minakaji@osaka.email.ne.jp>
+  SKK Development Team <skk@ring.gr.jp>
+license: |-
+  This dictionary is free software; you can redistribute it and/or
+  modify it under the terms of the GNU General Public License as
+  published by the Free Software Foundation; either version 2, or
+  (at your option) any later version.
+
+  This dictionary is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with Daredevil SKK, see the file COPYING.  If not, write to
+  the Free Software Foundation Inc., 51 Franklin St, Fifth Floor,
+  Boston, MA 02110-1301, USA.
+note: |-
+  M 辞書と L 辞書の中間サイズの辞書、という意味で ML 辞書と名付けまし
+  た。PDA などハードディスク (メモリ) が限られた機種でも使用できるよ
+  う、1MB を超えないサイズを維持することを目標としたいと思います。
+  この辞書の origin は、L 辞書です。
+
+  (1)L 辞書から広辞苑第四版に掲載されている語を抜き出し、
+  (2)L 辞書から接頭辞、接尾辞を抜き出し、
+  (3)ひらがな 10 文字以上のエントリを削除し、
+  (4)都道府県、県庁所在地を追加し、
+  (5)記号類をいくつか追加し、
+  (6)更に S 辞書のコンテンツを追加
+
+  して作成しました。加除のご希望は、理由を添えて skk@ring.gr.jp
+  まで。

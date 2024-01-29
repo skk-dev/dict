@@ -20,6 +20,7 @@ SORT	  = skkdic-sort
 TAR	  = tar
 UNZIP	  = unzip -o
 ZIPDIC_DIR  = ./zipcode
+DENO 	= deno
 
 DIC2PDB = dic2pdb
 DICCOMPACT = diccompact.rb
@@ -35,6 +36,7 @@ SRCS	  = SKK-JISYO.L SKK-JISYO.ML SKK-JISYO.M SKK-JISYO.S SKK-JISYO.JIS2 \
 		SKK-JISYO.itaiji.JIS3_4 SKK-JISYO.china_taiwan \
 		SKK-JISYO.propernoun SKK-JISYO.station SKK-JISYO.requested \
 		SKK-JISYO.fullname SKK-JISYO.JIS2004 SKK-JISYO.lisp
+
 # SKK-JISYO.noregist SKK-JISYO.hukugougo
 BIN_SRCS  = #PBinlineDB.pdb
 ALL_SRCS  = $(SRCS) $(BIN_SRCS) SKK-JISYO.wrong SKK-JISYO.L.unannotated
@@ -231,4 +233,8 @@ IVD_Sequences.txt:
 IVD_Collections.txt:
 	test -f IVD_Collections.txt || $(CURL) -o IVD_Collections.txt https://unicode.org/ivd/data/2017-12-12/IVD_Collections.txt
 
+json: json/SKK-JISYO.assoc.json json/SKK-JISYO.china_taiwan.json json/SKK-JISYO.edict2.json json/SKK-JISYO.edict.json json/SKK-JISYO.emoji.json json/SKK-JISYO.fullname.json json/SKK-JISYO.geo.json json/SKK-JISYO.hukugougo.json json/SKK-JISYO.itaiji.json json/SKK-JISYO.jinmei.json json/SKK-JISYO.JIS2.json json/SKK-JISYO.law.json json/SKK-JISYO.L.json json/SKK-JISYO.mazegaki.json json/SKK-JISYO.M.json json/SKK-JISYO.ML.json json/SKK-JISYO.okinawa.json json/SKK-JISYO.pinyin.json json/SKK-JISYO.propernoun.json json/SKK-JISYO.pubdic+.json json/SKK-JISYO.S.json json/SKK-JISYO.station.json
+
+json/%.json: %
+	$(DENO) run --allow-read --allow-write --allow-net script/txt2json.ts -i $< -m meta/$<.yaml -o $@
 # end of Makefile.

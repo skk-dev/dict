@@ -1,0 +1,38 @@
+version: 0.0.0
+description: SKK system made from 沖縄辞書 (Okinawa dic 2005/11/07)
+copyright: Copyright (c) 2022 SKK Development Team <skk@ring.gr.jp>
+license: |-
+  この辞書は Public Domain です。使用・変更・配布に関しては一切の制限
+  をつけません。商品などに組み込むことも自由に行なってください。既に
+  いくつかの辞書には沖縄辞書が採用されています。勝手ながら、沖縄辞書
+  に寄贈された辞書も Public Domain 扱いとさせていただきます。
+note: |-
+  沖縄辞書プロジェクトは有志が行なっている仮名漢字変換用ソフトウェ
+  ア用の辞書ファイルの語彙強化プロジェクトです。集録語数は、基本的
+  な語彙(人名、地名)が約2900語。その他の雑多な語を含めると約5800語
+  (品詞の異なるものを同じに数えると約5100語)です。
+
+       city.dic        市町村および郡の名前
+       address.dic     市町村内の行政区画の名前
+       island.dic      島嶼名
+       geo.dic         市町村名/字名/島名に含まれない地名(山や川も)
+       name.dic        人名
+       school.dic      学校名
+       park.dic        公園名
+       history.dic     歴史上の人名・地名
+       food.dic        食べ物の名前
+       sakana.dic      魚の名前
+       awamori.dic     泡盛の銘柄名
+       base.dic        基地
+       amami.dic       奄美の人名・地名
+       misc.dic        その他
+
+  SKK-JISYO.okinawa は、これらの辞書を単純に SKK 形式に変換したもの
+  です。元のコンテンツについていた品詞データやコメントは SKK では変
+  換に直接利用しませんが、SKK 用 annotation として収録しています。
+
+  沖縄辞書について更に詳しくは、http://www.zukeran.org/o-dic/
+  をご参照下さい。
+
+  TODO:
+  人名をSKK-JISYO.jinmei、地名をSKK-JISYO.geoに追加？
