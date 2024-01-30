@@ -1,6 +1,8 @@
 2024-01-30  Cj-bc <cj.bc-sd@outlook.jp>
 	* SKK-JISYO.L: Modify entry.
 	$B$G$s$-$=$j$g$&(B /$BEE5$AGNL(B;1.602176{53->634;SI$AND$(GUs$A5Z(B9$A0f$K$F$(I+y$A8|(B}*10^-19C/
+	$B$\$k$D$^$s$F$$$9$&(B /$B%\%k%D%^%sDj?t(B;1.3806{503->49;$BF1>e(B}*10^-23 J$B!&(BK^-1/
+
 	* SKK-JISYO.assoc: Modify entry.
 	$B$G$s$-$=$j$g$&(B /$BEE5$AGNL(B;e0/1.602176{53->634;$AM,IO(B}*10^-19 C/elementary charge/
 
