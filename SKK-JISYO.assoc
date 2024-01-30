@@ -848,7 +848,7 @@ K /ケッヘル/Kochel-Verzeichnis/カリウム;[元素]19/potassium/kalium/Kalium/
 KK /株式会社;Kabusiki Kaisha/（株）/(株)/
 Kings /列王記;[聖書]/
 Kr /クリプトン;[元素]36/krypton/Krypton/
-L /アボガドロ定数/アボガドロ数/6.0221367*10^23 mol^-1/
+L /アボガドロ定数/アボガドロ数/6.02214076*10^23 mol^-1/
 L- /(concat "&pound\073");[HTML]163/£/
 LMi /小獅子座/こじし座/Leo Minor/
 La /ランタン;[元素]57/lanthanum/Lanthan/
@@ -886,8 +886,8 @@ Mn /マンガン;[元素]25/manganese/Mangan/
 Mo /モリブデン;[元素]42/molybdenum/Molybdaen/
 Mon /一角獣座/いっかくじゅう座/Monoceros/
 Mus /蝿座/はえ座/Musca/
-N /窒素;[元素]7/ナイトロジェン/nitrogen/azote/Stickstoff/アボガドロ定数/アボガドロ数/6.0221367*10^23 mol^-1/
-NA /アボガドロ定数/アボガドロ数/6.0221367*10^23 mol^-1/
+N /窒素;[元素]7/ナイトロジェン/nitrogen/azote/Stickstoff/アボガドロ定数/アボガドロ数/6.02214076*10^23 mol^-1/
+NA /アボガドロ定数/アボガドロ数/6.02214076*10^23 mol^-1/
 NP /名詞句/noun phrase/
 Na /ナトリウム;[元素]11/ソディウム/sodium/natrium/Natrium/
 Nah /ナホム書;[聖書]/Nahum;[聖書]/
@@ -5043,8 +5043,8 @@ zw /ジンバブエ;[ccTLD]/Zimbabwe/
 あぱーと /アパートメント/apartment/アパート;apart/
 あふろでぃて /Aphrodite/Αφροδιτη/
 あぷり /アプリケーション/application/アプリ;appli/
-あぼがどろすう /アボガドロ数/Avogadro's number/6.0221367*10^23 mol^-1/
-あぼがどろていすう /アボガドロ定数/Avogadro's constant/6.0221367*10^23 mol^-1/
+あぼがどろすう /アボガドロ数/Avogadro's number/6.02214076*10^23 mol^-1/
+あぼがどろていすう /アボガドロ定数/Avogadro's constant/6.02214076*10^23 mol^-1/
 あぽ /アポイントメント/appointment/アポ;appo/
 あぽりねーる /Apollinaire/Guillaume Apollinaire de Kostrowsky;(1880-1918)/ギヨーム・アポリネール/ギヨーム・アポリネール・ド・コストロウィツキー/
 あぽろん /Apollon/Απολλων/
