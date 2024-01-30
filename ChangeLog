@@ -5,6 +5,7 @@
 
 	* SKK-JISYO.assoc: Modify entry.
 	でんきそりょう /電気素量;e0/1.602176{53->634;同上}*10^-19 C/elementary charge/
+	ぷらんくていすう /プランク定数;h/Planck's constant/6.6260{693->7015;同上}*10^-34 J・s/
 
 2024-01-17  Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 	* SKK-JISYO.L, SKK-JISYO.L.unannotated, SKK-JISYO.assoc:
