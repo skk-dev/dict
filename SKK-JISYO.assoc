@@ -848,7 +848,7 @@ K /ケッヘル/Kochel-Verzeichnis/カリウム;[元素]19/potassium/kalium/Kalium/
 KK /株式会社;Kabusiki Kaisha/（株）/(株)/
 Kings /列王記;[聖書]/
 Kr /クリプトン;[元素]36/krypton/Krypton/
-L /アボガドロ定数/アボガドロ数/6.0221367*10^23 mol^-1/
+L /アボガドロ定数/アボガドロ数/6.02214076*10^23 mol^-1/
 L- /(concat "&pound\073");[HTML]163/£/
 LMi /小獅子座/こじし座/Leo Minor/
 La /ランタン;[元素]57/lanthanum/Lanthan/
@@ -886,8 +886,8 @@ Mn /マンガン;[元素]25/manganese/Mangan/
 Mo /モリブデン;[元素]42/molybdenum/Molybdaen/
 Mon /一角獣座/いっかくじゅう座/Monoceros/
 Mus /蝿座/はえ座/Musca/
-N /窒素;[元素]7/ナイトロジェン/nitrogen/azote/Stickstoff/アボガドロ定数/アボガドロ数/6.0221367*10^23 mol^-1/
-NA /アボガドロ定数/アボガドロ数/6.0221367*10^23 mol^-1/
+N /窒素;[元素]7/ナイトロジェン/nitrogen/azote/Stickstoff/アボガドロ定数/アボガドロ数/6.02214076*10^23 mol^-1/
+NA /アボガドロ定数/アボガドロ数/6.02214076*10^23 mol^-1/
 NP /名詞句/noun phrase/
 Na /ナトリウム;[元素]11/ソディウム/sodium/natrium/Natrium/
 Nah /ナホム書;[聖書]/Nahum;[聖書]/
@@ -5043,8 +5043,8 @@ zw /ジンバブエ;[ccTLD]/Zimbabwe/
 あぱーと /アパートメント/apartment/アパート;apart/
 あふろでぃて /Aphrodite/Αφροδιτη/
 あぷり /アプリケーション/application/アプリ;appli/
-あぼがどろすう /アボガドロ数/Avogadro's number/6.0221367*10^23 mol^-1/
-あぼがどろていすう /アボガドロ定数/Avogadro's constant/6.0221367*10^23 mol^-1/
+あぼがどろすう /アボガドロ数/Avogadro's number/6.02214076*10^23 mol^-1/
+あぼがどろていすう /アボガドロ定数/Avogadro's constant/6.02214076*10^23 mol^-1/
 あぽ /アポイントメント/appointment/アポ;appo/
 あぽりねーる /Apollinaire/Guillaume Apollinaire de Kostrowsky;(1880-1918)/ギヨーム・アポリネール/ギヨーム・アポリネール・ド・コストロウィツキー/
 あぽろん /Apollon/Απολλων/
@@ -5664,7 +5664,7 @@ zw /ジンバブエ;[ccTLD]/Zimbabwe/
 でもくりとす /Demokritos/Δημοκριτοσ/
 でもすてねす /Demosthenes/Δημοσθενησ/
 でりへる /デリバリーヘルス/delivery health;和製語/デリヘル/
-でんきそりょう /電気素量;e0/1.60217653*10^-19 C/elementary charge/
+でんきそりょう /電気素量;e0/1.602176634*10^-19 C/elementary charge/
 でんきれんごう /電機連合/全日本電機・電子・情報関連産業労働組合連合会/
 でんけん /電顕/電子顕微鏡/電験/電気主任技術者試験/電気主任技術者/
 でんしきょう /電子工業振興協会/電子協/
@@ -5895,7 +5895,7 @@ zw /ジンバブエ;[ccTLD]/Zimbabwe/
 ぷら /プラスチック/plastic/プラ;pla/
 ぷらうだ /Pravda/Правда/
 ぷらとん /Platon/Πλατων/
-ぷらんくていすう /プランク定数;h/Planck's constant/6.6260693*10^-34 J・s/
+ぷらんくていすう /プランク定数;h/Planck's constant/6.62607015*10^-34 J・s/
 ぷるーすと /Proust/Marcel Proust;(1871-1922) 小説家。 A la recherche du temps perdu/マルセル・プルースト/
 ぷれあです /Pleiades/Πλειαδεσ/
 ぷれいあです /Pleiades/Πλειαδεσ/
