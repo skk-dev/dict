@@ -5,9 +5,17 @@ Refer to the following URL for the distribution files.
 https://skk-dev.github.io/dict/
 
 
-# 辞書ファイルを編集する
+# 辞書ファイルの編集をお考えの方へ
 
-[committers.md](committers.md) を参照してください。
+[committers.md](committers.md) には、次の内容を掲載してあります。
+
+- 各辞書ファイルに適用しているライセンス
+- 各辞書の編集方針
+- ChangeLog の記述方法
+- 辞書の形式
+
+いずれも、SKK 辞書ファイルの編纂に向け役立つ内容ですので、ぜひご確認ください。
+
 
 # 配布用の gzip アーカイブを作る
 
@@ -62,9 +70,20 @@ $ git add -u && git commit
 さきほど退避しておいた `SKK-JISYO.*.gz`, `SKK-JISYO.*.md5`, `zipdoce.*.gz`, `zipdoce.*.md5` を
 ブランチ gh-pages に mv して add && push します。
 
-# JSON形式の辞書 について
+```
+$ git co gh-pages
+$ mv ../SKK-JISYO.*.gz .
+$ mv ../SKK-JISYO.*.md5 .
+$ mv ../zipdoce.*.gz .
+$ mv ../zipdoce.*.md5 .
+$ git add -u && git commit
+$ git push
+```
 
-辞書データをJSONに変換したテキストファイルです。
-一部のIMEではJSON形式の辞書をサポートしています。
-生成するためにはスクリプト実行環境としてDenoが必要です。
-`make json`でJSONファイルが生成されます。
+
+# JSON 形式の辞書について
+
+辞書データを JSON に変換したテキストファイルです。
+一部の IME では JSON 形式の辞書をサポートしています。
+JSON ファイルを生成するためには `make json` を実行してください。
+このとき、スクリプト実行環境として Deno が必要です。
