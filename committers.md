@@ -10,6 +10,7 @@ SKK 辞書 committer のみなさまへ
 - SKK-JISYO.law
 - SKK-JISYO.wrong
 - SKK-JISYO.jinmei
+- SKK-JISYO.fullname
 - SKK-JISYO.lisp
 
 上記の各辞書については、 the Free Software Foundation が発行している
