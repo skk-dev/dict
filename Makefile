@@ -49,12 +49,16 @@ CDB_TARGET = ./`basename $(CDB_SOURCE)`.cdb
 
 clean:
 	$(RM) *.gz* *~ `find . -name '*~'` `find . -name '.*~'` `find . -name '.#*'` \
-	*.unannotated SKK-JISYO.wrong PBinlineDB.pdb *.tmp *.w PBinlineDB.dic *.taciturn SKK-JISYO.L+ SKK-JISYO.total SKK-JISYO.total+zipcode SKK-JISYO.L.header SKK-JISYO.china_taiwan \
+	*.unannotated SKK-JISYO.wrong PBinlineDB.pdb *.tmp *.e csv/*.e *.w PBinlineDB.dic *.taciturn SKK-JISYO.L+ SKK-JISYO.total SKK-JISYO.total+zipcode SKK-JISYO.L.header SKK-JISYO.china_taiwan \
 	emoji-list.txt
 
 archive: gzip
 
 unannotated: SKK-JISYO.L.unannotated SKK-JISYO.wrong SKK-JISYO.china_taiwan.unannotated
+
+%.e: %
+	$(NKF) -e $< > $@
+	$(SED) -i "1s/coding: utf-8/coding: euc-jp/" $@
 
 SKK-JISYO.L.unannotated: SKK-JISYO.L
 	$(GAWK) -f $(TOOLS_DIR)/unannotation.awk SKK-JISYO.L > SKK-JISYO.L.unannotated
@@ -62,10 +66,10 @@ SKK-JISYO.L.unannotated: SKK-JISYO.L
 SKK-JISYO.wrong: SKK-JISYO.wrong.annotated
 	$(GAWK) -f $(TOOLS_DIR)/unannotation.awk SKK-JISYO.wrong.annotated > SKK-JISYO.wrong
 
-SKK-JISYO.china_taiwan: csv/china_taiwan.csv
-	$(RUBY) $(TOOLS_DIR)/convert2skk/ctdicconv.rb csv/china_taiwan.csv > SKK-JISYO.tmp
+SKK-JISYO.china_taiwan: csv/china_taiwan.csv.e SKK-JISYO.china_taiwan.header.e
+	$(RUBY) $(TOOLS_DIR)/convert2skk/ctdicconv.rb csv/china_taiwan.csv.e > SKK-JISYO.tmp
 	$(EXPR) SKK-JISYO.tmp | $(SORT) - > SKK-JISYO.1.tmp
-	cat SKK-JISYO.china_taiwan.header SKK-JISYO.1.tmp > SKK-JISYO.china_taiwan
+	cat SKK-JISYO.china_taiwan.header.e SKK-JISYO.1.tmp > SKK-JISYO.china_taiwan
 	$(RM) SKK-JISYO.tmp SKK-JISYO.1.tmp
 
 SKK-JISYO.china_taiwan.unannotated: SKK-JISYO.china_taiwan csv/china_taiwan.csv
@@ -108,42 +112,42 @@ gzip: clean $(ALL_SRCS)
 	$(TAR) cvzpf zipcode.tar.gz --exclude-from=./skk.ex ./zipcode
 	$(MD5) zipcode.tar.gz >zipcode.tar.gz.md5
 
-SKK-JISYO.L+: SKK-JISYO.L SKK-JISYO.L.header
-	$(RUBY) $(TOOLS_DIR)/filters/conjugation.rb -Cpox SKK-JISYO.notes > SKK-JISYO.tmp
-	$(RUBY) $(TOOLS_DIR)/filters/asayaKe.rb -p SKK-JISYO.L >> SKK-JISYO.tmp
-	$(RUBY) $(TOOLS_DIR)/filters/complete-numerative.rb -pU SKK-JISYO.L >> SKK-JISYO.tmp
-	$(RUBY) $(TOOLS_DIR)/filters/abbrev-convert.rb -K -s 2 SKK-JISYO.L >> SKK-JISYO.tmp
-	$(RUBY) $(TOOLS_DIR)/filters/abbrev-convert.rb -w -s 2 SKK-JISYO.L >> SKK-JISYO.tmp
-	$(EXPR2) SKK-JISYO.L + SKK-JISYO.tmp | cat SKK-JISYO.L.header - > SKK-JISYO.L+
+SKK-JISYO.L+: SKK-JISYO.notes.e SKK-JISYO.L.e SKK-JISYO.L.header.e
+	$(RUBY) $(TOOLS_DIR)/filters/conjugation.rb -Cpox SKK-JISYO.notes.e > SKK-JISYO.tmp
+	$(RUBY) $(TOOLS_DIR)/filters/asayaKe.rb -p SKK-JISYO.L.e >> SKK-JISYO.tmp
+	$(RUBY) $(TOOLS_DIR)/filters/complete-numerative.rb -pU SKK-JISYO.L.e >> SKK-JISYO.tmp
+	$(RUBY) $(TOOLS_DIR)/filters/abbrev-convert.rb -K -s 2 SKK-JISYO.L.e >> SKK-JISYO.tmp
+	$(RUBY) $(TOOLS_DIR)/filters/abbrev-convert.rb -w -s 2 SKK-JISYO.L.e >> SKK-JISYO.tmp
+	$(EXPR2) SKK-JISYO.L.e + SKK-JISYO.tmp | cat SKK-JISYO.L.header.e - > SKK-JISYO.L+
 	$(RM) SKK-JISYO.tmp SKK-JISYO.addition
 
-SKK-JISYO.total: SKK-JISYO.L SKK-JISYO.geo SKK-JISYO.station SKK-JISYO.jinmei SKK-JISYO.propernoun SKK-JISYO.fullname SKK-JISYO.law SKK-JISYO.okinawa SKK-JISYO.hukugougo SKK-JISYO.assoc SKK-JISYO.notes SKK-JISYO.L.header
-	$(RUBY) $(TOOLS_DIR)/filters/conjugation.rb -Cpox SKK-JISYO.notes > SKK-JISYO.tmp
-	$(RUBY) $(TOOLS_DIR)/filters/asayaKe.rb -p SKK-JISYO.L >> SKK-JISYO.tmp
-	$(RUBY) $(TOOLS_DIR)/filters/complete-numerative.rb -pU SKK-JISYO.L >> SKK-JISYO.tmp
-	$(RUBY) $(TOOLS_DIR)/filters/abbrev-convert.rb -K -s 2 SKK-JISYO.L >> SKK-JISYO.tmp
-	$(RUBY) $(TOOLS_DIR)/filters/abbrev-convert.rb -w -s 2 SKK-JISYO.L >> SKK-JISYO.tmp
+SKK-JISYO.total: SKK-JISYO.L.e SKK-JISYO.geo.e SKK-JISYO.station.e SKK-JISYO.jinmei.e SKK-JISYO.propernoun.e SKK-JISYO.fullname.e SKK-JISYO.law.e SKK-JISYO.okinawa.e SKK-JISYO.hukugougo.e SKK-JISYO.assoc.e SKK-JISYO.notes.e SKK-JISYO.L.header.e
+	$(RUBY) $(TOOLS_DIR)/filters/conjugation.rb -Cpox SKK-JISYO.notes.e > SKK-JISYO.tmp
+	$(RUBY) $(TOOLS_DIR)/filters/asayaKe.rb -p SKK-JISYO.L.e >> SKK-JISYO.tmp
+	$(RUBY) $(TOOLS_DIR)/filters/complete-numerative.rb -pU SKK-JISYO.L.e >> SKK-JISYO.tmp
+	$(RUBY) $(TOOLS_DIR)/filters/abbrev-convert.rb -K -s 2 SKK-JISYO.L.e >> SKK-JISYO.tmp
+	$(RUBY) $(TOOLS_DIR)/filters/abbrev-convert.rb -w -s 2 SKK-JISYO.L.e >> SKK-JISYO.tmp
 	# order is very important here
-	$(EXPR2) SKK-JISYO.geo + SKK-JISYO.station + SKK-JISYO.jinmei + SKK-JISYO.propernoun + SKK-JISYO.fullname + SKK-JISYO.tmp + SKK-JISYO.law + SKK-JISYO.okinawa + SKK-JISYO.hukugougo + SKK-JISYO.assoc - SKK-JISYO.L > SKK-JISYO.addition
+	$(EXPR2) SKK-JISYO.geo.e + SKK-JISYO.station.e + SKK-JISYO.jinmei.e + SKK-JISYO.propernoun.e + SKK-JISYO.fullname.e + SKK-JISYO.tmp + SKK-JISYO.law.e + SKK-JISYO.okinawa.e + SKK-JISYO.hukugougo.e + SKK-JISYO.assoc.e - SKK-JISYO.L.e > SKK-JISYO.addition
 	# why eliminating SKK-JISYO.L once? -- to not add too noisy
 	# annotations from SKK-JISYO.jinmei and so on.
-	$(EXPR2) SKK-JISYO.L + SKK-JISYO.addition | cat SKK-JISYO.L.header - > SKK-JISYO.total
+	$(EXPR2) SKK-JISYO.L.e + SKK-JISYO.addition | cat SKK-JISYO.L.header.e - > SKK-JISYO.total
 	$(RM) SKK-JISYO.tmp SKK-JISYO.addition
 
-SKK-JISYO.total+zipcode: SKK-JISYO.total $(ZIPDIC_DIR)/SKK-JISYO.zipcode $(ZIPDIC_DIR)/SKK-JISYO.office.zipcode SKK-JISYO.L.header
-	$(EXPR2) SKK-JISYO.total + $(ZIPDIC_DIR)/SKK-JISYO.zipcode + $(ZIPDIC_DIR)/SKK-JISYO.office.zipcode | cat SKK-JISYO.L.header - > SKK-JISYO.total+zipcode
+SKK-JISYO.total+zipcode: SKK-JISYO.total $(ZIPDIC_DIR)/SKK-JISYO.zipcode $(ZIPDIC_DIR)/SKK-JISYO.office.zipcode SKK-JISYO.L.header.e
+	$(EXPR2) SKK-JISYO.total + $(ZIPDIC_DIR)/SKK-JISYO.zipcode + $(ZIPDIC_DIR)/SKK-JISYO.office.zipcode | cat SKK-JISYO.L.header.e - > SKK-JISYO.total+zipcode
 
-SKK-JISYO.L.taciturn: SKK-JISYO.L SKK-JISYO.L.header
-	$(RUBY) $(TOOLS_DIR)/filters/annotation-filter.rb -d SKK-JISYO.L | $(EXPR2) | cat SKK-JISYO.L.header - > SKK-JISYO.L.taciturn
+SKK-JISYO.L.taciturn: SKK-JISYO.L.e SKK-JISYO.L.header.e
+	$(RUBY) $(TOOLS_DIR)/filters/annotation-filter.rb -d SKK-JISYO.L.e | $(EXPR2) | cat SKK-JISYO.L.header.e - > SKK-JISYO.L.taciturn
 
-SKK-JISYO.L+.taciturn: SKK-JISYO.L+ SKK-JISYO.L.header
-	$(RUBY) $(TOOLS_DIR)/filters/annotation-filter.rb -d SKK-JISYO.L+ | $(EXPR2) | cat SKK-JISYO.L.header - > SKK-JISYO.L+.taciturn
+SKK-JISYO.L+.taciturn: SKK-JISYO.L+ SKK-JISYO.L.header.e
+	$(RUBY) $(TOOLS_DIR)/filters/annotation-filter.rb -d SKK-JISYO.L+ | $(EXPR2) | cat SKK-JISYO.L.header.e - > SKK-JISYO.L+.taciturn
 
-SKK-JISYO.total.taciturn: SKK-JISYO.total SKK-JISYO.L.header
-	$(RUBY) $(TOOLS_DIR)/filters/annotation-filter.rb -d SKK-JISYO.total | $(EXPR2) | cat SKK-JISYO.L.header - > SKK-JISYO.total.taciturn
+SKK-JISYO.total.taciturn: SKK-JISYO.total SKK-JISYO.L.header.e
+	$(RUBY) $(TOOLS_DIR)/filters/annotation-filter.rb -d SKK-JISYO.total | $(EXPR2) | cat SKK-JISYO.L.header.e - > SKK-JISYO.total.taciturn
 
-SKK-JISYO.total+zipcode.taciturn: SKK-JISYO.total+zipcode SKK-JISYO.L.header
-	$(RUBY) $(TOOLS_DIR)/filters/annotation-filter.rb -d SKK-JISYO.total+zipcode | $(EXPR2) | cat SKK-JISYO.L.header - > SKK-JISYO.total+zipcode.taciturn
+SKK-JISYO.total+zipcode.taciturn: SKK-JISYO.total+zipcode SKK-JISYO.L.header.e
+	$(RUBY) $(TOOLS_DIR)/filters/annotation-filter.rb -d SKK-JISYO.total+zipcode | $(EXPR2) | cat SKK-JISYO.L.header.e - > SKK-JISYO.total+zipcode.taciturn
 
 SKK-JISYO.L+.unannotated: SKK-JISYO.L+
 	$(GAWK) -f $(TOOLS_DIR)/unannotation.awk SKK-JISYO.L+ > SKK-JISYO.L+.unannotated

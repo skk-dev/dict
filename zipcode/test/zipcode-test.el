@@ -1,4 +1,4 @@
-;;; zipcode-test.el --- —X•Ö”Ô†«‘ƒeƒXƒg -*- mode: emacs-lisp; coding: japanese-shift-jis-2004; -*-
+;;; zipcode-test.el --- éƒµä¾¿ç•ªå·è¾æ›¸ãƒ†ã‚¹ãƒˆ -*- mode: emacs-lisp; coding: utf-8; -*-
 
 ;; Copyright (C) 2020 Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
 ;; Author: 2020 Tsuyoshi Kitamoto  <tsuyoshi.kitamoto@gmail.com>
@@ -23,37 +23,37 @@
 (require 'ert)
 
 ;; ken_all.csv
-;;   26102,"602  ","6020033","·®³ÄÌ","·®³Ä¼¶Ğ·Ş®³¸","²ÏÃŞ¶ŞÜÁ®³","‹“s•{",
-;;   "‹“ssã‹‹æ","¡oì’¬i‰GŠÛ’Ê¡oìã‚éA‰GŠÛ’Ê¡oì‰º‚éA¡oì’Ê‰GŠÛ¼",0,0,0,0,0,0
+;;   26102,"602  ","6020033","ï½·ï½®ï½³ï¾„ï¾Œ","ï½·ï½®ï½³ï¾„ï½¼ï½¶ï¾ï½·ï¾ï½®ï½³ï½¸","ï½²ï¾ï¾ƒï¾ï½¶ï¾ï¾œï¾ï½®ï½³","äº¬éƒ½åºœ",
+;;   "äº¬éƒ½å¸‚ä¸Šäº¬åŒº","ä»Šå‡ºå·ç”ºï¼ˆçƒä¸¸é€šä»Šå‡ºå·ä¸Šã‚‹ã€çƒä¸¸é€šä»Šå‡ºå·ä¸‹ã‚‹ã€ä»Šå‡ºå·é€šçƒä¸¸è¥¿",0,0,0,0,0,0
 
 ;; ZIPCODE-MK
 ;;   mkdic-process-kyoto()
 
 ;; SKK-JISYO.zipcode
-;; 6020033 /‹“s•{‹“ssã‹‹æ‰GŠÛ’Ê¡oìã‚é¡oì’¬
-;;         /‹“s•{‹“ssã‹‹æ‰GŠÛ’Ê¡oì‰º‚é¡oì’¬
-;;         /‹“s•{‹“ssã‹‹æ¡oì’Ê‰GŠÛ¼“ü¡oì’¬
-;;         /‹“s•{‹“ssã‹‹æ¡oì’Êº’¬“Œ“ü¡oì’¬/
+;; 6020033 /äº¬éƒ½åºœäº¬éƒ½å¸‚ä¸Šäº¬åŒºçƒä¸¸é€šä»Šå‡ºå·ä¸Šã‚‹ä»Šå‡ºå·ç”º
+;;         /äº¬éƒ½åºœäº¬éƒ½å¸‚ä¸Šäº¬åŒºçƒä¸¸é€šä»Šå‡ºå·ä¸‹ã‚‹ä»Šå‡ºå·ç”º
+;;         /äº¬éƒ½åºœäº¬éƒ½å¸‚ä¸Šäº¬åŒºä»Šå‡ºå·é€šçƒä¸¸è¥¿å…¥ä»Šå‡ºå·ç”º
+;;         /äº¬éƒ½åºœäº¬éƒ½å¸‚ä¸Šäº¬åŒºä»Šå‡ºå·é€šå®¤ç”ºæ±å…¥ä»Šå‡ºå·ç”º/
 
 (ert-deftest jisyo-zipcode/test1 ()
   (should
-   (string-equal "‹“s•{‹“ssã‹‹æ‰GŠÛ’Ê¡oìã‚é¡oì’¬/‹“s•{‹“ssã‹‹æ‰GŠÛ’Ê¡oì‰º‚é¡oì’¬/‹“s•{‹“ssã‹‹æ¡oì’Ê‰GŠÛ¼“ü¡oì’¬/‹“s•{‹“ssã‹‹æ¡oì’Êº’¬“Œ“ü¡oì’¬/"
+   (string-equal "äº¬éƒ½åºœäº¬éƒ½å¸‚ä¸Šäº¬åŒºçƒä¸¸é€šä»Šå‡ºå·ä¸Šã‚‹ä»Šå‡ºå·ç”º/äº¬éƒ½åºœäº¬éƒ½å¸‚ä¸Šäº¬åŒºçƒä¸¸é€šä»Šå‡ºå·ä¸‹ã‚‹ä»Šå‡ºå·ç”º/äº¬éƒ½åºœäº¬éƒ½å¸‚ä¸Šäº¬åŒºä»Šå‡ºå·é€šçƒä¸¸è¥¿å…¥ä»Šå‡ºå·ç”º/äº¬éƒ½åºœäº¬éƒ½å¸‚ä¸Šäº¬åŒºä»Šå‡ºå·é€šå®¤ç”ºæ±å…¥ä»Šå‡ºå·ç”º/"
                  (with-temp-buffer
                    (let ((large-file-warning-threshold 20000000)
-	                 (coding-system-for-read 'euc-jp))
+	                 (coding-system-for-read 'utf-8))
                      (insert-file-contents (expand-file-name "SKK-JISYO.zipcode" "./"))
                      (goto-char (point-min))
                      (search-forward "6020033 /")
                      (buffer-substring (point)
                                        (progn (end-of-line) (point))))))))
 
-;; “Á‚É‘–±È‚Å‚ ‚é•K‘R«‚Í‚È‚¢BˆÚ“]‚µ‚È‚¢‚Å‚ ‚ë‚¤–‹ÆŠ‚Æ‚µ‚Ä‘I‚ñ‚Å‚İ‚½‚¾‚¯B
+;; ç‰¹ã«ç·å‹™çœã§ã‚ã‚‹å¿…ç„¶æ€§ã¯ãªã„ã€‚ç§»è»¢ã—ãªã„ã§ã‚ã‚ã†äº‹æ¥­æ‰€ã¨ã—ã¦é¸ã‚“ã§ã¿ãŸã ã‘ã€‚
 (ert-deftest jisyo-office-zipcode/test1 ()
   (should
-   (string-equal "‘–±È @ “Œ‹“sç‘ã“c‹æ‰à‚ªŠÖ‚Q’š–Ú‚P|‚Q/"
+   (string-equal "ç·å‹™çœ @ æ±äº¬éƒ½åƒä»£ç”°åŒºéœãŒé–¢ï¼’ä¸ç›®ï¼‘âˆ’ï¼’/"
                  (with-temp-buffer
                    (let ((large-file-warning-threshold 20000000)
-	                 (coding-system-for-read 'euc-jp))
+	                 (coding-system-for-read 'utf-8))
                      (insert-file-contents (expand-file-name "SKK-JISYO.office.zipcode" "./"))
                      (goto-char (point-min))
                      (search-forward "1008926 /")

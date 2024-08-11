@@ -1,4 +1,4 @@
-;;; ZIPCODE-MK -- SKK —X•Ö”Ô†«‘ì¬—pƒvƒƒOƒ‰ƒ€ -*- mode: emacs-lisp; coding: japanese-shift-jis-2004; -*-
+;;; ZIPCODE-MK -- SKK éƒµä¾¿ç•ªå·è¾æ›¸ä½œæˆç”¨ãƒ—ãƒ­ã‚°ãƒ©ãƒ  -*- mode: emacs-lisp; coding: utf-8; -*-
 
 ;; Copyright (C) 2000-2005 SKK Development Team
 
@@ -24,7 +24,7 @@
 
 ;;; Commentary:
 
-;; Ú×‚É‚Â‚¢‚Ä‚Í README.ja ‚ğQÆ‚µ‚Ä‚­‚¾‚³‚¢B
+;; è©³ç´°ã«ã¤ã„ã¦ã¯ README.ja ã‚’å‚ç…§ã—ã¦ãã ã•ã„ã€‚
 
 ;;; Code:
 
@@ -67,7 +67,7 @@
       (set (car file) (expand-file-name (cdr file) temp-dir)))
     (setcdr (nthcdr 3 command-line-args-left) nil)))
 
-;; ˆê”Ê—X•Ö”Ô†—p .. make zipcode
+;; ä¸€èˆ¬éƒµä¾¿ç•ªå·ç”¨ .. make zipcode
 (defun mkdic-zipcode ()
   (let (*addr3* *addr4*
 		*stat*)
@@ -94,7 +94,7 @@
 ;; okuri-ari entries.
 ;; okuri-nasi entries.
 ")
-    (let ((coding-system-for-write 'euc-jis-2004-unix))
+    (let ((coding-system-for-write 'utf-8))
       (write-region (point-min) (point-max) TEMP_ZIPCODE))))
 
 (defun mkdic-get-line ()
@@ -116,39 +116,39 @@
        ((= i 8)
 	(forward-char 1)
 	(setq addr3 (buffer-substring (point) (1- (search-forward "\""))))
-	(when (or (string-equal "ˆÈ‰º‚ÉŒfÚ‚ª‚È‚¢ê‡" addr3)
-		  (string-match ".*ˆê‰~$" addr3)
-		  (string-match ".*‚ÌŸ‚É”Ô’n‚ª‚­‚éê‡$" addr3)
-		  (string-match "^[‚O-‚X].*[‚O-‚X]$" addr3))
+	(when (or (string-equal "ä»¥ä¸‹ã«æ²è¼‰ãŒãªã„å ´åˆ" addr3)
+		  (string-match ".*ä¸€å††$" addr3)
+		  (string-match ".*ã®æ¬¡ã«ç•ªåœ°ãŒãã‚‹å ´åˆ$" addr3)
+		  (string-match "^[ï¼-ï¼™].*[ï¼-ï¼™]$" addr3))
 	  (setq addr3 ""))
 	;;
-	(when (string-equal addr3 "•x‰ªi››‰®•~j")
-	  ;; ˆ¤’mŒ§Vés‰®•~’n‹æ?
-	  ;; ˆ¤’mŒ§Vés‰®•~‚Í•Ê”Ô†‚Ì–Í—l
-	  (setq addr3 "•x‰ªi‘å‰®•~A’†‰®•~A“Œ‰®•~A¼‰®•~j"))
-	(when (string-match "i" addr3)
+	(when (string-equal addr3 "å¯Œå²¡ï¼ˆâ—‹â—‹å±‹æ•·ï¼‰")
+	  ;; æ„›çŸ¥çœŒæ–°åŸå¸‚å±‹æ•·åœ°åŒº?
+	  ;; æ„›çŸ¥çœŒæ–°åŸå¸‚å±‹æ•·ã¯åˆ¥ç•ªå·ã®æ¨¡æ§˜
+	  (setq addr3 "å¯Œå²¡ï¼ˆå¤§å±‹æ•·ã€ä¸­å±‹æ•·ã€æ±å±‹æ•·ã€è¥¿å±‹æ•·ï¼‰"))
+	(when (string-match "ï¼ˆ" addr3)
 	  (let ((start (match-beginning 0)))
 	    (cond
-	     ((and (string-match "ŠK" addr3 start)
-		   (not (string-match "i’nŠKEŠK‘w•s–¾j" addr3 start)))
+	     ((and (string-match "éš" addr3 start)
+		   (not (string-match "ï¼ˆåœ°éšãƒ»éšå±¤ä¸æ˜ï¼‰" addr3 start)))
 	      (setq addr3
 		    (if (and (> start 0)
 			     (save-match-data
-			       (string-match "[‚O-‚X]" (substring addr3
+			       (string-match "[ï¼-ï¼™]" (substring addr3
 								  (1- start)
 								  start))))
-			;; "ƒTƒ“ƒVƒƒƒCƒ“‚U‚O@‚PŠK" ‚È‚Ç
+			;; "ã‚µãƒ³ã‚·ãƒ£ã‚¤ãƒ³ï¼–ï¼ã€€ï¼‘éš" ãªã©
 			(concat (substring addr3 0 start)
-				"@"
+				"ã€€"
 				(substring addr3 (1+ start) (match-end 0)))
 		      (concat (substring addr3 0 start)
 			      (substring addr3 (1+ start) (match-end 0))))))
 	     ;;
-	     ((and (string-equal addr1 "‹“s•{")
-		   (string-match "^‹“ss" addr2))
+	     ((and (string-equal addr1 "äº¬éƒ½åºœ")
+		   (string-match "^äº¬éƒ½å¸‚" addr2))
 	      (setq *addr4* (substring addr3 0 start))
 	      (setq *addr3* (substring addr3 start))
-	      (if (string-match "j$" *addr3*)
+	      (if (string-match "ï¼‰$" *addr3*)
 		  (progn
 		    (setq addr3 (mkdic-process-kyoto *addr3* *addr4*))
 		    (setq *stat* nil)
@@ -156,16 +156,16 @@
 		(setq addr3 nil)
 		(setq *stat* t)))
 	     ;;
-	     ((and (string-match "j" addr3)
+	     ((and (string-match "ï¼‰" addr3)
 		   (not (string-match
-			 "’nŠ„\\|‚ğœ‚­\\|‚ğŠÜ‚Ş\\|‘Sˆæ\\|[ƒA-ƒ“]A[ƒA-ƒ“]"
+			 "åœ°å‰²\\|ã‚’é™¤ã\\|ã‚’å«ã‚€\\|å…¨åŸŸ\\|[ã‚¢-ãƒ³]ã€[ã‚¢-ãƒ³]"
 			 addr3)))
 	      (setq *addr4* (substring addr3 0 start))
 	      (setq *addr3* (substring addr3 start))
-	      (when (string-equal *addr4* "bA‰³")
+	      (when (string-equal *addr4* "ç”²ã€ä¹™")
 		(setq *addr4* ""))
-	      (if (and (string-match ".+j$" *addr3*)
-		       (not (string-match "u\\|v\\|`\\|[‚O-‚X]" *addr3*)))
+	      (if (and (string-match ".+ï¼‰$" *addr3*)
+		       (not (string-match "ã€Œ\\|ã€\\|ã€œ\\|[ï¼-ï¼™]" *addr3*)))
 		  (progn
 		    (setq addr3 (mkdic-process-kakkonai *addr3* *addr4*))
 		    (setq *stat* nil)
@@ -180,14 +180,14 @@
 	      (setq *addr3* nil)
 	      (setq *stat* t)))))
 	;;
-	(when (and addr3 (string-match ".*’nŠ„$" addr3))
+	(when (and addr3 (string-match ".*åœ°å‰²$" addr3))
 	  (cond
-	   ((string-match "A" addr3)
+	   ((string-match "ã€" addr3)
 	    (let ((start (match-beginning 0)))
 	      (setq addr3 (concat (substring addr3 0 start)
 				  "/" addr1 addr2
 				  (substring addr3 (1+ start))))))
-	   ((string-match "`" addr3)
+	   ((string-match "ã€œ" addr3)
 	    (let ((point (match-beginning 0))
 		  fromstr tostr
 		  from to
@@ -198,13 +198,13 @@
 	      (setq chimei (substring fromstr 0
 				      (string-match "[0-9]" fromstr)))
 	      (setq pt1 (match-beginning 0))
-	      (when (string-match "’nŠ„$" fromstr)
+	      (when (string-match "åœ°å‰²$" fromstr)
 		(setq pt2 (match-beginning 0)))
 	      (setq from (string-to-number (substring fromstr pt1 pt2)))
 	      ;;
 	      (when (string-match "[0-9]" tostr)
 		(setq pt1 (match-beginning 0)))
-	      (when (string-match "’nŠ„$" tostr)
+	      (when (string-match "åœ°å‰²$" tostr)
 		(setq pt2 (match-beginning 0)))
 	      (setq to (string-to-number (substring tostr pt1 pt2)))
 	      ;;
@@ -214,14 +214,14 @@
 		   ((= i from)
 		    (setq addr3 (concat chimei
 					(japanese-zenkaku (format "%d" i))
-					"’nŠ„")))
+					"åœ°å‰²")))
 		   (t
 		    (setq addr3 (concat addr3 "/" addr1 addr2 chimei
 					(japanese-zenkaku (format "%d" i))
-					"’nŠ„"))))
+					"åœ°å‰²"))))
 		  (setq i (1+ i))))))))
 	;;
-	(when (and addr3 (string-match "j$" addr3))
+	(when (and addr3 (string-match "ï¼‰$" addr3))
 	  (cond
 	   ((and *addr4* *addr3*)
 	    (setq *addr3* (concat *addr3* addr3))
@@ -231,29 +231,29 @@
 	   ((and *addr3* (setq addr3 *addr3*))
 	    (setq *stat* nil))))
 	;;
-	(when (member addr3 '("Šâ“c’¬‹‘ºA–k‹½’†"
-			    "Šâ“c’¬‹{‰ºA“¹‡"
-			    "”Ñ‘º’¬¼RA‚R"))
-	  ;; ‚¢‚¸‚ê‚àˆ¤’mŒ§–L‹´s
+	(when (member addr3 '("å²©ç”°ç”ºå±…æ‘ã€åŒ—éƒ·ä¸­"
+			    "å²©ç”°ç”ºå®®ä¸‹ã€é“åˆ"
+			    "é£¯æ‘ç”ºè¥¿å±±ã€é«˜å±±"))
+	  ;; ã„ãšã‚Œã‚‚æ„›çŸ¥çœŒè±Šæ©‹å¸‚
 	  (setq addr3 (concat (substring addr3 0
 					(progn
-					  (string-match "A" addr3)
+					  (string-match "ã€" addr3)
 					  (match-beginning 0)))
 			     "/" addr1 addr2
 			     (substring addr3 0
 					(progn
-					  (string-match "’¬" addr3)
+					  (string-match "ç”º" addr3)
 					  (match-end 0)))
 			     (substring addr3
 					(progn
-					  (string-match "A" addr3)
+					  (string-match "ã€" addr3)
 					  (1+ (match-end 0)))))))
 	;;
 	(cond
 	 ((and *stat* *addr4* *addr3* addr3)
 	  (setq *addr3* (concat *addr3* addr3))
 	  (setq addr3 nil))
-	 ((and addr3 (string-match "A" addr3))
+	 ((and addr3 (string-match "ã€" addr3))
 	  (if *stat*
 	      (when *addr3*
 		(setq addr3 *addr3*))
@@ -279,18 +279,18 @@
 (defun mkdic-process-kyoto (nantaras cho)
   (let (addr)
     (cond
-     ((string-match "\\(`\\|i’š–Új\\|‚»‚Ì‘¼\\|”Ô’nj$\\)"
+     ((string-match "\\(ã€œ\\|ï¼ˆä¸ç›®ï¼‰\\|ãã®ä»–\\|ç•ªåœ°ï¼‰$\\)"
 		    nantaras)
       (setq nantaras nil))
 
-     ((string-match "i[‚O-‚X]’š–Új" nantaras)
+     ((string-match "ï¼ˆ[ï¼-ï¼™]ä¸ç›®ï¼‰" nantaras)
       (setq cho (concat cho (substring nantaras 1 (1- (length nantaras)))))
       (setq nantaras nil))
 
      (t
       (setq nantaras (split-string (substring nantaras 1
 					      (1- (length nantaras)))
-				   "A"))))
+				   "ã€"))))
 
     (cond
      ((not nantaras)
@@ -305,17 +305,17 @@
 (defun mkdic-process-kakkonai (detail cho)
   (let (addr)
     (cond
-     ((string-match "\\(`\\|i’š–Új\\|”Ô’nj$\\)"
+     ((string-match "\\(ã€œ\\|ï¼ˆä¸ç›®ï¼‰\\|ç•ªåœ°ï¼‰$\\)"
 		    detail)
       (setq detail nil))
-     ((string-match "i[‚O-‚X]’š–Új" detail)
+     ((string-match "ï¼ˆ[ï¼-ï¼™]ä¸ç›®ï¼‰" detail)
       (setq cho (concat cho (substring detail 1 (1- (length detail)))))
       (setq detail nil))
-     ((string-match "i’nŠKEŠK‘w•s–¾j" detail)
-      (setq detail (list "’nŠK")))
+     ((string-match "ï¼ˆåœ°éšãƒ»éšå±¤ä¸æ˜ï¼‰" detail)
+      (setq detail (list "åœ°éš")))
      (t
       (setq detail (split-string (substring detail 1 (1- (length detail)))
-				 "A"))))
+				 "ã€"))))
     (cond
      ((not detail)
       (setq addr cho))
@@ -325,11 +325,11 @@
 	(setq detail (cons "" detail)))
       (setq addr (concat cho (car detail)))
       (dolist (nantara (cdr detail))
-	(unless (string-match "‚»‚Ì‘¼" nantara)
+	(unless (string-match "ãã®ä»–" nantara)
 	  (setq addr (concat addr "/" addr1 addr2 cho nantara))))
       addr))))
 
-;; –‹ÆŠ—p .. make office
+;; äº‹æ¥­æ‰€ç”¨ .. make office
 (defun mkdic-office ()
   (let (*addr3* *addr4*	*stat*)
     (set-buffer (get-buffer-create " *dic *"))
@@ -342,7 +342,7 @@
       (insert-file-contents JIGYOSYO))
 
     ;; workaround 2007-01-16
-    ;; IBM Šg’£•¶š fab1 ‚ğ`è'i8de8j‚Ö’uŠ·
+    ;; IBM æ‹¡å¼µæ–‡å­— fab1 ã‚’`å´'ï¼ˆ8de8ï¼‰ã¸ç½®æ›
     ;;   (format "%x-%x" #o372 #o261) => "fa-b1"
     (goto-char (point-min))
     (while (search-forward (decode-coding-string "\372\261" 'japanese-cp932) nil t)
@@ -350,21 +350,21 @@
       (insert (decode-coding-string "\215\350" 'sjis)))
 
     ;; workaround 2007-02-12
-    ;; IBM Šg’£•¶š fadc ‚ğ `‚µ‚å‚¤'i‚Ğ‚ç‚ª‚È‚R•¶šj‚Ö’uŠ·
+    ;; IBM æ‹¡å¼µæ–‡å­— fadc ã‚’ `ã—ã‚‡ã†'ï¼ˆã²ã‚‰ãŒãªï¼“æ–‡å­—ï¼‰ã¸ç½®æ›
     (goto-char (point-min))
     (while (search-forward (decode-coding-string "\372\334" 'japanese-cp932) nil t)
       (replace-match "")
       (insert (decode-coding-string "\202\265\202\345\202\244" 'sjis)))
 
     ;; workaround 2007-05-11
-    ;; fa 9c ‚ğ `’Ë' ‚Ö’uŠ·
+    ;; fa 9c ã‚’ `å¡š' ã¸ç½®æ›
     (goto-char (point-min))
     (while (search-forward (decode-coding-string "\372\234" 'japanese-cp932) nil t)
       (replace-match "")
       (insert (decode-coding-string "\222\313" 'sjis)))
 
     ;; workaround 2011-06-09
-    ;; ƒnƒVƒS‚iIBM Šg’£•¶š fbfcj‚ğ `‚' ‚Ö’uŠ·
+    ;; ãƒã‚·ã‚´é«˜ï¼ˆIBM æ‹¡å¼µæ–‡å­— fbfcï¼‰ã‚’ `é«˜' ã¸ç½®æ›
     (goto-char (point-min))
     (while (search-forward (decode-coding-string "\373\374" 'japanese-cp932) nil t)
       (replace-match "")
@@ -385,7 +385,7 @@
 ;; okuri-ari entries.
 ;; okuri-nasi entries.
 ")
-    (let ((coding-system-for-write 'euc-jis-2004-unix))
+    (let ((coding-system-for-write 'utf-8))
       (write-region (point-min) (point-max) TEMP_OFFICE))))
 
 (defun mkdic-office-get-line ()
@@ -447,27 +447,27 @@
 (defun mkdic-zipcode-header ()
   (with-temp-buffer
     (insert "\
-;; -*- coding: euc-jis-2004; -*-
+;; -*- coding: utf-8; -*-
 ;; SKK-JISYO.zipcode --- 7-digit ZIP code dictionary for SKK
 " JISYO_HEADER)
     (let ((time-stamp-format "%02d %03b %y")
 	  (time-stamp-time-zone "GMT")
 	  (system-time-locale "C"))
       (time-stamp))
-    (set-buffer-file-coding-system 'euc-jis-2004-unix)
+    (set-buffer-file-coding-system 'utf-8)
     (write-region (point-min) (point-max) ZIPCODE)))
 
 (defun mkdic-office-header ()
   (with-temp-buffer
     (insert "\
-;; -*- coding: euc-jis-2004; -*-
+;; -*- coding: utf-8; -*-
 ;; SKK-JISYO.office.zipcode --- 7-digit ZIP code (offices) dictionary for SKK
 " JISYO_HEADER)
     (let ((time-stamp-format "%02d %03b %y")
 	  (time-stamp-time-zone "GMT")
 	  (system-time-locale "C"))
       (time-stamp))
-    (set-buffer-file-coding-system 'euc-jis-2004-unix)
+    (set-buffer-file-coding-system 'utf-8)
     (write-region (point-min) (point-max) OFFICE)))
 
 ;; ZIPCODE-MK ends here

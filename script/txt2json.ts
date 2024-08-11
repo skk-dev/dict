@@ -26,11 +26,10 @@ async function main(ifile: string, mfile: string, ofile: string) {
     )
   })
   const input = await Deno.readFile(ifile)
-  const text = iconv.decode(input, "EUC-JP")
   const meta = YAML.parse(await Deno.readTextFile(mfile))
   const jisyo = {
     ...meta,
-    ...(LegacyFormat.jisyo.parse(text) as any).value
+    ...(LegacyFormat.jisyo.parse(input) as any).value
   }
   await Deno.writeTextFile(ofile, JSON.stringify(jisyo, null, 2))
 }
