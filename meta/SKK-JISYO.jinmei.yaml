@@ -19,6 +19,13 @@ license: |-
   Free Software Foundation Inc., 59 Temple Place - Suite 330, Boston,
   MA 02111-1307, USA.
 note: |-
-  本辞書は、skk/tools/convert2skk/wnn2skk.awk を利用し「人名辞書 (gerodic) 1.00」を SKK 辞書形式に変換したものをベースに加除した ものです。
-  % gawk -f wnn2skk.awk gerodic/g-jinmei.u > temp % skkdic-expr temp | skkdic-sort > SKK-JISYO.jinmei
-  Wnn の品詞データ、コメントは SKK annotation として辞書内に含め ています。annotation が不要な方は skk/dic/unannotation.awk を利 用して削除して下さい。
+  本辞書は、skk/tools/convert2skk/wnn2skk.awk を利用し「人名辞書
+  (gerodic) 1.00」を SKK 辞書形式に変換したものをベースに加除した
+  ものです。
+
+  % gawk -f wnn2skk.awk gerodic/g-jinmei.u > temp
+  % skkdic-expr temp | skkdic-sort > SKK-JISYO.jinmei
+
+  Wnn の品詞データ、コメントは SKK annotation として辞書内に含め
+  ています。annotation が不要な方は skk/dic/unannotation.awk を利
+  用して削除して下さい。

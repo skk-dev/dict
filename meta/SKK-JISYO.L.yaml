@@ -28,7 +28,8 @@ license: |-
   the Free Software Foundation Inc., 59 Temple Place - Suite 330,
   Boston, MA 02111-1307, USA.
 note: |-
-  Acknowledgement:
+  ACKNOWLEDGEMENT
+
   この辞書は、SKK 原作者の佐藤雅彦先生が、第 1 版作成のために東北大学
   電気通信研究所佐藤研究室 (当時) の学生さん達とともに scratch から作
   成されたのをその起源とし、その後、無数のユーザからのユーザ辞書の提
@@ -38,17 +39,10 @@ note: |-
   この辞書の作成にご尽力頂いた全ての方に感謝すると共に、これをお読み
   のあなたのご協力を是非ともお待ちしております。
 
-    http://openlab.ring.gr.jp/skk/registdic.cgi
+    https://github.com/skk-dev/dict
 
-  にアクセスし、フォームに是非あなたの新語・誤登録指摘・コメントを書
-  いて下さい。
+  にアクセスし、Issue や Pull request をお寄せください。
 
-  また、実際に辞書の編集をしてみたいという方は、
-
-    http://openlab.ring.gr.jp/skk/cvs-ja.html#account
-
-  をご覧の上、cvs account の発行申し込みをして下さい。
-
-  辞書の編集方針は skk/dic/READMEs/committers.txt をご参照下さい。
-  そこに記載のない事項、またその変更については、その都度 SKK Openlab
-  ML で話し合いで決められます。
+  辞書の編集方針は committers.md をご参照下さい。
+  そこに記載のない事項、またその変更については、その都度 github.com/skk-dev/dict/Issue
+  で話し合いで決められます。

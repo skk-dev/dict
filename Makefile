@@ -233,8 +233,29 @@ IVD_Sequences.txt:
 IVD_Collections.txt:
 	test -f IVD_Collections.txt || $(CURL) -o IVD_Collections.txt https://unicode.org/ivd/data/2017-12-12/IVD_Collections.txt
 
-json: json/SKK-JISYO.assoc.json json/SKK-JISYO.china_taiwan.json json/SKK-JISYO.edict2.json json/SKK-JISYO.edict.json json/SKK-JISYO.emoji.json json/SKK-JISYO.fullname.json json/SKK-JISYO.geo.json json/SKK-JISYO.hukugougo.json json/SKK-JISYO.itaiji.json json/SKK-JISYO.jinmei.json json/SKK-JISYO.JIS2.json json/SKK-JISYO.law.json json/SKK-JISYO.L.json json/SKK-JISYO.mazegaki.json json/SKK-JISYO.M.json json/SKK-JISYO.ML.json json/SKK-JISYO.okinawa.json json/SKK-JISYO.pinyin.json json/SKK-JISYO.propernoun.json json/SKK-JISYO.pubdic+.json json/SKK-JISYO.S.json json/SKK-JISYO.station.json
 
-json/%.json: %
-	$(DENO) run --allow-read --allow-write --allow-net script/txt2json.ts -i $< -m meta/$<.yaml -o $@
+# JSON <--> txt
+
+EUC_SRCS = SKK-JISYO.assoc SKK-JISYO.china_taiwan SKK-JISYO.edict SKK-JISYO.fullname SKK-JISYO.geo SKK-JISYO.hukugougo SKK-JISYO.itaiji SKK-JISYO.jinmei SKK-JISYO.JIS2 SKK-JISYO.law SKK-JISYO.L SKK-JISYO.mazegaki SKK-JISYO.M SKK-JISYO.ML SKK-JISYO.okinawa SKK-JISYO.propernoun SKK-JISYO.pubdic+ SKK-JISYO.S SKK-JISYO.station
+UTF_SRCS = SKK-JISYO.edict2 SKK-JISYO.emoji SKK-JISYO.pinyin
+EUC_JSON = $(EUC_SRCS:%=json/%.json)
+UTF_JSON = $(UTF_SRCS:%=json/%.json)
+json: euc_json utf_json
+euc_json:
+	for file in $(EUC_SRCS); do \
+		$(DENO) run --allow-read --allow-write --allow-net script/txt2json.ts -c EUC-JP -i $$file -m meta/$$file.yaml -o json/$$file.json ; \
+	done
+utf_json:
+	for file in $(EUC_SRCS); do \
+		$(DENO) run --allow-read --allow-write --allow-net script/txt2json.ts -c UTF-8 -i $$file -m meta/$$file.yaml -o json/$$file.json ; \
+	done
+euc: $(EUC_JSON)
+	for file in $(EUC_SRCS); do \
+		$(DENO) run --allow-read --allow-write --allow-net script/json2txt.ts -c EUC-JP -i json/$$file.json -o $$file ; \
+	done
+utf: $(UTF_JSON)
+	for file in $(EUC_SRCS); do \
+		$(DENO) run --allow-read --allow-write --allow-net script/json2txt.ts -c UTF-8 -i json/$$file.json -o $$file ; \
+	done
+
 # end of Makefile.
