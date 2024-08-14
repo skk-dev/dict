@@ -65,6 +65,7 @@ async function main(
   const jisyo = result.value
   const json = {
     ...meta,
+    version: "0.1.0",
     okuri_ari: jisyo.okuri_ari,
     okuri_nasi: jisyo.okuri_nasi,
   }
