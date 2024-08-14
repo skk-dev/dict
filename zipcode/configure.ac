@@ -17,6 +17,7 @@ AC_PATH_PROG(wget, wget)
 AC_PATH_PROG(unzip, unzip)
 AC_PATH_PROG(nkf, nkf)
 AC_PATH_PROG(skkdic_expr2, skkdic-expr2)
+AC_PATH_PROG(deno, deno)
 
 if test x$ac_cv_path_skkdic_expr2 = x; then
    AC_PATH_PROG(skkdic_expr, skkdic-expr)
