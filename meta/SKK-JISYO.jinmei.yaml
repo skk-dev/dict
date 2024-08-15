@@ -3,6 +3,7 @@ description: 人名辞書 for SKK system
 copyright: |-
   Copyright (C) 1993 Wnn Consortium
   Copyright (C) 2002, 2003, 2004 SKK Development Team <skk@ring.gr.jp>
+  Author: OMRON SOFTWARE Co., Ltd. <freewnn@rd.kyoto.omronsoft.co.jp>
 license: |-
   This dictionary is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License as
@@ -23,8 +24,8 @@ note: |-
   (gerodic) 1.00」を SKK 辞書形式に変換したものをベースに加除した
   ものです。
 
-  % gawk -f wnn2skk.awk gerodic/g-jinmei.u > temp
-  % skkdic-expr temp | skkdic-sort > SKK-JISYO.jinmei
+    % gawk -f wnn2skk.awk gerodic/g-jinmei.u > temp
+    % skkdic-expr temp | skkdic-sort > SKK-JISYO.jinmei
 
   Wnn の品詞データ、コメントは SKK annotation として辞書内に含め
   ています。annotation が不要な方は skk/dic/unannotation.awk を利

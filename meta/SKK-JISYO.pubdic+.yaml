@@ -2,7 +2,7 @@ version: 0.0.0
 description: Additional dictionary for SKK system made from pubdic.p.
 copyright: |-
   Copyright (C) 2000 the Pubdic+ project.
-                2002, 2003, 2004 SKK Development Team <skk@ring.gr.jp>
+                    2002, 2003, 2004 SKK Development Team <skk@ring.gr.jp>
 license: |-
   This package is copyrighted by the Pubdic+ project. Permission to use,
   copy, modify, and distribute this package for any purpose is hereby
@@ -18,6 +18,6 @@ license: |-
 note: |-
   This file is made by the following steps;
 
-  $ pubdic2list pubdic.p | adddummy | sort -u | removedummy | list2skk > temp
-  $ skkdic-expr2 temp - SKK-JISYO.L > SKK-JISYO.pubdic+
+   $ pubdic2list pubdic.p | adddummy | sort -u | removedummy | list2skk > temp
+   $ skkdic-expr2 temp - SKK-JISYO.L > SKK-JISYO.pubdic+
   (and some edit to remove entries that cannot be used with SKK).
