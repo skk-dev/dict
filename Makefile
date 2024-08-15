@@ -206,6 +206,8 @@ cldr-common.zip:
 # http://www.edrdg.org/jmdict/edict.html
 #   ELECTRONIC DICTIONARY RESEARCH AND DEVELOPMENT GROUP GENERAL DICTIONARY LICENCE STATEMENT
 #   http://www.edrdg.org/edrdg/licence.html
+# http://ftp.edrdg.org/pub/Nihongo/00INDEX.html
+#   After nearly 30 years of operation the Monash ftp server has been closed down.
 
 SKK-JISYO.edict2: edict2u
 	$(MV) SKK-JISYO.edict2 SKK-JISYO.edict2.ORIG
@@ -216,7 +218,7 @@ SKK-JISYO.edict2: edict2u
 	$(MD5) SKK-JISYO.edict2.gz > SKK-JISYO.edict2.gz.md5
 
 edict2u:
-	$(CURL) -o edict2u.gz http://ftp.monash.edu/pub/nihongo/edict2u.gz
+	$(CURL) -o edict2u.gz http://ftp.edrdg.org/pub/Nihongo/edict2u.gz
 	$(GZIP) --force --decompress edict2u.gz
 
 
