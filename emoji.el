@@ -118,6 +118,7 @@
 (defvar kanji2kana-alist nil)
 
 (defun make-alist ()
+  (let ((coding-system-for-read 'euc-jp))
     (let (alist)
       (with-temp-buffer
         (insert-file-contents "SKK-JISYO.L.unannotated")
@@ -132,7 +133,7 @@
             (unless (string-match ">" kana-midasi)
               (setq alist (cons (cons kana-midasi kanji-cands) alist))))
           (forward-line)))
-      alist))
+      alist)))
 
 (defun kanji-to-kana ()
   (setq kanji2kana-alist (make-alist))
