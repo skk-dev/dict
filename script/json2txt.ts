@@ -56,11 +56,11 @@ async function main(coding: string, ifile: string, ofile: string) {
     okuri_nasi: json.okuri_nasi,
   }
   jisyo.toString = () =>
-    `-*- mode: fundamental; coding: ${coding.toLowerCase()} -*-\n` +
+    `;; -*- mode: fundamental; coding: ${coding.toLowerCase()} -*-\n` +
     jisyo.comments.reduce((acc: string, com: string): string => {
       if (typeof com !== "string") return acc + ";;\n"
       return acc + com.split("\n").reduce((a: string, l: string): string => {
-        return a + `;; ${l}\n`
+        return a + `;;${l.length ? " ": ""}${l}\n`
       }, "") + ";;\n"
     }, "") +
     ";; okuri-ari entries.\n" +
