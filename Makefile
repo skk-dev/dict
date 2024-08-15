@@ -243,21 +243,25 @@ UTF_SRCS = SKK-JISYO.edict2 SKK-JISYO.emoji SKK-JISYO.fullname SKK-JISYO.pinyin
 EUC_JSON = $(EUC_SRCS:%=json/%.json)
 UTF_JSON = $(UTF_SRCS:%=json/%.json)
 json: euc_json utf_json
-euc_json:
+euc_json: $(EUC_SRCS)
 	for file in $(EUC_SRCS); do \
-		$(DENO) run --allow-read --allow-write --allow-net script/txt2json.ts -c EUC-JP -i $$file -m meta/$$file.yaml -o json/$$file.json ; \
+		$(DENO) run --allow-read --allow-write --allow-net script/txt2json.ts \
+		-c EUC-JP -i $$file -m meta/$$file.yaml -o json/$$file.json ; \
 	done
-utf_json:
-	for file in $(EUC_SRCS); do \
-		$(DENO) run --allow-read --allow-write --allow-net script/txt2json.ts -c UTF-8 -i $$file -m meta/$$file.yaml -o json/$$file.json ; \
+utf_json: $(UTF_SRCS)
+	for file in $(UTF_SRCS); do \
+		$(DENO) run --allow-read --allow-write --allow-net script/txt2json.ts \
+		-c UTF-8 -i $$file -m meta/$$file.yaml -o json/$$file.json ; \
 	done
 euc: $(EUC_JSON)
 	for file in $(EUC_SRCS); do \
-		$(DENO) run --allow-read --allow-write --allow-net script/json2txt.ts -c EUC-JP -i json/$$file.json -o $$file ; \
+		$(DENO) run --allow-read --allow-write --allow-net script/json2txt.ts \
+		-c EUC-JP -i json/$$file.json -o $$file ; \
 	done
 utf: $(UTF_JSON)
-	for file in $(EUC_SRCS); do \
-		$(DENO) run --allow-read --allow-write --allow-net script/json2txt.ts -c UTF-8 -i json/$$file.json -o $$file ; \
+	for file in $(UTF_SRCS); do \
+		$(DENO) run --allow-read --allow-write --allow-net script/json2txt.ts \
+		-c UTF-8 -i json/$$file.json -o $$file ; \
 	done
 
 # end of Makefile.
