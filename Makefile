@@ -204,7 +204,7 @@ SKK-JISYO.emoji.ja: cldr-common.zip
 	test -f ja.xml || $(UNZIP) -p cldr-common.zip "*common/annotations/ja.xml" > ja.xml
 	$(EMACS) --load emoji.el --funcall ja > SKK-JISYO.emoji.ja
 
-SKK-JISYO.emoji.kana: SKK-JISYO.emoji.kanji
+SKK-JISYO.emoji.kana: SKK-JISYO.emoji.kanji SKK-JISYO.L.unannotated
 	$(EMACS) --load emoji.el --funcall kanji-to-kana > SKK-JISYO.emoji.kana
 	$(RM) SKK-JISYO.emoji.kanji
 
