@@ -2,7 +2,7 @@ version: 0.0.0
 description: SKK railroad stations dictionary.
 copyright: |-
   Copyright (C) 2003-2005 MITA Yuusuke  <clefs@mail.goo.ne.jp>
-                    SKK Development Team <skk@ring.gr.jp>
+                SKK Development Team <skk@ring.gr.jp>
 license: |-
   This dictionary is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License as

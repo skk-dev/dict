@@ -2,8 +2,8 @@ version: 0.0.0
 description: SKK association and abbreviation dictionary.
 copyright: |-
   Copyright (C) 2002 NAKAJIMA Mikio <minakaji@osaka.email.ne.jp>
-                    2005-2006 MITA Yuusuke <clefs@mail.goo.ne.jp>
-                    SKK Development Team <skk@ring.gr.jp>
+                2005-2006 MITA Yuusuke <clefs@mail.goo.ne.jp>
+                SKK Development Team <skk@ring.gr.jp>
 license: |-
   This dictionary is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License as
@@ -157,8 +157,8 @@ note: |-
       ・アミノ酸 「Gly /glycine/グリシン/」
       ・ビタミン 「v.c /ビタミンC/vitamin C/」
       ・外国語・外国文学
-            「どくご /独語/ドイツ語/独逸語/Deutsche/German/」
-            「どくぶん /独文/ドイツ文学/独逸文学/」
+          「どくご /独語/ドイツ語/独逸語/Deutsche/German/」
+          「どくぶん /独文/ドイツ文学/独逸文学/」
       ・クラシック音楽の形式のかな引き 「わるつ /円舞曲/waltz/」
       ・文法用語・品詞 「adj. /形容詞/adjectif/adjective/」
       ・拡張子 「.sh /shell/シェル/(concat "#!\057bin\057sh")/」
