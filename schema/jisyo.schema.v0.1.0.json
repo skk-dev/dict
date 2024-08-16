@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "id": "jisyo.schema.v0.1.0.json",
+  "$id": "jisyo.schema.v0.1.0.json",
   "title": "Jisyo",
   "description": "SKKの変換エンジンのための辞書形式",
   "$comment": "必須の項目に加えて任意の項目を追加してもよい",
@@ -33,76 +33,57 @@
       "type": "array",
       "description": "送り仮名があるエントリ",
       "items": {
-        "type": "array",
-        "minItems": 2,
-        "maxItems": 2,
-        "items": [
-          {
-            "type": "string",
-            "description": "かな"
-          },
-          {
+        "type": "object",
+        "additionalProperties": false,
+        "$comment": "かなの最後がアルファベット",
+        "patternProperties": {
+          ".+[a-z]": {
             "type": "array",
             "minItems": 1,
             "items": {
-              "type": "array",
+              "type": "object",
               "description": "変換エントリ",
-              "minItems": 2,
-              "maxItems": 2,
-              "items": [
-                {
-                  "type": "string",
-                  "description": "漢字"
-                },
-                {
+              "additionalProperties": false,
+              "patternProperties": {
+                ".+": {
                   "type": "array",
                   "description": "注釈",
                   "items": {
                     "type": "string"
                   }
                 }
-              ]
+              }
             }
           }
-        ]
+        }
       }
     },
     "okuri_nasi": {
       "type": "array",
-      "description": "送り仮名がないエントリ",
+      "description": "送り仮名があるエントリ",
       "items": {
-        "type": "array",
-        "minItems": 2,
-        "maxItems": 2,
-        "items": [
-          {
-            "type": "string",
-            "description": "かな"
-          },
-          {
+        "type": "object",
+        "additionalProperties": false,
+        "patternProperties": {
+          ".+": {
             "type": "array",
             "minItems": 1,
             "items": {
-              "type": "array",
+              "type": "object",
               "description": "変換エントリ",
-              "minItems": 2,
-              "maxItems": 2,
-              "items": [
-                {
-                  "type": "string",
-                  "description": "漢字"
-                },
-                {
+              "additionalProperties": false,
+              "patternProperties": {
+                ".+": {
                   "type": "array",
                   "description": "注釈",
                   "items": {
                     "type": "string"
                   }
                 }
-              ]
+              }
             }
           }
-        ]
+        }
       }
     }
   }

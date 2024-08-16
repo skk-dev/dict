@@ -1,9 +1,16 @@
 type SKKJisyo = {
-  comments: string[]
-  okuri_ari: Entry[]
-  okuri_nasi: Entry[]
+  meta: SKKMeta
+  okuri_ari: SKKEntry[]
+  okuri_nasi: SKKEntry[]
 }
-type Entry = [Kana, Kanji[]]
-type Kana = string
-type Kanji = [string, Annotations]
-type Annotations = string[]
+type SKKEntry = { [kana: string]: SKKHenkans }
+type SKKHenkans = SKKHenkan[]
+type SKKHenkan = { [kanji: string]: SKKAnnotations }
+type SKKAnnotations = string[]
+
+type SKKMeta = {
+  description: string
+  copyright: string
+  license: string
+  note: string
+}

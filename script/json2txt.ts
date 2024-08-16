@@ -1,5 +1,5 @@
 import iconv from "https://esm.sh/iconv-lite@0.6.3"
-import * as cli from "https://deno.land/std@0.213.0/cli/mod.ts"
+import * as cli from "jsr:@std/cli"
 
 async function main(coding: string, ifile: string, ofile: string) {
   function enlisp(sexp: string): string {
@@ -10,28 +10,31 @@ async function main(coding: string, ifile: string, ofile: string) {
         .replace(/;/g, "\\073")
     }")`
   }
-  function reduceRecords(records: Entry[]): string {
-    return records.reduce((acc: string, rec: Entry): string => {
-      return acc + rec[0] + " /" +
-        rec[1].reduce((ac: string, kanji: Kanji): string => {
-          return ac + enlisp(kanji[0]) +
-            kanji[1].reduce((a: string, s: string) => {
+  function reduceRecords(records: SKKEntry[]): string {
+    return records.reduce((acc: string, ent: SKKEntry): string => {
+      const kana = Object.keys(ent)[0]
+      return acc + kana + " /" +
+        ent[kana].reduce((ac: string, henkan: SKKHenkan): string => {
+          const kanji = Object.keys(henkan)[0]
+          return ac + enlisp(kanji) +
+            henkan[kanji].reduce((a: string, s: string) => {
               return a + ";" + s
             }, "") + "/"
         }, "") + "\n"
     }, "")
   }
   function replaceWrongChars(s: Uint8Array): Uint8Array {
-    if (coding != "EUC-JP") return s
+    if (!/^euc-?j/i.test(coding)) return s
     let deleteCount = 0
     const b = s.reduce((p, v, i, a) => {
       if (deleteCount > 0) {
         deleteCount--
-      } else if ( // s/8FA2B7/A1C1/g
+      } else if (
+        // s/8FA2B7/A1C1/g
         a.length > i + 3 &&
-        a[i+0] == 0x8F &&
-        a[i+1] == 0xA2 &&
-        a[i+2] == 0xB7
+        a[i + 0] == 0x8F &&
+        a[i + 1] == 0xA2 &&
+        a[i + 2] == 0xB7
       ) {
         p.push(0xA1, 0xC1)
         deleteCount = 2
@@ -45,22 +48,17 @@ async function main(coding: string, ifile: string, ofile: string) {
 
   const input = await Deno.readTextFile(ifile)
   const json = JSON.parse(input)
-  const jisyo: SKKJisyo = {
-    comments: [
-      json.description,
-      json.copyright,
-      json.license,
-      json.note,
-    ],
-    okuri_ari: json.okuri_ari,
-    okuri_nasi: json.okuri_nasi,
-  }
+  const jisyo: SKKJisyo = json // meta が欠落している
+  const meta: SKKMeta = json
   jisyo.toString = () =>
     `;; -*- mode: fundamental; coding: ${coding.toLowerCase()} -*-\n` +
-    jisyo.comments.reduce((acc: string, com: string): string => {
-      if (typeof com !== "string") return acc + ";;\n"
-      return acc + com.split("\n").reduce((a: string, l: string): string => {
-        return a + `;;${l.length ? " ": ""}${l}\n`
+    Object.entries(meta).reduce((acc, com): string => {
+      const key = com[0]
+      const value = com[1]
+      if (value == undefined) return acc + ";;\n"
+      if (key == "version" || typeof value !== "string") return acc
+      return acc + value.split("\n").reduce((a: string, l: string): string => {
+        return a + `;;${l.length ? " " : ""}${l}\n`
       }, "") + ";;\n"
     }, "") +
     ";; okuri-ari entries.\n" +
