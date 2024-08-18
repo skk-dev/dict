@@ -258,26 +258,23 @@ UTF_SRCS = SKK-JISYO.edict2 SKK-JISYO.emoji SKK-JISYO.fullname SKK-JISYO.pinyin
 EUC_JSON = $(EUC_SRCS:%=json/%.json)
 UTF_JSON = $(UTF_SRCS:%=json/%.json)
 
-json: euc_json utf_json
-euc_json: $(EUC_SRCS)
-	for file in $(EUC_SRCS); do \
-		$(DENO) run --allow-read --allow-write --allow-net script/txt2json.ts \
-		-c EUC-JP -i $$file -m meta/$$file.yaml -o json/$$file.json ; \
-	done &&	$(TOUCH) euc_json
-utf_json: $(UTF_SRCS)
-	for file in $(UTF_SRCS); do \
-		$(DENO) run --allow-read --allow-write --allow-net script/txt2json.ts \
-		-c UTF-8 -i $$file -m meta/$$file.yaml -o json/$$file.json ; \
-	done && $(TOUCH) utf_json
-euc_txt: $(EUC_JSON)
-	for file in $(EUC_SRCS); do \
+json: $(EUC_JSON) $(UTF_JSON)
+SKK-JISYO.%: json/SKK-JISYO.%.json meta/SKK-JISYO.%.yaml
+	if [ "x$(filter $@,$(EUC_SRCS))" = "x$@" ]; then \
 		$(DENO) run --allow-read --allow-write --allow-net script/json2txt.ts \
-		-c EUC-JP -i json/$$file.json -o $$file ; \
-	done &&	$(TOUCH) euc_txt
-utf_txt: $(UTF_JSON)
-	for file in $(UTF_SRCS); do \
+		-c EUC-JP -i json/$@.json -o $@ ; \
+	elif [ "x$(filter $@,$(UTF_SRCS))" = "x$@" ]; then \
 		$(DENO) run --allow-read --allow-write --allow-net script/json2txt.ts \
-		-c UTF-8 -i json/$$file.json -o $$file ; \
-	done &&	$(TOUCH) utf_txt
-
+		-c UTF-8 -i json/$@.json -o $@ ; \
+	fi
+# % に依存すると循環するので注意
+json/%.json:
+	TXT=$(patsubst json/%.json,%,$@) ; \
+	if [ "x$(filter $@,$(EUC_JSON))" = "x$@" ]; then \
+		$(DENO) run --allow-read --allow-write --allow-net script/txt2json.ts \
+		-c EUC-JP -i $${TXT} -m meta/$${TXT}.yaml -o $@ -s schema/jisyo.schema.v0.1.0.json ; \
+	elif [ "x$(filter $@,$(UTF_JSON))" = "x$@" ]; then \
+		$(DENO) run --allow-read --allow-write --allow-net script/txt2json.ts \
+		-c UTF-8 -i $${TXT} -m meta/$${TXT}.yaml -o $@ -s schema/jisyo.schema.v0.1.0.json ; \
+	fi
 # end of Makefile.
