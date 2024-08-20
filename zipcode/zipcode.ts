@@ -189,19 +189,17 @@ function main(
 }
 
 function mkdicProcessKyoto(n: string, c: string, prefix: string): string {
-  let nantaras
   let matches
   if (RegExp(["〜", "（丁目）", "その他", "番地）$"].join("|")).test(n)) {
-    nantaras = [""]
+    return c
   } else if ((matches = n.match(/（([０-９]丁目)）/))) {
-    c += matches[1]
-    nantaras = [""]
+    return c + matches[1]
   } else {
-    nantaras = n.substring(1, n.length - 1).split("、")
+    const nantaras = n.substring(1, n.length - 1).split("、")
+    return nantaras.map((nantara, notFirst) =>
+      (notFirst ? prefix : "") + nantara + c
+    ).join("/")
   }
-  return nantaras.map((nantara, notFirst) =>
-    (notFirst ? prefix : "") + nantara + c
-  ).join("/")
 }
 
 function mkdicProcessKakkonai(
