@@ -32,7 +32,8 @@ JIGYOSYO=$(temp_dir)/jigyosyo.csv
 all: zipcode office words
 
 zipcode:
-	$(DENO) run --allow-read $(srcdir)/zipcode.ts $(KEN_ALL) > $(TEMP_ZIPCODE)
+	$(DENO) run --allow-read --allow-write $(srcdir)/zipcode.ts \
+	  --csv=$(KEN_ALL) --out=$(TEMP_ZIPCODE) --header=SKK-JISYO.zipcode
 ifneq ($(SKKDIC_EXPR2),)
 	$(SKKDIC_EXPR2) $(TEMP_ZIPCODE) >> SKK-JISYO.zipcode
 else

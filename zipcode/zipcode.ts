@@ -1,11 +1,20 @@
+/* ZIPCODE-MK の TypeScript 版
+   なので GPL2 ライセンスです */
+
 import * as csv from "jsr:@std/csv"
 import * as fmt from "jsr:@std/datetime/format"
 import * as cli from "jsr:@std/cli"
+import { splitAddr2, splitAddr3 } from "./zipcode-split.ts"
 
-async function main(file: string, geo: boolean) {
+function main(
+  inCSV: string,
+  outJisyo: string,
+  outHeader: string,
+  outGeo: string,
+) {
   const geoMap = new Map<string, string>()
   const zipMap = new Map<string, string>()
-  const text = await Deno.readTextFile(file)
+  const text = Deno.readTextFileSync(inCSV)
   csv.parse(text)
     .forEach((entry: string[]) => {
       const it: Entry = {
@@ -17,10 +26,7 @@ async function main(file: string, geo: boolean) {
         addr2: entry[7],
         addr3: entry[8],
       }
-      if (geo) {
-        addGeo(geoMap, it)
-        return
-      }
+      addGeo(geoMap, it)
       let matches
       let _addr3
       let _addr4
@@ -167,16 +173,19 @@ async function main(file: string, geo: boolean) {
           `${it.addr1}${it.addr2}${it.addr3}/`,
       )
     })
-  const encoder = new TextEncoder()
-  const map = geo ? geoMap : zipMap
-  if (!geo) {
-    await Deno.stdout.write(encoder.encode(mkdicZipcodeHeader()))
-  }
-  await Deno.stdout.write(encoder.encode(okuriHeader()))
-  const jisyo = [...map.entries()].sort().map(([k, v]) => `${k} ${v}\n`).join(
-    "",
-  )
-  await Deno.stdout.write(encoder.encode(jisyo))
+  Promise.all([
+    Deno.writeTextFile(outHeader, mkdicZipcodeHeader()),
+    Deno.writeTextFile(
+      outJisyo,
+      okuriHeader() +
+        [...zipMap.entries()].map(([k, v]) => `${k} ${v}\n`).join(""),
+    ),
+    Deno.writeTextFile(
+      outGeo,
+      okuriHeader() +
+        [...geoMap.entries()].map(([k, v]) => `${k} ${v}\n`).join(""),
+    ),
+  ])
 }
 
 function mkdicProcessKyoto(n: string, c: string, prefix: string): string {
@@ -261,52 +270,8 @@ function hiragana(katakana: string): string {
 function addGeo(map: Map<string, string>, it: Entry) {
   map.set(hiragana(it.kana1), `/${it.addr1}/`)
   map.set(hiragana(it.kana2), `/${it.addr2}/`)
-  splitAndSetEach(map, hiragana(it.kana3), it.addr3)
-}
-
-function splitAndSetEach(map: Map<string, string>, kana: string, addr: string) {
-  const kanas = kana.split(/(?:[−（０-９、）＜＞]+(?:ちょうめ)?)+/)
-    .filter((v) => v.length)
-  const addrs = addr.split(/(?:[−〜（０-９、）「」]+(?:丁目)?)+/)
-    .filter((v) => v.length)
-  if (setIfSameLength(map, kanas, addrs)) {
-    return
-  } else if (kanas.length > addrs.length) {
-    const addrs2 = addr.split(
-      /(?:(?:[−〜（０-９、）「」]+|(?<!四重麦)[一二三四五六七八九十]+(?!十四軒|四軒|重麦|十嵐|[嵐角百軒]))(?:丁目)?)+/,
-    ).filter((v) => v.length)
-    if (!setIfSameLength(map, kanas, addrs2)) {
-      console.error("カナと住所の分割不一致", kanas, addrs2)
-    }
-  } else {
-    if (
-      kanas.length == 1 &&
-      addrs.some((v) =>
-        v.endsWith("上る") || v.endsWith("下る") ||
-        v.endsWith("西入") || v.endsWith("東入")
-      )
-    ) {
-      return
-    }
-    const addrs2 = addr.split(/[−〜（０-９、）]+/).filter((v) => v.length)
-    if (!setIfSameLength(map, kanas, addrs2)) {
-      console.error("カナと住所の分割不一致", kanas, addrs)
-    }
-  }
-}
-
-function setIfSameLength(
-  map: Map<string, string>,
-  kanas: string[],
-  addrs: string[],
-): boolean {
-  if (kanas.length != addrs.length) {
-    return false
-  }
-  kanas.forEach((v, i) => {
-    if (v.length) map.set(kanas[i], `/${addrs[i]}/`)
-  })
-  return true
+  splitAddr2(map, hiragana(it.kana2), it.addr2)
+  splitAddr3(map, hiragana(it.kana3), it.addr3)
 }
 
 type Entry = {
@@ -319,8 +284,13 @@ type Entry = {
   addr3: string
 }
 
-const params = cli.parseArgs(Deno.args)
-const files = params._
-if (files.length > 0 && typeof files[0] == "string") {
-  main(files[0], params.geo)
-}
+const params = cli.parseArgs(Deno.args, {
+  string: ["csv", "out", "header", "geo"],
+  default: {
+    csv: ".work/utf_ken_all.csv",
+    out: ".work/.zipcode",
+    header: "SKK-JISYO.zipcode",
+    geo: ".work/.geo",
+  },
+})
+main(params.csv, params.out, params.header, params.geo)
