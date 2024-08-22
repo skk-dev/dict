@@ -8,3 +8,4 @@ SKK-JISYO.zipcode.diff
 SKK-JISYO.zipcode.orig
 words.zipcode.diff
 words.zipcode.orig
+test/zipcode-test.sh
