@@ -1,14 +1,16 @@
 # Makefile for ZIP-code dictionaries.
 
-RM = @rm@
-MKDIR = @mkdir@
+DENO = @deno@
 GIT = @git@
-WGET = @wget@
+MKDIR = @mkdir@
+NKF = @nkf@
+RM = @rm@
 UNZIP = @unzip@
+WGET = @wget@
+
 SKKDIC_EXPR2 = @skkdic_expr2@
 SKKDIC_EXPR = @skkdic_expr@
 SKKDIC_SORT = @skkdic_sort@
-DENO = @deno@
 
 srcdir = @srcdir@
 top_srcdir = @top_srcdir@
@@ -71,6 +73,13 @@ diff:
 	  > SKK-JISYO.zipcode.diff
 	-$(GIT) diff $(srcdir)/words.zipcode \
 	  > words.zipcode.diff
+
+geo:
+	$(NKF) -e $(TEMP_GEO) > $(TEMP_GEO).euc
+	$(SKKDIC_EXPR2) $(TEMP_GEO).euc \
+	  - $(srcdir)/../SKK-JISYO.L \
+	  - $(srcdir)/../SKK-JISYO.geo \
+	  > $(srcdir)/../SKK-JISYO.geo.add
 
 # For doing everything automatically.
 

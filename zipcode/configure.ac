@@ -8,15 +8,16 @@ AC_ARG_WITH(temp_dir,
 AC_SUBST(temp_dir)
 
 dnl Checks for programs.
-AC_PATH_PROG(rm, rm)
-AC_PATH_PROG(mkdir, mkdir)
+AC_PATH_PROG(deno, deno)
 AC_PATH_PROG(git, git)
 AC_PATH_PROG(grep, grep)
-AC_PATH_PROG(wget, wget)
-AC_PATH_PROG(unzip, unzip)
+AC_PATH_PROG(mkdir, mkdir)
 AC_PATH_PROG(nkf, nkf)
+AC_PATH_PROG(rm, rm)
+AC_PATH_PROG(unzip, unzip)
+AC_PATH_PROG(wget, wget)
+
 AC_PATH_PROG(skkdic_expr2, skkdic-expr2)
-AC_PATH_PROG(deno, deno)
 
 if test x$ac_cv_path_skkdic_expr2 = x; then
    AC_PATH_PROG(skkdic_expr, skkdic-expr)
