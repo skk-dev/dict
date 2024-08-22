@@ -1,6 +1,7 @@
 /* ZIPCODE-MK の TypeScript 版
    なので GPL2 ライセンスです */
 
+import iconv from "https://esm.sh/iconv-lite@0.6.3"
 import * as csv from "jsr:@std/csv"
 import * as fmt from "jsr:@std/datetime/format"
 import * as cli from "jsr:@std/cli"
@@ -11,12 +12,24 @@ function main(
   outJisyo: string,
   outHeader: string,
   outGeo: string,
+  outOffice: string,
+  outWords: string,
 ) {
   const geoMap = new Map<string, string>()
   const zipMap = new Map<string, string>()
-  const text = Deno.readTextFileSync(inCSV)
+  const text: string = outOffice
+    ? iconv.decode(Deno.readFileSync(inCSV), "shiftjis")
+    : Deno.readTextFileSync(inCSV)
+
   csv.parse(text)
     .forEach((entry: string[]) => {
+      if (outOffice) {
+        zipMap.set(
+          entry[7],
+          `/${entry[2]} @ ${entry[3]}${entry[4]}${entry[5]}${entry[6]}/`,
+        )
+        return
+      }
       const it: Entry = {
         zip: entry[2],
         kana1: entry[3],
@@ -173,17 +186,22 @@ function main(
           `${it.addr1}${it.addr2}${it.addr3}/`,
       )
     })
+
   Promise.all([
-    Deno.writeTextFile(outHeader, mkdicZipcodeHeader()),
     Deno.writeTextFile(
-      outJisyo,
+      outOffice ? outOffice : outJisyo,
       okuriHeader() +
         [...zipMap.entries()].map(([k, v]) => `${k} ${v}\n`).join(""),
     ),
-    Deno.writeTextFile(
+    Deno.writeTextFile(outHeader, mkdicZipcodeHeader(outOffice.length > 0)),
+    outOffice ? undefined : Deno.writeTextFile(
       outGeo,
       okuriHeader() +
         [...geoMap.entries()].map(([k, v]) => `${k} ${v}\n`).join(""),
+    ),
+    outOffice ? undefined : Deno.writeTextFile(
+      outWords,
+      [...zipMap.keys()].sort().map((k) => `${k}\n`).join("")
     ),
   ])
 }
@@ -224,9 +242,11 @@ function mkdicProcessKakkonai(
     .join("/")
 }
 
-function mkdicZipcodeHeader(): string {
+function mkdicZipcodeHeader(office: boolean = false): string {
   return `;; -*- coding: utf-8 -*-
-;; SKK-JISYO.zipcode --- 7-digit ZIP code dictionary for SKK
+;; SKK-JISYO${office ? ".office" : ""}.zipcode --- 7-digit ZIP code ${
+    office ? "(offices) " : ""
+  }dictionary for SKK
 ;;
 ;; Copyright: Public domain dictionary.  Share and enjoy.
 ;;
@@ -283,12 +303,14 @@ type Entry = {
 }
 
 const params = cli.parseArgs(Deno.args, {
-  string: ["csv", "out", "header", "geo"],
+  string: ["csv", "out", "header", "geo", "office", "words"],
   default: {
     csv: ".work/utf_ken_all.csv",
     out: ".work/.zipcode",
     header: "SKK-JISYO.zipcode",
     geo: ".work/.geo",
+    office: "",
+    words: "words.zipcode"
   },
 })
-main(params.csv, params.out, params.header, params.geo)
+main(params.csv, params.out, params.header, params.geo, params.office, params.words)
