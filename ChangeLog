@@ -1,3 +1,16 @@
+2024-08-22  Tamotsu Takahashi  <ttakah+github@gmail.com>
+
+	* zipcode/Makefile.in, zipcode/README.md: 配布元の CSV に追従。
+	* zipcode/zipcode.ts, zipcode/zipcode-split.ts: 新規。
+	ZIPCODE-MK と skkdic-split-geo.rb のようなもの。
+	zipcode と office.zipcode を UTF-8 で出力する。
+	* zipcode/test/zipcode-test.sh.in: テストを単純な grep で実装。
+	* zipcode/SKK-JISYO.office.zipcode, zipcode/SKK-JISYO.zipcode,
+	zipcode/words.zipcode: 辞書などを実際に更新。
+	* zipcode/ZIPCODE-MK, zipcode/test/*.el: 削除。Deno で代替。
+
+	* Makefile, committers.md: 上記を反映。
+
 2024-08-18  Tamotsu Takahashi  <ttakah+github@gmail.com>
 
 	* ChangeLog: UTF-8 に変更。

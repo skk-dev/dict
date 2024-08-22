@@ -196,19 +196,27 @@ make SKK-JISYO.emoji
 
 #### 2.2.5.2. zipcode から更新する場合
 
-必要なら zipcode から[抽出](https://github.com/skk-dev/dict/pull/54)して
+必要なら zipcode から抽出して
 SKK-JISYO.geo にマージしてから script/txt2json.ts で JSON に戻します。
+
+```
+cd zipcode
+autoconf -f                  # configure を生成
+sh configure                 # Makefile を生成
+make batch geo               # 最新データで更新
+cd ..
+emacs SKK-JISYO.geo.add      # 追加エントリを取捨選択
+skkdic-expr2 SKK-JISYO.geo + SKK-JISYO.geo.add > SKK-JISYO.geo.new
+mv SKK-JISYO.geo.new SKK-JISYO.geo
+rm json/SKK-JISYO.geo.json   # Makefile の関係で一旦消す
+make json/SKK-JISYO.geo.json # そのあとで JSON にする
+```
 
 meta/SKK-JISYO.geo.yaml の最終更新日も更新します。
 
 プルリクエストに含めるのは YAML と JSON です。
 
 (この場合はおそらく zipcode も更新が必要)
-
-#### 2.2.5.3. skkdic-split-geo.rb で処理する場合
-
-[skkdic-split-geo.rb](https://github.com/skk-dev/dict/pull/54)
-も必要に応じて使います。この場合も JSON に戻します。
 
 ### 2.2.6. SKK-JISYO.hukugougo
 

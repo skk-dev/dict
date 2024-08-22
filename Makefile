@@ -135,9 +135,8 @@ SKK-JISYO.total: SKK-JISYO.L.u8 SKK-JISYO.geo.u8 SKK-JISYO.station.u8 SKK-JISYO.
 	$(EXPR2) SKK-JISYO.L.u8 + SKK-JISYO.addition | cat SKK-JISYO.L.header.u8 - > SKK-JISYO.total
 	$(RM) SKK-JISYO.tmp SKK-JISYO.addition
 
-# zipcode がまだ UTF-8 ではない場合
-SKK-JISYO.total+zipcode: SKK-JISYO.total $(ZIPDIC_DIR)/SKK-JISYO.zipcode.u8 $(ZIPDIC_DIR)/SKK-JISYO.office.zipcode.u8 SKK-JISYO.L.header.u8
-	$(EXPR2) SKK-JISYO.total + $(ZIPDIC_DIR)/SKK-JISYO.zipcode.u8 + $(ZIPDIC_DIR)/SKK-JISYO.office.zipcode.u8 | cat SKK-JISYO.L.header.u8 - > SKK-JISYO.total+zipcode
+SKK-JISYO.total+zipcode: SKK-JISYO.total $(ZIPDIC_DIR)/SKK-JISYO.zipcode $(ZIPDIC_DIR)/SKK-JISYO.office.zipcode SKK-JISYO.L.header.u8
+	$(EXPR2) SKK-JISYO.total + $(ZIPDIC_DIR)/SKK-JISYO.zipcode + $(ZIPDIC_DIR)/SKK-JISYO.office.zipcode | cat SKK-JISYO.L.header.u8 - > SKK-JISYO.total+zipcode
 
 SKK-JISYO.L.taciturn: SKK-JISYO.L SKK-JISYO.L.header
 	$(RUBY) $(TOOLS_DIR)/filters/annotation-filter.rb -d SKK-JISYO.L | $(EXPR2) | cat SKK-JISYO.L.header - > SKK-JISYO.L.taciturn
@@ -164,8 +163,6 @@ SKK-JISYO.L.header: SKK-JISYO.L
 	echo ';; (This dictionary was automatically generated from SKK dictionaries)' > SKK-JISYO.L.header
 	$(SED) -n '/^;; okuri-ari entries./q;p' SKK-JISYO.L >> SKK-JISYO.L.header
 
-$(ZIPDIC_DIR)/SKK-JISYO.office.zipcode.u8: $(ZIPDIC_DIR)/SKK-JISYO.office.zipcode
-	$(ICONV) -f euc-jisx0213 -t utf-8 $< > $@
 SKK-JISYO.L.header.u8: SKK-JISYO.L.header
 	$(ICONV) -f euc-jp -t utf-8 SKK-JISYO.L.header > SKK-JISYO.L.header.u8
 	$(SED) -i "2s/coding: euc-jp /coding: utf-8 /" SKK-JISYO.L.header.u8
