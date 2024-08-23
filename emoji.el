@@ -3,7 +3,7 @@
 ;;; Commentary:
 
 ;;  Unicode Common Locale Data Repository
-;;    https://unicode.org/Public/cldr/36.1/cldr-common-36.1.zip
+;;    https://unicode.org/Public/cldr/45/cldr-common-45.0.zip
 ;;    common/annotations/*.xml
 
 ;;; License:
@@ -37,7 +37,7 @@
                                (if kanjionly
                                    (validate3 anno)
                                  (validate2 anno))
-                               (princ (format "%s /%s;%s/\n" (treat anno) cp (get-codepoint cp)))))
+                               (princ (format "%s /%s;%s/\n" (treat anno) (enlisp cp) (get-codepoint cp)))))
                       annos)))
           doms-anno)))
 
@@ -75,6 +75,11 @@
       (unless (eq 'han (aref char-script-table (string-to-char s)))
         (setq result nil)))
     result))
+
+(defun enlisp (str)
+  (replace-regexp-in-string "/" "(concat \"\\\\057\")"
+    (replace-regexp-in-string ";" "(concat \"\\\\073\")"
+      str)))
 
 (defun treat (str)
   (let ((lst `((,(char-to-string 232) . "e") ; è
