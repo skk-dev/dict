@@ -1,50 +1,45 @@
 ;; -*- mode: fundamental; coding: utf-8 -*-
-;; ﻿UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
-;; 
-;; See Terms of Use for definitions of Unicode Inc.'s
-;; Data Files and Software.
-;; 
-;; NOTICE TO USER: Carefully read the following legal agreement.
-;; BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
-;; DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
-;; YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
-;; TERMS AND CONDITIONS OF THIS AGREEMENT.
-;; IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
-;; THE DATA FILES OR SOFTWARE.
+;; UNICODE LICENSE V3
 ;; 
 ;; COPYRIGHT AND PERMISSION NOTICE
 ;; 
-;; Copyright © 1991-2020 Unicode, Inc. All rights reserved.
-;; Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+;; Copyright © 1991-2024 Unicode, Inc.
 ;; 
-;; Permission is hereby granted, free of charge, to any person obtaining
-;; a copy of the Unicode data files and any associated documentation
-;; (the "Data Files") or Unicode software and any associated documentation
-;; (the "Software") to deal in the Data Files or Software
-;; without restriction, including without limitation the rights to use,
-;; copy, modify, merge, publish, distribute, and/or sell copies of
-;; the Data Files or Software, and to permit persons to whom the Data Files
-;; or Software are furnished to do so, provided that either
-;; (a) this copyright and permission notice appear with all copies
-;; of the Data Files or Software, or
-;; (b) this copyright and permission notice appear in associated
-;; Documentation.
+;; NOTICE TO USER: Carefully read the following legal agreement. BY
+;; DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
+;; SOFTWARE, YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+;; TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT
+;; DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.
 ;; 
-;; THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
-;; ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-;; WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-;; NONINFRINGEMENT OF THIRD PARTY RIGHTS.
-;; IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
-;; NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
-;; DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
-;; DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
-;; TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-;; PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+;; Permission is hereby granted, free of charge, to any person obtaining a
+;; copy of data files and any associated documentation (the "Data Files") or
+;; software and any associated documentation (the "Software") to deal in the
+;; Data Files or Software without restriction, including without limitation
+;; the rights to use, copy, modify, merge, publish, distribute, and/or sell
+;; copies of the Data Files or Software, and to permit persons to whom the
+;; Data Files or Software are furnished to do so, provided that either (a)
+;; this copyright and permission notice appear with all copies of the Data
+;; Files or Software, or (b) this copyright and permission notice appear in
+;; associated Documentation.
 ;; 
-;; Except as contained in this notice, the name of a copyright holder
-;; shall not be used in advertising or otherwise to promote the sale,
-;; use or other dealings in these Data Files or Software without prior
-;; written authorization of the copyright holder.
+;; THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+;; KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+;; MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+;; THIRD PARTY RIGHTS.
+;; 
+;; IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE
+;; BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES,
+;; OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+;; WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+;; ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA
+;; FILES OR SOFTWARE.
+;; 
+;; Except as contained in this notice, the name of a copyright holder shall
+;; not be used in advertising or otherwise to promote the sale, use or other
+;; dealings in these Data Files or Software without prior written
+;; authorization of the copyright holder.
+;; 
+;; SPDX-License-Identifier: Unicode-3.0
 ;; okuri-ari entries.
 ;; okuri-nasi entries.
 㐂 /㐂󠄀;Adobe-Japan1(CID+13698)/㐂󠄁;Adobe-Japan1(CID+13697)/㐂󠄂;Adobe-Japan1(CID+13699)/㐂󠄃;Hanyo-Denshi(IA0102)/㐂󠄄;Hanyo-Denshi(TK01000160)/
@@ -355,7 +350,7 @@
 䁏 /䁏󠄀;Hanyo-Denshi(IA3504),Moji_Joho(MJ002863)/䁏󠄁;Hanyo-Denshi(KS263350),Moji_Joho(MJ002864)/
 䁐 /䁐󠄀;Hanyo-Denshi(IA0506),Moji_Joho(MJ002865)/䁐󠄁;Hanyo-Denshi(KS262880),Moji_Joho(MJ002866)/
 䁔 /䁔󠄀;Hanyo-Denshi(IA3507)/䁔󠄁;Hanyo-Denshi(TK01062970)/
-䁘 /䁘󠄀;Adobe-Japan1(CID+18198)/
+䁘 /䁘󠄀;Adobe-Japan1(CID+18198)/䁘󠄁;MSARG(MD_4058)/䁘󠄂;MSARG(ME_4058_001)/
 䁱 /䁱󠄀;Hanyo-Denshi(IA0509),Moji_Joho(MJ002897)/䁱󠄁;Hanyo-Denshi(JTB661),Moji_Joho(MJ059940)/䁱󠄂;Hanyo-Denshi(JTB662),Moji_Joho(MJ059941)/
 䁾 /䁾󠄀;Hanyo-Denshi(IA3544)/䁾󠄁;Hanyo-Denshi(KS266100),Moji_Joho(MJ002911)/䁾󠄂;Moji_Joho(MJ002910)/
 䂊 /䂊󠄀;Hanyo-Denshi(IA0510)/䂊󠄁;Hanyo-Denshi(TK01063340)/䂊󠄂;Hanyo-Denshi(TK01063350)/
@@ -434,6 +429,7 @@
 䍃 /䍃󠄀;Adobe-Japan1(CID+18379)/䍃󠄁;Hanyo-Denshi(JD8465),Moji_Joho(MJ003627)/䍃󠄂;Hanyo-Denshi(KS314320),Moji_Joho(MJ003628)/
 䍙 /䍙󠄀;Hanyo-Denshi(IA4222),Moji_Joho(MJ003649)/䍙󠄁;Hanyo-Denshi(KS316060),Moji_Joho(MJ003650)/
 䎕 /䎕󠄀;Hanyo-Denshi(IA4278)/䎕󠄁;Hanyo-Denshi(TK01074010)/
+䎗 /䎗󠄀;MSARG(MA_9967)/䎗󠄁;MSARG(ME_4397_001)/
 䎨 /䎨󠄀;Hanyo-Denshi(IA4294)/䎨󠄁;Hanyo-Denshi(TK01074340)/
 䎩 /䎩󠄀;Hanyo-Denshi(IA0588),Moji_Joho(MJ003730)/䎩󠄁;Hanyo-Denshi(KS323160),Moji_Joho(MJ003729)/
 䎪 /䎪󠄀;Hanyo-Denshi(IA4301)/䎪󠄁;Hanyo-Denshi(TK01074350)/
@@ -533,6 +529,7 @@
 䘍 /䘍󠄀;Hanyo-Denshi(IA0664),Moji_Joho(MJ004387)/䘍󠄁;Hanyo-Denshi(KS385700),Moji_Joho(MJ004388)/
 䘏 /䘏󠄀;Adobe-Japan1(CID+18634)/
 䘐 /䘐󠄀;Adobe-Japan1(CID+19136)/
+䘕 /䘕󠄀;MSARG(MA_8FEB)/䘕󠄁;MSARG(ME_4615_001)/
 䘯 /䘯󠄀;Hanyo-Denshi(IA4925)/䘯󠄁;Hanyo-Denshi(TK01083800)/
 䘵 /䘵󠄀;Hanyo-Denshi(IA4929)/䘵󠄁;Hanyo-Denshi(TK01083980)/
 䘸 /䘸󠄀;Moji_Joho(MJ004426)/䘸󠄁;Moji_Joho(MJ004427)/
@@ -588,6 +585,7 @@
 䣐 /䣐󠄀;Hanyo-Denshi(IA0722),Moji_Joho(MJ005072)/䣐󠄁;Hanyo-Denshi(KS448540),Moji_Joho(MJ005073)/
 䤡 /䤡󠄀;Hanyo-Denshi(IA5624)/䤡󠄁;Hanyo-Denshi(TK01092060)/
 䤸 /䤸󠄀;Hanyo-Denshi(IA5637)/䤸󠄁;Hanyo-Denshi(TK01093220)/
+䤾 /䤾󠄀;MSARG(MA_97E1)/䤾󠄁;MSARG(ME_493E_001)/
 䤿 /䤿󠄀;Hanyo-Denshi(IA5643),Moji_Joho(MJ005179)/䤿󠄁;Hanyo-Denshi(KS462830),Moji_Joho(MJ005180)/䤿󠄂;Hanyo-Denshi(KS462850),Moji_Joho(MJ005181)/
 䥀 /䥀󠄀;Hanyo-Denshi(IA5644)/䥀󠄁;Hanyo-Denshi(TK01093770)/
 䥃 /䥃󠄀;Hanyo-Denshi(IA0741)/䥃󠄁;Hanyo-Denshi(TK01093910)/
@@ -605,7 +603,7 @@
 䨢 /䨢󠄀;Moji_Joho(MJ005384)/䨢󠄁;Moji_Joho(MJ005385)/
 䨤 /䨤󠄀;Hanyo-Denshi(IB0438),Moji_Joho(MJ005388)/䨤󠄁;Hanyo-Denshi(IB1032),Moji_Joho(MJ005387)/
 䨨 /䨨󠄀;Hanyo-Denshi(IB0439),Moji_Joho(MJ005392)/䨨󠄁;Hanyo-Denshi(IB1033),Moji_Joho(MJ005391)/
-䨩 /䨩󠄀;Adobe-Japan1(CID+18910)/
+䨩 /䨩󠄀;Adobe-Japan1(CID+18910)/䨩󠄁;MSARG(MD_4A29)/䨩󠄂;MSARG(ME_4A29_001)/
 䨼 /䨼󠄀;Hanyo-Denshi(IB1041),Moji_Joho(MJ005411)/䨼󠄁;Hanyo-Denshi(JTBEBD),Moji_Joho(MJ005412)/
 䩿 /䩿󠄀;Hanyo-Denshi(IA5909),Moji_Joho(MJ005477)/䩿󠄁;Hanyo-Denshi(KS487580),Moji_Joho(MJ059013)/
 䪝 /䪝󠄀;Moji_Joho(MJ005507)/䪝󠄁;Moji_Joho(MJ068057)/
@@ -760,6 +758,7 @@
 乳 /乳󠄀;Adobe-Japan1(CID+3285)/乳󠄁;Adobe-Japan1(CID+13968)/乳󠄂;Hanyo-Denshi(JA3893),Moji_Joho(MJ006417)/乳󠄃;Hanyo-Denshi(JTAD27),Moji_Joho(MJ006416)/
 乴 /乴󠄀;Adobe-Japan1(CID+21079)/
 乵 /乵󠄀;Adobe-Japan1(CID+21080)/乵󠄁;Hanyo-Denshi(JB1626),Moji_Joho(MJ006419)/乵󠄂;Hanyo-Denshi(JTAD26),Moji_Joho(MJ006420)/
+乸 /乸󠄀;MSARG(MA_9AFB)/乸󠄁;MSARG(ME_4E78_001)/
 乹 /乹󠄀;Adobe-Japan1(CID+19143)/
 乾 /乾󠄀;Adobe-Japan1(CID+1505)/
 乿 /乿󠄀;Adobe-Japan1(CID+14306)/
@@ -1079,7 +1078,7 @@
 倦 /倦󠄀;Adobe-Japan1(CID+1863)/倦󠄁;Adobe-Japan1(CID+7674)/倦󠄂;Hanyo-Denshi(JA2381),Moji_Joho(MJ006859)/倦󠄃;Hanyo-Denshi(FT1790),Moji_Joho(MJ006858)/
 倧 /倧󠄀;Adobe-Japan1(CID+14331)/
 倨 /倨󠄀;Adobe-Japan1(CID+4155)/
-倩 /倩󠄀;Adobe-Japan1(CID+4163)/倩󠄁;Hanyo-Denshi(JA4874),Moji_Joho(MJ006862)/倩󠄂;Hanyo-Denshi(FT2068),Moji_Joho(MJ006863)/
+倩 /倩󠄀;Adobe-Japan1(CID+4163)/倩󠄁;Hanyo-Denshi(JA4874),Moji_Joho(MJ006862)/倩󠄂;Hanyo-Denshi(FT2068),Moji_Joho(MJ006863)/倩󠄃;MSARG(MB_ADC5)/倩󠄄;MSARG(ME_5029_001)/
 倪 /倪󠄀;Adobe-Japan1(CID+4157)/
 倫 /倫󠄀;Adobe-Japan1(CID+3993)/倫󠄁;Hanyo-Denshi(JA4649)/倫󠄂;Hanyo-Denshi(TK01004100)/
 倬 /倬󠄀;Adobe-Japan1(CID+4164)/
@@ -1393,7 +1392,7 @@
 凌 /凌󠄀;Adobe-Japan1(CID+3975)/凌󠄁;Hanyo-Denshi(JA4631),Moji_Joho(MJ007396)/凌󠄂;Hanyo-Denshi(KS019870),Moji_Joho(MJ007395)/
 凍 /凍󠄀;Adobe-Japan1(CID+3162)/
 减 /减󠄀;Adobe-Japan1(CID+19177)/
-凑 /凑󠄀;Adobe-Japan1(CID+19178)/
+凑 /凑󠄀;Adobe-Japan1(CID+19178)/凑󠄁;MSARG(MA_FAA4)/凑󠄂;MSARG(ME_51D1_001)/
 凒 /凒󠄀;Adobe-Japan1(CID+21186)/
 凓 /凓󠄀;Adobe-Japan1(CID+19179)/
 凔 /凔󠄀;Adobe-Japan1(CID+19180)/
@@ -1789,6 +1788,7 @@
 叕 /叕󠄀;Adobe-Japan1(CID+17343)/
 取 /取󠄀;Adobe-Japan1(CID+2324)/
 受 /受󠄀;Adobe-Japan1(CID+2337)/受󠄁;Adobe-Japan1(CID+13813)/
+变 /变󠄀;MSARG(MA_895A)/变󠄁;MSARG(ME_53D8_001)/
 叙 /叙󠄀;Adobe-Japan1(CID+2432)/
 叚 /叚󠄀;Adobe-Japan1(CID+14372)/
 叛 /叛󠄀;Adobe-Japan1(CID+3412)/叛󠄁;Adobe-Japan1(CID+7978)/叛󠄂;Hanyo-Denshi(JA4032),Moji_Joho(MJ008010)/叛󠄃;Hanyo-Denshi(FT2920),Moji_Joho(MJ008009)/叛󠄄;Hanyo-Denshi(JTAE9F),Moji_Joho(MJ008011)/叛󠄅;Hanyo-Denshi(JTAEA0),Moji_Joho(MJ008012)/叛󠄆;Hanyo-Denshi(KS036810),Moji_Joho(MJ057140)/
@@ -2043,17 +2043,19 @@
 啖 /啖󠄀;Adobe-Japan1(CID+4394)/
 啗 /啗󠄀;Adobe-Japan1(CID+4395)/啗󠄁;MSARG(MB_B0E8)/啗󠄂;MSARG(ME_5557_001)/
 啘 /啘󠄀;Adobe-Japan1(CID+21280)/
-啚 /啚󠄀;Adobe-Japan1(CID+21281)/啚󠄁;Hanyo-Denshi(JB2162),Moji_Joho(MJ008400)/啚󠄂;Hanyo-Denshi(KS044550),Moji_Joho(MJ008401)/啚󠄃;Moji_Joho(MJ057180)/
+啚 /啚󠄀;Adobe-Japan1(CID+21281)/啚󠄁;Hanyo-Denshi(JB2162),Moji_Joho(MJ008400)/啚󠄂;Hanyo-Denshi(KS044550),Moji_Joho(MJ008401)/啚󠄃;Moji_Joho(MJ057180)/啚󠄄;MSARG(MD_555A)/啚󠄅;MSARG(ME_555A_001)/
 啛 /啛󠄀;Adobe-Japan1(CID+21282)/
 啜 /啜󠄀;Adobe-Japan1(CID+4392)/
 啝 /啝󠄀;Adobe-Japan1(CID+4398)/啝󠄁;Hanyo-Denshi(JA5127),Moji_Joho(MJ008404)/啝󠄂;Hanyo-Denshi(JTAEDA),Moji_Joho(MJ008405)/
 啞 /啞󠄀;Adobe-Japan1(CID+7633)/
+啟 /啟󠄀;MSARG(MB_B1D2)/啟󠄁;MSARG(ME_555F_001)/
 啠 /啠󠄀;Adobe-Japan1(CID+14392)/
 啡 /啡󠄀;Adobe-Japan1(CID+20308)/啡󠄁;Adobe-Japan1(CID+14393)/
 啣 /啣󠄀;Adobe-Japan1(CID+4389)/
 啤 /啤󠄀;Adobe-Japan1(CID+17372)/
 啦 /啦󠄀;Adobe-Japan1(CID+19240)/
 啨 /啨󠄀;Hanyo-Denshi(IB0441),Moji_Joho(MJ008415)/啨󠄁;Hanyo-Denshi(IB1035),Moji_Joho(MJ008416)/
+啫 /啫󠄀;MSARG(MA_94DC)/啫󠄁;MSARG(ME_556B_001)/
 啻 /啻󠄀;Adobe-Japan1(CID+4404)/
 啼 /啼󠄀;Adobe-Japan1(CID+4409)/啼󠄁;Hanyo-Denshi(JA5138),Moji_Joho(MJ008420)/啼󠄂;Hanyo-Denshi(KS046180),Moji_Joho(MJ008421)/
 啽 /啽󠄀;Adobe-Japan1(CID+17374)/
@@ -2233,6 +2235,7 @@
 嚟 /嚟󠄀;Adobe-Japan1(CID+19265)/
 嚠 /嚠󠄀;Adobe-Japan1(CID+4443)/嚠󠄁;Hanyo-Denshi(JA5172),Moji_Joho(MJ008749)/嚠󠄂;Hanyo-Denshi(JTAF22),Moji_Joho(MJ008750)/
 嚢 /嚢󠄀;Adobe-Japan1(CID+3311)/
+嚤 /嚤󠄀;MSARG(MA_97A3)/嚤󠄁;MSARG(ME_56A4_001)/
 嚥 /嚥󠄀;Adobe-Japan1(CID+4446)/嚥󠄁;Adobe-Japan1(CID+7822)/嚥󠄂;Hanyo-Denshi(JA5175),Moji_Joho(MJ008752)/嚥󠄃;Hanyo-Denshi(FT1949),Moji_Joho(MJ008753)/
 嚦 /嚦󠄀;Adobe-Japan1(CID+19266)/
 嚧 /嚧󠄀;Adobe-Japan1(CID+21308)/
@@ -2798,7 +2801,7 @@
 姴 /姴󠄀;Adobe-Japan1(CID+21400)/
 姶 /姶󠄀;Adobe-Japan1(CID+1132)/
 姷 /姷󠄀;Adobe-Japan1(CID+21401)/
-姸 /姸󠄀;Adobe-Japan1(CID+19312)/
+姸 /姸󠄀;Adobe-Japan1(CID+19312)/姸󠄁;MSARG(MA_9D55)/姸󠄂;MSARG(ME_59F8_001)/
 姻 /姻󠄀;Adobe-Japan1(CID+1213)/
 姿 /姿󠄀;Adobe-Japan1(CID+2207)/姿󠄁;Adobe-Japan1(CID+13792)/姿󠄂;Adobe-Japan1(CID+13793)/姿󠄃;Hanyo-Denshi(JA2749),Moji_Joho(MJ009691)/姿󠄄;Hanyo-Denshi(JTAFE4),Moji_Joho(MJ009690)/
 娀 /娀󠄀;Adobe-Japan1(CID+21402)/
@@ -2899,7 +2902,7 @@
 嫉 /嫉󠄀;Adobe-Japan1(CID+2279)/
 嫋 /嫋󠄀;Adobe-Japan1(CID+4589)/嫋󠄁;Hanyo-Denshi(JA5330),Moji_Joho(MJ009907)/嫋󠄂;Hanyo-Denshi(FT2144),Moji_Joho(MJ009908)/
 嫌 /嫌󠄀;Adobe-Japan1(CID+1871)/嫌󠄁;Adobe-Japan1(CID+7675)/嫌󠄂;Hanyo-Denshi(JA2389),Moji_Joho(MJ009910)/嫌󠄃;Hanyo-Denshi(FT1791S),Moji_Joho(MJ009909)/
-嫏 /嫏󠄀;Adobe-Japan1(CID+21424)/
+嫏 /嫏󠄀;Adobe-Japan1(CID+21424)/嫏󠄁;MSARG(MA_92F4)/嫏󠄂;MSARG(ME_5ACF_001)/
 嫐 /嫐󠄀;Adobe-Japan1(CID+4603)/
 嫖 /嫖󠄀;Adobe-Japan1(CID+4596)/
 嫗 /嫗󠄀;Adobe-Japan1(CID+4593)/嫗󠄁;Hanyo-Denshi(JA5334),Moji_Joho(MJ009917)/嫗󠄂;Hanyo-Denshi(KS076290),Moji_Joho(MJ009918)/
@@ -3200,7 +3203,7 @@
 岊 /岊󠄀;Adobe-Japan1(CID+17549)/
 岋 /岋󠄀;Hanyo-Denshi(IP5C8B)/岋󠄁;Hanyo-Denshi(TK01024480)/
 岌 /岌󠄀;Adobe-Japan1(CID+4662)/岌󠄁;Hanyo-Denshi(JA5409),Moji_Joho(MJ010416)/岌󠄂;Hanyo-Denshi(JTB064),Moji_Joho(MJ010417)/
-岍 /岍󠄀;Hanyo-Denshi(IP5C8D),Moji_Joho(MJ010418)/岍󠄁;Hanyo-Denshi(JTB06C),Moji_Joho(MJ010419)/
+岍 /岍󠄀;Hanyo-Denshi(IP5C8D),Moji_Joho(MJ010418)/岍󠄁;Hanyo-Denshi(JTB06C),Moji_Joho(MJ010419)/岍󠄂;MSARG(MB_CAC0)/岍󠄃;MSARG(ME_5C8D_001)/
 岏 /岏󠄀;Adobe-Japan1(CID+16840)/
 岐 /岐󠄀;Adobe-Japan1(CID+1584)/
 岑 /岑󠄀;Adobe-Japan1(CID+4663)/岑󠄁;Hanyo-Denshi(JA5410),Moji_Joho(MJ010423)/岑󠄂;Hanyo-Denshi(JTB067),Moji_Joho(MJ059523)/
@@ -3219,7 +3222,7 @@
 岪 /岪󠄀;Adobe-Japan1(CID+16843)/
 岫 /岫󠄀;Adobe-Japan1(CID+4666)/
 岬 /岬󠄀;Adobe-Japan1(CID+3764)/
-岭 /岭󠄀;Adobe-Japan1(CID+17557)/
+岭 /岭󠄀;Adobe-Japan1(CID+17557)/岭󠄁;MSARG(MB_CC64)/岭󠄂;MSARG(ME_5CAD_001)/
 岱 /岱󠄀;Adobe-Japan1(CID+2866)/
 岲 /岲󠄀;Adobe-Japan1(CID+21464)/
 岳 /岳󠄀;Adobe-Japan1(CID+1463)/
@@ -4298,7 +4301,7 @@
 拍 /拍󠄀;Adobe-Japan1(CID+3365)/
 拎 /拎󠄀;Adobe-Japan1(CID+21623)/
 拏 /拏󠄀;Adobe-Japan1(CID+4963)/拏󠄁;Adobe-Japan1(CID+13543)/
-拐 /拐󠄀;Adobe-Japan1(CID+1405)/拐󠄁;Adobe-Japan1(CID+7649)/拐󠄂;Hanyo-Denshi(JA1893),Moji_Joho(MJ012272)/拐󠄃;Hanyo-Denshi(FT1766),Moji_Joho(MJ012273)/拐󠄄;Hanyo-Denshi(IB1917),Moji_Joho(MJ012274)/
+拐 /拐󠄀;Adobe-Japan1(CID+1405)/拐󠄁;Adobe-Japan1(CID+7649)/拐󠄂;Hanyo-Denshi(JA1893),Moji_Joho(MJ012272)/拐󠄃;Hanyo-Denshi(FT1766),Moji_Joho(MJ012273)/拐󠄄;Hanyo-Denshi(IB1917),Moji_Joho(MJ012274)/拐󠄅;MSARG(MB_A9E4)/拐󠄆;MSARG(ME_62D0_001)/
 拑 /拑󠄀;Adobe-Japan1(CID+4961)/
 拒 /拒󠄀;Adobe-Japan1(CID+1675)/拒󠄁;Adobe-Japan1(CID+13715)/拒󠄂;Hanyo-Denshi(JA2181),Moji_Joho(MJ012277)/拒󠄃;Hanyo-Denshi(KS134470),Moji_Joho(MJ012276)/
 拓 /拓󠄀;Adobe-Japan1(CID+2899)/拓󠄁;Hanyo-Denshi(JA3483)/拓󠄂;Hanyo-Denshi(TK01035300)/
@@ -5398,7 +5401,7 @@
 椊 /椊󠄀;Adobe-Japan1(CID+16903)/
 椋 /椋󠄀;Adobe-Japan1(CID+3782)/
 椌 /椌󠄀;Adobe-Japan1(CID+5216)/椌󠄁;Hanyo-Denshi(JA5993),Moji_Joho(MJ014116)/椌󠄂;Hanyo-Denshi(JTB33D),Moji_Joho(MJ014117)/
-植 /植󠄀;Adobe-Japan1(CID+2536)/植󠄁;Adobe-Japan1(CID+13465)/植󠄂;Adobe-Japan1(CID+13845)/植󠄃;Hanyo-Denshi(JA3102),Moji_Joho(MJ014118)/植󠄄;Hanyo-Denshi(KS170180),Moji_Joho(MJ057753)/植󠄅;Hanyo-Denshi(TK01044570)/
+植 /植󠄀;Adobe-Japan1(CID+2536)/植󠄁;Adobe-Japan1(CID+13465)/植󠄂;Adobe-Japan1(CID+13845)/植󠄃;Hanyo-Denshi(JA3102),Moji_Joho(MJ014118)/植󠄄;Hanyo-Denshi(KS170180),Moji_Joho(MJ057753)/植󠄅;Hanyo-Denshi(TK01044570)/植󠄆;MSARG(MB_B4D3)/植󠄇;MSARG(ME_690D_001)/
 椎 /椎󠄀;Adobe-Japan1(CID+3043)/
 椏 /椏󠄀;Adobe-Japan1(CID+5206)/
 椐 /椐󠄀;Adobe-Japan1(CID+21777)/
@@ -5569,7 +5572,7 @@
 樃 /樃󠄀;Adobe-Japan1(CID+21793)/
 樅 /樅󠄀;Adobe-Japan1(CID+5283)/
 樊 /樊󠄀;Adobe-Japan1(CID+5289)/
-樋 /樋󠄀;Adobe-Japan1(CID+3465)/樋󠄁;Adobe-Japan1(CID+7780)/樋󠄂;Hanyo-Denshi(JA4085),Moji_Joho(MJ014416)/樋󠄃;Hanyo-Denshi(FT1907),Moji_Joho(MJ014417)/
+樋 /樋󠄀;Adobe-Japan1(CID+3465)/樋󠄁;Adobe-Japan1(CID+7780)/樋󠄂;Hanyo-Denshi(JA4085),Moji_Joho(MJ014416)/樋󠄃;Hanyo-Denshi(FT1907),Moji_Joho(MJ014417)/樋󠄄;MSARG(MA_FD42)/樋󠄅;MSARG(ME_6A0B_001)/
 樌 /樌󠄀;Adobe-Japan1(CID+5295)/
 樏 /樏󠄀;Adobe-Japan1(CID+14658)/
 樑 /樑󠄀;Adobe-Japan1(CID+17851)/
@@ -5948,7 +5951,7 @@
 江 /江󠄀;Adobe-Japan1(CID+2000)/江󠄁;Hanyo-Denshi(JA2530)/江󠄂;Hanyo-Denshi(TK01048390)/
 池 /池󠄀;Adobe-Japan1(CID+2961)/
 汢 /汢󠄀;Adobe-Japan1(CID+5384)/
-汧 /汧󠄀;Adobe-Japan1(CID+17930)/汧󠄁;Hanyo-Denshi(JB3922),Moji_Joho(MJ015091)/汧󠄂;Hanyo-Denshi(IB2201),Moji_Joho(MJ015090)/汧󠄃;Hanyo-Denshi(TK01049100)/
+汧 /汧󠄀;Adobe-Japan1(CID+17930)/汧󠄁;Hanyo-Denshi(JB3922),Moji_Joho(MJ015091)/汧󠄂;Hanyo-Denshi(IB2201),Moji_Joho(MJ015090)/汧󠄃;Hanyo-Denshi(TK01049100)/汧󠄄;MSARG(MB_CB4C)/汧󠄅;MSARG(ME_6C67_001)/
 汨 /汨󠄀;Adobe-Japan1(CID+5392)/
 汪 /汪󠄀;Adobe-Japan1(CID+5385)/汪󠄁;Hanyo-Denshi(JA6174)/汪󠄂;Hanyo-Denshi(TK01048620)/
 汫 /汫󠄀;Adobe-Japan1(CID+21849)/
@@ -6175,7 +6178,7 @@
 淋 /淋󠄀;Adobe-Japan1(CID+3996)/
 淌 /淌󠄀;Adobe-Japan1(CID+5442)/淌󠄁;Hanyo-Denshi(JA6237),Moji_Joho(MJ015454)/淌󠄂;Hanyo-Denshi(FT2281),Moji_Joho(MJ015455)/
 淍 /淍󠄀;Hanyo-Denshi(IP6DCD)/淍󠄁;Hanyo-Denshi(TK01050160)/
-淎 /淎󠄀;Adobe-Japan1(CID+17952)/
+淎 /淎󠄀;Adobe-Japan1(CID+17952)/淎󠄁;MSARG(MD_6DCE)/淎󠄂;MSARG(ME_6DCE_001)/
 淏 /淏󠄀;Adobe-Japan1(CID+8520)/淏󠄁;Hanyo-Denshi(JB3957),Moji_Joho(MJ015459)/淏󠄂;Hanyo-Denshi(JTB442),Moji_Joho(MJ015460)/
 淐 /淐󠄀;Adobe-Japan1(CID+15414)/
 淑 /淑󠄀;Adobe-Japan1(CID+2388)/
@@ -6557,7 +6560,7 @@
 瀚 /瀚󠄀;Adobe-Japan1(CID+5542)/瀚󠄁;Hanyo-Denshi(JA6343),Moji_Joho(MJ016150)/瀚󠄂;Hanyo-Denshi(FT2310),Moji_Joho(MJ016151)/
 瀛 /瀛󠄀;Adobe-Japan1(CID+5541)/瀛󠄁;Adobe-Japan1(CID+14154)/瀛󠄂;Hanyo-Denshi(JA6342),Moji_Joho(MJ016152)/瀛󠄃;Hanyo-Denshi(KS211110),Moji_Joho(MJ016155)/瀛󠄄;Hanyo-Denshi(KS210600),Moji_Joho(MJ016153)/瀛󠄅;Hanyo-Denshi(JTB501),Moji_Joho(MJ016154)/瀛󠄆;Hanyo-Denshi(JTB500),Moji_Joho(MJ016156)/
 瀝 /瀝󠄀;Adobe-Japan1(CID+5544)/
-瀞 /瀞󠄀;Adobe-Japan1(CID+3244)/瀞󠄁;Adobe-Japan1(CID+7761)/瀞󠄂;Hanyo-Denshi(JA3852),Moji_Joho(MJ016160)/瀞󠄃;Hanyo-Denshi(FT1881),Moji_Joho(MJ016161)/瀞󠄄;Hanyo-Denshi(KS210580),Moji_Joho(MJ016162)/瀞󠄅;Hanyo-Denshi(JTB4FA),Moji_Joho(MJ016163)/瀞󠄆;Hanyo-Denshi(IB2283),Moji_Joho(MJ016159)/瀞󠄇;Hanyo-Denshi(TK01053770)/
+瀞 /瀞󠄀;Adobe-Japan1(CID+3244)/瀞󠄁;Adobe-Japan1(CID+7761)/瀞󠄂;Hanyo-Denshi(JA3852),Moji_Joho(MJ016160)/瀞󠄃;Hanyo-Denshi(FT1881),Moji_Joho(MJ016161)/瀞󠄄;Hanyo-Denshi(KS210580),Moji_Joho(MJ016162)/瀞󠄅;Hanyo-Denshi(JTB4FA),Moji_Joho(MJ016163)/瀞󠄆;Hanyo-Denshi(IB2283),Moji_Joho(MJ016159)/瀞󠄇;Hanyo-Denshi(TK01053770)/瀞󠄈;MSARG(MA_96EE)/瀞󠄉;MSARG(ME_701E_001)/
 瀟 /瀟󠄀;Adobe-Japan1(CID+5546)/瀟󠄁;Hanyo-Denshi(JA6347),Moji_Joho(MJ016166)/瀟󠄂;Hanyo-Denshi(KS210320),Moji_Joho(MJ016165)/
 瀠 /瀠󠄀;Adobe-Japan1(CID+19512)/
 瀡 /瀡󠄀;Hanyo-Denshi(IP7021),Moji_Joho(MJ016169)/瀡󠄁;Hanyo-Denshi(JTB4E8),Moji_Joho(MJ016168)/
@@ -6747,7 +6750,7 @@
 熥 /熥󠄀;Hanyo-Denshi(IB0744),Moji_Joho(MJ016580)/熥󠄁;Hanyo-Denshi(IP71A5),Moji_Joho(MJ016581)/
 熨 /熨󠄀;Adobe-Japan1(CID+5580)/
 熬 /熬󠄀;Adobe-Japan1(CID+5581)/
-熮 /熮󠄀;Adobe-Japan1(CID+18037)/
+熮 /熮󠄀;Adobe-Japan1(CID+18037)/熮󠄁;MSARG(MD_71AE)/熮󠄂;MSARG(ME_71AE_001)/
 熯 /熯󠄀;Adobe-Japan1(CID+18038)/
 熰 /熰󠄀;Adobe-Japan1(CID+21938)/
 熱 /熱󠄀;Adobe-Japan1(CID+3300)/
@@ -6755,6 +6758,7 @@
 熳 /熳󠄀;Adobe-Japan1(CID+15397)/熳󠄁;Adobe-Japan1(CID+14766)/熳󠄂;Hanyo-Denshi(JB4215),Moji_Joho(MJ016596)/熳󠄃;Hanyo-Denshi(JD8001),Moji_Joho(MJ016595)/
 熹 /熹󠄀;Adobe-Japan1(CID+5583)/
 熺 /熺󠄀;Adobe-Japan1(CID+16965)/
+熻 /熻󠄀;MSARG(MD_71BB)/熻󠄁;MSARG(ME_71BB_001)/
 熾 /熾󠄀;Adobe-Japan1(CID+5584)/熾󠄁;Hanyo-Denshi(JA6385),Moji_Joho(MJ016605)/熾󠄂;Hanyo-Denshi(KS219130),Moji_Joho(MJ016606)/
 熿 /熿󠄀;Adobe-Japan1(CID+21939)/熿󠄁;Hanyo-Denshi(JB4217),Moji_Joho(MJ016607)/熿󠄂;Hanyo-Denshi(JTB543),Moji_Joho(MJ016608)/
 燀 /燀󠄀;Adobe-Japan1(CID+21940)/
@@ -6802,7 +6806,7 @@
 爍 /爍󠄀;Adobe-Japan1(CID+5596)/
 爐 /爐󠄀;Adobe-Japan1(CID+5597)/
 爓 /爓󠄀;Adobe-Japan1(CID+21946)/
-爕 /爕󠄀;Adobe-Japan1(CID+16967)/
+爕 /爕󠄀;Adobe-Japan1(CID+16967)/爕󠄁;MSARG(MA_FE41)/爕󠄂;MSARG(ME_7215_001)/
 爗 /爗󠄀;Adobe-Japan1(CID+19521)/爗󠄁;Hanyo-Denshi(JB4235),Moji_Joho(MJ016708)/爗󠄂;Hanyo-Denshi(KS220520),Moji_Joho(MJ016709)/
 爚 /爚󠄀;Adobe-Japan1(CID+21947)/
 爛 /爛󠄀;Adobe-Japan1(CID+5598)/爛󠄁;Hanyo-Denshi(JA6405),Moji_Joho(MJ016712)/爛󠄂;Hanyo-Denshi(FT2324),Moji_Joho(MJ016713)/
@@ -7667,7 +7671,7 @@
 眛 /眛󠄀;Adobe-Japan1(CID+5819)/
 眜 /眜󠄀;Adobe-Japan1(CID+22052)/
 眞 /眞󠄀;Adobe-Japan1(CID+13357)/眞󠄁;Adobe-Japan1(CID+5816)/眞󠄂;Hanyo-Denshi(JA6635),Moji_Joho(MJ018170)/眞󠄃;Hanyo-Denshi(JTB651),Moji_Joho(MJ018171)/眞󠄄;Hanyo-Denshi(JTB64B),Moji_Joho(MJ058159)/眞󠄅;Hanyo-Denshi(KS017440),Moji_Joho(MJ056990)/眞󠄆;Hanyo-Denshi(JTB652),Moji_Joho(MJ018172)/
-真 /真󠄀;Adobe-Japan1(CID+2565)/真󠄁;Adobe-Japan1(CID+13854)/真󠄂;Hanyo-Denshi(JA3131),Moji_Joho(MJ018173)/真󠄃;Hanyo-Denshi(KS017450),Moji_Joho(MJ056991)/真󠄄;Hanyo-Denshi(IB2489)/真󠄅;Hanyo-Denshi(JTB649),Moji_Joho(MJ018174)/真󠄆;Hanyo-Denshi(TK01062480)/真󠄇;Moji_Joho(MJ018175)/
+真 /真󠄀;Adobe-Japan1(CID+2565)/真󠄁;Adobe-Japan1(CID+13854)/真󠄂;Hanyo-Denshi(JA3131),Moji_Joho(MJ018173)/真󠄃;Hanyo-Denshi(KS017450),Moji_Joho(MJ056991)/真󠄄;Hanyo-Denshi(IB2489)/真󠄅;Hanyo-Denshi(JTB649),Moji_Joho(MJ018174)/真󠄆;Hanyo-Denshi(TK01062480)/真󠄇;Moji_Joho(MJ018175)/真󠄈;MSARG(MB_AF75)/真󠄉;MSARG(ME_771F_001)/
 眠 /眠󠄀;Adobe-Japan1(CID+3774)/
 眢 /眢󠄀;Adobe-Japan1(CID+19578)/
 眤 /眤󠄀;Adobe-Japan1(CID+5815)/
@@ -7845,7 +7849,7 @@
 硈 /硈󠄀;Adobe-Japan1(CID+22076)/
 硌 /硌󠄀;Adobe-Japan1(CID+22077)/
 硎 /硎󠄀;Adobe-Japan1(CID+8575)/硎󠄁;Hanyo-Denshi(JB4766),Moji_Joho(MJ018493)/硎󠄂;Hanyo-Denshi(JTB67C),Moji_Joho(MJ018494)/
-硏 /硏󠄀;Adobe-Japan1(CID+13342)/硏󠄁;Hanyo-Denshi(JC8903),Moji_Joho(MJ018495)/硏󠄂;Hanyo-Denshi(JTB674),Moji_Joho(MJ018496)/
+硏 /硏󠄀;Adobe-Japan1(CID+13342)/硏󠄁;Hanyo-Denshi(JC8903),Moji_Joho(MJ018495)/硏󠄂;Hanyo-Denshi(JTB674),Moji_Joho(MJ018496)/硏󠄃;MSARG(MD_784F)/硏󠄄;MSARG(ME_784F_001)/
 硑 /硑󠄀;Adobe-Japan1(CID+15420)/
 硒 /硒󠄀;Adobe-Japan1(CID+22078)/
 硜 /硜󠄀;Adobe-Japan1(CID+19603)/
@@ -8256,7 +8260,7 @@
 窬 /窬󠄀;Adobe-Japan1(CID+18267)/窬󠄁;Hanyo-Denshi(JB4962),Moji_Joho(MJ019268)/窬󠄂;Hanyo-Denshi(JTB77BS),Moji_Joho(MJ019269)/窬󠄃;Hanyo-Denshi(TK01068630)/
 窮 /窮󠄀;Adobe-Japan1(CID+1665)/窮󠄁;Adobe-Japan1(CID+13431)/窮󠄂;Moji_Joho(MJ019271)/窮󠄃;Moji_Joho(MJ019272)/
 窯 /窯󠄀;Adobe-Japan1(CID+3900)/
-窰 /窰󠄀;Adobe-Japan1(CID+5938)/
+窰 /窰󠄀;Adobe-Japan1(CID+5938)/窰󠄁;MSARG(MA_8E50)/窰󠄂;MSARG(ME_7AB0_001)/
 窱 /窱󠄀;Hanyo-Denshi(IP7AB1)/窱󠄁;Hanyo-Denshi(TK01068710)/
 窳 /窳󠄀;Adobe-Japan1(CID+14931)/窳󠄁;Hanyo-Denshi(JB4963),Moji_Joho(MJ019279)/窳󠄂;Hanyo-Denshi(JTB77DS),Moji_Joho(MJ019278)/
 窴 /窴󠄀;Moji_Joho(MJ019280)/窴󠄁;Moji_Joho(MJ019281)/
@@ -8372,7 +8376,7 @@
 筎 /筎󠄀;Adobe-Japan1(CID+14940)/
 筏 /筏󠄀;Adobe-Japan1(CID+3401)/
 筐 /筐󠄀;Adobe-Japan1(CID+5969)/
-筑 /筑󠄀;Adobe-Japan1(CID+2972)/筑󠄁;Adobe-Japan1(CID+13923)/筑󠄂;Hanyo-Denshi(JA3562),Moji_Joho(MJ019457)/筑󠄃;Hanyo-Denshi(KS291140),Moji_Joho(MJ019458)/筑󠄄;Hanyo-Denshi(JTB7A5),Moji_Joho(MJ019456)/
+筑 /筑󠄀;Adobe-Japan1(CID+2972)/筑󠄁;Adobe-Japan1(CID+13923)/筑󠄂;Hanyo-Denshi(JA3562),Moji_Joho(MJ019457)/筑󠄃;Hanyo-Denshi(KS291140),Moji_Joho(MJ019458)/筑󠄄;Hanyo-Denshi(JTB7A5),Moji_Joho(MJ019456)/筑󠄅;MSARG(MB_B5AE)/筑󠄆;MSARG(ME_7B51_001)/
 筒 /筒󠄀;Adobe-Japan1(CID+3189)/
 筓 /筓󠄀;Adobe-Japan1(CID+14173)/筓󠄁;Hanyo-Denshi(IP7B53)/筓󠄂;Hanyo-Denshi(TK01069510)/
 答 /答󠄀;Adobe-Japan1(CID+3188)/
@@ -8762,7 +8766,7 @@
 綅 /綅󠄀;Adobe-Japan1(CID+19664)/
 綆 /綆󠄀;Adobe-Japan1(CID+14979)/綆󠄁;Hanyo-Denshi(JB5186),Moji_Joho(MJ020133)/綆󠄂;Hanyo-Denshi(JTB826),Moji_Joho(MJ020135)/綆󠄃;Moji_Joho(MJ020134)/
 綈 /綈󠄀;Adobe-Japan1(CID+18353)/
-綉 /綉󠄀;Adobe-Japan1(CID+6084)/
+綉 /綉󠄀;Adobe-Japan1(CID+6084)/綉󠄁;MSARG(MA_8EA7)/綉󠄂;MSARG(ME_7D89_001)/
 綋 /綋󠄀;Adobe-Japan1(CID+14980)/
 綌 /綌󠄀;Adobe-Japan1(CID+14981)/
 綍 /綍󠄀;Adobe-Japan1(CID+19665)/
@@ -8785,7 +8789,7 @@
 綦 /綦󠄀;Adobe-Japan1(CID+17043)/
 綧 /綧󠄀;Adobe-Japan1(CID+18357)/
 綪 /綪󠄀;Adobe-Japan1(CID+18358)/綪󠄁;Hanyo-Denshi(JB5204),Moji_Joho(MJ020183)/綪󠄂;Hanyo-Denshi(IB0846),Moji_Joho(MJ020184)/
-綫 /綫󠄀;Adobe-Japan1(CID+6095)/
+綫 /綫󠄀;Adobe-Japan1(CID+6095)/綫󠄁;MSARG(MA_8EA8)/綫󠄂;MSARG(ME_7DAB_001)/
 綬 /綬󠄀;Adobe-Japan1(CID+2342)/
 維 /維󠄀;Adobe-Japan1(CID+1185)/維󠄁;Hanyo-Denshi(JA1661)/維󠄂;Hanyo-Denshi(TK01072230)/
 綮 /綮󠄀;Adobe-Japan1(CID+6090)/綮󠄁;Adobe-Japan1(CID+7852)/綮󠄂;Hanyo-Denshi(JA6927),Moji_Joho(MJ020190)/綮󠄃;Hanyo-Denshi(FT1977),Moji_Joho(MJ020189)/
@@ -9091,14 +9095,15 @@
 翨 /翨󠄀;Adobe-Japan1(CID+22243)/
 翩 /翩󠄀;Adobe-Japan1(CID+6198)/翩󠄁;Adobe-Japan1(CID+7998)/翩󠄂;Adobe-Japan1(CID+14193)/翩󠄃;Hanyo-Denshi(JA7041),Moji_Joho(MJ020713)/翩󠄄;Hanyo-Denshi(FT2441),Moji_Joho(MJ020714)/翩󠄅;Hanyo-Denshi(JTB89C),Moji_Joho(MJ020712)/
 翫 /翫󠄀;Adobe-Japan1(CID+1569)/翫󠄁;Adobe-Japan1(CID+7657)/翫󠄂;Hanyo-Denshi(JA2069),Moji_Joho(MJ020717)/翫󠄃;Hanyo-Denshi(FT1774),Moji_Joho(MJ020716)/翫󠄄;Moji_Joho(MJ020718)/
-翬 /翬󠄀;Adobe-Japan1(CID+15007)/
+翬 /翬󠄀;Adobe-Japan1(CID+15007)/翬󠄁;MSARG(MB_E6F8)/翬󠄂;MSARG(ME_7FEC_001)/
 翮 /翮󠄀;Adobe-Japan1(CID+15008)/
 翯 /翯󠄀;Adobe-Japan1(CID+15009)/
 翰 /翰󠄀;Adobe-Japan1(CID+1545)/翰󠄁;Adobe-Japan1(CID+7656)/翰󠄂;Hanyo-Denshi(JA2045),Moji_Joho(MJ020724)/翰󠄃;Hanyo-Denshi(FT1773),Moji_Joho(MJ020723)/翰󠄄;Hanyo-Denshi(JTB8A2),Moji_Joho(MJ020725)/翰󠄅;Hanyo-Denshi(TK01074020)/翰󠄆;Hanyo-Denshi(TK01074040)/
+翱 /翱󠄀;MSARG(MB_BFAC)/翱󠄁;MSARG(ME_7FF1_001)/
 翲 /翲󠄀;Adobe-Japan1(CID+18402)/
 翳 /翳󠄀;Adobe-Japan1(CID+6199)/翳󠄁;Hanyo-Denshi(JA7042),Moji_Joho(MJ020730)/翳󠄂;Hanyo-Denshi(FT2442),Moji_Joho(MJ020731)/
 翹 /翹󠄀;Adobe-Japan1(CID+6200)/翹󠄁;Hanyo-Denshi(JA7043),Moji_Joho(MJ020736)/翹󠄂;Hanyo-Denshi(FT2443),Moji_Joho(MJ020737)/
-翺 /翺󠄀;Adobe-Japan1(CID+15010)/
+翺 /翺󠄀;Adobe-Japan1(CID+15010)/翺󠄁;MSARG(MA_8ECB)/翺󠄂;MSARG(ME_7FFA_001)/翺󠄃;MSARG(ME_7FFA_002)/
 翻 /翻󠄀;Adobe-Japan1(CID+3723)/翻󠄁;Adobe-Japan1(CID+14040)/翻󠄂;Hanyo-Denshi(JA4361),Moji_Joho(MJ020740)/翻󠄃;Hanyo-Denshi(KS321850),Moji_Joho(MJ020739)/
 翼 /翼󠄀;Adobe-Japan1(CID+3917)/翼󠄁;Adobe-Japan1(CID+13512)/翼󠄂;Adobe-Japan1(CID+14082)/翼󠄃;Hanyo-Denshi(JA4567),Moji_Joho(MJ020741)/翼󠄄;Hanyo-Denshi(KS321890),Moji_Joho(MJ020743)/翼󠄅;Hanyo-Denshi(JTB89F),Moji_Joho(MJ020742)/翼󠄆;Moji_Joho(MJ020744)/
 翽 /翽󠄀;Adobe-Japan1(CID+19689)/
@@ -9675,7 +9680,7 @@
 茷 /茷󠄀;Adobe-Japan1(CID+22318)/茷󠄁;Hanyo-Denshi(JB5579),Moji_Joho(MJ021836)/茷󠄂;Hanyo-Denshi(KS346630),Moji_Joho(MJ021837)/
 茸 /茸󠄀;Adobe-Japan1(CID+2907)/茸󠄁;Hanyo-Denshi(JA3491),Moji_Joho(MJ021838)/茸󠄂;Hanyo-Denshi(KS346650),Moji_Joho(MJ021839)/茸󠄃;Moji_Joho(MJ021840)/
 茹 /茹󠄀;Adobe-Japan1(CID+6352)/茹󠄁;Hanyo-Denshi(JA7207),Moji_Joho(MJ021841)/茹󠄂;Hanyo-Denshi(KS346680),Moji_Joho(MJ021842)/
-茺 /茺󠄀;Adobe-Japan1(CID+17074)/茺󠄁;Hanyo-Denshi(JB5580),Moji_Joho(MJ021843)/茺󠄂;Hanyo-Denshi(KS346690S),Moji_Joho(MJ021844)/
+茺 /茺󠄀;Adobe-Japan1(CID+17074)/茺󠄁;Hanyo-Denshi(JB5580),Moji_Joho(MJ021843)/茺󠄂;Hanyo-Denshi(KS346690S),Moji_Joho(MJ021844)/茺󠄃;MSARG(MB_D072)/茺󠄄;MSARG(ME_833A_001)/
 茼 /茼󠄀;Adobe-Japan1(CID+18489)/茼󠄁;Hanyo-Denshi(JB5581),Moji_Joho(MJ021846)/茼󠄂;Hanyo-Denshi(KS346710),Moji_Joho(MJ021847)/
 茽 /茽󠄀;Adobe-Japan1(CID+22319)/茽󠄁;Hanyo-Denshi(JB5582),Moji_Joho(MJ021848)/茽󠄂;Hanyo-Denshi(KS346720),Moji_Joho(MJ021849)/
 荀 /荀󠄀;Adobe-Japan1(CID+6351)/荀󠄁;Hanyo-Denshi(JA7206),Moji_Joho(MJ021852)/荀󠄂;Hanyo-Denshi(KS346750),Moji_Joho(MJ021853)/
@@ -9756,7 +9761,7 @@
 莾 /莾󠄀;Adobe-Japan1(CID+22331)/莾󠄁;Hanyo-Denshi(JB5620),Moji_Joho(MJ022055)/莾󠄂;Hanyo-Denshi(KS350350),Moji_Joho(MJ022056)/
 莿 /莿󠄀;Adobe-Japan1(CID+15057)/莿󠄁;Hanyo-Denshi(JB5621),Moji_Joho(MJ022057)/莿󠄂;Hanyo-Denshi(JTB9C8),Moji_Joho(MJ022058)/
 菀 /菀󠄀;Adobe-Japan1(CID+15058)/菀󠄁;Hanyo-Denshi(JB5622),Moji_Joho(MJ022059)/菀󠄂;Hanyo-Denshi(KS350380),Moji_Joho(MJ022060)/
-菁 /菁󠄀;Adobe-Japan1(CID+6384)/菁󠄁;Hanyo-Denshi(JA7239),Moji_Joho(MJ022061)/菁󠄂;Hanyo-Denshi(JTB9A6),Moji_Joho(MJ022064)/菁󠄃;Hanyo-Denshi(IB0355),Moji_Joho(MJ022063)/菁󠄄;Hanyo-Denshi(FT2479),Moji_Joho(MJ022062)/菁󠄅;Hanyo-Denshi(TK01078230)/
+菁 /菁󠄀;Adobe-Japan1(CID+6384)/菁󠄁;Hanyo-Denshi(JA7239),Moji_Joho(MJ022061)/菁󠄂;Hanyo-Denshi(JTB9A6),Moji_Joho(MJ022064)/菁󠄃;Hanyo-Denshi(IB0355),Moji_Joho(MJ022063)/菁󠄄;Hanyo-Denshi(FT2479),Moji_Joho(MJ022062)/菁󠄅;Hanyo-Denshi(TK01078230)/菁󠄆;MSARG(MB_B5D7)/菁󠄇;MSARG(ME_83C1_001)/
 菂 /菂󠄀;Hanyo-Denshi(KS350410)/菂󠄁;Hanyo-Denshi(TK01078690)/
 菅 /菅󠄀;Adobe-Japan1(CID+2625)/菅󠄁;Hanyo-Denshi(JA3191),Moji_Joho(MJ022070)/菅󠄂;Hanyo-Denshi(JTB9C4),Moji_Joho(MJ022071)/
 菆 /菆󠄀;Hanyo-Denshi(IP83C6),Moji_Joho(MJ022072)/菆󠄁;Hanyo-Denshi(JTB9D0),Moji_Joho(MJ022074)/菆󠄂;Hanyo-Denshi(KS350490),Moji_Joho(MJ022073)/
@@ -9902,7 +9907,7 @@
 蒥 /蒥󠄀;Hanyo-Denshi(KS356580)/蒥󠄁;Hanyo-Denshi(TK01079890)/
 蒦 /蒦󠄀;Adobe-Japan1(CID+18522)/蒦󠄁;Hanyo-Denshi(JB5678),Moji_Joho(MJ022475)/蒦󠄂;Hanyo-Denshi(JTBA16),Moji_Joho(MJ022477)/蒦󠄃;Hanyo-Denshi(JTBA15),Moji_Joho(MJ022476)/
 蒧 /蒧󠄀;Hanyo-Denshi(KS355780),Moji_Joho(MJ022478)/蒧󠄁;Hanyo-Denshi(KS358560),Moji_Joho(MJ022479)/
-蒨 /蒨󠄀;Adobe-Japan1(CID+15064)/蒨󠄁;Hanyo-Denshi(JB5679),Moji_Joho(MJ022480)/蒨󠄂;Hanyo-Denshi(IB0358),Moji_Joho(MJ022482)/蒨󠄃;Hanyo-Denshi(IB0865),Moji_Joho(MJ022481)/蒨󠄄;Hanyo-Denshi(TK01080090)/
+蒨 /蒨󠄀;Adobe-Japan1(CID+15064)/蒨󠄁;Hanyo-Denshi(JB5679),Moji_Joho(MJ022480)/蒨󠄂;Hanyo-Denshi(IB0358),Moji_Joho(MJ022482)/蒨󠄃;Hanyo-Denshi(IB0865),Moji_Joho(MJ022481)/蒨󠄄;Hanyo-Denshi(TK01080090)/蒨󠄅;MSARG(MB_E3C8)/蒨󠄆;MSARG(ME_84A8_001)/
 蒩 /蒩󠄀;Adobe-Japan1(CID+22350)/蒩󠄁;Hanyo-Denshi(JB5680),Moji_Joho(MJ022484)/蒩󠄂;Hanyo-Denshi(KS356720),Moji_Joho(MJ022485)/
 蒪 /蒪󠄀;Adobe-Japan1(CID+22351)/蒪󠄁;Hanyo-Denshi(JB5681),Moji_Joho(MJ022486)/蒪󠄂;Hanyo-Denshi(KS356730),Moji_Joho(MJ022487)/
 蒭 /蒭󠄀;Adobe-Japan1(CID+6403)/蒭󠄁;Hanyo-Denshi(JA7258),Moji_Joho(MJ022490)/蒭󠄂;Hanyo-Denshi(KS356770),Moji_Joho(MJ022491)/
@@ -9993,7 +9998,7 @@
 蔯 /蔯󠄀;Adobe-Japan1(CID+17092)/蔯󠄁;Hanyo-Denshi(JB5728),Moji_Joho(MJ022728)/蔯󠄂;Hanyo-Denshi(KS359950),Moji_Joho(MJ022729)/
 蔲 /蔲󠄀;Adobe-Japan1(CID+17090)/蔲󠄁;Hanyo-Denshi(JB5709),Moji_Joho(MJ022732)/蔲󠄂;Hanyo-Denshi(KS358920),Moji_Joho(MJ022733)/蔲󠄃;Hanyo-Denshi(JTBA03),Moji_Joho(MJ060129)/
 蔳 /蔳󠄀;Adobe-Japan1(CID+22366)/蔳󠄁;Hanyo-Denshi(JB5729),Moji_Joho(MJ022734)/蔳󠄂;Hanyo-Denshi(IB2845),Moji_Joho(MJ022735)/蔳󠄃;Hanyo-Denshi(TK01080730)/蔳󠄄;Hanyo-Denshi(TK01080830)/
-蔴 /蔴󠄀;Adobe-Japan1(CID+15071)/蔴󠄁;Hanyo-Denshi(JB5730),Moji_Joho(MJ022738)/蔴󠄂;Hanyo-Denshi(KS360300),Moji_Joho(MJ022739)/
+蔴 /蔴󠄀;Adobe-Japan1(CID+15071)/蔴󠄁;Hanyo-Denshi(JB5730),Moji_Joho(MJ022738)/蔴󠄂;Hanyo-Denshi(KS360300),Moji_Joho(MJ022739)/蔴󠄃;MSARG(MA_8F77)/蔴󠄄;MSARG(ME_8534_001)/
 蔵 /蔵󠄀;Adobe-Japan1(CID+2818)/蔵󠄁;Hanyo-Denshi(JA3402)/蔵󠄂;Hanyo-Denshi(TK01081050)/
 蔶 /蔶󠄀;Adobe-Japan1(CID+22367)/蔶󠄁;Hanyo-Denshi(JB5731),Moji_Joho(MJ022742)/蔶󠄂;Hanyo-Denshi(KS361080),Moji_Joho(MJ022743)/
 蔽 /蔽󠄀;Adobe-Japan1(CID+3603)/蔽󠄁;Adobe-Japan1(CID+7789)/蔽󠄂;Adobe-Japan1(CID+13505)/蔽󠄃;Hanyo-Denshi(JA4235),Moji_Joho(MJ022744)/蔽󠄄;Hanyo-Denshi(FT1916),Moji_Joho(MJ022746)/蔽󠄅;Hanyo-Denshi(KS361180S),Moji_Joho(MJ022745)/
@@ -10510,7 +10515,7 @@
 衃 /衃󠄀;Adobe-Japan1(CID+22464)/
 衄 /衄󠄀;Adobe-Japan1(CID+6573)/
 衅 /衅󠄀;Adobe-Japan1(CID+19776)/
-衆 /衆󠄀;Adobe-Japan1(CID+2362)/衆󠄁;Adobe-Japan1(CID+13818)/衆󠄂;Hanyo-Denshi(JA2916),Moji_Joho(MJ023854)/衆󠄃;Hanyo-Denshi(KS386410),Moji_Joho(MJ058673)/衆󠄄;Hanyo-Denshi(KS386430),Moji_Joho(MJ058675)/衆󠄅;Hanyo-Denshi(KS386520),Moji_Joho(MJ058677)/衆󠄆;Hanyo-Denshi(TK01083450)/衆󠄇;MSARG(MA_8FBC)/衆󠄈;MSARG(ME_8846_001)/
+衆 /衆󠄀;Adobe-Japan1(CID+2362)/衆󠄁;Adobe-Japan1(CID+13818)/衆󠄂;Hanyo-Denshi(JA2916),Moji_Joho(MJ023854)/衆󠄃;Hanyo-Denshi(KS386410),Moji_Joho(MJ058673)/衆󠄄;Hanyo-Denshi(KS386430),Moji_Joho(MJ058675)/衆󠄅;Hanyo-Denshi(KS386520),Moji_Joho(MJ058677)/衆󠄆;Hanyo-Denshi(TK01083450)/衆󠄇;MSARG(MA_8FBC)/衆󠄈;MSARG(ME_8846_001)/衆󠄉;MSARG(ME_8846_002)/
 衈 /衈󠄀;Adobe-Japan1(CID+22465)/
 衉 /衉󠄀;Adobe-Japan1(CID+22466)/
 衊 /衊󠄀;Adobe-Japan1(CID+18635)/衊󠄁;Hanyo-Denshi(JB6008),Moji_Joho(MJ023860)/衊󠄂;Hanyo-Denshi(KS386960),Moji_Joho(MJ023859)/衊󠄃;Hanyo-Denshi(KS386930),Moji_Joho(MJ023858)/
@@ -11050,6 +11055,7 @@
 譢 /譢󠄀;Hanyo-Denshi(IP8B62)/譢󠄁;Hanyo-Denshi(TK01085930)/
 譣 /譣󠄀;Adobe-Japan1(CID+22561)/
 警 /警󠄀;Adobe-Japan1(CID+1839)/警󠄁;Hanyo-Denshi(JA2357),Moji_Joho(MJ024795)/警󠄂;Hanyo-Denshi(KS408750S),Moji_Joho(MJ024796)/
+譧 /譧󠄀;MSARG(MB_F4D4)/譧󠄁;MSARG(ME_8B67_001)/
 譩 /譩󠄀;Adobe-Japan1(CID+17130)/譩󠄁;Hanyo-Denshi(JC9220),Moji_Joho(MJ024799)/譩󠄂;Hanyo-Denshi(KS409100),Moji_Joho(MJ024800)/
 譪 /譪󠄀;Hanyo-Denshi(IP8B6A),Moji_Joho(MJ024801)/譪󠄁;Hanyo-Denshi(KS408810),Moji_Joho(MJ024802)/譪󠄂;Moji_Joho(MJ024803)/
 譫 /譫󠄀;Adobe-Japan1(CID+6721)/
@@ -11372,6 +11378,7 @@
 踦 /踦󠄀;Adobe-Japan1(CID+19850)/
 踧 /踧󠄀;Adobe-Japan1(CID+18732)/
 踪 /踪󠄀;Adobe-Japan1(CID+6824)/
+踭 /踭󠄀;MSARG(MA_9E5A)/踭󠄁;MSARG(ME_8E2D_001)/
 踰 /踰󠄀;Adobe-Japan1(CID+6813)/踰󠄁;Hanyo-Denshi(JA7692),Moji_Joho(MJ025364)/踰󠄂;Hanyo-Denshi(FT2566),Moji_Joho(MJ025365)/
 踱 /踱󠄀;Adobe-Japan1(CID+19851)/
 踳 /踳󠄀;Adobe-Japan1(CID+22617)/
@@ -11802,7 +11809,7 @@
 那 /那󠄀;Adobe-Japan1(CID+3257)/那󠄁;Adobe-Japan1(CID+7765)/那󠄂;Hanyo-Denshi(JA3865),Moji_Joho(MJ026239)/那󠄃;Hanyo-Denshi(FT1885),Moji_Joho(MJ026238)/
 邥 /邥󠄀;Adobe-Japan1(CID+22678)/
 邦 /邦󠄀;Adobe-Japan1(CID+3676)/邦󠄁;Adobe-Japan1(CID+14027)/邦󠄂;Adobe-Japan1(CID+14028)/邦󠄃;Hanyo-Denshi(JA4314),Moji_Joho(MJ026242)/邦󠄄;Hanyo-Denshi(JTBD85),Moji_Joho(MJ026246)/邦󠄅;Hanyo-Denshi(JTBD86),Moji_Joho(MJ026244)/邦󠄆;Hanyo-Denshi(JTBD83),Moji_Joho(MJ026243)/邦󠄇;Hanyo-Denshi(TK01090640)/邦󠄈;Moji_Joho(MJ026245)/
-邨 /邨󠄀;Adobe-Japan1(CID+6932)/邨󠄁;Adobe-Japan1(CID+20235)/邨󠄂;Hanyo-Denshi(JA7823),Moji_Joho(MJ026249)/邨󠄃;Hanyo-Denshi(FT2634),Moji_Joho(MJ026250)/邨󠄄;Hanyo-Denshi(TK01090660)/邨󠄅;Hanyo-Denshi(TK01090690)/
+邨 /邨󠄀;Adobe-Japan1(CID+6932)/邨󠄁;Adobe-Japan1(CID+20235)/邨󠄂;Hanyo-Denshi(JA7823),Moji_Joho(MJ026249)/邨󠄃;Hanyo-Denshi(FT2634),Moji_Joho(MJ026250)/邨󠄄;Hanyo-Denshi(TK01090660)/邨󠄅;Hanyo-Denshi(TK01090690)/邨󠄆;MSARG(MA_9068)/邨󠄇;MSARG(ME_90A8_001)/
 邪 /邪󠄀;Adobe-Japan1(CID+2309)/邪󠄁;Adobe-Japan1(CID+13454)/邪󠄂;Adobe-Japan1(CID+13806)/邪󠄃;Hanyo-Denshi(JA2857),Moji_Joho(MJ026255)/邪󠄄;Hanyo-Denshi(KS446560),Moji_Joho(MJ026254)/邪󠄅;Moji_Joho(MJ026256)/
 邫 /邫󠄀;Hanyo-Denshi(IP90AB),Moji_Joho(MJ026257)/邫󠄁;Hanyo-Denshi(JTBD87),Moji_Joho(MJ026258)/邫󠄂;Hanyo-Denshi(TK01090980)/邫󠄃;Hanyo-Denshi(TK01091000)/
 邯 /邯󠄀;Adobe-Japan1(CID+6933)/
@@ -11927,6 +11934,7 @@
 酳 /酳󠄀;Adobe-Japan1(CID+6951)/酳󠄁;Adobe-Japan1(CID+13613)/
 酴 /酴󠄀;Adobe-Japan1(CID+18804)/
 酵 /酵󠄀;Adobe-Japan1(CID+2028)/酵󠄁;Hanyo-Denshi(JA2558),Moji_Joho(MJ026482)/酵󠄂;Hanyo-Denshi(JTBDA9),Moji_Joho(MJ026483)/
+酶 /酶󠄀;MSARG(MA_9E4A)/酶󠄁;MSARG(ME_9176_001)/
 酷 /酷󠄀;Adobe-Japan1(CID+2053)/酷󠄁;Adobe-Japan1(CID+13776)/酷󠄂;Hanyo-Denshi(JA2583),Moji_Joho(MJ026486)/酷󠄃;Hanyo-Denshi(JTBDAA),Moji_Joho(MJ026485)/
 酸 /酸󠄀;Adobe-Japan1(CID+2190)/酸󠄁;Hanyo-Denshi(JA2732),Moji_Joho(MJ026488)/酸󠄂;Hanyo-Denshi(KS452620),Moji_Joho(MJ026487)/酸󠄃;Hanyo-Denshi(JTBDAB),Moji_Joho(MJ026489)/
 酹 /酹󠄀;Adobe-Japan1(CID+18805)/
@@ -12162,7 +12170,7 @@
 銶 /銶󠄀;Adobe-Japan1(CID+22750)/
 銷 /銷󠄀;Adobe-Japan1(CID+6998)/銷󠄁;Hanyo-Denshi(JA7889),Moji_Joho(MJ026857)/銷󠄂;Hanyo-Denshi(FT2648),Moji_Joho(MJ026858)/
 銸 /銸󠄀;Adobe-Japan1(CID+22751)/
-銹 /銹󠄀;Adobe-Japan1(CID+6997)/
+銹 /銹󠄀;Adobe-Japan1(CID+6997)/銹󠄁;MSARG(MA_F9D7)/銹󠄂;MSARG(ME_92B9_001)/
 銺 /銺󠄀;Adobe-Japan1(CID+22752)/
 銻 /銻󠄀;Adobe-Japan1(CID+19920)/
 銼 /銼󠄀;Adobe-Japan1(CID+19921)/
@@ -12286,7 +12294,7 @@
 鍫 /鍫󠄀;Adobe-Japan1(CID+18851)/
 鍬 /鍬󠄀;Adobe-Japan1(CID+1795)/
 鍭 /鍭󠄀;Adobe-Japan1(CID+15240)/
-鍮 /鍮󠄀;Adobe-Japan1(CID+7014)/鍮󠄁;Hanyo-Denshi(JA7911),Moji_Joho(MJ027061)/鍮󠄂;Hanyo-Denshi(FT2650),Moji_Joho(MJ027062)/
+鍮 /鍮󠄀;Adobe-Japan1(CID+7014)/鍮󠄁;Hanyo-Denshi(JA7911),Moji_Joho(MJ027061)/鍮󠄂;Hanyo-Denshi(FT2650),Moji_Joho(MJ027062)/鍮󠄃;MSARG(MA_A05F)/鍮󠄄;MSARG(ME_936E_001)/
 鍯 /鍯󠄀;Adobe-Japan1(CID+22777)/
 鍰 /鍰󠄀;Adobe-Japan1(CID+8676)/
 鍱 /鍱󠄀;Adobe-Japan1(CID+18852)/
@@ -12649,7 +12657,7 @@
 隲 /隲󠄀;Adobe-Japan1(CID+7110)/隲󠄁;Adobe-Japan1(CID+14257)/
 隳 /隳󠄀;Adobe-Japan1(CID+18899)/
 隴 /隴󠄀;Adobe-Japan1(CID+7112)/隴󠄁;Hanyo-Denshi(JA8015),Moji_Joho(MJ027702)/隴󠄂;Hanyo-Denshi(KS475300),Moji_Joho(MJ027703)/
-隶 /隶󠄀;Adobe-Japan1(CID+7113)/隶󠄁;Hanyo-Denshi(JA8016),Moji_Joho(MJ027706)/隶󠄂;Hanyo-Denshi(KS475490),Moji_Joho(MJ027705)/
+隶 /隶󠄀;Adobe-Japan1(CID+7113)/隶󠄁;Hanyo-Denshi(JA8016),Moji_Joho(MJ027706)/隶󠄂;Hanyo-Denshi(KS475490),Moji_Joho(MJ027705)/隶󠄃;MSARG(MA_90C4)/隶󠄄;MSARG(ME_96B6_001)/
 隷 /隷󠄀;Adobe-Japan1(CID+4020)/
 隸 /隸󠄀;Adobe-Japan1(CID+7114)/
 隹 /隹󠄀;Adobe-Japan1(CID+7115)/隹󠄁;Moji_Joho(MJ027709)/隹󠄂;Moji_Joho(MJ056921)/
@@ -12756,10 +12764,10 @@
 靖 /靖󠄀;Adobe-Japan1(CID+3843)/靖󠄁;Adobe-Japan1(CID+8587)/靖󠄂;Hanyo-Denshi(JA4487),Moji_Joho(MJ027901)/靖󠄃;Hanyo-Denshi(IB3208),Moji_Joho(MJ030214)/
 靗 /靗󠄀;Adobe-Japan1(CID+18914)/靗󠄁;Hanyo-Denshi(JB7119),Moji_Joho(MJ027902)/靗󠄂;Hanyo-Denshi(IB3209),Moji_Joho(MJ027903)/
 靘 /靘󠄀;Adobe-Japan1(CID+22851)/靘󠄁;Hanyo-Denshi(JB7120),Moji_Joho(MJ027904)/靘󠄂;Hanyo-Denshi(IB1036),Moji_Joho(MJ027905)/
-静 /静󠄀;Adobe-Japan1(CID+2665)/静󠄁;Adobe-Japan1(CID+14258)/静󠄂;Hanyo-Denshi(JA3237)/静󠄃;Hanyo-Denshi(TK01097430)/静󠄄;Hanyo-Denshi(TK01097490)/
+静 /静󠄀;Adobe-Japan1(CID+2665)/静󠄁;Adobe-Japan1(CID+14258)/静󠄂;Hanyo-Denshi(JA3237)/静󠄃;Hanyo-Denshi(TK01097430)/静󠄄;Hanyo-Denshi(TK01097490)/静󠄅;MSARG(MD_9759)/静󠄆;MSARG(ME_9759_001)/
 靚 /靚󠄀;Adobe-Japan1(CID+15275)/靚󠄁;Hanyo-Denshi(JB7121),Moji_Joho(MJ027909)/靚󠄂;Hanyo-Denshi(IB1037),Moji_Joho(MJ027910)/靚󠄃;Hanyo-Denshi(TK01084520)/
 靛 /靛󠄀;Adobe-Japan1(CID+18915)/靛󠄁;Hanyo-Denshi(JB7122),Moji_Joho(MJ027911)/靛󠄂;Hanyo-Denshi(IB1038),Moji_Joho(MJ027912)/
-靜 /靜󠄀;Adobe-Japan1(CID+7145)/靜󠄁;Adobe-Japan1(CID+13873)/靜󠄂;Adobe-Japan1(CID+13874)/靜󠄃;Hanyo-Denshi(JA8048),Moji_Joho(MJ027913)/靜󠄄;Hanyo-Denshi(IB1039),Moji_Joho(MJ027914)/靜󠄅;Hanyo-Denshi(FT2674),Moji_Joho(MJ027915)/靜󠄆;Hanyo-Denshi(TK01097530)/靜󠄇;Hanyo-Denshi(TK01097550)/
+靜 /靜󠄀;Adobe-Japan1(CID+7145)/靜󠄁;Adobe-Japan1(CID+13873)/靜󠄂;Adobe-Japan1(CID+13874)/靜󠄃;Hanyo-Denshi(JA8048),Moji_Joho(MJ027913)/靜󠄄;Hanyo-Denshi(IB1039),Moji_Joho(MJ027914)/靜󠄅;Hanyo-Denshi(FT2674),Moji_Joho(MJ027915)/靜󠄆;Hanyo-Denshi(TK01097530)/靜󠄇;Hanyo-Denshi(TK01097550)/靜󠄈;MSARG(MB_C052)/靜󠄉;MSARG(ME_975C_001)/
 靝 /靝󠄀;Hanyo-Denshi(IB1040),Moji_Joho(MJ027919)/靝󠄁;Hanyo-Denshi(IP975D),Moji_Joho(MJ027918)/
 非 /非󠄀;Adobe-Japan1(CID+3463)/非󠄁;Moji_Joho(MJ027920)/非󠄂;Moji_Joho(MJ027921)/
 靠 /靠󠄀;Adobe-Japan1(CID+7146)/靠󠄁;Adobe-Japan1(CID+7879)/靠󠄂;Adobe-Japan1(CID+13623)/靠󠄃;Hanyo-Denshi(JA8049)/靠󠄄;Hanyo-Denshi(FT2006),Moji_Joho(MJ027925)/靠󠄅;Moji_Joho(MJ027923)/靠󠄆;Moji_Joho(MJ027924)/靠󠄇;Moji_Joho(MJ027926)/
@@ -12773,7 +12781,7 @@
 革 /革󠄀;Adobe-Japan1(CID+1461)/革󠄁;Hanyo-Denshi(JA1955),Moji_Joho(MJ027936)/革󠄂;Hanyo-Denshi(KS484070),Moji_Joho(MJ059006)/
 靪 /靪󠄀;Adobe-Japan1(CID+18916)/
 靫 /靫󠄀;Adobe-Japan1(CID+7151)/靫󠄁;Moji_Joho(MJ027938)/靫󠄂;Moji_Joho(MJ027939)/
-靭 /靭󠄀;Adobe-Japan1(CID+2591)/靭󠄁;Adobe-Japan1(CID+7880)/靭󠄂;Adobe-Japan1(CID+7971)/靭󠄃;Hanyo-Denshi(JA3157),Moji_Joho(MJ027942)/靭󠄄;Hanyo-Denshi(HG1633),Moji_Joho(MJ027941)/
+靭 /靭󠄀;Adobe-Japan1(CID+2591)/靭󠄁;Adobe-Japan1(CID+7880)/靭󠄂;Adobe-Japan1(CID+7971)/靭󠄃;Hanyo-Denshi(JA3157),Moji_Joho(MJ027942)/靭󠄄;Hanyo-Denshi(HG1633),Moji_Joho(MJ027941)/靭󠄅;MSARG(MA_9E46)/靭󠄆;MSARG(ME_976D_001)/
 靮 /靮󠄀;Adobe-Japan1(CID+15277)/
 靱 /靱󠄀;Adobe-Japan1(CID+7152)/靱󠄁;Adobe-Japan1(CID+7710)/靱󠄂;Adobe-Japan1(CID+13624)/靱󠄃;Hanyo-Denshi(JA8055)/靱󠄄;Hanyo-Denshi(FT1831),Moji_Joho(MJ027947)/靱󠄅;Moji_Joho(MJ027945)/靱󠄆;Moji_Joho(MJ027946)/
 靳 /靳󠄀;Adobe-Japan1(CID+15278)/
@@ -12834,7 +12842,7 @@
 韅 /韅󠄀;Adobe-Japan1(CID+22862)/
 韆 /韆󠄀;Adobe-Japan1(CID+7169)/韆󠄁;Hanyo-Denshi(JA8072),Moji_Joho(MJ028047)/韆󠄂;Hanyo-Denshi(FT2681),Moji_Joho(MJ028049)/韆󠄃;Hanyo-Denshi(IB1042S),Moji_Joho(MJ028045)/韆󠄄;Hanyo-Denshi(JTBED6S),Moji_Joho(MJ028048)/韆󠄅;Hanyo-Denshi(JTBED8),Moji_Joho(MJ028046)/
 韇 /韇󠄀;Adobe-Japan1(CID+22863)/
-韈 /韈󠄀;Adobe-Japan1(CID+7170)/韈󠄁;Hanyo-Denshi(JA8073),Moji_Joho(MJ028051)/韈󠄂;Hanyo-Denshi(KS488060),Moji_Joho(MJ028053)/韈󠄃;Hanyo-Denshi(KS488000),Moji_Joho(MJ028052)/韈󠄄;Hanyo-Denshi(FT2682),Moji_Joho(MJ028054)/
+韈 /韈󠄀;Adobe-Japan1(CID+7170)/韈󠄁;Hanyo-Denshi(JA8073),Moji_Joho(MJ028051)/韈󠄂;Hanyo-Denshi(KS488060),Moji_Joho(MJ028053)/韈󠄃;Hanyo-Denshi(KS488000),Moji_Joho(MJ028052)/韈󠄄;Hanyo-Denshi(FT2682),Moji_Joho(MJ028054)/韈󠄅;MSARG(MA_9F76)/韈󠄆;MSARG(ME_97C8_001)/
 韉 /韉󠄀;Adobe-Japan1(CID+17192)/韉󠄁;Hanyo-Denshi(JB7160),Moji_Joho(MJ028055)/韉󠄂;Hanyo-Denshi(KS488160),Moji_Joho(MJ028056)/
 韊 /韊󠄀;Adobe-Japan1(CID+22864)/韊󠄁;Hanyo-Denshi(JB7161),Moji_Joho(MJ028057)/韊󠄂;Hanyo-Denshi(KS488290),Moji_Joho(MJ028058)/
 韋 /韋󠄀;Adobe-Japan1(CID+7171)/韋󠄁;Hanyo-Denshi(JA8074),Moji_Joho(MJ028060)/韋󠄂;Hanyo-Denshi(JTBEDA),Moji_Joho(MJ028059)/韋󠄃;Moji_Joho(MJ028061)/
@@ -12999,7 +13007,7 @@
 飩 /飩󠄀;Adobe-Japan1(CID+7202)/飩󠄁;Hanyo-Denshi(JA8111),Moji_Joho(MJ028355)/飩󠄂;Hanyo-Denshi(FT2688),Moji_Joho(MJ028354)/
 飪 /飪󠄀;Adobe-Japan1(CID+18953)/飪󠄁;Hanyo-Denshi(JB7245),Moji_Joho(MJ028357)/飪󠄂;Hanyo-Denshi(IB1051S),Moji_Joho(MJ028356)/
 飫 /飫󠄀;Adobe-Japan1(CID+7203)/飫󠄁;Adobe-Japan1(CID+14260)/飫󠄂;Hanyo-Denshi(JA8112),Moji_Joho(MJ028359)/飫󠄃;Hanyo-Denshi(FT2689),Moji_Joho(MJ028358)/
-飬 /飬󠄀;MSARG(MA_914B)/飬󠄁;MSARG(ME_98EC_001)/
+飬 /飬󠄀;MSARG(MA_914B)/飬󠄁;MSARG(ME_98EC_001)/飬󠄂;MSARG(ME_98EC_002)/
 飭 /飭󠄀;Adobe-Japan1(CID+4289)/飭󠄁;Hanyo-Denshi(JA5012),Moji_Joho(MJ028362)/飭󠄂;Hanyo-Denshi(FT2091),Moji_Joho(MJ028361)/飭󠄃;Moji_Joho(MJ059041)/
 飮 /飮󠄀;Adobe-Japan1(CID+5338)/
 飯 /飯󠄀;Adobe-Japan1(CID+8699)/飯󠄁;Adobe-Japan1(CID+3431)/飯󠄂;Adobe-Japan1(CID+20261)/飯󠄃;Hanyo-Denshi(JA4051),Moji_Joho(MJ028364)/飯󠄄;Hanyo-Denshi(JTFA2A),Moji_Joho(MJ030240)/
@@ -13059,6 +13067,7 @@
 餴 /餴󠄀;Adobe-Japan1(CID+22891)/餴󠄁;Hanyo-Denshi(JB7266),Moji_Joho(MJ028487)/餴󠄂;Hanyo-Denshi(JTBF73),Moji_Joho(MJ028488)/餴󠄃;Hanyo-Denshi(JTC101),Moji_Joho(MJ028489)/
 餵 /餵󠄀;Adobe-Japan1(CID+19992)/
 餶 /餶󠄀;Hanyo-Denshi(IB1128),Moji_Joho(MJ028491)/餶󠄁;Hanyo-Denshi(IP9936),Moji_Joho(MJ028492)/
+餸 /餸󠄀;MSARG(MA_9652)/餸󠄁;MSARG(ME_9938_001)/
 餹 /餹󠄀;Adobe-Japan1(CID+22892)/餹󠄁;Hanyo-Denshi(JB7268),Moji_Joho(MJ028494)/餹󠄂;Hanyo-Denshi(JTBF7D),Moji_Joho(MJ028495)/餹󠄃;Hanyo-Denshi(JTBF7E),Moji_Joho(MJ028493)/
 餺 /餺󠄀;Adobe-Japan1(CID+18968)/餺󠄁;Hanyo-Denshi(JB7269),Moji_Joho(MJ028497)/餺󠄂;Hanyo-Denshi(JTBF82),Moji_Joho(MJ028496)/
 餻 /餻󠄀;Adobe-Japan1(CID+18969)/餻󠄁;Hanyo-Denshi(JB7270),Moji_Joho(MJ028499)/餻󠄂;Hanyo-Denshi(IB1120),Moji_Joho(MJ028498)/
@@ -13230,6 +13239,7 @@
 驝 /驝󠄀;Adobe-Japan1(CID+22923)/
 驟 /驟󠄀;Adobe-Japan1(CID+7260)/驟󠄁;Adobe-Japan1(CID+14267)/驟󠄂;Hanyo-Denshi(JA8169),Moji_Joho(MJ028830)/驟󠄃;Hanyo-Denshi(KS510550),Moji_Joho(MJ028831)/
 驢 /驢󠄀;Adobe-Japan1(CID+7261)/
+驣 /驣󠄀;MSARG(MA_9557)/驣󠄁;MSARG(ME_9A63_001)/
 驤 /驤󠄀;Adobe-Japan1(CID+7263)/
 驥 /驥󠄀;Adobe-Japan1(CID+7262)/驥󠄁;Adobe-Japan1(CID+14268)/驥󠄂;Hanyo-Denshi(JA8171),Moji_Joho(MJ028837)/驥󠄃;Hanyo-Denshi(JTBFEF),Moji_Joho(MJ028838)/
 驩 /驩󠄀;Adobe-Japan1(CID+7264)/驩󠄁;Hanyo-Denshi(JA8173),Moji_Joho(MJ028842)/驩󠄂;Hanyo-Denshi(KS510910),Moji_Joho(MJ028843)/
@@ -13819,7 +13829,7 @@
 黔 /黔󠄀;Adobe-Japan1(CID+7435)/黔󠄁;Hanyo-Denshi(JA8356),Moji_Joho(MJ029896)/黔󠄂;Hanyo-Denshi(FT2744),Moji_Joho(MJ029897)/
 黕 /黕󠄀;Adobe-Japan1(CID+23029)/
 默 /默󠄀;Adobe-Japan1(CID+5645)/默󠄁;Hanyo-Denshi(JA6452),Moji_Joho(MJ029901)/默󠄂;Hanyo-Denshi(FT2329),Moji_Joho(MJ029902)/
-黙 /黙󠄀;Adobe-Japan1(CID+3815)/
+黙 /黙󠄀;Adobe-Japan1(CID+3815)/黙󠄁;MSARG(MD_9ED9)/黙󠄂;MSARG(ME_9ED9_001)/
 黛 /黛󠄀;Adobe-Japan1(CID+2883)/黛󠄁;Adobe-Japan1(CID+7729)/黛󠄂;Hanyo-Denshi(JA3467),Moji_Joho(MJ029905)/黛󠄃;Hanyo-Denshi(FT1849),Moji_Joho(MJ029906)/
 黜 /黜󠄀;Adobe-Japan1(CID+7436)/黜󠄁;Hanyo-Denshi(JA8357),Moji_Joho(MJ029907)/黜󠄂;Hanyo-Denshi(FT2745),Moji_Joho(MJ029908)/
 黝 /黝󠄀;Adobe-Japan1(CID+7438)/黝󠄁;Hanyo-Denshi(JA8359),Moji_Joho(MJ029909)/黝󠄂;Hanyo-Denshi(FT2747),Moji_Joho(MJ029910)/
@@ -14051,6 +14061,7 @@
 𠛬 /𠛬󠄀;Adobe-Japan1(CID+20083)/
 𠛮 /𠛮󠄀;Moji_Joho(MJ031291)/𠛮󠄁;Moji_Joho(MJ031295)/
 𠛹 /𠛹󠄀;Moji_Joho(MJ031302)/𠛹󠄁;Moji_Joho(MJ031303)/
+𠜎 /𠜎󠄀;MSARG(MA_92C3)/𠜎󠄁;MSARG(ME_2070E_001)/
 𠜛 /𠜛󠄀;Hanyo-Denshi(KS023680)/𠜛󠄁;Hanyo-Denshi(TK01009920)/
 𠝏 /𠝏󠄀;Adobe-Japan1(CID+17312)/
 𠝟 /𠝟󠄀;Hanyo-Denshi(KS024400)/𠝟󠄁;Hanyo-Denshi(TK01010030)/
@@ -14158,6 +14169,7 @@
 𡜆 /𡜆󠄀;Adobe-Japan1(CID+17492)/𡜆󠄁;Hanyo-Denshi(JD0553),Moji_Joho(MJ033579)/𡜆󠄂;Hanyo-Denshi(KS071330),Moji_Joho(MJ033578)/
 𡝂 /𡝂󠄀;Adobe-Japan1(CID+17493)/
 𡝤 /𡝤󠄀;Hanyo-Denshi(KS072920),Moji_Joho(MJ033638)/𡝤󠄁;Hanyo-Denshi(KS073700),Moji_Joho(MJ057303)/
+𡞵 /𡞵󠄀;MSARG(MA_96FD)/𡞵󠄁;MSARG(ME_217B5_001)/
 𡠀 /𡠀󠄀;Hanyo-Denshi(TK01020690)/𡠀󠄁;Hanyo-Denshi(TK01020760)/
 𡢘 /𡢘󠄀;Hanyo-Denshi(KS077190),Moji_Joho(MJ033773)/𡢘󠄁;Hanyo-Denshi(KS077520),Moji_Joho(MJ033774)/
 𡢽 /𡢽󠄀;Adobe-Japan1(CID+16833)/
@@ -14190,6 +14202,7 @@
 𡵃 /𡵃󠄀;Hanyo-Denshi(TK01024420)/𡵃󠄁;Hanyo-Denshi(TK01024430)/
 𡵅 /𡵅󠄀;Adobe-Japan1(CID+17545)/
 𡵘 /𡵘󠄀;Hanyo-Denshi(KS089870)/𡵘󠄁;Hanyo-Denshi(TK01024500)/
+𡵞 /𡵞󠄀;MSARG(MA_876E)/𡵞󠄁;MSARG(ME_21D5E_001)/
 𡵢 /𡵢󠄀;Adobe-Japan1(CID+17547)/
 𡵸 /𡵸󠄀;Adobe-Japan1(CID+17546)/
 𡶒 /𡶒󠄀;Adobe-Japan1(CID+17556)/
@@ -14383,6 +14396,7 @@
 𣝣 /𣝣󠄀;Adobe-Japan1(CID+16916)/𣝣󠄁;Hanyo-Denshi(JC8618)/𣝣󠄂;Hanyo-Denshi(TK01046710)/
 𣝤 /𣝤󠄀;Adobe-Japan1(CID+17867)/𣝤󠄁;Hanyo-Denshi(JD1565),Moji_Joho(MJ038365)/𣝤󠄂;Hanyo-Denshi(KS179770),Moji_Joho(MJ057856)/𣝤󠄃;Hanyo-Denshi(TK01047010)/
 𣞀 /𣞀󠄀;Hanyo-Denshi(JTB3B2),Moji_Joho(MJ057852)/𣞀󠄁;Hanyo-Denshi(JTB3B8),Moji_Joho(MJ038377)/𣞀󠄂;Hanyo-Denshi(TK01046760)/
+𣟂 /𣟂󠄀;MSARG(MA_FCF0)/𣟂󠄁;MSARG(ME_237C2_001)/
 𣟧 /𣟧󠄀;Adobe-Japan1(CID+17875)/𣟧󠄁;Hanyo-Denshi(JD1574),Moji_Joho(MJ038420)/𣟧󠄂;Hanyo-Denshi(JTB3C0),Moji_Joho(MJ038419)/
 𣟱 /𣟱󠄀;Adobe-Japan1(CID+20152)/
 𣟳 /𣟳󠄀;Hanyo-Denshi(IB0321),Moji_Joho(MJ038426)/𣟳󠄁;Hanyo-Denshi(IB0725),Moji_Joho(MJ038425)/
@@ -14509,6 +14523,7 @@
 𥓉 /𥓉󠄀;Hanyo-Denshi(JTB675)/𥓉󠄁;Hanyo-Denshi(TK01063840)/
 𥓙 /𥓙󠄀;Adobe-Japan1(CID+18217)/
 𥔎 /𥔎󠄀;Adobe-Japan1(CID+17009)/
+𥖄 /𥖄󠄀;MSARG(MA_93C3)/𥖄󠄁;MSARG(ME_25584_001)/
 𥖧 /𥖧󠄀;Adobe-Japan1(CID+18229)/
 𥘇 /𥘇󠄀;Hanyo-Denshi(IB0328),Moji_Joho(MJ042965)/𥘇󠄁;Hanyo-Denshi(IB0764),Moji_Joho(MJ042964)/
 𥘦 /𥘦󠄀;Hanyo-Denshi(IB0316),Moji_Joho(MJ042971)/𥘦󠄁;Hanyo-Denshi(JTB246),Moji_Joho(MJ042970)/
@@ -14630,13 +14645,16 @@
 𦍌 /𦍌󠄀;Adobe-Japan1(CID+20311)/
 𦎱 /𦎱󠄀;Hanyo-Denshi(KS318870),Moji_Joho(MJ045039)/𦎱󠄁;Hanyo-Denshi(KS318930),Moji_Joho(MJ045040)/
 𦏁 /𦏁󠄀;Hanyo-Denshi(JTC0C9),Moji_Joho(MJ045052)/𦏁󠄁;Hanyo-Denshi(JTC0CA),Moji_Joho(MJ045051)/𦏁󠄂;Moji_Joho(MJ045050)/
+𦏹 /𦏹󠄀;MSARG(MD_263F9)/𦏹󠄁;MSARG(ME_263F9_001)/
 𦐂 /𦐂󠄀;Adobe-Japan1(CID+18398)/
 𦐅 /𦐅󠄀;Hanyo-Denshi(KS319810)/𦐅󠄁;Hanyo-Denshi(TK01073730)/
 𦐇 /𦐇󠄀;Hanyo-Denshi(KS319840),Moji_Joho(MJ045109)/𦐇󠄁;Hanyo-Denshi(KS319990S),Moji_Joho(MJ045110)/
 𦐈 /𦐈󠄀;Hanyo-Denshi(JTB88A),Moji_Joho(MJ045112)/𦐈󠄁;Hanyo-Denshi(KS319880),Moji_Joho(MJ045111)/𦐈󠄂;Hanyo-Denshi(TK01073790)/
 𦐉 /𦐉󠄀;Hanyo-Denshi(KS319910)/𦐉󠄁;Hanyo-Denshi(TK01073770)/
+𦐐 /𦐐󠄀;MSARG(MA_90CC)/𦐐󠄁;MSARG(ME_26410_001)/
+𦐹 /𦐹󠄀;MSARG(MD_26439)/𦐹󠄁;MSARG(ME_26439_001)/
 𦑢 /𦑢󠄀;Hanyo-Denshi(KS321040),Moji_Joho(MJ045176)/𦑢󠄁;Hanyo-Denshi(KS321270),Moji_Joho(MJ045177)/
-𦒉 /𦒉󠄀;Hanyo-Denshi(TK01007100)/𦒉󠄁;Hanyo-Denshi(TK01074030)/
+𦒉 /𦒉󠄀;Hanyo-Denshi(TK01007100)/𦒉󠄁;Hanyo-Denshi(TK01074030)/𦒉󠄂;MSARG(MA_8ECC)/𦒉󠄃;MSARG(ME_26489_001)/
 𦒳 /𦒳󠄀;Hanyo-Denshi(KS322190),Moji_Joho(MJ058361)/𦒳󠄁;Hanyo-Denshi(KS322200S),Moji_Joho(MJ045235)/
 𦓯 /𦓯󠄀;Hanyo-Denshi(IB2736)/𦓯󠄁;Hanyo-Denshi(TK01074310)/
 𦔃 /𦔃󠄀;Hanyo-Denshi(KS323240)/𦔃󠄁;Hanyo-Denshi(TK01074360)/
@@ -14734,7 +14752,7 @@
 𧀷 /𧀷󠄀;Hanyo-Denshi(KS367130)/𧀷󠄁;Hanyo-Denshi(TK01081860)/
 𧀹 /𧀹󠄀;Hanyo-Denshi(IB0371),Moji_Joho(MJ047142)/𧀹󠄁;Hanyo-Denshi(IB0877),Moji_Joho(MJ047141)/
 𧂈 /𧂈󠄀;Hanyo-Denshi(KS368410)/𧂈󠄁;Hanyo-Denshi(TK01082110)/
-𧃰 /𧃰󠄀;Hanyo-Denshi(KS369820)/𧃰󠄁;Hanyo-Denshi(TK01082380)/
+𧃰 /𧃰󠄀;Hanyo-Denshi(KS369820)/𧃰󠄁;Hanyo-Denshi(TK01082380)/𧃰󠄂;MSARG(MA_8FA8)/𧃰󠄃;MSARG(ME_270F0_001)/
 𧃴 /𧃴󠄀;Adobe-Japan1(CID+17103)/𧃴󠄁;Hanyo-Denshi(JC9141),Moji_Joho(MJ047259)/𧃴󠄂;Hanyo-Denshi(KS369890),Moji_Joho(MJ047258)/
 𧄍 /𧄍󠄀;Adobe-Japan1(CID+18571)/𧄍󠄁;Hanyo-Denshi(JD8719),Moji_Joho(MJ047264)/𧄍󠄂;Hanyo-Denshi(KS369990),Moji_Joho(MJ047265)/
 𧄒 /𧄒󠄀;Hanyo-Denshi(KS370090)/𧄒󠄁;Hanyo-Denshi(TK01082450)/
@@ -14779,6 +14797,7 @@
 𧜎 /𧜎󠄀;Adobe-Japan1(CID+18650)/
 𧜏 /𧜏󠄀;Moji_Joho(MJ048373)/𧜏󠄁;Moji_Joho(MJ048374)/
 𧜣 /𧜣󠄀;Adobe-Japan1(CID+18652)/
+𧝁 /𧝁󠄀;MSARG(MA_94C7)/𧝁󠄁;MSARG(ME_27741_001)/
 𧝒 /𧝒󠄀;Adobe-Japan1(CID+18656)/
 𧝓 /𧝓󠄀;Hanyo-Denshi(KS393290),Moji_Joho(MJ048418)/𧝓󠄁;Hanyo-Denshi(KS393450),Moji_Joho(MJ058708)/
 𧝱 /𧝱󠄀;Hanyo-Denshi(KS393540),Moji_Joho(MJ048434)/𧝱󠄁;Hanyo-Denshi(KS393840),Moji_Joho(MJ058710)/
@@ -15226,6 +15245,7 @@
 𬻜 /𬻜󠄀;Moji_Joho(MJ056843)/𬻜󠄁;Moji_Joho(MJ056844)/
 𬼘 /𬼘󠄀;Moji_Joho(MJ057888)/𬼘󠄁;Moji_Joho(MJ057889)/
 𬽌 /𬽌󠄀;Moji_Joho(MJ056862)/𬽌󠄁;Moji_Joho(MJ056893)/𬽌󠄂;Moji_Joho(MJ056894)/𬽌󠄃;Moji_Joho(MJ056898)/
+𬽺 /𬽺󠄀;MSARG(MC_00045)/𬽺󠄁;MSARG(ME_2CF7A_001)/
 𭀠 /𭀠󠄀;Moji_Joho(MJ056969)/𭀠󠄁;Moji_Joho(MJ056970)/
 𭀨 /𭀨󠄀;Moji_Joho(MJ059338)/𭀨󠄁;Moji_Joho(MJ059339)/
 𭁈 /𭁈󠄀;Moji_Joho(MJ058413)/𭁈󠄁;Moji_Joho(MJ059341)/𭁈󠄂;Moji_Joho(MJ059342)/
@@ -15311,3 +15331,4 @@
 𮩁 /𮩁󠄀;Moji_Joho(MJ060341)/𮩁󠄁;Moji_Joho(MJ060342)/𮩁󠄂;Moji_Joho(MJ068100)/
 𮭱 /𮭱󠄀;Moji_Joho(MJ059251)/𮭱󠄁;Moji_Joho(MJ059252)/
 𮭹 /𮭹󠄀;Moji_Joho(MJ059255)/𮭹󠄁;Moji_Joho(MJ059256)/
+𱍐 /𱍐󠄀;Adobe-Japan1(CID+19130)/

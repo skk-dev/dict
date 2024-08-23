@@ -249,6 +249,7 @@ edict2u:
 
 
 # Unicode Ideographic Variation Database (IVD)
+IVD_VER = 2022-09-13
 
 SKK-JISYO.ivd: IVD_Sequences.txt IVD_Collections.txt
 	$(EMACS) --load ivd.el --funcall make-ivd-jisyo | $(EXPR2) > SKK-JISYO.ivd.tmp
@@ -256,10 +257,10 @@ SKK-JISYO.ivd: IVD_Sequences.txt IVD_Collections.txt
 	$(RM) SKK-JISYO.ivd.tmp
 
 IVD_Sequences.txt:
-	test -f IVD_Sequences.txt || $(CURL) -o IVD_Sequences.txt https://unicode.org/ivd/data/2017-12-12/IVD_Sequences.txt
+	test -f IVD_Sequences.txt || $(CURL) -o IVD_Sequences.txt https://unicode.org/ivd/data/$(IVD_VER)/IVD_Sequences.txt
 
 IVD_Collections.txt:
-	test -f IVD_Collections.txt || $(CURL) -o IVD_Collections.txt https://unicode.org/ivd/data/2017-12-12/IVD_Collections.txt
+	test -f IVD_Collections.txt || $(CURL) -o IVD_Collections.txt https://unicode.org/ivd/data/$(IVD_VER)/IVD_Collections.txt
 
 # json/%.json が % に依存すると循環するので注意
 EUC_JSON = $(patsubst %,json/%.json,$(EUC_SRCS))
