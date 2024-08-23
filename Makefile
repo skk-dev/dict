@@ -196,8 +196,10 @@ cdb:
 
 
 # Unicode emoji
+# https://cldr.unicode.org/index/downloads/latest
 
-VER = 36.1
+CLDR_VER = 45
+CLDR_COMMON_VER = 45.0
 
 SKK-JISYO.emoji: SKK-JISYO.emoji.en SKK-JISYO.emoji.ja SKK-JISYO.emoji.kana unicode-license.txt
 	$(EXPR2) SKK-JISYO.emoji.en + SKK-JISYO.emoji.ja + SKK-JISYO.emoji.kana \
@@ -223,10 +225,10 @@ SKK-JISYO.emoji.kanji: cldr-common.zip
 	$(EMACS) --load emoji.el --funcall kanjionly | $(EXPR2) > SKK-JISYO.emoji.kanji
 
 unicode-license.txt: cldr-common.zip
-	test -f unicode-license.txt || $(UNZIP) -p cldr-common.zip "*unicode-license.txt" > unicode-license.txt
+	test -f unicode-license.txt || $(UNZIP) -p cldr-common.zip "LICENSE" > unicode-license.txt
 
 cldr-common.zip:
-	test -f cldr-common.zip || $(CURL) -o cldr-common.zip https://unicode.org/Public/cldr/$(VER)/cldr-common-$(VER).zip
+	test -f cldr-common.zip || $(CURL) -o cldr-common.zip https://unicode.org/Public/cldr/$(CLDR_VER)/cldr-common-$(CLDR_COMMON_VER).zip
 
 # http://www.edrdg.org/jmdict/edict.html
 #   ELECTRONIC DICTIONARY RESEARCH AND DEVELOPMENT GROUP GENERAL DICTIONARY LICENCE STATEMENT
