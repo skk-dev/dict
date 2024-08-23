@@ -1,0 +1,86 @@
+name: Make on push
+
+on:
+  push:
+    paths:
+      - csv/*
+      - meta/*
+      - json/*
+      - SKK-JISYO.*
+      - zipcode/SKK-JISYO.*
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: install packages
+      run: |
+        sudo apt update
+        sudo apt -y install autoconf docdiff emacs nkf libdb-dev
+
+    - name: clone skktools
+      uses: actions/checkout@v4
+      with:
+        repository: skk-dev/skktools
+        path: tools
+    - name: make skktools
+      run: |
+        cd tools
+        ./configure
+        make
+        pwd >> $GITHUB_PATH
+
+    - name: install deno
+      uses: denoland/setup-deno@v1
+      with:
+        deno-version: v1.x
+
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 2
+        path: dict
+
+    - name: make -C zipcode
+      run: |
+        cd dict
+        cd zipcode
+        autoconf -f
+        ./configure
+        make batch test
+
+    - name: make
+      run: |
+        cd dict
+        make MD5=md5sum gzip
+        ls -l
+
+    - name: see what has been changed
+      run: |
+        cd dict
+        echo 'ChangeLog for this pushed commit'
+        env COMPARED='HEAD^..HEAD' \
+          USERNAME='${{ github.event.head_commit.author.name }}' \
+          USEREMAIL='${{ github.event.head_commit.author.email }}' \
+          sh script/manued.sh SKK-JISYO.* zipcode/SKK-JISYO.* \
+          | tee headlog.txt
+        [ `wc -l < headlog.txt` = 1 ] && \
+        echo 'ChangeLog for the next time you do make' ; \
+        env COMPARED='HEAD' \
+          USERNAME='${{ github.event.head_commit.author.name }}' \
+          USEREMAIL='${{ github.event.head_commit.author.email }}' \
+          sh script/manued.sh SKK-JISYO.* zipcode/SKK-JISYO.*
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: dicts
+        path: |
+          dict/*.gz
+          dict/*.md5
+
+    - name: make wrong_check
+      run: |
+        cd dict
+        make wrong_check
+        (for i in *.w; do echo $i; cat $i; echo; done) | nkf -w

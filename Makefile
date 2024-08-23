@@ -41,8 +41,21 @@ SRCS	  = SKK-JISYO.L SKK-JISYO.ML SKK-JISYO.M SKK-JISYO.S SKK-JISYO.JIS2 \
 		SKK-JISYO.fullname SKK-JISYO.JIS2004 SKK-JISYO.lisp
 
 # SKK-JISYO.noregist SKK-JISYO.hukugougo
+
+# JSON から生成
+EUC_SRCS = SKK-JISYO.assoc SKK-JISYO.china_taiwan SKK-JISYO.edict SKK-JISYO.geo SKK-JISYO.hukugougo SKK-JISYO.itaiji SKK-JISYO.jinmei SKK-JISYO.JIS2 SKK-JISYO.law SKK-JISYO.L SKK-JISYO.mazegaki SKK-JISYO.M SKK-JISYO.ML SKK-JISYO.okinawa SKK-JISYO.propernoun SKK-JISYO.pubdic+ SKK-JISYO.S SKK-JISYO.station
+UTF_SRCS = SKK-JISYO.edict2 SKK-JISYO.emoji SKK-JISYO.fullname SKK-JISYO.pinyin
+SKK-JISYO.%: json/SKK-JISYO.%.json meta/SKK-JISYO.%.yaml
+	if [ "x$(filter $@,$(EUC_SRCS))" = "x$@" ]; then \
+		$(DENO) run --allow-read --allow-write --allow-net script/json2txt.ts \
+		-c EUC-JP -i json/$@.json -o $@ ; \
+	elif [ "x$(filter $@,$(UTF_SRCS))" = "x$@" ]; then \
+		$(DENO) run --allow-read --allow-write --allow-net script/json2txt.ts \
+		-c UTF-8 -i json/$@.json -o $@ ; \
+	fi
+
 BIN_SRCS  = #PBinlineDB.pdb
-ALL_SRCS  = $(SRCS) $(BIN_SRCS) SKK-JISYO.wrong SKK-JISYO.L.unannotated
+ALL_SRCS  = $(SRCS) $(BIN_SRCS) $(EUC_SRCS) $(UTF_SRCS) SKK-JISYO.wrong SKK-JISYO.L.unannotated
 # SKK-JISYO.L+ SKK-JISYO.L.taciturn SKK-JISYO.total
 
 PYTHON    = python
@@ -54,7 +67,7 @@ clean:
 	$(RM) *.gz* *~ `find . -name '*~'` `find . -name '.*~'` `find . -name '.#*'` \
 	*.unannotated SKK-JISYO.wrong PBinlineDB.pdb *.tmp *.u8 *.w PBinlineDB.dic *.taciturn \
 	SKK-JISYO.L+ SKK-JISYO.total SKK-JISYO.total+zipcode SKK-JISYO.L.header SKK-JISYO.china_taiwan \
-	emoji-list.txt
+	emoji-list.txt $(EUC_SRCS) $(UTF_SRCS)
 
 archive: gzip
 
@@ -176,7 +189,7 @@ taciturn-all: SKK-JISYO.L.taciturn SKK-JISYO.L+.taciturn SKK-JISYO.total.tacitur
 
 annotated-all: SKK-JISYO.L+ SKK-JISYO.total SKK-JISYO.total+zipcode
 
-all: annotated-all unannotated-all taciturn-all
+all: $(EUC_SRCS) $(UTF_SRCS) annotated-all unannotated-all taciturn-all
 
 cdb:
 	$(PYTHON) $(TOOLS_DIR)/$(SKK2CDB) $(CDB_TARGET) $(CDB_SOURCE)
@@ -222,7 +235,6 @@ cldr-common.zip:
 #   After nearly 30 years of operation the Monash ftp server has been closed down.
 
 SKK-JISYO.edict2: edict2u
-	$(MV) SKK-JISYO.edict2 SKK-JISYO.edict2.ORIG
 	$(EMACS) --load $(TOOLS_DIR)/convert2skk/edict2toskk.el --funcall main | $(EXPR2) > SKK-JISYO.edict2.tmp
 	$(EMACS) --load $(TOOLS_DIR)/convert2skk/edict2toskk.el --funcall after
 	$(MV) SKK-JISYO.edict2.tmp SKK-JISYO.edict2
@@ -247,24 +259,10 @@ IVD_Sequences.txt:
 IVD_Collections.txt:
 	test -f IVD_Collections.txt || $(CURL) -o IVD_Collections.txt https://unicode.org/ivd/data/2017-12-12/IVD_Collections.txt
 
-
-# JSON <--> txt
-
-EUC_SRCS = SKK-JISYO.assoc SKK-JISYO.china_taiwan SKK-JISYO.edict SKK-JISYO.geo SKK-JISYO.hukugougo SKK-JISYO.itaiji SKK-JISYO.jinmei SKK-JISYO.JIS2 SKK-JISYO.law SKK-JISYO.L SKK-JISYO.mazegaki SKK-JISYO.M SKK-JISYO.ML SKK-JISYO.okinawa SKK-JISYO.propernoun SKK-JISYO.pubdic+ SKK-JISYO.S SKK-JISYO.station
-UTF_SRCS = SKK-JISYO.edict2 SKK-JISYO.emoji SKK-JISYO.fullname SKK-JISYO.pinyin
+# json/%.json が % に依存すると循環するので注意
 EUC_JSON = $(EUC_SRCS:%=json/%.json)
 UTF_JSON = $(UTF_SRCS:%=json/%.json)
-
 json: $(EUC_JSON) $(UTF_JSON)
-SKK-JISYO.%: json/SKK-JISYO.%.json meta/SKK-JISYO.%.yaml
-	if [ "x$(filter $@,$(EUC_SRCS))" = "x$@" ]; then \
-		$(DENO) run --allow-read --allow-write --allow-net script/json2txt.ts \
-		-c EUC-JP -i json/$@.json -o $@ ; \
-	elif [ "x$(filter $@,$(UTF_SRCS))" = "x$@" ]; then \
-		$(DENO) run --allow-read --allow-write --allow-net script/json2txt.ts \
-		-c UTF-8 -i json/$@.json -o $@ ; \
-	fi
-# % に依存すると循環するので注意
 json/%.json:
 	TXT=$(patsubst json/%.json,%,$@) ; \
 	if [ "x$(filter $@,$(EUC_JSON))" = "x$@" ]; then \
