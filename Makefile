@@ -260,8 +260,8 @@ IVD_Collections.txt:
 	test -f IVD_Collections.txt || $(CURL) -o IVD_Collections.txt https://unicode.org/ivd/data/2017-12-12/IVD_Collections.txt
 
 # json/%.json が % に依存すると循環するので注意
-EUC_JSON = $(EUC_SRCS:%=json/%.json)
-UTF_JSON = $(UTF_SRCS:%=json/%.json)
+EUC_JSON = $(patsubst %,json/%.json,$(EUC_SRCS))
+UTF_JSON = $(patsubst %,json/%.json,$(UTF_SRCS))
 json: $(EUC_JSON) $(UTF_JSON)
 json/%.json:
 	TXT=$(patsubst json/%.json,%,$@) ; \
