@@ -109,4 +109,4 @@ async function validate(ofile: string, sfile: string): Promise<boolean> {
 }
 
 const params = cli.parseArgs(Deno.args)
-await main(params.c, params.i, params.m, params.o, params.s)
+Deno.exit(await main(params.c, params.i, params.m, params.o, params.s))
