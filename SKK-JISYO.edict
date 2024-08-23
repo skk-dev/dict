@@ -4,10 +4,11 @@
 ;; Copyright (C) 2017
 ;;     The Electronic Dictionary Research and Development Group.
 ;;     http://www.edrdg.org/
-;;
 ;; Author: James William Breen
 ;;
-;;; Commentary:
+;; Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+;;     <https://creativecommons.org/licenses/by-sa/3.0/deed>
+;;     <https://creativecommons.org/licenses/by-sa/3.0/legalcode>
 ;;
 ;; SKK-JISYO.edict は The Electronic Dictionary Research and Development Group
 ;; による「和英辞典」edict を SKK 辞書形式の「英和辞典」に機械的に変換したもの
@@ -20,10 +21,6 @@
 ;;     Copyright is vested in the EDRG (Electronic Dictionary Research Group)
 ;;     with the file available under a Creative Commons Attribution-ShareAlike Licence (V3.0).
 ;;     You can see the specific licence statement at the Group's site. 
-;;
-;; Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
-;;     <https://creativecommons.org/licenses/by-sa/3.0/deed>
-;;     <https://creativecommons.org/licenses/by-sa/3.0/legalcode>
 ;;
 ;; okuri-ari entries.
 ;; okuri-nasi entries.

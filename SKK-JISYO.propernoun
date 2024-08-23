@@ -1,11 +1,8 @@
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; SKK propernoun dictionary.
+;;
 ;; Copyright (C) 2003-2006 MITA Yuusuke  <clefs@mail.goo.ne.jp>
 ;;               SKK Development Team <skk@ring.gr.jp>
-;;
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Keywords: japanese
-;; Created: Nov. 09, 2003
 ;;
 ;; This dictionary is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -22,7 +19,6 @@
 ;; the Free Software Foundation Inc., 51 Franklin St, Fifth Floor,
 ;; Boston, MA 02110-1301, USA.
 ;;
-;;; Commentary:
 ;; この辞書は、芸能・音楽・アニメ・企業・組織などなどの固有名詞のうち、
 ;; geo辞書にもjinmei辞書にも当てはまらないものを集めたものです。
 ;;
@@ -135,7 +131,6 @@
 ;; ・古典文学作品名
 ;; ・仏典・経文名
 ;; ・中国元号 (+「人」「期」「末」etc) (SKK-JISYO.historyがほしい...)
-;;
 ;;
 ;; okuri-ari entries.
 わせだどおr /早稲田通/

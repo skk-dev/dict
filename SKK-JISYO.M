@@ -1,6 +1,8 @@
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; Medium size dictionary for SKK system
+;;
 ;; Copyright (C) 1988-1995, 1999-2001, 2003, 2004
+;;
 ;; Masahiko Sato <masahiko@kuis.kyoto-u.ac.jp>
 ;; Hironobu Takahashi <takahasi@tiny.or.jp>,
 ;; Masahiro Doteguchi, Miki Inooka,
@@ -8,9 +10,6 @@
 ;; Akihiko Sasaki, Dai Ando, Junichi Okukawa,
 ;; Katsushi Sato and Nobuhiro Yamagishi
 ;; SKK Development Team <skk@ring.gr.jp>
-;;
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Keywords: japanese
 ;;
 ;; This dictionary is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

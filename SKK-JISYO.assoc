@@ -1,12 +1,9 @@
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; SKK association and abbreviation dictionary.
+;;
 ;; Copyright (C) 2002 NAKAJIMA Mikio <minakaji@osaka.email.ne.jp>
 ;;               2005-2006 MITA Yuusuke <clefs@mail.goo.ne.jp>
 ;;               SKK Development Team <skk@ring.gr.jp>
-;;
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Keywords: japanese
-;; Created: Nov. 16, 2002
 ;;
 ;; This dictionary is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -23,7 +20,6 @@
 ;; the Free Software Foundation Inc., 51 Franklin St, Fifth Floor,
 ;; Boston, MA 02110-1301, USA.
 ;;
-;;; Commentary:
 ;; この辞書は、見出し語を単純に変換して得られる候補ではなく、見出し
 ;; 語と候補との間に一定の連想関係があるエントリを集めたものです。
 ;;
@@ -72,7 +68,7 @@
 ;;    ccTLDはL辞書の国名ペアにもannotateしてあります。
 ;;      「luxembourg /ルクセンブルク;.lu/」
 ;;    NOTE: ドットなしは削除する方が良い？
-;; 
+;;
 ;; ・IATA都市コード・空港コード変換
 ;;    旅行業などで使われている、IATAの三文字コードから主要な都市名・
 ;;    空港名に変換します。

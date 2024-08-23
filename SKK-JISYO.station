@@ -1,12 +1,8 @@
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; SKK railroad stations dictionary.
+;;
 ;; Copyright (C) 2003-2005 MITA Yuusuke  <clefs@mail.goo.ne.jp>
 ;;               SKK Development Team <skk@ring.gr.jp>
-;;
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Keywords: japanese
-;; Created: 2005/07/31
-;; Modifiled: 2020/03/20
 ;;
 ;; This dictionary is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -23,10 +19,8 @@
 ;; the Free Software Foundation Inc., 51 Franklin St, Fifth Floor,
 ;; Boston, MA 02110-1301, USA.
 ;;
-;;; Commentary:
-;; 
 ;; 日本国内の鉄道の駅名および路線名を収録した辞書です。
-;; 
+;;
 ;; 基本的に、全ての駅名について「駅」のついた形とつかない形の双方で
 ;; 収録してあります。
 ;; (TIP: 「えき」をつけて変換して、駅の字だけ消す方が速く入力できる
@@ -37,7 +31,7 @@
 ;; 同音異駅のある場合のみ、路線名をannotationとして付与しています。
 ;;
 ;;
-;;; Acknowledgment:
+;;  Acknowledgment:
 ;;
 ;; この辞書の作成に当たり、特に以下のリソースを参考にさせていただきました。
 ;; 作成・公開された皆様に感謝いたします。
@@ -57,16 +51,15 @@
 ;; http://www.trainfrontview.net/index.htm
 ;;
 ;;
-;;; おねがい:
+;; おねがい:
 ;;
 ;; 辞書を最新に保つため、新駅・新線の誕生や駅名の改称などのニュースを
 ;; 耳になさいましたら、github.com/skk-dev/dict/issues に
 ;; 報いただけますようお願いいたします。（三セク化など要注意です）
-;; 
+;;
 ;; 時間的余裕がおありでしたら、お住まいの地域の主要な駅名や路線名が
 ;; 変換できるか試してみて、遺漏や誤字脱字などを報告していただけると
 ;; 大変助かります。
-;;
 ;;
 ;; okuri-ari entries.
 ;; okuri-nasi entries.

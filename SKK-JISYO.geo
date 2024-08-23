@@ -1,11 +1,8 @@
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; Geographical dictionary for SKK system
+;;
 ;; Copyright (C) 2001, 2002, 2003-2005
-;;
 ;; IIDA Yosiaki <iida@ring.gr.jp>
-;;
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Keywords: japanese
 ;;
 ;; This dictionary is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -21,8 +18,6 @@
 ;; along with Daredevil SKK, see the file COPYING.  If not, write to the Free
 ;; Software Foundation Inc., 51 Franklin St, Fifth Floor, Boston,
 ;; MA 02110-1301, USA.
-;;
-;; Commentary:
 ;;
 ;; The original data of this file has come from the Postal Service
 ;; Agency (YUUSEI ZIGYOU TYOU), formerly known as the Ministry of
@@ -46,13 +41,13 @@
 ;; Yes, you can add to it! We're awaiting your contributions.
 ;;
 ;; *
-;; 
+;;
 ;; The script below is used to separate compound names into single ones:
 ;; http://aveiro.hp.infoseek.co.jp/skk/skkdic-split-geo.rb
 ;;
 ;; I'd like to thank the (anonymous) author for the contribution and
 ;; generous permission to apply it.  -Mita
-;; 
+;;
 ;; *
 ;;
 ;; Foreign place-names consisted of katakana are contained in SKK-JISYO.L.

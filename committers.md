@@ -170,8 +170,9 @@ make SKK-JISYO.edict2
 と実行することで生成できます。
 emacs と skktools が必要です。
 
-そこから script/txt2json.ts で JSON に戻します。
-プルリクエストに含めるのは JSON です。
+そこから script/txt2json.ts で JSON に戻すことができます。
+edrdg.org で更新される以外に
+こちらで更新することはありません。
 
 ### 2.2.4. SKK-JISYO.emoji
 

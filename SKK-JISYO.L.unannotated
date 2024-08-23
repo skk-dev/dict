@@ -1,7 +1,8 @@
 ;; -*- text -*-
-;; SKK-JISYO.L.unannotated was generated automatically by unannotation.awk at Wed Jan 17 20:59:09 2024
+;; SKK-JISYO.L.unannotated was generated automatically by unannotation.awk at Fri Aug 23 22:47:31 2024
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; Large size dictionary for SKK system
+;;
 ;; Copyright (C) 1988-1995, 1997, 1999-2014
 ;;
 ;; Masahiko Sato <masahiko@kuis.kyoto-u.ac.jp>
@@ -13,9 +14,6 @@
 ;; NAKAJIMA Mikio <minakaji@osaka.email.ne.jp>
 ;; MITA Yuusuke <clefs@mail.goo.ne.jp>
 ;; SKK Development Team <skk@ring.gr.jp>
-;;
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Keywords: japanese
 ;;
 ;; This dictionary is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
