@@ -67,15 +67,15 @@ $ git add -u && git commit
 
 ## 配布用の gzip アーカイブをブランチ gh-pages に配置
 
-さきほど退避しておいた `SKK-JISYO.*.gz`, `SKK-JISYO.*.md5`, `zipdoce.*.gz`, `zipdoce.*.md5` を
+さきほど退避しておいた `SKK-JISYO.*.gz`, `SKK-JISYO.*.md5`, `zipcode.*.gz`, `zipcode.*.md5` を
 ブランチ gh-pages に mv して add && push します。
 
 ```
 $ git co gh-pages
 $ mv ../SKK-JISYO.*.gz .
 $ mv ../SKK-JISYO.*.md5 .
-$ mv ../zipdoce.*.gz .
-$ mv ../zipdoce.*.md5 .
+$ mv ../zipcode.*.gz .
+$ mv ../zipcode.*.md5 .
 $ git add -u && git commit
 $ git push
 ```
