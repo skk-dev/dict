@@ -164,14 +164,7 @@ make SKK-JISYO.edict2
 ```
 
 と実行することで生成できます。
-emacs と skktools が必要です。
-
-そこから script/txt2json.ts で JSON に戻すことができます。
-
-```
-rm json/SKK-JISYO.edict2.json   # Makefile の関係で一度消してください
-make json/SKK-JISYO.edict2.json
-```
+JSON も更新されます。
 
 edrdg.org で更新される以外に
 こちらで更新することはありません。

@@ -246,9 +246,11 @@ cldr-common.zip:
 #   After nearly 30 years of operation the Monash ftp server has been closed down.
 
 SKK-JISYO.edict2: edict2u
-	$(EMACS) --load $(TOOLS_DIR)/convert2skk/edict2toskk.el --funcall main | $(EXPR2) > SKK-JISYO.edict2.tmp
-	$(EMACS) --load $(TOOLS_DIR)/convert2skk/edict2toskk.el --funcall after
-	$(MV) SKK-JISYO.edict2.tmp SKK-JISYO.edict2
+	$(DENO) --allow-read --allow-write script/edict2.ts -i edict2u -o SKK-JISYO.edict2
+	$(RM) json/SKK-JISYO.edict2.json
+	$(MAKE) json/SKK-JISYO.edict2.json
+	$(DENO) --allow-read --allow-write script/json2txt.ts \
+		-c UTF-8 -i json/SKK-JISYO.edict2.json -o SKK-JISYO.edict2
 	$(GZIP) -fc SKK-JISYO.edict2 > SKK-JISYO.edict2.gz
 	$(MD5) SKK-JISYO.edict2.gz > SKK-JISYO.edict2.gz.md5
 
