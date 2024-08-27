@@ -159,7 +159,7 @@ json/SKK-JISYO.*.json 内の各エントリは以下の形式です。
 csv/china_taiwan.csv を更新して make します。
 そこから script/txt2json.ts で JSON に戻します。
 
-つまり、プルリクエストに含めるのは CSV と JSON です。
+つまり、最低限プルリクエストに含めるのは CSV と JSON です。
 
 ### 2.2.3. SKK-JISYO.edict2
 
@@ -171,20 +171,70 @@ make SKK-JISYO.edict2
 emacs と skktools が必要です。
 
 そこから script/txt2json.ts で JSON に戻すことができます。
+
+```
+rm json/SKK-JISYO.edict2.json   # Makefile の関係で一度消してください
+make json/SKK-JISYO.edict2.json
+```
+
 edrdg.org で更新される以外に
 こちらで更新することはありません。
 
 ### 2.2.4. SKK-JISYO.emoji
 
 https://cldr.unicode.org/index/downloads を確認して、
-Makefile 内の VER を更新します。
+Makefile 内の `CLDR_VER` と `CLDR_COMMON_VER` を更新します。
+
+その後、漢字を平仮名にします。
+まず既存の SKK-JISYO.emoji.predef を最新の ja.xml と
+SKK-JISYO.L+ で更新します。
+
+```
+make SKK-JISYO.emoji.predef
+```
+
+更新された SKK-JISYO.emoji.predef を編集して、
+複数候補のあるものや undefined をなくします。
+
+```
+undefined /🚙;U+1f699;RV車, (SUV車, アールブイ車, 乗り物, 自動車, 車)/
+きんにく/すじにく /💪;U+1f4aa;筋肉, (ムキムキ, 力こぶ, 筋トレ)/
+```
+
+を
+
+```
+あーるぶいしゃ /🚙;U+1f699;RV車, (SUV車, アールブイ車, 乗り物, 自動車, 車)/
+きんにく /💪;U+1f4aa;筋肉, (ムキムキ, 力こぶ, 筋トレ)/
+```
+
+にするような感じです。
+ただし、「あーるぶいしゃ」は
+右の括弧内にある「アールブイ車」でカバーされているので、
+undefined のままにしておいても同じです。
+そういう場合は「rvしゃ」などにしてカバー率を上げることもできます。
+
+SKK-JISYO.emoji.predef の更新が終わったら、それを使って
+SKK-JISYO.emoji を更新します。
 
 ```
 make SKK-JISYO.emoji
 ```
 
 そこから script/txt2json.ts で JSON に戻します。
-プルリクエストに含めるのは JSON です。
+
+```
+rm json/SKK-JISYO.emoji.json   # Makefile の関係で一度消してください
+make json/SKK-JISYO.emoji.json
+```
+
+最低限プルリクエストに含めるのは
+SKK-JISYO.emoji.predef と JSON です。
+
+ライセンスも変更されることがあるので、
+unicode-license.txt も確認します。
+変更されていたら yaml も更新してください。
+
 
 ### 2.2.5. SKK-JISYO.geo
 
@@ -236,7 +286,8 @@ meta/SKK-JISYO.geo.yaml の最終更新日も更新します。
 
 ### 2.2.9. SKK-JISYO.ivd
 
-https://www.unicode.org/ivd/ を見て Makefile を更新します。
+https://www.unicode.org/ivd/ を見て
+Makefile の `IVD_VER` を更新します。
 (JSON は存在しない)
 
 ```

@@ -67,6 +67,7 @@ clean:
 	$(RM) *.gz* *~ `find . -name '*~'` `find . -name '.*~'` `find . -name '.#*'` \
 	*.unannotated SKK-JISYO.wrong PBinlineDB.pdb *.tmp *.u8 *.w PBinlineDB.dic *.taciturn \
 	SKK-JISYO.L+ SKK-JISYO.total SKK-JISYO.total+zipcode SKK-JISYO.L.header SKK-JISYO.china_taiwan \
+	SKK-JISYO.emoji.en SKK-JISYO.emoji.ja en.xml ja.xml \
 	emoji-list.txt $(EUC_SRCS) $(UTF_SRCS)
 
 archive: gzip
@@ -200,35 +201,43 @@ cdb:
 
 CLDR_VER = 45
 CLDR_COMMON_VER = 45.0
+CLDR_URL = https://unicode.org/Public/cldr/$(CLDR_VER)/cldr-common-$(CLDR_COMMON_VER).zip
 
-SKK-JISYO.emoji: SKK-JISYO.emoji.en SKK-JISYO.emoji.ja SKK-JISYO.emoji.kana unicode-license.txt
-	$(EXPR2) SKK-JISYO.emoji.en + SKK-JISYO.emoji.ja + SKK-JISYO.emoji.kana \
+SKK-JISYO.emoji: SKK-JISYO.emoji.en SKK-JISYO.emoji.ja unicode-license.txt
+	$(EXPR2) SKK-JISYO.emoji.en + SKK-JISYO.emoji.ja \
 	  > SKK-JISYO.emoji.tmp
-	echo '-*- mode: fundamental; coding: utf-8 -*-' | cat - unicode-license.txt | $(SED) "s/^/;; /g" | cat - SKK-JISYO.emoji.tmp > SKK-JISYO.emoji
-	$(RM) SKK-JISYO.emoji.en SKK-JISYO.emoji.ja en.xml ja.xml
-	$(RM) SKK-JISYO.emoji.tmp SKK-JISYO.emoji.kana
+	echo '-*- mode: fundamental; coding: utf-8 -*-' \
+	  | cat - unicode-license.txt \
+	  | $(SED) "s/^/;; /g" \
+	  | cat - SKK-JISYO.emoji.tmp \
+	  > SKK-JISYO.emoji
 
-SKK-JISYO.emoji.en: cldr-common.zip
-	test -f en.xml || $(UNZIP) -p cldr-common.zip "*common/annotations/en.xml" > en.xml
-	$(EMACS) --load emoji.el --funcall en > SKK-JISYO.emoji.en
+SKK-JISYO.emoji.en: en.xml
+	$(DENO) --allow-read --allow-write script/emoji.ts -x en.xml \
+	  -o SKK-JISYO.emoji.en
 
-SKK-JISYO.emoji.ja: cldr-common.zip
-	test -f ja.xml || $(UNZIP) -p cldr-common.zip "*common/annotations/ja.xml" > ja.xml
-	$(EMACS) --load emoji.el --funcall ja > SKK-JISYO.emoji.ja
+SKK-JISYO.emoji.ja: ja.xml SKK-JISYO.emoji.predef
+	$(DENO) --allow-read --allow-write script/emoji.ts -x ja.xml \
+	  -o SKK-JISYO.emoji.ja -p SKK-JISYO.emoji.predef
 
-SKK-JISYO.emoji.kana: SKK-JISYO.emoji.kanji SKK-JISYO.L.unannotated
-	$(EMACS) --load emoji.el --funcall kanji-to-kana > SKK-JISYO.emoji.kana
-	$(RM) SKK-JISYO.emoji.kanji
+SKK-JISYO.emoji.predef: ja.xml
+	$(MAKE) SKK-JISYO.L+
+	touch SKK-JISYO.emoji.predef
+	$(DENO) --allow-read --allow-write script/emoji.ts -x ja.xml \
+	  -o SKK-JISYO.emoji.predef -p SKK-JISYO.emoji.predef \
+	  -i SKK-JISYO.L+ -c EUC-JP
 
-SKK-JISYO.emoji.kanji: cldr-common.zip
-	test -f ja.xml || $(UNZIP) -p cldr-common.zip "*common/annotations/ja.xml" > ja.xml
-	$(EMACS) --load emoji.el --funcall kanjionly | $(EXPR2) > SKK-JISYO.emoji.kanji
+en.xml: cldr-common.zip
+	$(UNZIP) -p cldr-common.zip "*common/annotations/en.xml" > en.xml
+
+ja.xml: cldr-common.zip
+	$(UNZIP) -p cldr-common.zip "*common/annotations/ja.xml" > ja.xml
 
 unicode-license.txt: cldr-common.zip
-	test -f unicode-license.txt || $(UNZIP) -p cldr-common.zip "LICENSE" > unicode-license.txt
+	$(UNZIP) -p cldr-common.zip "LICENSE" > unicode-license.txt
 
 cldr-common.zip:
-	test -f cldr-common.zip || $(CURL) -o cldr-common.zip https://unicode.org/Public/cldr/$(CLDR_VER)/cldr-common-$(CLDR_COMMON_VER).zip
+	$(CURL) -o cldr-common.zip $(CLDR_URL)
 
 # http://www.edrdg.org/jmdict/edict.html
 #   ELECTRONIC DICTIONARY RESEARCH AND DEVELOPMENT GROUP GENERAL DICTIONARY LICENCE STATEMENT
