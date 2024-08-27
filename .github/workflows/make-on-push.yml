@@ -9,6 +9,9 @@ on:
       - SKK-JISYO.*
       - zipcode/SKK-JISYO.*
 
+permissions:
+  contents: write
+
 jobs:
   build:
 
@@ -54,30 +57,68 @@ jobs:
       run: |
         cd dict
         make MD5=md5sum gzip
-        ls -l
 
-    - name: see what has been changed
+    - name: prepare git user
       run: |
         cd dict
-        echo 'ChangeLog for this pushed commit'
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+
+    - name: push ChangeLog for the previous commit
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        cd dict
+        git log HEAD^..HEAD --name-only --oneline \
+        | grep ^ChangeLog || \
+        git log HEAD^..HEAD --name-only --oneline \
+        | grep SKK-JISYO | grep -v json | grep -v edict2 && \
         env COMPARED='HEAD^..HEAD' \
           USERNAME='${{ github.event.head_commit.author.name }}' \
           USEREMAIL='${{ github.event.head_commit.author.email }}' \
-          sh script/manued.sh SKK-JISYO.* zipcode/SKK-JISYO.* \
-          | tee headlog.txt
-        [ `wc -l < headlog.txt` = 1 ] && \
-        echo 'ChangeLog for the next time you do make' ; \
+          sh script/manued.sh \
+        | tee headlog.txt && \
+        (cat headlog.txt ChangeLog > ChangeLog.tmp && mv ChangeLog{.tmp,}) && \
+        git add ChangeLog && \
+        printf "auto-push ChangeLog\n\n" \
+        | cat - headlog.txt \
+        | git commit -F - && \
+        git push
+
+    - name: auto-push after make
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        cd dict
+        git diff --no-prefix -I '^;' | sed -n 's/^--- //p' \
+        | grep SKK-JISYO \
+        | grep -v json | grep -v edict2 | grep -v ivd && \
         env COMPARED='HEAD' \
           USERNAME='${{ github.event.head_commit.author.name }}' \
           USEREMAIL='${{ github.event.head_commit.author.email }}' \
-          sh script/manued.sh SKK-JISYO.* zipcode/SKK-JISYO.*
+          sh script/manued.sh \
+        | tee headlog.txt && \
+        [ `wc -l < headlog.txt` = 2 ] || \
+        (cat headlog.txt ChangeLog > ChangeLog.tmp && mv ChangeLog{.tmp,}) && \
+        git add `git diff --no-prefix -I '^;' | sed -n 's/^--- //p' | grep SKK-JISYO` ChangeLog && \
+        printf "auto-push after auto-make\n\n" \
+        | cat - headlog.txt \
+        | git commit -F - && \
+        git push
 
-    - uses: actions/upload-artifact@v4
+    - name: upload dicts artifact
+      uses: actions/upload-artifact@v4
       with:
         name: dicts
         path: |
           dict/*.gz
           dict/*.md5
+
+    - name: upload source artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: source
+        path: dict
 
     - name: make wrong_check
       run: |

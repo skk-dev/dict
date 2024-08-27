@@ -38,7 +38,21 @@ echo
 COMPARED=${COMPARED:-HEAD}
 
 # Makefile 参照
-UTF_SRCS=" .edict2 .emoji .fullname .ivd zipcode/SKK-JISYO.zipcode zipcode/SKK-JISYO.office.zipcode"
+UTF_SRCS=" .edict2 .emoji .fullname .ivd zipcode/SKK-JISYO.zipcode zipcode/SKK-JISYO.office.zipcode "
+
+# デフォルトでチェックするファイル
+# edict2 と ivd は自動更新で大量に出るので除外
+if [ $# -eq 0 ]; then
+  OTHER_SRCS=" .assoc .china_taiwan .edict .geo .hukugougo .itaiji .itaiji.JIS3_4 .jinmei .JIS2 .JIS2004 .JIS3_4 .law .lisp .L .mazegaki .M .ML .okinawa .propernoun .pubdic+ .requested .S .station .wrong.annotated "
+  DEFAULT_SRCS="`echo ' '$UTF_SRCS $OTHER_SRCS | sed 's/ \.\(edict2\|ivd\) / /g' | sed 's/ \./ SKK-JISYO./g'`"
+  set $DEFAULT_SRCS
+fi
+
+# git diff の -I オプションは 2.30 以降にしかない
+# https://github.com/git/git/commit/296d4a94e7231a1d57356889f51bff57a1a3c5a1
+# 古い git では "fatal: bad revision" エラーになる
+(echo "bad version 2.29.4"; git --version) | sort -Vk3 | tail -1 | grep git && \
+IGNORECOMMENTS='^;'
 
 while [ $# -ne 0 ]; do
   case $UTF_SRCS in
@@ -48,10 +62,10 @@ while [ $# -ne 0 ]; do
 
   OLDLINES=`mktemp`
   NEWLINES=`mktemp`
-  git diff -U0 $COMPARED -- $1 | iconv -f $ENC -t utf-8 | sed \
+  git diff $IGNORECOMMENTS -U0 $COMPARED -- $1 | iconv -f $ENC -t utf-8 | sed \
     -e '1,4d' -e 's/^@.*$//' \
     -e '/^[+]/d' -e 's/^-\(.*\)$/\t\1\n/' > $OLDLINES
-  git diff -U0 $COMPARED -- $1 | iconv -f $ENC -t utf-8 | sed \
+  git diff $IGNORECOMMENTS -U0 $COMPARED -- $1 | iconv -f $ENC -t utf-8 | sed \
     -e '1,4d' -e 's/^@.*$//' \
     -e '/^-/d' -e 's/^[+]\(.*\)$/\t\1\n/' > $NEWLINES
 

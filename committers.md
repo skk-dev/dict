@@ -116,13 +116,9 @@ GitHub でブランチを作って
 JSON と ChangeLog を更新し、
 プルリクエストを出します。
 
-将来的には GitHub Actions で
-自動的に辞書を更新できるようになるかもしれません。
-今のところは make が必要です。
-
-make してできた辞書をプルリクエストに含めると
-conflict が増えそうなので、
-適当なタイミングで make するというのが良いと思います。
+ChangeLog を更新しなかった場合の ChangeLog、
+および従来からの形式の辞書は、
+GitHub Actions で自動更新されます。
 
 ### 2.1.1. JSON
 
