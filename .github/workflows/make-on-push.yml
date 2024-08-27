@@ -31,7 +31,7 @@ jobs:
     - name: make skktools
       run: |
         cd tools
-        ./configure
+        ./configure --enable-maintainer-mode
         make
         pwd >> $GITHUB_PATH
 
