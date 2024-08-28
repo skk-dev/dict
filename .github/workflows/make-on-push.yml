@@ -65,6 +65,7 @@ jobs:
         git config --local user.name "github-actions[bot]"
 
     - name: push ChangeLog for the previous commit
+      continue-on-error: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
@@ -86,6 +87,7 @@ jobs:
         git push
 
     - name: auto-push after make
+      continue-on-error: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
