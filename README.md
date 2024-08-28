@@ -30,16 +30,16 @@ https://skk-dev.github.io/dict/
 $ make archive TOOLS_DIR=../github.skktools
 ```
 
-カレントディレクトリに `SKK-JISYO.*.gz`, `SKK-JISYO.*.md5`, `zipdoce.*.gz`,
-`zipdoce.*.md5` が生成されます。
+カレントディレクトリに `SKK-JISYO.*.gz`, `SKK-JISYO.*.md5`, `zipcode.*.gz`,
+`zipcode.*.md5` が生成されます。
 
 これらのファイルは、いったん退避しておきましょう。
 
 ```
 $ mv SKK-JISYO.*.gz ../
 $ mv SKK-JISYO.*.md5 ../
-$ mv zipdoce.*.gz ../
-$ mv zipdoce.*.md5 ../
+$ mv zipcode.*.gz ../
+$ mv zipcode.*.md5 ../
 ```
 
 
