@@ -1,3 +1,45 @@
+2024-08-28  Tamotsu Takahashi  <ttakah+github@gmail.com>
+
+	* script/edict2.ts: 新規。
+	* Makefile: 上に対応。
+	deno -RW edict2.ts -i edict2u -o SKK-JISYO.edict2
+	だけではヘッダがないので、txt2json して json2txt する。
+
+2024-08-27  Tamotsu Takahashi  <ttakah+github@gmail.com>
+
+	* script/manued.sh, .github/workflows/make-on-push.yml:
+	適当に git push するだけで ChangeLog を作成したり
+	make して最新の状態で push し直してくれるように
+	(なってたらいいなあ……。)
+
+2024-08-27  Tamotsu Takahashi  <ttakah+github@gmail.com>
+
+	* COPYING: committers.md に GPL2 は「COPYING を参照」と
+	あるので、新規その名前のファイルを用意。
+
+2024-08-27  Tamotsu Takahashi  <ttakah+github@gmail.com>
+
+	* emoji.ts, SKK-JISYO.emoji.predef: 新規。
+	* Makefile: emoji は predef を優先しつつ L+ で平仮名を探す。
+
+	* script/txt2json.ts: 失敗箇所を見せるように変更。
+	annotation も delisp する。
+
+2024-08-24  Tamotsu Takahashi  <ttakah+github@gmail.com>
+
+	* emoji.el: 「/」などを enlisp
+	* SKK-JISYO.emoji, Makefile: 更新
+
+	* SKK-JISYO.ivd, Makefile: 更新
+
+	* txt2json.ts: 終了コードを出すように変更
+
+2024-08-23  Tamotsu Takahashi  <ttakah+github@gmail.com>
+
+	* .gitignore: zipcode/test/zipcode-test.sh 追加。
+
+	* edict2: make したら最新版になってしまった。
+
 2024-08-22  Tamotsu Takahashi  <ttakah+github@gmail.com>
 
 	* zipcode/Makefile.in, zipcode/README.md: 配布元の CSV に追従。
