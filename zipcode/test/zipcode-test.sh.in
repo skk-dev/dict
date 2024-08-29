@@ -1,0 +1,11 @@
+#!/bin/sh
+GREP=@grep@
+
+${GREP} '^6020033$' words.zipcode \
+  > /dev/null && echo "OK words" || (echo "エラー words"; return 2)
+
+${GREP} '^6020033 /京都府京都市上京区烏丸通今出川上る今出川町/京都府京都市上京区烏丸通今出川下る今出川町/京都府京都市上京区今出川通烏丸西入今出川町/京都府京都市上京区今出川通室町東入今出川町/$' SKK-JISYO.zipcode \
+  > /dev/null && echo "OK SKK-JISYO.zipcode" || (echo "エラー SKK-JISYO.zipcode 京都"; return 3)
+
+${GREP} '^1008926 /総務省 @ 東京都千代田区霞が関２丁目１－２/' SKK-JISYO.office.zipcode \
+  > /dev/null && echo "OK SKK-JISYO.office.zipcode" || (echo "エラー SKK-JISYO.office.zipcode"; return 4)
