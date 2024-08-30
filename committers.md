@@ -1,25 +1,45 @@
 SKK 辞書 committer のみなさまへ
 ===============================
 
-# 1. GPL が適用される辞書
+# 1. ライセンス
+## 1.1. GPL が適用される辞書
 
 - SKK-JISYO.{SML}
 - SKK-JISYO.JIS2
 - SKK-JISYO.JIS3_4
-- SKK-JISYO.geo
+- SKK-JISYO.JIS2004
+- SKK-JISYO.geo[^1]
 - SKK-JISYO.law
 - SKK-JISYO.wrong
 - SKK-JISYO.jinmei
 - SKK-JISYO.lisp
+- SKK-JISYO.assoc
+- SKK-JISYO.china_taiwan
+- SKK-JISYO.fullname
+- SKK-JISYO.hukugougo
+- SKK-JISYO.mazegaki
+- SKK-JISYO.pinyin
+- SKK-JISYO.propernoun
+- SKK-JISYO.station
+- SKK-JISYO.itaiji.JIS3_4[^2]
+- SKK-JISYO.noregist
+- SKK-JISYO.not_wrong
+- SKK-JISYO.requested
+- SKK-JISYO.wrong.annotated[^3]
 
 上記の各辞書については、 the Free Software Foundation が発行している
 the GNU General Public License version 2 以降が適用されます。詳細につ
 いては COPYING をご覧下さい。
 
+[^1]: geo に関しては 2.3. も参照。
 
-# 2. GPL 以外のライセンスが適用される辞書
+[^2]: itaiji は GPL ではない。
 
-## 2.1. SKK-JISYO.pubdic+
+[^3]: wrong は wrong.annotated から自動生成。
+
+## 1.2. GPL 以外のライセンスが適用される辞書
+
+### 1.2.1. SKK-JISYO.pubdic+
 
 SKK-JISYO.pubdic+ は、 the Pubdic+ project によって作成された pubdic.p
 を SKK 辞書形式に加工したものです。
@@ -29,71 +49,211 @@ SKK-JISYO.pubdic+ はこれを継承します。
 配布条件を一言で言うと「いかなる利用方法も可」というものです。詳細は
 SKK-JISYO.pubdic+ のヘッダー部分をご覧下さい。
 
-## 2.2. SKK-JISYO.edict, SKK-JISYO.edict2
+### 1.2.2. SKK-JISYO.edict, SKK-JISYO.edict2
 
 SKK-JISYO.edict は [The Electronic Dictionary Research and Development
 Group](http://www.edrdg.org/) による「和英辞典」edict を tools/convert2skk/edict2skk.awk
 を利用して SKK 辞書形式の「英和辞典」に加工したものです。
 
-同じく、SKK-JISYO.edict2 は edict2u を加工したものであり、
+同じく、SKK-JISYO.edict2 は edict2u を加工したものです。
+
+edict, edict2u ともに Creative Commons Attribution-ShareAlike Licence (V3.0)
+ですので、それらの派生である SKK-JISYO.edict, SKK-JISYO.edict2 も同じ
+ライセンスとしました。
+
+### 1.2.3. SKK-JISYO.geo
+
+SKK-JISYO.geo は、日本郵便のページにあるデータをもと
+に SKK 辞書形式の「地名辞典」に加工したものです。
+
+2024 年 8 月 17 日現在、https://www.post.japanpost.jp/zipcode/dl/readme.html
+によれば、
+
+    使用・再配布・移植・改良について
+    郵便番号データに限っては日本郵便株式会社は著作権を主張しません。自由に配布していただいて結構です。
+
+とあります。同社のご厚意に感謝しつつ、自由に配布できるよう、明示的に
+GPL を適用しました。
+
+### 1.2.4. SKK-JISYO.okinawa
+
+この辞書は Public Domain です。使用・変更・配布に関しては一切の制限を
+つけません。商品などに組み込むことも自由に行なってください。
+
+### 1.2.5. SKK-JISYO.office.zipcode, SKK-JISYO.zipcode
+
+geo と同じデータに基づきますが、機械的に抽出しているため
+元のデータと同じく Public domain です。
+
+ただし、これらを生成するためのプログラムは GPL が適用されます。
+[zipcode/README.md](zipcode/README.md) をご覧下さい。
+
+### 1.2.6. SKK-JISYO.emoji
+
+SKK-JISYO.emoji は、[Unicode Common Locale Data Repository](http://cldr.unicode.org/)
+の cldr-common.zip に含まれる annotations/(en|ja).xml から生成していま
+す。
+
+unicode license です。
+
+### 1.2.7. SKK-JISYO.ivd
+
+SKK-JISYO.ivd は、 https://unicode.org/ の ivd/data/*/IVD_Sequences.txt
+から生成しています。
+
+unicode license です。
+
+### 1.2.8. SKK-JISYO.itaiji
+
+Public domain です。
+
+
+# 2. 更新手順
+
+## 2.1. 基本
+
+GitHub でブランチを作って
+JSON と ChangeLog を更新し、
+プルリクエストを出します。
+
+将来的には GitHub Actions で
+自動的に辞書を更新できるようになるかもしれません。
+今のところは make が必要です。
+
+make してできた辞書をプルリクエストに含めると
+conflict が増えそうなので、
+適当なタイミングで make するというのが良いと思います。
+
+### 2.1.1. JSON
+
+json/SKK-JISYO.*.json 内の各エントリは以下の形式です。
+
+```
+    {
+      "かな": [
+        { "漢字1": [ "注釈1", "注釈2" ] },
+        { "漢字2": [] }
+      ]
+    },
+```
+
+上記エントリは
+
+```
+かな /漢字1;注釈1;注釈2/漢字2/
+```
+
+に変換されます。
+
+## 2.2. 自動生成など
+
+### 2.2.1. 更新しないもの
+
+- pubdic+
+- edict
+- requested (他の辞書に登録してここから減らすのはあり)
+- wrong (annotated の方を編集する)
+
+### 2.2.2. SKK-JISYO.china_taiwan
+
+csv/china_taiwan.csv を更新して make します。
+そこから script/txt2json.ts で JSON に戻します。
+
+つまり、プルリクエストに含めるのは CSV と JSON です。
+
+### 2.2.3. SKK-JISYO.edict2
 
 ```
 make SKK-JISYO.edict2
 ```
 
 と実行することで生成できます。
+emacs と skktools が必要です。
 
-edict, edict2u ともに Creative Commons Attribution-ShareAlike Licence (V3.0)
-ですので、それらの派生である SKK-JISYO.edict, SKK-JISYO.edict2 も同じ
-ライセンスとしました。
+そこから script/txt2json.ts で JSON に戻します。
+プルリクエストに含めるのは JSON です。
 
-## 2.3. SKK-JISYO.geo
+### 2.2.4. SKK-JISYO.emoji
 
-SKK-JISYO.geo は、郵政事業庁 (以前は郵政省) のページにあるデータをもと
-に SKK 辞書形式の「地名辞典」に加工したものです。
-
-2001 年 2 月 2 日現在、 http://www.post.yusei.go.jp/newnumber/readme.htm
-によれば、
-
-    使用・再配布・移植・改良について
-    郵政省は著作権を主張しません。自由に配布していただいて結構です。
-
-とあります。同庁のご厚意に感謝しつつ、自由に配布できるよう、明示的に
-GPL を適用しました。
-
-## 2.4. SKK-JISYO.okinawa
-
-この辞書は Public Domain です。使用・変更・配布に関しては一切の制限を
-つけません。商品などに組み込むことも自由に行なってください。
-
-## 2.5. SKK-JISYO.office.zipcode, SKK-JISYO.zipcode
-
-Public domain です。
-
-ただし、これらを生成するためのプログラムは GPL が適用されます。
-
-## 2.6. SKK-JISYO.emoji
-
-SKK-JISYO.emoji は、[Unicode Common Locale Data Repository](http://cldr.unicode.org/)
-の cldr-common.zip に含まれる annotations/[en|ja].xml から生成していま
-す。
+https://cldr.unicode.org/index/downloads を確認して、
+Makefile 内の VER を更新します。
 
 ```
 make SKK-JISYO.emoji
 ```
 
-unicode license です。
+そこから script/txt2json.ts で JSON に戻します。
+プルリクエストに含めるのは JSON です。
 
-## 2.7. SKK-JISYO.ivd
+### 2.2.5. SKK-JISYO.geo
 
-SKK-JISYO.ivd は、 https://unicode.org/ の ivd/data/*/IVD_Sequences.txt
-から生成しています。
+手作業と自動生成情報のハイブリッドです。
+
+#### 2.2.5.1 手作業で JSON から更新する場合
+
+基本どおりです。
+情報源について meta/SKK-JISYO.geo.yaml を更新することも忘れずに。
+
+#### 2.2.5.2. zipcode から更新する場合
+
+必要なら zipcode から[抽出](https://github.com/skk-dev/dict/pull/54)して
+SKK-JISYO.geo にマージしてから script/txt2json.ts で JSON に戻します。
+
+meta/SKK-JISYO.geo.yaml の最終更新日も更新します。
+
+プルリクエストに含めるのは YAML と JSON です。
+
+(この場合はおそらく zipcode も更新が必要)
+
+#### 2.2.5.3. skkdic-split-geo.rb で処理する場合
+
+[skkdic-split-geo.rb](https://github.com/skk-dev/dict/pull/54)
+も必要に応じて使います。この場合も JSON に戻します。
+
+### 2.2.6. SKK-JISYO.hukugougo
+
+ヘッダには「機械的に抽出」とありますが不明です。
+基本どおり JSON を編集します。
+
+### 2.2.7. SKK-JISYO.itaiji
+
+ヘッダに書かれているデータは 404 エラーです。
+基本どおり JSON を編集します。
+
+### 2.2.8. SKK-JISYO.itaiji.JIS3_4
+
+ヘッダに書かれた方式で直接編集します。
+(JSON は存在しない: UTF-8 で itaiji に統合する予定だから？)
+
+### 2.2.9. SKK-JISYO.ivd
+
+https://www.unicode.org/ivd/ を見て Makefile を更新します。
+(JSON は存在しない)
 
 ```
 make SKK-JISYO.ivd
 ```
 
-unicode license です。
+### 2.2.10. SKK-JISYO.lisp
+
+直接編集します。(JSON は存在しない)
+
+### 2.2.11. SKK-JISYO.mazegaki
+
+SKK-JISYO.M から skk-mkmgk.el で生成、とのことですが古い情報のようです。
+https://khiker.hatenablog.jp/entry/20101225/ddskk_mazegaki_dict
+のような方法を検討すべきかもしれません。(あるいは廃止を検討)
+
+### 2.2.12. zipcode
+
+[zipcode/README.md](zipcode/README.md) を参照下さい。
+(JSON は存在しない)
+
+
+## 2.3. その他
+
+noregist, not_wrong, wrong.annotated は直接編集します。
+(JSON は存在しない)
 
 
 # 3. 各辞書の編集方針について
