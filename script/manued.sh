@@ -51,8 +51,9 @@ fi
 # git diff の -I オプションは 2.30 以降にしかない
 # https://github.com/git/git/commit/296d4a94e7231a1d57356889f51bff57a1a3c5a1
 # 古い git では "fatal: bad revision" エラーになる
-(echo "bad version 2.29.4"; git --version) | sort -Vk3 | tail -1 | grep git && \
-IGNORECOMMENTS='^;'
+(echo "bad version 2.29.4"; git --version) \
+| sort -Vk3 | tail -1 | grep git > /dev/null && \
+IGNORECOMMENTS="-I '^;'"
 
 while [ $# -ne 0 ]; do
   case $UTF_SRCS in
