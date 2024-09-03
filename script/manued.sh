@@ -2,12 +2,19 @@
 # コミットする前に真鵺道チェック (Public domain)
 # sh manued.sh SKK-JISYO.* zipcode/SKK-JISYO.*
 
+THISFILE=`command -v -- "$0"`
+THISDIR=`dirname -- "$THISFILE"`
+
 # 事前に PATH を通しておく必要がある
-if ! command -v docdiff >/dev/null; then
+if ! command -v deno > /dev/null; then
+  echo "deno をインストールしてください"
+  return 1
+fi
+if ! command -v docdiff > /dev/null; then
   echo "docdiff をインストールしてください"
   return 1
 fi
-if ! command -v iconv >/dev/null; then
+if ! command -v iconv > /dev/null; then
   echo "iconv をインストールしてください"
   return 1
 fi
@@ -63,20 +70,22 @@ while [ $# -ne 0 ]; do
 
   OLDLINES=`mktemp`
   NEWLINES=`mktemp`
-  git diff $IGNORECOMMENTS -U0 $COMPARED -- $1 | iconv -f $ENC -t utf-8 | sed \
-    -e '1,4d' -e 's/^@.*$//' \
-    -e '/^[+]/d' -e 's/^-\(.*\)$/\t\1\n/' > $OLDLINES
-  git diff $IGNORECOMMENTS -U0 $COMPARED -- $1 | iconv -f $ENC -t utf-8 | sed \
-    -e '1,4d' -e 's/^@.*$//' \
-    -e '/^-/d' -e 's/^[+]\(.*\)$/\t\1\n/' > $NEWLINES
+  ( \
+    git diff $IGNORECOMMENTS -U0 $COMPARED -- $1 \
+    | iconv -f $ENC -t utf-8 \
+    | sed -e '1,4d' \
+    | tee /dev/stderr \
+    | sed -e '/^[+@]/d' \
+    > $OLDLINES \
+  ) 2>&1 \
+  | sed -e '/^[-@]/d' \
+  > $NEWLINES
 
   if [ "`wc -l < $OLDLINES`" != "0" ] || [ "`wc -l < $NEWLINES`" != "0" ]; then
     echo "	* $1:"
-    docdiff --char --format=user $OLDLINES $NEWLINES | sed \
-      -e '/^$/d' \
-      -e 's/^{->\t/\n\tAdd entry.\n\t/;/^}$/d' \
-      -e 's/^{\t/\n\tRemove entry.\n\t/;/^->}$/d' \
-      -e 's/^\(.*->.*\)$/\n\tModify entry.\n\1/'
+    deno --allow-read --allow-write "$THISDIR/manued-helper.ts" \
+      --old $OLDLINES --new $NEWLINES
+    docdiff --char --format=user $OLDLINES $NEWLINES
     echo
   fi
 
