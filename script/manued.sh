@@ -87,6 +87,7 @@ while [ $# -ne 0 ]; do
       --old $OLDLINES --new $NEWLINES
     docdiff --char --format=user $OLDLINES $NEWLINES
     echo
+    echo
   fi
 
   rm $OLDLINES $NEWLINES

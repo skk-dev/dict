@@ -6,9 +6,9 @@ const newText = Deno.readTextFileSync(params.new)
 
 function str2entries(text: string): Map<string, string> {
   return text.split("\n").reduce((p, c) => {
-    const [kana, rawHenkans] = c.substring(1).split(" ")
+    const [kana, ...rawHenkans] = c.substring(1).split(" ")
     if (!kana.startsWith(";") && rawHenkans) {
-      p.set(kana, rawHenkans)
+      p.set(kana, rawHenkans.join(" "))
     }
     return p
   }, new Map<string, string>())
@@ -29,7 +29,7 @@ allKeys.forEach((v) => {
     console.log(`\tRemove ${v} ${oldEntries.get(v)}`)
   } else if (!inOld && inNew) {
     console.log(`\tAdd ${v} ${newEntries.get(v)}`)
-  } else {
+  } else if (v) {
     olds.push(`\tModify ${v} ${oldEntries.get(v)}`)
     news.push(`\tModify ${v} ${newEntries.get(v)}`)
   }
