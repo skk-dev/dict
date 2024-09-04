@@ -1,11 +1,9 @@
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; 人名辞書 for SKK system
+;;
 ;; Copyright (C) 1993 Wnn Consortium
 ;; Copyright (C) 2002, 2003, 2004 SKK Development Team <skk@ring.gr.jp>
-;;
 ;; Author: OMRON SOFTWARE Co., Ltd. <freewnn@rd.kyoto.omronsoft.co.jp>
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Keywords: japanese
 ;;
 ;; This dictionary is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -21,8 +19,6 @@
 ;; along with GNU Emacs; see the file COPYING.  If not, write to the
 ;; Free Software Foundation Inc., 59 Temple Place - Suite 330, Boston,
 ;; MA 02111-1307, USA.
-;;
-;;; Commentary:
 ;;
 ;; 本辞書は、skk/tools/convert2skk/wnn2skk.awk を利用し「人名辞書
 ;; (gerodic) 1.00」を SKK 辞書形式に変換したものをベースに加除した

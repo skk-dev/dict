@@ -1,15 +1,12 @@
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; SKK system made from 沖縄辞書 (Okinawa dic 2005/11/07)
 ;;
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Keywords: japanese
+;; Copyright (c) 2022 SKK Development Team <skk@ring.gr.jp>
 ;;
 ;; この辞書は Public Domain です。使用・変更・配布に関しては一切の制限
 ;; をつけません。商品などに組み込むことも自由に行なってください。既に
 ;; いくつかの辞書には沖縄辞書が採用されています。勝手ながら、沖縄辞書
 ;; に寄贈された辞書も Public Domain 扱いとさせていただきます。
-;;
-;;; Commentary:
 ;;
 ;; 沖縄辞書プロジェクトは有志が行なっている仮名漢字変換用ソフトウェ
 ;; ア用の辞書ファイルの語彙強化プロジェクトです。集録語数は、基本的
@@ -37,7 +34,6 @@
 ;;
 ;; 沖縄辞書について更に詳しくは、http://www.zukeran.org/o-dic/
 ;; をご参照下さい。
-;;
 ;;
 ;; TODO:
 ;; 人名をSKK-JISYO.jinmei、地名をSKK-JISYO.geoに追加？

@@ -1,9 +1,8 @@
 version: 0.0.0
 description: Barely used compound words once contained in SKK dictionaries.
 copyright: |-
-  Copyright (C)
-  2004-2005 MITA Yuusuke  <clefs@mail.goo.ne.jp>
-  SKK Development Team <skk@ring.gr.jp>
+  Copyright (C) 2004-2005 MITA Yuusuke  <clefs@mail.goo.ne.jp>
+                SKK Development Team <skk@ring.gr.jp>
 license: |-
   This dictionary is free software; you can redistribute it and/or
   modify it under the terms of the GNU General Public License as

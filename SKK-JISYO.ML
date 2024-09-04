@@ -2,6 +2,7 @@
 ;; Medium-Large size dictionary for SKK system
 ;;
 ;; Copyright (C) 1988-1995, 1997, 1999-2006
+;;
 ;; Masahiko Sato <masahiko@kuis.kyoto-u.ac.jp>
 ;; Hironobu Takahashi <takahasi@tiny.or.jp>,
 ;; Masahiro Doteguchi, Miki Inooka,
@@ -10,10 +11,6 @@
 ;; Katsushi Sato and Nobuhiro Yamagishi
 ;; Mikio NAKAJIMA <minakaji@osaka.email.ne.jp>
 ;; SKK Development Team <skk@ring.gr.jp>
-;;
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Keywords: japanese
-;; Created: April 13, 2003
 ;;
 ;; This dictionary is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as

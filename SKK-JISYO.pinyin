@@ -1,20 +1,17 @@
 ;; -*- mode: fundamental; coding: utf-8 -*-
 ;; Pinyin to simplified chinese (簡体字) dictionary for SKK system
 ;;
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Version: $Id: $
-;; Keywords: chinese
-;; Last Modified: $Date: $
+;; Copyright (C) 1999, Rui He, herui@cs.duke.edu
 ;;
 ;; This dictionary was created by converting "pinyin.map" and
 ;; "sysphrase.txt" to a SKK dictionary format. These source files are
 ;; included in the free package CCE. CCE is available at:
 ;;
-;;	http://archive.debian.org/debian/pool/main/c/cce/cce_0.36.orig.tar.gz
+;;     http://archive.debian.org/debian/pool/main/c/cce/cce_0.36.orig.tar.gz
 ;;
 ;; Below is the copyright notice of CCE.
 ;;
-;;-----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
 ;;             Copyright (C) 1999, Rui He, herui@cs.duke.edu
 ;;
 ;;
@@ -31,7 +28,7 @@
 ;;
 ;; You should have received a copy of the GNU General Public License along with
 ;; CCE.  If not, see <https://www.gnu.org/licenses/>.
-;;-----------------------------------------------------------------------------
+;; ----------------------------------------------------------------------------
 ;;
 ;; okuri-ari entries.
 ;; okuri-nasi entries.

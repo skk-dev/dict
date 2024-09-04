@@ -1,11 +1,8 @@
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; Barely used compound words once contained in SKK dictionaries.
+;;
 ;; Copyright (C) 2004-2005 MITA Yuusuke  <clefs@mail.goo.ne.jp>
 ;;               SKK Development Team <skk@ring.gr.jp>
-;;
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Keywords: japanese
-;; Created: July 18, 2004
 ;;
 ;; This dictionary is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
@@ -22,13 +19,12 @@
 ;; the Free Software Foundation Inc., 51 Franklin St, Fifth Floor,
 ;; Boston, MA 02110-1301, USA.
 ;;
-;;; Commentary:
 ;; この辞書は、使用頻度が低く、変換する上での価値も高くないと思われる
 ;; 複合語を L辞書から機械的に抽出したものです。
-;; 
+;;
 ;;
 ;; noregist 辞書との最大の違いは、フォーム
-;; 
+;;
 ;;   http://openlab.jp/skk/registdic.cgi
 ;;
 ;; から再び登録希望を出せることです。

@@ -1,5 +1,6 @@
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; Small size dictionary for SKK system
+;;
 ;; Copyright (C) 1988-1995, 1997, 1999-2003
 ;;
 ;; Masahiko Sato <masahiko@kuis.kyoto-u.ac.jp>
@@ -8,9 +9,6 @@
 ;; Yukiyoshi Kameyama <kameyama@kuis.kyoto-u.ac.jp>,
 ;; Akihiko Sasaki, Dai Ando, Junichi Okukawa,
 ;; Katsushi Sato and Nobuhiro Yamagishi
-;;
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Keywords: japanese
 ;;
 ;; This dictionary is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

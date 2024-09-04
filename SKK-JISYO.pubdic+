@@ -1,9 +1,8 @@
 ;; -*- mode: fundamental; coding: euc-jp -*-
 ;; Additional dictionary for SKK system made from pubdic.p.
+;;
 ;; Copyright (C) 2000 the Pubdic+ project.
 ;;               2002, 2003, 2004 SKK Development Team <skk@ring.gr.jp>
-;; Maintainer: SKK Development Team <skk@ring.gr.jp>
-;; Keywords: japanese
 ;;
 ;; This package is copyrighted by the Pubdic+ project. Permission to use,
 ;; copy, modify, and distribute this package for any purpose is hereby
@@ -17,7 +16,6 @@
 ;; NEGLIGENCE OR OTHER TORTUOUS ACTION, ARISING OUT OF OR IN CONNECTION
 ;; WITH THE USE OR PERFORMANCE OF THIS PACKAGE.
 ;;
-;;; Commentary:
 ;; This file is made by the following steps;
 ;;
 ;;  $ pubdic2list pubdic.p | adddummy | sort -u | removedummy | list2skk > temp
