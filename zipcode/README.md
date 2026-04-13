@@ -11,10 +11,11 @@
    する場合に `/usr/dict/words` というファイルに書くべき内容が書かれています。
    public domain です。
 
- 4. `Makefile`, `ZIPCODE-MK` … これらは、[日本郵便株式会社](https://www.post.japanpost.jp/) の
+ 4. `Makefile`, `zipcode.ts`, `zipcode-split.ts` … これらは、
+   [日本郵便株式会社](https://www.post.japanpost.jp/) の
    [郵便番号データダウンロード](https://www.post.japanpost.jp/zipcode/download.html) か
    ら取得できるファイルを基に、自分で郵便番号辞書を最新版に更新したいときなどに使
-   います。 GNU Emacs 26 以上を使う必要があります。GPL です。
+   います。[Deno](https://deno.com/#installation) を使う必要があります。GPL です。
 
 
 # インストール
@@ -121,8 +122,9 @@
 きていません。
 
 そこでよろしければ、よく御存知の地名について、間違っていないかどうか調べてみて
-ください。もし間違いがありましたら、SKK 開発ラボ <skk@ring.gr.jp> にご連絡くだ
-さい。
+ください。もし間違いがありましたら、
+[GitHub](https://github.com/skk-dev/dict/issues)
+にご連絡ください。
 
 
 # メンテナンスの方法 (コミッタの方へ)
@@ -154,19 +156,33 @@
 する前に、これらの差分 `*.diff` を必ず確認してください。これは以下のような理由によ
 ります。
 
-* `ZIPCODE-MK` にバグがあると、変なエントリを生成してしまう可能性がある。
+* `zipcode.ts` にバグがあると、変なエントリを生成してしまう可能性がある。
 
-* 日本郵便株式会社のデータの書式が変わるなどの理由によって `ZIPCODE-MK` が対応で
+* 日本郵便株式会社のデータの書式が変わるなどの理由によって `zipcode.ts` が対応で
   きなくなっている可能性がある。
 
-* 使用する GNU Emacs によっては、元データの内容を正しくデコードできないなどの理由に
+* 元データの内容を正しくデコードできないなどの理由に
   よって、変なエントリを生成してしまう可能性がある。
 
 ## 必要なもの
 
 * `skk-tools` https://github.com/skk-dev/skktools
 
-* GNU Emacs 26 以上
+* Deno https://deno.com/#installation
+
+## SKK-JISYO.geo への追加
+
+```
+% make geo
+```
+
+を実行することで `SKK-JISYO.geo.add` というファイルができます。
+これは `SKK-JISYO.L` にも `SKK-JISYO.geo` にも存在しない地名として
+追加できるかもしれないエントリ候補です。
+
+明らかに不要な語句や末尾の「北」「中央」「下」などを削りつつ、
+いずれかの辞書に追加できるか考慮してみてください。
+
 
 # この辞書の出来、他の郵便番号辞書、などについて
 

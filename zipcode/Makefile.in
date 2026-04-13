@@ -1,13 +1,13 @@
 # Makefile for ZIP-code dictionaries.
 
-EMACS = @emacs@
-RM = @rm@
-CP = @cp@
+DENO = @deno@
+GIT = @git@
 MKDIR = @mkdir@
-CAT = @cat@
-DIFF = @diff@
-WGET = @wget@
+NKF = @nkf@
+RM = @rm@
 UNZIP = @unzip@
+WGET = @wget@
+
 SKKDIC_EXPR2 = @skkdic_expr2@
 SKKDIC_EXPR = @skkdic_expr@
 SKKDIC_SORT = @skkdic_sort@
@@ -18,60 +18,68 @@ temp_dir = @temp_dir@
 
 TEMP_ZIPCODE=$(temp_dir)/.zipcode
 TEMP_OFFICE=$(temp_dir)/.office
+TEMP_GEO=$(temp_dir)/.geo
 
-SOURCE_KEN_ALL=https://www.post.japanpost.jp/zipcode/dl/kogaki/zip/ken_all.zip
+SOURCE_KEN_ALL=https://www.post.japanpost.jp/zipcode/dl/utf/zip/utf_ken_all.zip
 SOURCE_JIGYOSYO=https://www.post.japanpost.jp/zipcode/dl/jigyosyo/zip/jigyosyo.zip
 
-KEN_ALL_ZIP=$(temp_dir)/ken_all.zip
+KEN_ALL_ZIP=$(temp_dir)/utf_ken_all.zip
 JIGYOSYO_ZIP=$(temp_dir)/jigyosyo.zip
 
-KEN_ALL=$(temp_dir)/ken_all.csv
+KEN_ALL=$(temp_dir)/utf_ken_all.csv
 JIGYOSYO=$(temp_dir)/jigyosyo.csv
 
-all: zipcode office words
+all: zipcode office
 
 zipcode:
-	$(EMACS) --batch -q -no-site-file --load $(srcdir)/ZIPCODE-MK \
-	  --funcall mkdic-zipcode --funcall mkdic-zipcode-header $(temp_dir)
+	$(DENO) run --allow-read --allow-write $(srcdir)/zipcode.ts \
+	  --csv=$(KEN_ALL) --out=$(TEMP_ZIPCODE) \
+	  --header=$(srcdir)/SKK-JISYO.zipcode \
+	  --geo=$(TEMP_GEO) \
+	  --words=$(srcdir)/words.zipcode
 ifneq ($(SKKDIC_EXPR2),)
-	$(SKKDIC_EXPR2) $(TEMP_ZIPCODE) >> SKK-JISYO.zipcode
+	$(SKKDIC_EXPR2) $(TEMP_ZIPCODE) >> $(srcdir)/SKK-JISYO.zipcode
 else
 	$(SKKDIC_EXPR) $(TEMP_ZIPCODE) \
-	  | $(SKKDIC_SORT) >> SKK-JISYO.zipcode
+	  | $(SKKDIC_SORT) >> $(srcdir)/SKK-JISYO.zipcode
 endif
 
 office:
-	$(EMACS) --batch -q -no-site-file --load $(srcdir)/ZIPCODE-MK \
-	  --funcall mkdic-office --funcall mkdic-office-header $(temp_dir)
+	$(DENO) run --allow-read --allow-write $(srcdir)/zipcode.ts \
+	  --csv=$(JIGYOSYO) --office=$(TEMP_OFFICE) \
+	  --header=$(srcdir)/SKK-JISYO.office.zipcode \
+	  --geo="" --words=""
 ifneq ($(SKKDIC_EXPR2),)
-	$(SKKDIC_EXPR2) $(TEMP_OFFICE) >> SKK-JISYO.office.zipcode
+	$(SKKDIC_EXPR2) $(TEMP_OFFICE) >> $(srcdir)/SKK-JISYO.office.zipcode
 else
 	$(SKKDIC_EXPR) $(TEMP_OFFICE) \
-	  | $(SKKDIC_SORT) >> SKK-JISYO.office.zipcode
+	  | $(SKKDIC_SORT) >> $(srcdir)/SKK-JISYO.office.zipcode
 endif
-
-words:
-	$(EMACS) --batch -q -no-site-file --load $(srcdir)/ZIPCODE-MK --funcall mkdic-words
 
 # For checking new entries.
 
-update: orig all diff
+update: all diff
 
 orig:
-	-$(CP) -f $(srcdir)/SKK-JISYO.office.zipcode \
-	  SKK-JISYO.office.zipcode.orig
-	-$(CP) -f $(srcdir)/SKK-JISYO.zipcode SKK-JISYO.zipcode.orig
-	-$(CP) -f $(srcdir)/words.zipcode words.zipcode.orig
+	-$(GIT) show HEAD:$(srcdir)/SKK-JISYO.office.zipcode \
+	  > SKK-JISYO.office.zipcode.orig
+	-$(GIT) show HEAD:$(srcdir)/SKK-JISYO.zipcode > SKK-JISYO.zipcode.orig
+	-$(GIT) show HEAD:$(srcdir)/words.zipcode > words.zipcode.orig
 
 diff:
-	-$(DIFF) -u SKK-JISYO.office.zipcode.orig \
-	  SKK-JISYO.office.zipcode \
-	  | $(CAT) > SKK-JISYO.office.zipcode.diff
-	-$(DIFF) -u SKK-JISYO.zipcode.orig \
-	  SKK-JISYO.zipcode \
-	  | $(CAT) > SKK-JISYO.zipcode.diff
-	-$(DIFF) -u words.zipcode.orig words.zipcode \
-	  | $(CAT) > words.zipcode.diff
+	-$(GIT) diff $(srcdir)/SKK-JISYO.office.zipcode \
+	  > SKK-JISYO.office.zipcode.diff
+	-$(GIT) diff $(srcdir)/SKK-JISYO.zipcode \
+	  > SKK-JISYO.zipcode.diff
+	-$(GIT) diff $(srcdir)/words.zipcode \
+	  > words.zipcode.diff
+
+geo:
+	$(NKF) -e $(TEMP_GEO) > $(TEMP_GEO).euc
+	$(SKKDIC_EXPR2) $(TEMP_GEO).euc \
+	  - $(srcdir)/../SKK-JISYO.L \
+	  - $(srcdir)/../SKK-JISYO.geo \
+	  > $(srcdir)/../SKK-JISYO.geo.add
 
 # For doing everything automatically.
 
@@ -106,13 +114,14 @@ clean-diffs:
 mostlyclean: clean-temps clean-diffs
 	-$(RM) -f config.status \
 	  config.log \
+	  $(srcdir)/test/zipcode-test.sh \
 	  Makefile
 
 distclean: mostlyclean
-	-$(RM) -f SKK-JISYO.office.zipcode \
-	  SKK-JISYO.zipcode \
-	  words.zipcode
+	-$(RM) -f $(srcdir)/SKK-JISYO.office.zipcode \
+	  $(srcdir)/SKK-JISYO.zipcode \
+	  $(srcdir)/words.zipcode
 
 .PHONY: test
 test:
-	$(EMACS) --batch --quick --directory test --load test/all-tests.el --funcall ert-run-tests-batch-and-exit
+	. $(srcdir)/test/zipcode-test.sh
